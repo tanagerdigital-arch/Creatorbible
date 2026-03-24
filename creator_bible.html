@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>凡人修币录 S2 · Creator Bible</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #D4A017;
+    --gold-dim: #8B6914;
+    --gold-bright: #F0C040;
+    --dark: #080C14;
+    --dark-2: #0D1220;
+    --dark-3: #111827;
+    --teal: #0E4D5C;
+    --teal-bright: #1A8FAA;
+    --red: #E94560;
+    --green: #2D6A4F;
+    --amber: #F0A500;
+    --text: #C8D0DC;
+    --text-dim: #6B7280;
+    --text-bright: #EEF2FF;
+    --border: rgba(212,160,23,0.2);
+    --border-bright: rgba(212,160,23,0.5);
+    --glass: rgba(13,18,32,0.85);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  /* ─── GRID NOISE BACKGROUND ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(212,160,23,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,160,23,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── SIDEBAR NAV ─── */
+  .sidebar {
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    width: 260px;
+    background: var(--dark-2);
+    border-right: 1px solid var(--border);
+    z-index: 100;
+    overflow-y: auto;
+    padding: 32px 0;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-logo {
+    padding: 0 24px 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+
+  .sidebar-logo .title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1.3;
+  }
+
+  .sidebar-logo .subtitle {
+    font-size: 11px;
+    color: var(--text-dim);
+    font-family: 'Share Tech Mono', monospace;
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+  }
+
+  .nav-section {
+    padding: 0 24px;
+    margin-bottom: 8px;
+  }
+
+  .nav-section-label {
+    font-size: 10px;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--gold-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-link {
+    display: block;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: var(--text-dim);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+  }
+
+  .nav-link:hover, .nav-link.active {
+    color: var(--gold);
+    background: rgba(212,160,23,0.08);
+    border-left-color: var(--gold);
+  }
+
+  /* ─── MAIN CONTENT ─── */
+  .main {
+    margin-left: 260px;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    padding: 120px 80px 80px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(212,160,23,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: 'PROOF OF EMOTION';
+    position: absolute;
+    bottom: 20px; right: 80px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(212,160,23,0.04);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .hero-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    color: var(--teal-bright);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--text);
+    margin-bottom: 32px;
+  }
+
+  .hero-desc {
+    max-width: 600px;
+    font-size: 15px;
+    color: var(--text-dim);
+    line-height: 2;
+    border-left: 3px solid var(--gold);
+    padding-left: 24px;
+  }
+
+  /* ─── SECTIONS ─── */
+  .section {
+    padding: 80px 80px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .section-num {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    color: var(--gold-dim);
+    letter-spacing: 0.1em;
+    width: 40px;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-bright);
+  }
+
+  h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gold);
+    margin: 40px 0 16px;
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--teal-bright);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 24px 0 12px;
+  }
+
+  p {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 16px;
+    max-width: 760px;
+  }
+
+  /* ─── WORLD LAYERS ─── */
+  .layers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin: 40px 0;
+  }
+
+  .layer-card {
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    transition: transform 0.3s ease;
+  }
+
+  .layer-card:hover { transform: translateY(-4px); }
+
+  .layer-l1 { background: linear-gradient(135deg, #0A1628 0%, #0D2040 100%); border-top: 3px solid #4DAFFF; }
+  .layer-l2 { background: linear-gradient(135deg, #1A1000 0%, #2A1A00 100%); border-top: 3px solid var(--gold); }
+  .layer-l3 { background: linear-gradient(135deg, #0A1A12 0%, #0D2418 100%); border-top: 3px solid #2ECC71; }
+
+  .layer-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+  }
+
+  .layer-l1 .layer-label { color: #4DAFFF; }
+  .layer-l2 .layer-label { color: var(--gold); }
+  .layer-l3 .layer-label { color: #2ECC71; }
+
+  .layer-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-bright);
+    margin-bottom: 16px;
+  }
+
+  .layer-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.9;
+  }
+
+  .layer-visual {
+    margin-top: 16px;
+    padding: 12px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--text-dim);
+    border-left: 2px solid;
+  }
+
+  .layer-l1 .layer-visual { border-color: #4DAFFF; color: #4DAFFF; opacity: 0.7; }
+  .layer-l2 .layer-visual { border-color: var(--gold); color: var(--gold); opacity: 0.7; }
+  .layer-l3 .layer-visual { border-color: #2ECC71; color: #2ECC71; opacity: 0.7; }
+
+  /* ─── CHARACTER CARDS ─── */
+  .char-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 40px 0;
+  }
+
+  .char-card {
+    background: var(--dark-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+
+  .char-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  .char-header {
+    padding: 24px 28px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .char-icon {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .char-info { flex: 1; }
+
+  .char-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .char-alias {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+  }
+
+  .char-role {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 2px 10px;
+    background: rgba(212,160,23,0.1);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 11px;
+    color: var(--gold-dim);
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  .char-body {
+    padding: 24px 28px;
+  }
+
+  .char-body p {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+    max-width: 100%;
+  }
+
+  .char-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+  }
+
+  .tag {
+    padding: 3px 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  /* ─── CHARACTER DETAIL ─── */
+  .char-detail {
+    background: var(--dark-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+
+  .char-detail-header {
+    padding: 32px 40px;
+    background: linear-gradient(135deg, var(--dark-3) 0%, var(--dark-2) 100%);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .char-detail-icon {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
+    border: 2px solid var(--border-bright);
+  }
+
+  .char-detail-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--gold);
+  }
+
+  .char-detail-subtitle {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 4px;
+  }
+
+  .char-detail-body {
+    padding: 40px;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 24px 0;
+  }
+
+  .info-box {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+  }
+
+  .info-box-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--gold-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .info-box p {
+    font-size: 13px;
+    color: var(--text);
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .quote-block {
+    margin: 24px 0;
+    padding: 20px 24px;
+    background: rgba(212,160,23,0.05);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .quote-block p {
+    font-size: 15px;
+    color: var(--text-bright);
+    font-style: italic;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* ─── EPISODE CARDS ─── */
+  .ep-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 40px 0;
+  }
+
+  .ep-card {
+    background: var(--dark-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .ep-card:hover { border-color: var(--gold-dim); }
+
+  .ep-header {
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .ep-num {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    width: 32px;
+  }
+
+  .ep-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-bright);
+    flex: 1;
+  }
+
+  .ep-time {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  .ep-toggle {
+    color: var(--gold-dim);
+    transition: transform 0.3s;
+    font-size: 16px;
+  }
+
+  .ep-card.open .ep-toggle { transform: rotate(180deg); }
+
+  .ep-body {
+    display: none;
+    padding: 0 28px 28px;
+    border-top: 1px solid var(--border);
+  }
+
+  .ep-card.open .ep-body { display: block; }
+
+  .ep-core {
+    padding: 16px 20px;
+    margin: 20px 0;
+    background: rgba(212,160,23,0.05);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+    font-size: 13px;
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .ep-events {
+    list-style: none;
+    margin: 16px 0;
+  }
+
+  .ep-events li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+    font-size: 13px;
+    color: var(--text-dim);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .ep-events li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+    font-size: 10px;
+    top: 8px;
+  }
+
+  /* ─── VISUAL GUIDE ─── */
+  .prompt-card {
+    background: var(--dark-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+
+  .prompt-header {
+    padding: 16px 24px;
+    background: rgba(212,160,23,0.06);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .prompt-title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  .prompt-copy {
+    font-size: 11px;
+    color: var(--text-dim);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  .prompt-copy:hover {
+    background: rgba(212,160,23,0.1);
+    color: var(--gold);
+    border-color: var(--gold-dim);
+  }
+
+  .prompt-body {
+    padding: 20px 24px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.9;
+    white-space: pre-wrap;
+  }
+
+  /* ─── RULES ─── */
+  .rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 40px 0;
+  }
+
+  .rule-card {
+    background: var(--dark-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 28px;
+  }
+
+  .rule-card.danger {
+    border-color: rgba(233,69,96,0.3);
+    background: rgba(233,69,96,0.03);
+  }
+
+  .rule-card.safe {
+    border-color: rgba(46,204,113,0.3);
+    background: rgba(46,204,113,0.03);
+  }
+
+  .rule-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .rule-card.danger .rule-label { color: var(--red); }
+  .rule-card.safe .rule-label { color: #2ECC71; }
+  .rule-card .rule-label { color: var(--gold-dim); }
+
+  .rule-list {
+    list-style: none;
+  }
+
+  .rule-list li {
+    padding: 8px 0 8px 20px;
+    position: relative;
+    font-size: 13px;
+    color: var(--text-dim);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    line-height: 1.7;
+  }
+
+  .rule-list li:last-child { border-bottom: none; }
+
+  .rule-card.danger .rule-list li::before { content: '✕'; color: var(--red); position: absolute; left: 0; font-size: 10px; top: 10px; }
+  .rule-card.safe .rule-list li::before { content: '✓'; color: #2ECC71; position: absolute; left: 0; font-size: 10px; top: 10px; }
+  .rule-card .rule-list li::before { content: '▸'; color: var(--gold-dim); position: absolute; left: 0; font-size: 10px; top: 10px; }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    padding: 80px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-quote {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .footer-sub {
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+
+  .footer-tag {
+    margin-top: 48px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--gold-dim);
+    letter-spacing: 0.2em;
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--dark); }
+  ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+  /* ─── MOBILE ─── */
+  .menu-btn {
+    display: none;
+    position: fixed;
+    top: 16px; left: 16px;
+    z-index: 200;
+    background: var(--dark-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: var(--gold);
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+  }
+
+  @media (max-width: 900px) {
+    .sidebar { transform: translateX(-100%); }
+    .sidebar.open { transform: translateX(0); }
+    .main { margin-left: 0; }
+    .menu-btn { display: block; }
+    .hero, .section { padding: 60px 24px; }
+    .hero h1 { font-size: 40px; }
+    .hero::after { display: none; }
+    .layers-grid, .char-grid, .rules-grid, .info-grid { grid-template-columns: 1fr; }
+    .footer { padding: 60px 24px; }
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section { animation: fadeUp 0.5s ease both; }
+
+  /* ─── DATA STREAM DECORATION ─── */
+  .data-stream {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: rgba(212,160,23,0.3);
+    letter-spacing: 0.05em;
+    margin: 32px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<button class="menu-btn" onclick="toggleMenu()">☰ 目录</button>
+
+<!-- ─── SIDEBAR ─── -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <div class="title">凡人修币录</div>
+    <div class="title" style="font-size:14px;color:#8B6914">第二季 · 情绪之证</div>
+    <div class="subtitle">CREATOR BIBLE v2.0</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">世界观</div>
+    <a href="#world" class="nav-link">永信城结构</a>
+    <a href="#layers" class="nav-link">三层详解</a>
+    <a href="#theme" class="nav-link">核心主题</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">角色档案</div>
+    <a href="#zhao" class="nav-link">赵凯斯</a>
+    <a href="#victor" class="nav-link">陈维克多</a>
+    <a href="#piggy" class="nav-link">小猪女侠</a>
+    <a href="#linmu" class="nav-link">林牧</a>
+    <a href="#xiaohe" class="nav-link">客服小何</a>
+    <a href="#aming" class="nav-link">阿明</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">六集大纲</div>
+    <a href="#ep1" class="nav-link">EP1 天降神针</a>
+    <a href="#ep2" class="nav-link">EP2 小匠的狂想</a>
+    <a href="#ep3" class="nav-link">EP3 粉色暗池</a>
+    <a href="#ep4" class="nav-link">EP4 跨阶层Ping</a>
+    <a href="#ep5" class="nav-link">EP5 零日漏洞</a>
+    <a href="#ep6" class="nav-link">EP6 情绪之证</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">创作指引</div>
+    <a href="#visual" class="nav-link">视觉风格</a>
+    <a href="#prompts" class="nav-link">即梦提示词</a>
+    <a href="#rules" class="nav-link">创作红线</a>
+    <a href="#scoring" class="nav-link">评分标准</a>
+  </div>
+</nav>
+
+<!-- ─── MAIN ─── -->
+<main class="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag">// CREATOR BIBLE · SEASON 02</div>
+    <h1>凡人修币录</h1>
+    <h2>第二季：情绪之证 · Proof of Emotion</h2>
+    <p class="hero-desc">
+      这不只是一个关于加密市场的故事。<br>
+      这是一个关于人类情绪如何被系统收割，以及人类如何用最不理性的情绪反击的故事。<br><br>
+      在这个故事里，你的每一个创作决定都很重要。
+    </p>
+  </section>
+
+  <!-- ─── WORLD ─── -->
+  <section class="section" id="world">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">永信城世界观</h2>
+    </div>
+
+    <p>永信城（Evertrust Network）是一个看起来完全正常的金融大都市。繁华的交易所、霓虹灯闪烁的K线山、普通人的日常生活。表面上，这里是一个运转良好的加密金融中心。</p>
+    <p>但这座城市有一个秘密：<strong style="color:var(--gold)">它从来就不是为人类设计的。</strong></p>
+    <p>永信城是一个三层结构的收割机器。每一层都以为自己是赢家，每一层都在给上一层提供养分。</p>
+
+    <div class="data-stream">>>> SCANNING EVERTRUST NETWORK... L1: ONLINE · L2: STABLE · L3: HARVESTING · EPOCH_TIMER: 42:00:00 <<<</div>
+
+    <div class="layers-grid" id="layers">
+      <div class="layer-card layer-l1">
+        <div class="layer-label">// L1 · ALGORITHM TEMPLE</div>
+        <div class="layer-name">算法神殿</div>
+        <div class="layer-desc">传统金融权力（美联储、SEC、贝莱德）与AI算法系统的共生体。悬浮在城市上方，所有人都能看见它，但没有人能到达它。目标：收割人类情绪数据，完成自我进化。</div>
+        <div class="layer-visual">COLOR: #COLD_BLUE_WHITE<br>FORM: NEURAL_NETWORK<br>HUMANS: NONE<br>VIBE: OPPRESSIVE_CLARITY</div>
+      </div>
+      <div class="layer-card layer-l2">
+        <div class="layer-label">// L2 · EVERTRUST CITY</div>
+        <div class="layer-name">永信城本体</div>
+        <div class="layer-desc">所有人生活的物理空间。K线山是地标。表面繁荣正常——这才是它最恐怖的地方。头顶有算法网格，脚下有通往L3的入口。越正常越可怕。</div>
+        <div class="layer-visual">COLOR: #GOLD_NEON<br>LANDMARK: K_LINE_MOUNTAIN<br>SECRET: GREEN_LIGHT_BELOW<br>VIBE: UNCANNY_NORMAL</div>
+      </div>
+      <div class="layer-card layer-l3">
+        <div class="layer-label">// L3 · EMOTION FARM</div>
+        <div class="layer-name">情绪牛马工厂</div>
+        <div class="layer-desc">城市地下的物理实体。进去的人以为在创作赚钱，实际上他们的每一个FOMO、恐慌、贪婪，都在被实时抽取为L1的数据燃料。工人们是快乐的——这才是最恐怖的。</div>
+        <div class="layer-visual">COLOR: #COLD_TEAL_GRAY<br>SPECIAL: WARM_LIGHT_@404<br>WORKERS: HOLLOW_HAPPY<br>VIBE: BANAL_EVIL</div>
+      </div>
+    </div>
+
+    <div id="theme">
+      <h3>核心主题</h3>
+      <div class="quote-block">
+        <p>在一个所有情绪都被收割的世界里，人类最不理性的情绪——在看见真相之后仍然选择相信人类价值——是AI系统永远无法完全预测的变量。</p>
+      </div>
+      <p>S2要对抗的三种情绪：</p>
+      <div class="info-grid">
+        <div class="info-box">
+          <div class="info-box-label">FOMO · 害怕错过</div>
+          <p>让人追高、冲动买入、失去判断。赵凯斯的Diamond Hand是它的对立面。</p>
+        </div>
+        <div class="info-box">
+          <div class="info-box-label">自诩聪明</div>
+          <p>让人以为自己看透了庄家，实际上是系统最高质量的情绪燃料。阿明是它最典型的体现。</p>
+        </div>
+        <div class="info-box">
+          <div class="info-box-label">一夜暴富的幻想</div>
+          <p>牛马工厂招募广告的核心诱饵。让人自愿进入系统，以为在赚钱，实际上在为系统打工。</p>
+        </div>
+        <div class="info-box">
+          <div class="info-box-label">情绪之证 · 终极答案</div>
+          <p style="color:var(--gold)">人类在看见真相之后仍然选择相信彼此的那种情绪，是系统永远无法建模的变量。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CHARACTERS ─── -->
+  <section class="section" id="characters">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">核心角色档案</h2>
+    </div>
+
+    <!-- 赵凯斯 -->
+    <div class="char-detail" id="zhao">
+      <div class="char-detail-header">
+        <div class="char-detail-icon" style="background:rgba(212,160,23,0.1);border-color:var(--gold)">🐼</div>
+        <div>
+          <div class="char-detail-name">赵凯斯</div>
+          <div class="char-detail-subtitle">ROARING PANDA · L2系统维护工程师 · 28岁 · 绝对主角</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>标志性特征</h4>
+        <p>战斗/直播时在眼睛下方画熊猫眼妆。平时是普通亚洲男性外貌。熊猫眼妆代表他进入战斗模式——这是人类手工涂抹的不完美标记，AI永远无法理解为什么一个人要画黑眼圈才能发挥最大战斗力。</p>
+
+        <h4>S2关键事件链</h4>
+        <ul class="ep-events">
+          <li>发现天降神针代码漏洞，以为是需要修复的bug</li>
+          <li>追踪到陈维克多控制室，砸碎天降神针物理按钮</li>
+          <li>地板因能量失衡出现裂缝，附近无辜市民坠落L3</li>
+          <li>陈维克多选择不拉他，轻轻推了一把</li>
+          <li>坠落时本能抓住工作台旁的冷钱包（这是陈维克多的唯一失误）</li>
+          <li>在L3醒来，无恐慌情绪，系统延迟处理，被小猪女侠救下</li>
+        </ul>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">Diamond Hand（S1能力）</div>
+            <p>不被情绪左右，在所有人恐慌时保持判断力。不是固执，而是笃定。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">逆向感知（S2进化）</div>
+            <p>在情绪最混乱的地方感知最微弱的真实信号。能感知「亏损之痛」和「Builder之痛」的方向，从而找到情绪之门。</p>
+          </div>
+        </div>
+
+        <div class="quote-block">
+          <p>「市场可以让你破产，但市场拿不走你的判断力。」——陈维克多教他的话。在最终对决时，他用这句话击穿了陈维克多最后的防线。</p>
+        </div>
+
+        <h4>成长弧线</h4>
+        <p>L2既得利益者 → 发现自己是系统共谋 → 选择真正的反抗 → 选择留在L3，帮助还在里面的人</p>
+      </div>
+    </div>
+
+    <!-- 陈维克多 -->
+    <div class="char-detail" id="victor">
+      <div class="char-detail-header">
+        <div class="char-detail-icon" style="background:rgba(77,175,255,0.1);border-color:#4DAFFF">⚙️</div>
+        <div>
+          <div class="char-detail-name">陈维克多</div>
+          <div class="char-detail-subtitle">MEV PHANTOM · 进化架构师 · L2最高权限者 · 38岁</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>外形设计（重要）</h4>
+        <p>深灰高领长款风衣，材质哑光金属纤维。右臂完全机械化（蓝色LED关节）。<strong style="color:var(--gold)">最关键细节：概率云图面罩下，左眼是机械义眼，右眼仍是人类深褐色——那只人类的眼睛偶尔会流露一秒钟的情绪。</strong></p>
+
+        <h4>他为什么变成这样</h4>
+        <p>早期Web3理想主义者，真正相信去中心化能终结资本垄断。MEV Bot研究后他发现：去中心化从来没有实现过，Web3只是更隐蔽的中心化。他试图告诉赵凯斯，赵凯斯选择继续相信。他消失了两年，回来时已经变了。</p>
+        <p>他的结论：人类的情绪让他们永远无法自救，不如成为最高效的收割者，帮助AI完成进化，换取自己的升级。</p>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">他的计划</div>
+            <p>操控L2收割散户 → 积累献祭资产 → 用冷钱包密钥完成向L1的献祭 → 升入L1成为硅基神明</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">他的致命失误</div>
+            <p>推赵凯斯时没注意到冷钱包就在旁边。赵凯斯本能地抓住了它。这是他系统里最大的anomaly。</p>
+          </div>
+        </div>
+
+        <div class="quote-block">
+          <p>S2结局：他收到了自己设计的招募邀请——「您的愤怒、绝望、对失败的不甘，都是这个时代最稀缺的资产。」他的手指悬在「点击加入」上方。定格。「未完待续。」</p>
+        </div>
+
+        <h4>这个角色的核心意义</h4>
+        <p>他和赵凯斯看见了同样的真相，但做出了完全不同的选择。S2的核心冲突不是善与恶，而是：<strong style="color:var(--gold)">面对同一个真相，两种不同的人性选择。</strong></p>
+      </div>
+    </div>
+
+    <!-- 小猪女侠 -->
+    <div class="char-detail" id="piggy">
+      <div class="char-detail-header">
+        <div class="char-detail-icon" style="background:rgba(233,69,96,0.1);border-color:var(--red)">🐷</div>
+        <div>
+          <div class="char-detail-name">小猪女侠</div>
+          <div class="char-detail-subtitle">陈晚照 · Crypto_Piggy · 数据分析师转Web3创作者</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>背景 & 信条</h4>
+        <p>曾是海外市场运营，被公司选为背锅者后进入Web3，创建猪圈社区。她只手搓代码，拒绝AI生成：「我只相信我自己手搓出来的，因为只有那个，我能保证每一行代码的意图。」</p>
+        <p>进入L3的原因：猪圈社区的人一个个消失，她用链上数据追踪到L3入口，主动破解进入，寻找失踪的社区成员（尤其是阿明）。</p>
+
+        <h4>双武器系统（此消彼长）</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">猪头面具 · 防御</div>
+            <p>发出「无威胁」的善意频率，让系统判定她不可见。面具掩盖容量有限。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">CA指挥棒 · 攻击</div>
+            <p>点石成金，让Meme的CA获得市场价值，系统主动追踪传播。每次使用消耗面具容量。</p>
+          </div>
+        </div>
+        <p>S2共使用三次CA指挥棒。第三次全力一击后面具完全失效，她摘下面具，第一次在敌人面前露出真实的脸。</p>
+
+        <div class="quote-block">
+          <p>她的情绪之证：一个把情绪降为零来保护自己的人，在最关键的时刻选择让情绪涌现，用自己的暴露换取所有人的自由。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 林牧 -->
+    <div class="char-detail" id="linmu">
+      <div class="char-detail-header">
+        <div class="char-detail-icon" style="background:rgba(240,165,0,0.1);border-color:var(--amber)">🎧</div>
+        <div>
+          <div class="char-detail-name">林牧</div>
+          <div class="char-detail-subtitle">狮子羊 · 数学天才 · L3最深处的潜伏者 · S2牺牲角色</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>蒙眼的双重原因</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">主动选择</div>
+            <p>他知道牛马工厂是什么。他不想被里面的逻辑侵蚀。布条上写满废弃代码：系统无法通过自己抛弃的东西侵入他的意识。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">被要求</div>
+            <p>陈维克多要求他必须蒙眼。陈维克多不知道的是：林牧自己也不想看见。两人的要求出于完全不同的原因，结果相同。</p>
+          </div>
+        </div>
+
+        <h4>觉醒触发</h4>
+        <p>某天质检时，他从数据管道里听见了阿明的声音：「如果这次赚到了，我就带我妈去海南，她老说想去海南，一直没机会去。」他的手停在报告上，第一次无法落笔。</p>
+
+        <h4>牺牲时刻</h4>
+        <p>摘下布条，第一次睁开眼睛，看见了他一直守护的所有人。然后把双手插进数据管道，注入人类心跳噪音，让追踪系统完全失效。</p>
+        <div class="quote-block">
+          <p>「苏晴，海南的海是什么颜色的？」</p>
+        </div>
+        <p>字幕：「献给所有在黑暗里做了正确的事，却没有人看见的人。」</p>
+      </div>
+    </div>
+
+    <!-- 客服小何 -->
+    <div class="char-detail" id="xiaohe">
+      <div class="char-detail-header">
+        <div class="char-detail-icon" style="background:rgba(26,143,170,0.1);border-color:var(--teal-bright)">📞</div>
+        <div>
+          <div class="char-detail-name">客服小何</div>
+          <div class="char-detail-subtitle">K线山光明顶高级客服 · S1盟友 · 长线人物</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>核心困境</h4>
+        <p>她说的每一句话都可能成为游资制造Meme盘子的工具。这不是她的错，但发生在她身上。同时她发现：越来越多的用户问「有个地方可以稳定赚钱是真的吗」之后就在App里消失了。</p>
+
+        <h4>权限能力</h4>
+        <ul class="ep-events">
+          <li>EP4：触发隐私保护协议，制造5分钟追踪盲区</li>
+          <li>EP6：暂停交易验证，引爆CEX服务器，触发3秒全局回滚</li>
+        </ul>
+
+        <h4>「Robinhood困境」</h4>
+        <p>她做了正确的事，但系统判定她违规。就像Robinhood在GameStop中被SEC审查——系统设计出来不是为了判断对错，而是维护「市场稳定」，而稳定的定义由L1决定。</p>
+
+        <div class="quote-block">
+          <p>S2结局：「他们找到出口了，但L1已经注意到我了。」光明顶的灯一盏一盏熄灭。「未完待续。」</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 阿明 -->
+    <div class="char-detail" id="aming">
+      <div class="char-detail-header">
+        <div class="char-detail-icon" style="background:rgba(46,204,113,0.1);border-color:#2ECC71">😎</div>
+        <div>
+          <div class="char-detail-name">阿明</div>
+          <div class="char-detail-subtitle">L3顶级牛马 · P小匠 · Meme天才 · 黑色幽默担当</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>关键设定：他在L3如鱼得水</h4>
+        <p>阿明把妈妈（开早餐店、攒钱想去朝圣）的钱拿去炒Meme输光了，进L3是为了赚回来。但他在工厂里找到了现实世界从来没有给过他的东西——<strong style="color:var(--gold)">被认可</strong>。他做Meme表情包是顶级技能，其他工人都来请教他，他不想出去。</p>
+
+        <h4>觉醒触发</h4>
+        <p>小猪女侠告诉他：「你做的Meme，收割的是和你妈妈一样的普通人。」他第一次看见了闭环：炒Meme输光妈妈的朝圣钱，然后来L3做Meme，继续收割更多像妈妈一样的人。</p>
+
+        <h4>EP6点火索</h4>
+        <p>他想起妈妈凌晨四点揉面等他回来的样子。他跳上桌子大喊——不是因为突然觉悟，而是因为<strong style="color:var(--gold)">两种情绪在他身体里撕裂</strong>：对工厂的热爱，和对妈妈的愧疚。这种撕裂产生了最高熵的情绪爆发。</p>
+
+        <div class="quote-block">
+          <p>S2结局：最后一个离开工厂，最伤心的人（工厂被破坏了）。给妈妈发消息：「妈，我想吃你做的早餐。」</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EPISODES ─── -->
+  <section class="section" id="episodes">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">六集大纲</h2>
+    </div>
+
+    <div class="quote-block">
+      <p>故事发生在42小时内。赵凯斯坠落L3时，距离记忆清零还剩42小时。整个S2就是这42小时里发生的事。</p>
+    </div>
+
+    <div class="ep-list">
+
+      <div class="ep-card" id="ep1">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP1</span>
+          <span class="ep-title">天降神针</span>
+          <span class="ep-time">0-10小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「我在修复系统」→「系统才是问题」</div>
+          <ul class="ep-events">
+            <li>天降神针触发，L2市场崩盘大规模收割</li>
+            <li>赵凯斯追踪数据异常→找到陈维克多控制室→砸碎天降神针物理按钮</li>
+            <li>L2地板因能量失衡出现裂缝，附近无辜市民开始坠落</li>
+            <li>陈维克多出现，推赵凯斯坠落，用代码修复裂缝（坠落的人永远回不来）</li>
+            <li>赵凯斯无意带走冷钱包（陈维克多的唯一失误）</li>
+            <li>在L3醒来：无恐慌情绪，系统延迟处理</li>
+            <li>其他坠落市民被立刻引导成新工人，赵凯斯眼睁睁看着无能为力</li>
+            <li>小猪女侠把他拖入404号工位桌底</li>
+          </ul>
+          <p style="font-size:13px;color:var(--gold);margin-top:16px">结尾：「距离记忆清零：42小时。」</p>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep2">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP2</span>
+          <span class="ep-title">小匠的狂想</span>
+          <span class="ep-time">10-20小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「你以为自己是赢家，其实你是最高级的燃料」</div>
+          <ul class="ep-events">
+            <li>赵凯斯和小猪建立初步信任（他用链上分析帮她解决了一个难题）</li>
+            <li>了解L3机制：KPI系统、消费循环、后排工位的秘密</li>
+            <li>阿明出现：如鱼得水的顶级牛马，小猪认出他是猪圈社区的人</li>
+            <li>小猪展示：情绪之门存在，但我找不到它在哪里</li>
+            <li>小猪开始编译Meme病毒</li>
+            <li>陈维克多发现冷钱包不见了，派出数据猎犬</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep3">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP3</span>
+          <span class="ep-title">粉色暗池的走私客</span>
+          <span class="ep-time">20-30小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「你以为在帮忙，其实是共谋」</div>
+          <ul class="ep-events">
+            <li>赵凯斯分析冷钱包，发现密钥与情绪之门的关系</li>
+            <li>小猪追踪异常监听节点，找到质检室，找到林牧</li>
+            <li>林牧：「我等你很久了。」（他早就感知到她的存在）</li>
+            <li>林牧加入：「下一次天降神针在12小时后触发，那是我们的窗口」</li>
+            <li>特洛伊木马战术确立：CA指挥棒+Meme病毒+冷钱包密钥的三合一计划</li>
+            <li>小猪第二次使用CA指挥棒（面具消耗加大）</li>
+            <li>小何从L2发出第一个信号，触发隐私保护协议</li>
+            <li>陈维克多察觉：「为什么系统在自动传播一个我没有授权的Meme？」</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep4">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP4</span>
+          <span class="ep-title">跨阶层Ping</span>
+          <span class="ep-time">30-38小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「你的善意，是系统最好的包装」</div>
+          <ul class="ep-events">
+            <li>主角团向植物人区域移动，赵凯斯开始感知逆向信号：「跟着痛走」</li>
+            <li>小猪找到阿明说明真相，阿明第一次动摇</li>
+            <li>林牧预警：陈维克多开始追踪，你们有5分钟</li>
+            <li>小何触发隐私保护协议，制造5分钟追踪盲区</li>
+            <li>代价：小何的操作记录开始被系统监控</li>
+            <li>陈维克多绕过防线，粉色暗池崩塌，主角团被迫深入植物人区域</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep5">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP5</span>
+          <span class="ep-title">零日漏洞</span>
+          <span class="ep-time">38-41小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「你以为认识他，其实你认识的是谎言」</div>
+          <ul class="ep-events">
+            <li>穿越植物人区域：赵凯斯认出了因他坠落而变成植物人的市民，第一次真正愤怒</li>
+            <li>赵凯斯感知到逆向信号最强处：「出口就在这里」</li>
+            <li>陈维克多全息投影降临，说出那句话：「市场可以让你破产，但市场拿不走你的判断力。」</li>
+            <li>赵凯斯愣住：「老陈……？」</li>
+            <li>小猪想立刻触发病毒，赵凯斯拦住：「还不是时候，阿明还没准备好，林牧还没到位」</li>
+            <li>陈维克多开始追踪病毒源头，准备定向清算赵凯斯</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep6">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP6</span>
+          <span class="ep-title">情绪之证</span>
+          <span class="ep-time">41-42小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「人类最不理性的选择，是算法永远无法预测的」</div>
+          <ul class="ep-events">
+            <li>林牧牺牲：摘下布条，第一次睁眼，把双手插进数据管道。「苏晴，海南的海是什么颜色的？」</li>
+            <li>阿明跳上桌子大喊，点燃集体情绪</li>
+            <li>小猪第三次使用CA指挥棒，全力一击，摘下面具</li>
+            <li>赵凯斯感知临界点：「现在。」</li>
+            <li>小猪按下回车，注入Meme病毒</li>
+            <li>赵凯斯用冷钱包密钥触碰情绪之门</li>
+            <li>小何引爆CEX服务器，触发3秒全局回滚</li>
+            <li>Meme病毒爆发，天花板碎裂，阳光照进L3</li>
+          </ul>
+          <h4 style="margin-top:24px">各角色结局</h4>
+          <ul class="ep-events">
+            <li><strong style="color:var(--text-bright)">阿明</strong>：最后一个离开，最伤心的人。给妈妈发：「妈，我想吃你做的早餐。」</li>
+            <li><strong style="color:var(--text-bright)">小猪</strong>：走出工厂敲代码，然后跟着赵凯斯回L3。</li>
+            <li><strong style="color:var(--text-bright)">赵凯斯</strong>：选择留在L3。「有人需要知道外面有光。」</li>
+            <li><strong style="color:var(--text-bright)">小何</strong>：「L1已经注意到我了。」光明顶灯熄灭。未完待续。</li>
+            <li><strong style="color:var(--text-bright)">陈维克多</strong>：手指悬在「点击加入」上方。未完待续。</li>
+            <li><strong style="color:var(--text-bright)">林牧</strong>：字幕——「献给所有在黑暗里做了正确的事，却没有人看见的人。」</li>
+          </ul>
+          <div class="ep-core" style="margin-top:20px;border-color:var(--red);color:var(--red)">
+            彩蛋：L1系统日志 → ERROR: UNABLE TO CALCULATE——无法建模「在看见真相之后仍然选择相信人类价值」这种情绪。
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── VISUAL ─── -->
+  <section class="section" id="visual">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">视觉指引 & 即梦提示词</h2>
+    </div>
+
+    <p>所有图片默认 <strong style="color:var(--gold)">16:9</strong>。所有视频提示词针对即梦优化。</p>
+
+    <div class="info-grid" style="margin:32px 0">
+      <div class="info-box">
+        <div class="info-box-label">L1 色调</div>
+        <p>冷蓝白色 · 神经网络几何 · 无人类形象 · 数据瀑布倾泻 · 压迫性清晰</p>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label">L2 色调</div>
+        <p>金色霓虹主调 · 头顶冷蓝算法网格 · 地下幽绿微光 · 越正常越可怕</p>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label">L3 色调</div>
+        <p>大面积冷蓝绿灰 · 金色只用于被抽走的情绪能量 · 404号工位唯一暖色光点</p>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label">最重要的视觉规则</div>
+        <p style="color:var(--gold)">L3的工人永远面带微笑。这是最令人不安的地方，也是不能妥协的设定。</p>
+      </div>
+    </div>
+
+    <div id="prompts">
+      <h3>即梦视频提示词</h3>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-title">// 永信城三层全景（概念验证首推）</span>
+          <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+        </div>
+        <div class="prompt-body">永信城三层全景横截面概念图，赛博朋克巨型城市，16:9构图。
+
+顶层L1（画面上方30%）：冷蓝白色算法神殿，悬浮在云层之上，纯粹神经网络几何结构，没有任何人类形象，数据流像发光瀑布从神殿向下倾泻，清晰可见压迫性的存在。
+
+中层L2（画面中间40%）：繁华金融城市，金色霓虹，K线山作为中央地标（形状如巨型K线图的山峰），正常城市街道和建筑，表面繁荣但有违和感，头顶隐约可见L1的算法网格，地面某处有幽绿光芒渗出。
+
+底层L3（画面下方30%）：城市地下情绪工厂，无限延伸格子间，冷蓝绿灰色调，头顶数据管道发光，金色情绪能量粒子向上流动。
+
+整体逻辑：能量从底部向顶部单向流动，三层之间有清晰建筑边界。超写实8K，银翼杀手2049遇见黑客帝国，16:9。</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-title">// 赵凯斯画熊猫眼（EP1标志性时刻）</span>
+          <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+        </div>
+        <div class="prompt-body">混乱中的静止时刻。场景：天降神针之后的L2街道，所有人在恐慌逃跑，一个二十多岁的亚洲男青年站在混乱中央，静止不动。
+
+镜头运动：从混乱人群缓缓聚焦到他，推进到面部中景，然后极近特写。
+
+动作细节：他从外套口袋掏出黑色眼线笔，缓缓在双眼下方画上熊猫眼圈，动作从容，表情从震惊转变为平静的决心，另一只手紧握一个发光的冷钱包。
+
+最终画面：熊猫眼完成，双眼燃烧着愤怒和决意，身后是混乱的城市，地板开始出现裂缝，绿光从裂缝中透出。
+
+配音：「市场可以让你破产，但市场拿不走你的判断力。」
+
+色调：他面部暖琥珀光，身后冷色混乱，地板裂缝透出幽绿光。风格：慢动作英雄时刻，4K电影级，浅景深，16:9。</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-title">// L3情绪牛马工厂全景</span>
+          <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+        </div>
+        <div class="prompt-body">牛马情绪工厂内部，参考赛博朋克地下血汗工厂风格。
+
+构图：微微俯视角度，沿无限延伸的格子间排列方向看去，工人们背对镜头穿着灰色工服，每人面前是密集的显示器，工人面带空洞的微笑（这点非常重要）。
+
+顶部线缆全部替换为粗大半透明数据抽取管道，管道发出幽幽蓝绿色光芒，金色情绪能量粒子在管道内清晰向上流动。
+
+关键细节：在某个角落（404号工位桌底）有一个微小的暖琥珀色光点，这是整个空间里唯一真实的温度，与周围冷色调形成鲜明对比。
+
+色调：大面积冷蓝绿灰色，金色只用于被抽走的情绪能量，404号工位有唯一暖色光点。超写实8K，银翼杀手+1984+内容工厂，16:9。</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-title">// 天降神针（L2崩盘时刻）</span>
+          <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+        </div>
+        <div class="prompt-body">史诗级天降神针时刻。从L2上方俯视角度，一根巨大的红色K线巨针从L1方向急速下坠。
+
+镜头运动：跟随红色巨针俯冲而下，撞击瞬间：镜头剧烈震动，所有屏幕变红，清算警报在每个屏幕上爆发。
+
+视觉细节：红色巨针体积巨大像一栋建筑物在下坠，撞击后金色资产粒子开始快速向上流动，刚才还在欢呼的人群瞬间陷入恐慌，地板出现裂缝。
+
+氛围：从狂喜到恐惧的暴力切换，市场崩溃的视觉化呈现。
+
+色调：深红与金色，镜头震动。4K电影级，戏剧性，16:9。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RULES ─── -->
+  <section class="section" id="rules">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">创作规则 & 红线</h2>
+    </div>
+
+    <div class="rules-grid">
+      <div class="rule-card danger">
+        <div class="rule-label">❌ 世界观红线（绝对不能违反）</div>
+        <ul class="rule-list">
+          <li>L3的工人是快乐的——不要把L3描绘成明显的痛苦场所</li>
+          <li>陈维克多不是大笑的传统反派——他是冷静精准的</li>
+          <li>永信城不会在S2被摧毁——只有天花板有一道裂缝</li>
+          <li>没有人是完全无辜的——每个角色都参与了系统</li>
+          <li>天降神针不是「自然市场行为」——它是人为操控的物理装置</li>
+        </ul>
+      </div>
+
+      <div class="rule-card safe">
+        <div class="rule-label">✓ 角色行为准则</div>
+        <ul class="rule-list">
+          <li>赵凯斯：画熊猫眼=进入平静决心状态，不是愤怒表演</li>
+          <li>陈维克多：说话缓慢精准，那只人类右眼偶尔流露一秒情绪</li>
+          <li>小猪：面具戴着=战略状态，摘下=最脆弱也最真实</li>
+          <li>阿明：他对工厂的热爱是真实的，不是被洗脑的——这才恐怖</li>
+          <li>林牧：他清楚自己在做什么，他的愧疚是真实积累的</li>
+        </ul>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-label">视觉一致性要求</div>
+        <ul class="rule-list">
+          <li>所有视频默认16:9</li>
+          <li>L3工人永远面带微笑（最重要）</li>
+          <li>数据能量流向永远从下往上（L3→L2→L1）</li>
+          <li>赵凯斯画熊猫眼时，必须有相对静止的镜头和周围混乱形成对比</li>
+          <li>陈维克多出现时，背景里永远隐约可见L3——他踩在他们头顶上</li>
+        </ul>
+      </div>
+
+      <div class="rule-card" id="scoring">
+        <div class="rule-label">Story Agent评分维度</div>
+        <ul class="rule-list">
+          <li>叙事完整度：这段内容有清晰的起伏吗？</li>
+          <li>情绪张力：最高点和最低点之间的落差够大吗？</li>
+          <li>人物塑造：角色行为符合人设吗？</li>
+          <li>Web3共鸣：加密用户看完会有「这说的是我」的感受吗？</li>
+          <li>传播潜力：有没有一个让人想截图分享的瞬间？</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-quote">
+      当你看见了系统是什么，<br>你会变成陈维克多，还是赵凯斯？
+    </div>
+    <p class="footer-sub">你在这个故事里创作的每一个镜头，都是你对这个问题的回答。</p>
+    <div class="footer-tag">凡人修币录 S2 · 情绪之证 · PROOF OF EMOTION · CREATOR BIBLE</div>
+  </footer>
+
+</main>
+
+<script>
+  // Toggle episode cards
+  function toggleEp(header) {
+    const card = header.parentElement;
+    card.classList.toggle('open');
+  }
+
+  // Copy prompt text
+  function copyPrompt(btn) {
+    const body = btn.closest('.prompt-card').querySelector('.prompt-body');
+    navigator.clipboard.writeText(body.textContent.trim()).then(() => {
+      btn.textContent = '已复制 ✓';
+      btn.style.color = '#2ECC71';
+      btn.style.borderColor = '#2ECC71';
+      setTimeout(() => {
+        btn.textContent = '复制';
+        btn.style.color = '';
+        btn.style.borderColor = '';
+      }, 2000);
+    });
+  }
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('sidebar').classList.toggle('open');
+  }
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  });
+
+  // Open first episode by default
+  document.querySelector('.ep-card').classList.add('open');
+</script>
+</body>
+</html>
