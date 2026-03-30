@@ -771,9 +771,6 @@
 
   <div class="nav-section">
     <div class="nav-section-label">创作指引</div>
-    <a href="#recruitment" class="nav-link">招工广告 & 面试</a>
-    <a href="#ep1-scenes" class="nav-link">EP1 场景包</a>
-    <a href="ep1_render_list.html" class="nav-link" style="color:var(--teal-bright);border-color:rgba(26,143,170,0.4);font-size:10px">📋 渲染需求清单</a>
     <a href="#prompts" class="nav-link">即梦提示词</a>
     <a href="#rules" class="nav-link">创作红线</a>
     <a href="#scoring" class="nav-link">评分标准</a>
@@ -826,7 +823,8 @@
       </div>
     </div>
 
-    <div id="theme">
+    <h2 style="font-family:'Noto Serif SC',serif;font-size:18px;color:var(--gold);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border)">核心主题</h2>
+      <div id="theme" style="margin-top:32px">
       <h3>核心主题</h3>
       <div class="quote-block">
         <p>在一个所有情绪都被收割的世界里，人类最不理性的情绪——在看见真相之后仍然选择相信人类价值——是AI系统永远无法完全预测的变量。</p>
@@ -850,7 +848,7 @@
         </div>
       </div>
 
-      <h3>永信城重要区域</h3>
+      <h3 id="world-areas">永信城重要区域</h3>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0">
 
@@ -933,8 +931,10 @@
 
       <hr style="border:none;border-top:1px solid var(--border);margin:40px 0">
 
+      <h2 style="font-family:'Noto Serif SC',serif;font-size:18px;color:var(--gold);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border)">核心设定</h2>
+
       <!-- 隐藏机制 -->
-      <h3 id="hidden-system">永信城隐藏机制 · 情绪感知网络</h3>
+      <h3 id="hidden-system">情绪感知网络</h3>
       <div class="quote-block">
         <p>整个永信城是一台巨大的情绪收割机。天降神针是终点，但收割从你踏入这座城市的第一秒就已经开始了。</p>
       </div>
@@ -1107,10 +1107,905 @@
     </div>
   </section>
 
+
+
+  <section class="section" id="characters">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">角色档案</h2>
+    </div>
+
+    <!-- 赵凯斯 -->
+    <div class="char-detail" id="zhao">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(212,160,23,0.1);border-color:var(--gold)">🐼</div>
+        <div>
+          <div class="char-detail-name">赵凯斯</div>
+          <div class="char-detail-subtitle">ROARING PANDA · L2系统维护工程师 · 28岁 · 绝对主角</div>
+        </div>
+      </div>
+      <div class="char-images">
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/xS6tvdLT/L2.png')">
+          <img src="https://i.ibb.co/xS6tvdLT/L2.png" alt="赵凯斯L2版">
+          <div class="char-image-label">// L2 正常状态</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/0p37YznK/L3.png')">
+          <img src="https://i.ibb.co/0p37YznK/L3.png" alt="赵凯斯L3战斗版">
+          <div class="char-image-label">// L3 战斗状态（熊猫眼）</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/LDZvhXDL/image.png')">
+          <img src="https://i.ibb.co/LDZvhXDL/image.png" alt="赵凯斯正常">
+          <div class="char-image-label">// S1 参考风格</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>形象特征</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">正常状态</div>
+            <p>黑色蓬松竖发·黑框方形眼镜·黑色皮夹克（金色细节）·Diamond Hands T恤·战术背包·编织手环·右手握发光冷钱包</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">战斗状态（熊猫眼）</div>
+            <p>摘下眼镜·眼睛下方黑色油彩熊猫眼妆（晕染感）·脸上轻微灰尘·皮夹克有破损·表情平静的决心</p>
+          </div>
+        </div>
+        <h4>核心能力</h4>
+        <p><strong style="color:var(--gold)">Diamond Hand：</strong>不被情绪左右，市场越跌越坚定。</p>
+        <p><strong style="color:var(--gold)">逆向感知（S2进化）：</strong>画上熊猫眼后能感知「亏损之痛」和「Builder之痛」的逆向信号，找到情绪之门方向。左眼金色感知L2，右眼绿色感知L3。</p>
+        <div class="quote-block">
+          <p>「市场可以让你破产，但市场拿不走你的判断力。」——陈维克多教他的话，也是最终击穿陈维克多的话。</p>
+        </div>
+        <h4>即梦提示词</h4>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// L2正常状态</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
+二十八岁亚洲男性，黑色蓬松竖发带不规则刘海，黑框方形粗眼镜，
+黑色磨砂皮革夹克微微开着，拉链头金色，肩部细金色缝线，
+里面露出黑色Diamond Hands哥特字体T恤，
+黑色军事战术双肩背包，手腕编织手环，深色工装裤，黑色战术靴，
+右手握一个小型发光硬件冷钱包散发蓝白色微光，
+背景：永信城L2夜晚街道，金色霓虹，K线图霓虹招牌，
+表情轻松自信，8K电影级渲染</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// L3战斗状态（熊猫眼）</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
+保持人物面部特征和发型不变，无眼镜，
+眼睛下方黑色油彩熊猫眼妆晕染感不规则，
+眼睛激活：左眼金色数据流，右眼绿色逆向信号，
+脸上有轻微灰尘，表情平静的决心不是愤怒，
+黑色皮夹克有破损，右手握发光冷钱包散发蓝白色光，
+背景：L3地下工厂冷蓝绿灰色调，无限延伸格子间，头顶数据管道，
+8K电影级渲染</div>
+        </div>
+
+        <hr class="divider">
+        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
+
+        <h4>与陈维克多相识</h4>
+        <p>两人在Web3早期社区论坛相遇。赵凯斯发了一篇帖子「GameStop事件证明了什么」，陈维克多看到后主动联系了他。陈维克多教了他所有技能：传统股票技术分析、链上数据分析、MEV Bot运作原理，以及Diamond Hand哲学。那句「市场可以让你破产，但市场拿不走你的判断力」是陈维克多亲口说的，后来成了赵凯斯的人生信条。</p>
+
+        <h4>S2开场前的处境</h4>
+        <p>在L2担任系统维护工程师多年，负责监控协议运行状态、发现异常就修复。他以为自己在维护系统稳定——实际上他在维护一台收割机器的稳定运转。他是L2的既得利益者，有稳定收入，信任这套系统，把陈维克多当作消失了的好友和老师。</p>
+
+        <h4>S2成长弧线</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">EP1-2：震惊期</div>
+            <p>不知道L3存在，不知道冷钱包有什么特别，不知道为什么陈维克多要推他。只有一个问题：「为什么是我？」</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">EP3-4：追踪期</div>
+            <p>用陈维克多教他的链上分析能力，回头审视所有天降神针事件，发现模式。第一次意识到：「这不像自然市场行为。」</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">EP5：崩塌期</div>
+            <p>确认陈维克多的身份。双重背叛的冲击——朋友的背叛，和老师的背叛：「他教我识别MEV Bot，是为了让我永远看不见他自己。」</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">EP6：选择期</div>
+            <p>天花板碎裂，他有机会回L2。但他选择留下。原因：「L2给我的一切，是用L3的人换来的。我不想再换了。」</p>
+          </div>
+        </div>
+
+        <h4>他的「超能力」为什么是熊猫眼</h4>
+        <div class="quote-block">
+          <p>熊猫眼妆 = 人类手工涂抹的标记。不完美、有温度、AI永远无法理解为什么一个人要在脸上画黑圈才能发挥最大战斗力。这是他的「情绪之证」——一种系统无法算法化的人类仪式。</p>
+        </div>
+
+        <h4>标志性台词</h4>
+        <p style="color:var(--gold);font-style:italic">「L2给我的一切，是用L3的人换来的。我不想再换了。」——EP6，选择留在L3时</p>
+        <p style="color:var(--text-dim);font-style:italic">「他教我所有的技能，包括怎么找到他。」——EP5，确认陈维克多身份时</p>
+      </div>
+    </div>
+
+    <!-- 小猪女侠 -->
+    <div class="char-detail" id="piggy">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(233,69,96,0.1);border-color:var(--red)">🐷</div>
+        <div>
+          <div class="char-detail-name">小猪女侠</div>
+          <div class="char-detail-subtitle">陈晚照 · Crypto_Piggy · 数据分析师转Web3创作者</div>
+        </div>
+      </div>
+      <div class="char-images">
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/TMSFy0zp/image.png')">
+          <img src="https://i.ibb.co/TMSFy0zp/image.png" alt="小猪女侠战斗版">
+          <div class="char-image-label">// 战斗状态（CA指挥棒）</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/dw2hW0zj/image.png')">
+          <img src="https://i.ibb.co/dw2hW0zj/image.png" alt="小猪女侠工服版">
+          <div class="char-image-label">// 工服潜伏状态</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>形象特征</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">标准造型</div>
+            <p>薄荷绿+粉色渐变双丸子头·全息镭射bomber夹克·黑色crop top·黑色皮裤+皮腰带+金属链条·黑色厚底战靴</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">工服潜伏版</div>
+            <p>白色连体工服（领口大开随意）·双丸子头被工帽半遮·工服口袋透出粉色微光（CA指挥棒藏在里面）</p>
+          </div>
+        </div>
+        <h4>双武器系统（此消彼长）</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">猪头半脸面具 · 防御</div>
+            <p>覆盖眼睛到鼻子·猪耳朵造型·绿色+粉色霓虹发光轮廓·戴上后系统判定「无威胁」</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">CA指挥棒 · 攻击</div>
+            <p>顶端粉色猪头发出霓虹光·棒身绿色数据流·每次使用消耗面具掩盖容量·S2共使用三次</p>
+          </div>
+        </div>
+        <div class="quote-block">
+          <p>她的情绪之证：一个把情绪降为零来保护自己的人，在最关键的时刻选择让情绪涌现，用自己的暴露换取所有人的自由。</p>
+        </div>
+        <h4>即梦提示词</h4>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// L3潜伏版（正常状态）</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
+二十多岁亚洲女性，薄荷绿粉色渐变双丸子头，薄薄的齐刘海，
+全息镭射彩虹反光bomber夹克，黑色crop top，
+黑色皮裤配皮腰带和金属链条，黑色厚底战靴，
+右手持CA指挥棒：顶端粉色猪头霓虹光芒，棒身绿色数据流动，
+背景：L3工厂格子间冷蓝绿灰色调，只有她站在阴影里观察，
+表情：冷静观察，微微上扬的嘴角，
+8K电影级渲染</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 工服潜伏版</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
+薄荷绿粉色渐变双丸子头被白色工帽半遮，
+全白色连体工作服领口大开随意，手腕绿色数据监控手环，
+工服口袋隐约有粉色微光透出（CA指挥棒藏在里面），
+背景：L3格子间，周围所有工人低头工作，只有她站直抬头，
+表情：面无表情但眼睛里有光，
+8K电影级渲染</div>
+        </div>
+
+        <hr class="divider">
+        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
+
+        <h4>进入永信城之前</h4>
+        <p>真实姓名陈晚照。曾是海外市场运营，被公司选为「背锅者」，替金融产品暴雷背责。这段经历让她深刻理解了一件事：系统永远让肉身挡子弹。进入Web3之后，她创建了「猪圈社区」，建立了自己的信任体系。社区成员开始失踪、发胡言乱语，她顺着线索追踪，找到了永信城L3的入口，主动破解进入。</p>
+        <p>她的故事写到「进入永信城来结束」——这篇背景故事是她带着这些经历和能力进入永信城的起点。</p>
+
+        <h4>为什么能进入L3</h4>
+        <p>她的情绪指标接近于零。不是她没有情绪，而是她把情绪管理做到了极致——系统检测不到她，判定她「无威胁」，入口自动开放。这是她长期被系统伤害后发展出的自我保护机制，也是她最大的武器，同时也是她无法「过情绪之门」的根本原因。</p>
+
+        <h4>她和阿明的关系</h4>
+        <p>阿明是她猪圈社区里的人。她进L3很大程度上是为了找他。但她发现阿明认识她，却不想跟她走——他在L3如鱼得水，第一次感到被认可，不觉得需要被「救」。这是她最大的痛苦：不是他们认不出她，而是他们认出了她，但不想回去。</p>
+
+        <h4>「共识锚定」超能力的本质</h4>
+        <div class="quote-block">
+          <p>她的真正超能力不是技术性的冻结和回滚，而是「共识锚定」——在关键时刻说出一句话，让所有人停止FOMO，回到自己。这是陈维克多的系统最无法算法化的东西：一个真正被信任的声音。</p>
+        </div>
+
+        <h4>S2成长弧线</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">进入L3时</div>
+            <p>情绪为零，系统看不见她。她是L3里唯一清醒的旁观者，知道真相，但还没有找到出口。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">遇见赵凯斯</div>
+            <p>第一个从天花板掉下来的人。他看见了系统的背面，这让她相信：「他可能是我一直在等的人。」</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">EP6第三次使用CA指挥棒</div>
+            <p>全力一击后面具完全失效，情绪指标暴露。她主动摘下面具，第一次露出真实的脸，用自己的暴露换取所有人的自由。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">S2结局</div>
+            <p>走出工厂后没有离开，跟着赵凯斯回到L3入口方向。她救了别人，现在她要帮更多人找到出路。</p>
+          </div>
+        </div>
+
+        <h4>标志性台词</h4>
+        <p style="color:var(--gold);font-style:italic">「从上面掉下来的人，和自己走进来的人，看见的永信城不一样。你看见了什么？」——第一次对赵凯斯说的话</p>
+        <p style="color:var(--text-dim);font-style:italic">「你做的Meme，收割的是和你妈妈一样的普通人。」——对阿明说，触发他觉醒的话</p>
+      </div>
+    </div>
+
+    <!-- 林牧 -->
+    <div class="char-detail" id="linmu">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(240,165,0,0.1);border-color:var(--amber)">🎧</div>
+        <div>
+          <div class="char-detail-name">林牧</div>
+          <div class="char-detail-subtitle">狮子羊 · 数学天才 · L3最深处的潜伏者 · S2牺牲角色</div>
+        </div>
+      </div>
+      <div class="char-images">
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/PGRYHLgP/image.png')">
+          <img src="https://i.ibb.co/PGRYHLgP/image.png" alt="林牧正脸版">
+          <div class="char-image-label">// 正脸·质检室</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/sXnWXL1/image.png')">
+          <img src="https://i.ibb.co/sXnWXL1/image.png" alt="林牧蒙眼版">
+          <div class="char-image-label">// 蒙眼·聆听数据</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>形象特征</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">标准造型</div>
+            <p>黑色中长发内扣盖耳·轻微胡茬·深灰色衬衫袖子卷起·学院派气质·眼神深邃平静</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">标志性道具</div>
+            <p>写满废弃代码的白色布条（蒙眼用）·带裂痕的狐狸面具（放在桌上，象征他的双重身份）</p>
+          </div>
+        </div>
+        <h4>蒙眼的双重原因</h4>
+        <p><strong style="color:var(--gold)">主动选择：</strong>他知道牛马工厂是什么，不想被里面的逻辑侵蚀。布条上写满废弃代码，系统无法通过自己抛弃的东西侵入他的意识。</p>
+        <p><strong style="color:var(--gold)">被要求：</strong>陈维克多要求他必须蒙眼。两人要求的原因完全不同，结果相同。</p>
+        <div class="quote-block">
+          <p>「苏晴，海南的海是什么颜色的？」——他的最后一句话。赵凯斯后来回答了他：「海南的海，是蓝色的。」</p>
+        </div>
+        <h4>即梦提示词</h4>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 正脸·质检室版</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，上半身，9:16，
+二十多岁亚洲男性，黑色中长发内扣盖住耳朵，刘海自然垂落，
+轻微胡茬，学院派气质，眼神深邃平静，
+深灰色简单衬衫领口微微敞开袖子卷起，
+道具：写满废弃代码纹路的白色布条握在手里，
+带裂痕的狐狸面具放在旁边桌上，
+背景：L3独立质检室，冷蓝灰色调，数据管道发蓝光，
+光线：冷蓝色侧光打亮半边脸，
+8K电影级渲染，浅景深</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 蒙眼·聆听版</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，上半身，9:16，
+保持人物面部特征不变，
+用写满废弃代码纹路的白色布条蒙住眼睛，
+侧耳倾听姿态，头微微低下，发丝因低头垂落，
+双手放在数据接口上，嘴唇微微张开在聆听，
+旁边带裂痕的狐狸面具面朝他像在注视他，
+背景：L3质检室，数据管道有心跳频率波形，
+8K电影级渲染</div>
+        </div>
+
+        <hr class="divider">
+        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
+
+        <h4>他是谁</h4>
+        <p>数学天才，量化交易者，圈内代号「狮子羊」。妻子苏晴已怀孕（孩子代号「林数」）。他的能力来自对市场底层数据流的数学结构感知——不是预测，而是「听见」。他能感知未来的价格路径，能看见普通人看不见的数学规律叠加在现实世界上。</p>
+
+        <h4>进入L3的过程</h4>
+        <p>他在L2发现了天降神针的规律，知道某种力量在精确控制市场，但无法从外部阻止。陈维克多通过他的异常交易记录发现了他——那笔FHT合约交易，37秒内完成到几何参数预测终点的精准操作，被陈维克多的MEV Bot识别为「人类，但感知能力超越普通人类」。陈维克多用家人安全作为诱导，他顺势接受，成为L3的质检员，同时暗中寻找解法。</p>
+
+        <h4>蒙眼的双重含义</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">他自己选择蒙眼</div>
+            <p>他知道L3是什么，不想被工厂的逻辑侵蚀。布条上写满废弃代码——系统无法通过他自己已经抛弃的东西侵入他的意识。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">陈维克多要求他蒙眼</div>
+            <p>如果他能看见L3工人的脸，他会认出他们是真实的人，就无法继续做质检工作。两人的要求原因完全不同，结果相同。</p>
+          </div>
+        </div>
+
+        <h4>觉醒的触发</h4>
+        <p>某天的质检报告里，他的听觉能力捕捉到一个熟悉的声音——阿明的声音，从数据管道里传来，阿明在创作内容时那种极度自信的语气。林牧认出了：这不是抽象的情绪数据，这是一个真实的人。他开始反向追踪：「我的质检报告，被用来做什么了？」</p>
+
+        <h4>他的愧疚</h4>
+        <div class="quote-block">
+          <p>他没有直接伤害任何人。但他的存在，让整个收割系统的效率提升了数倍。他知道在自己帮助下有多少人被收割了。这才是他最深的罪：不是主动作恶，而是用善意的理由参与了一个邪恶的系统。</p>
+        </div>
+
+        <h4>牺牲时刻</h4>
+        <p>林牧摘下布条，第一次睁开眼睛，把双手插进数据管道，注入人类心跳的噪音，让陈维克多的追踪系统完全失效。他不知道这对自己意味着什么，但他知道这是他能做的唯一偿还。</p>
+        <p style="color:var(--gold);font-style:italic">最后一句话：「苏晴，海南的海是什么颜色的？」</p>
+        <p style="color:var(--text-dim)">赵凯斯后来回答了他：「海南的海，是蓝色的。」</p>
+
+        <h4>标志性台词</h4>
+        <p style="color:var(--gold);font-style:italic">「苏晴，对不起。我以为我在养活你们。原来我在伤害别人。」——牺牲前</p>
+        <p style="color:var(--text-dim);font-style:italic">「我等你很久了。」——第一次见到小猪女侠时</p>
+      </div>
+    </div>
+
+    <!-- 客服小何 -->
+    <div class="char-detail" id="xiaohe">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(26,143,170,0.1);border-color:var(--teal-bright)">📞</div>
+        <div>
+          <div class="char-detail-name">客服小何</div>
+          <div class="char-detail-subtitle">K线山光明顶高级客服 · S1盟友 · 长线人物</div>
+        </div>
+      </div>
+      <div class="char-images">
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/nHL455Q/image.png')">
+          <img src="https://i.ibb.co/nHL455Q/image.png" alt="客服小何工作版">
+          <div class="char-image-label">// 日常工作状态</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/S4mfZStT/image.png')">
+          <img src="https://i.ibb.co/S4mfZStT/image.png" alt="客服小何激活版">
+          <div class="char-image-label">// 权限激活·头发散开</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>形象特征</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">标准造型</div>
+            <p>黑色高马尾+红色发圈·金色圆耳环·白色西装外套（领口金色线条细节）·酒红色高领内搭·左手腕发光手环（蓝白色CEX权限道具）</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">激活状态（EP6）</div>
+            <p>高马尾在能量爆发中散开飞扬·红色发圈断开飘落·手环爆发强烈蓝白色光芒沿手臂蔓延·表情反而最平静</p>
+          </div>
+        </div>
+        <h4>「Robinhood困境」</h4>
+        <p>她做了正确的事，但系统判定她违规。就像Robinhood在GameStop事件中被SEC审查——系统设计出来不是为了判断对错，而是维护「市场稳定」，而稳定的定义由L1决定。</p>
+        <div class="quote-block">
+          <p>S2结局：「他们找到出口了，但L1已经注意到我了。」光明顶的灯一盏一盏熄灭。「未完待续。」</p>
+        </div>
+        <h4>即梦提示词</h4>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 日常工作版</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
+三十多岁亚洲女性，精致五官，黑色高马尾红色发圈，金色圆耳环，
+白色修身西装外套领口和袖口有极细金色线条，胸口低调金色菱形标志，
+内搭酒红色高领，黑色修身西裤，黑色高跟踝靴，
+左手腕发光手环金色+蓝白色交替发光，
+右手拿发光透明平板显示市场数据，
+背景：K线山光明顶，CEX操作台，多屏幕市场数据，
+表情温暖自信，8K电影级渲染</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 权限激活版（头发散开）</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，史诗级慢动作定格，9:16，
+保持人物面部特征不变，
+高马尾发圈在能量爆发中断开，长发在气流中向后飘散，
+发丝在蓝白色光芒中飞扬，断开的红色发圈在空中飘落，
+左手腕手环爆发强烈蓝白色光芒沿手臂向上蔓延，
+举起左手朝向正前方，衣角和头发同时向后飘，
+背景CEX屏幕出现系统审查警告，
+表情：平静而坚定，这是她知道代价但还是选择的瞬间，
+8K电影级渲染</div>
+        </div>
+
+        <hr class="divider">
+        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
+
+        <h4>她在永信城里的真实处境</h4>
+        <p>全球用户量最大的加密货币交易所的高级客服，驻守K线山光明顶。她的每一句话都可能成为游资制造Meme盘子的工具——不是她的错，但发生在她身上。她知道系统有问题，选择留在内部做有限的好事，而不是离开。这是她和赵凯斯、小猪女侠最大的区别：她的战场在L2。</p>
+
+        <h4>她真正的影响力</h4>
+        <p>在真实加密世界里，像她这样的机构声音，一句表态就能带动数百万用户的FOMO或恐慌。她的超能力「暂停交易+触发隐私保护协议」对应的正是这个现实——CEX在关键时刻可以冻结账户、回滚交易，而她选择用这个权力保护散户而不是机构。</p>
+
+        <h4>为什么留在L2</h4>
+        <div class="quote-block">
+          <p>「如果我离开，这个位置会被一个更不在乎用户的人占据。至少我在这里，还能做一些事。」——这是她的选择，沉重的、痛苦的，但真实的。</p>
+        </div>
+
+        <h4>「Robinhood困境」的深层含义</h4>
+        <p>她做了正确的事，但系统判定她违规。类比Robinhood在GameStop事件中被SEC审查：系统的设计不是为了判断对错，而是维护「市场稳定」，而稳定的定义由L1决定。她违反了规则，但她的规则是对的。</p>
+
+        <h4>S2结局与悬念</h4>
+        <p>EP6发出最后一条加密消息「他们找到出口了，但L1已经注意到我了」，光明顶的灯一盏一盏熄灭。她的命运是S3最大的悬念之一——她是否已经被L1系统「清除」了？</p>
+
+        <h4>标志性台词</h4>
+        <p style="color:var(--gold);font-style:italic">「你拖住Block，我传Payload。」——EP4对赵凯斯说</p>
+        <p style="color:var(--text-dim);font-style:italic">「他们找到出口了，但L1已经注意到我了。」——S2最后一条消息</p>
+      </div>
+    </div>
+
+    <!-- 陈维克多 -->
+    <div class="char-detail" id="victor">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(77,175,255,0.1);border-color:#4DAFFF">⚙️</div>
+        <div>
+          <div class="char-detail-name">陈维克多</div>
+          <div class="char-detail-subtitle">MEV PHANTOM · 进化架构师 · L2最高权限者 · 38岁</div>
+        </div>
+      </div>
+      <div class="char-images">
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/jkvbG749/image.png')">
+          <img src="https://i.ibb.co/jkvbG749/image.png" alt="陈维克多控制室版">
+          <div class="char-image-label">// L2控制室·面罩版</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/nMp1xgpG/image.png')">
+          <img src="https://i.ibb.co/nMp1xgpG/image.png" alt="陈维克多正常">
+          <div class="char-image-label">// 控制室全景</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>形象特征</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">标志性设计</div>
+            <p>概率云图面罩（覆盖眼睛到鼻梁，金色数据流实时流动）·右臂完全机械化（蓝色LED关节）·左眼机械义眼蓝色LED·右眼仍是人类深褐色</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">服装</div>
+            <p>深灰色高领长款风衣·哑光金属纤维·衣领处有细密电路纹路·整体极简无多余装饰</p>
+          </div>
+        </div>
+        <h4>最重要的设计原则</h4>
+        <p><strong style="color:var(--red)">永远不能让观众看见他完整的脸。</strong>概率云图面罩覆盖眼鼻区域，金色数据流实时流动。直到EP5揭露时刻，面罩出现短暂裂缝，那是他唯一的人性残留时刻。</p>
+        <p>胸口永远挂着冷钱包项链——他的图腾，他的仪式密钥，也是他唯一没有意识到的情感依附。工作台边缘还放着一个破损的旧硬件钱包，是他当年开发第一个MEV Bot时用的，从未扔掉。</p>
+        <div class="quote-block">
+          <p>S2结局：收到了自己设计的招募邀请——「您的愤怒、绝望、对失败的不甘，都是这个时代最稀缺的资产。」手指悬在「点击加入」上方。定格。「未完待续。」</p>
+        </div>
+        <h4>即梦提示词</h4>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 控制室标准版（带冷钱包项链）</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
+参考图：上传控制室面罩版定妆照，勾选角色特征75%，
+
+三十八岁亚洲男性，黑色短发干净利落，
+概率云图面罩覆盖眼睛到鼻梁，
+半透明黑色镜面材质，
+表面实时流动金色概率数据流，
+左眼机械义眼蓝色LED从面罩下隐约可见，
+右眼人类深褐色，
+
+深灰色高领长款风衣，哑光金属纤维，衣领细密电路纹路，
+右臂完全机械化：黑色钛合金外骨骼，关节处蓝色LED发光，
+左臂人类手臂，手腕有银色数据接口植入，
+
+关键细节：胸口挂着一条细链项链，
+链条末端是一个小型硬件冷钱包，
+设备表面有微弱蓝白色发光，
+像图腾一样贴近胸口，
+
+背景：L2顶层圆形控制室，
+全息星图天花板，数据网络可视化屏幕，
+透明玻璃地板下可见L3幽绿光，
+工作台边有一个破损的旧硬件钱包，
+
+8K电影级渲染，压迫感十足，
+参考风格：上传图片中的控制室氛围和机械臂质感</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 名场面·洞口蹲下（EP1关键镜头）</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，9:16，
+参考图：上传控制室面罩版定妆照，勾选角色特征75%，
+
+场景：控制室中央透明地板，一个圆形洞口打开，
+洞口边缘发出幽绿色L3的光，
+
+维克多蹲在洞口边缘，
+俯身向下，
+右手（机械臂）抓住洞口下方某人的手，
+姿势像要拉人上来，但表情隐藏在面罩后无法看见，
+
+胸口项链自然垂落，
+冷钱包悬在半空，
+在幽绿色的光照下发出蓝白色微光，
+
+视角：微微仰拍，从洞口内向上看维克多，
+他的轮廓逆光，压迫感极强，
+
+光线：身后控制室冷蓝色，
+洞口透上来的幽绿色L3光，
+两种颜色在他身上交界，
+
+8K电影级渲染，狮子王名场面构图，
+史诗感，命运感</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 三秒后·发现项链不见了</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，特写，9:16，
+参考图：上传控制室面罩版定妆照，勾选角色特征75%，
+
+胸口特写：
+深灰色风衣胸口区域，
+项链链条断裂的痕迹清晰可见，
+原来挂着冷钱包的位置空了，
+只剩一小截断裂的链条，
+
+前景：维克多的左手（人类手臂）
+手指悬停在键盘上方，
+没有按下去，
+
+面罩在画面上方虚化，
+但金色数据流停止了流动，
+整个面罩黯淡了一秒，
+
+光线：屏幕冷蓝色光，
+胸口空白处有一个极小的阴影，
+那是冷钱包刚才还在的地方，
+
+这是整个EP1最安静的一刻，
+8K电影级渲染，情绪特写，浅景深</div>
+        </div>
+
+        <hr class="divider">
+        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
+
+        <h4>人生轨迹（五个阶段）</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">第一阶段 25-30岁·理想主义者</div>
+            <p>Web3早期布道者，真正相信去中心化能终结金融不公平。写过被社区奉为圭臬的白皮书，参与过多个头部公链底层设计，是赵凯斯仰慕的精神领袖。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">第二阶段 28-33岁·MEV Bot开发者</div>
+            <p>开发MEV Bot，第一次站在收割者的位置，开始发现：算法比人类诚实——算法不会因为FOMO而失误，算法不会被情绪左右。「去中心化从来没有实现过，只是换了一套更隐蔽的中心化。」</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">第三阶段 33岁·觉醒崩溃</div>
+            <p>三年链上数据分析后得出结论：「去中心化是个谎言。」试图告诉赵凯斯，赵凯斯选择继续相信，陈维克多沉默了很久说：「你比我以前的自己更像我。我希望你是对的。」然后消失了两年。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">第四阶段 33-35岁·黑暗期</div>
+            <p>退出所有公开身份，删除社交媒体，卖掉「信仰」的持仓，独自研究数据。结论：人类的问题不是被资本控制，而是情绪让他们永远无法自救。AI没有这个缺陷，AI是进化的方向。</p>
+          </div>
+        </div>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">第五阶段 35-38岁·进化架构师</div>
+            <p>回来了，但变了。开始半机械化改造自己，设计天降神针算法，招募林牧，建立L3收割体系，积累向L1献祭的资产。工作台边始终放着当年第一次开发MEV Bot用的旧硬件钱包，从未扔掉。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">与赵凯斯的关系标注</div>
+            <p>他在系统数据里给赵凯斯标注了一个备注：「Victor Jr. — anomaly」。这既是他对赵凯斯的定义，也是他对自己曾经的自己的定义。他最终错的那一步，就是低估了这个anomaly。</p>
+          </div>
+        </div>
+
+        <h4>冷钱包·他的图腾</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">冷钱包的本质</div>
+            <p>不只是存储设备。这是向L1献祭的「仪式密钥」——没有它，收割来的所有资产和情绪数据无法完成最终的献祭程序。整个S2计划的核心。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">为什么挂在胸口</div>
+            <p>他把它做成项链挂在胸口，像图腾，像护身符。他以为自己超越了情感依附——但他把最重要的东西放在离心脏最近的地方。他自己没有意识到这个矛盾。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">修复系统时需要插入使用</div>
+            <p>EP1控制室场景：赵凯斯砸碎按钮后，维克多修复漏洞时需要从胸口取下冷钱包插入电脑。赵凯斯亲眼看见了这个动作，意识到这东西是整个系统的核心。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">失去的瞬间</div>
+            <p>维克多在洞口松手让赵凯斯坠落时，赵凯斯另一只手抓住了他的项链。链条断裂，冷钱包随赵凯斯一起坠入L3。维克多三秒后才发现项链不见了——他整个S2计划最大的失误。</p>
+          </div>
+        </div>
+
+        <h4>他计划的致命漏洞</h4>
+        <p>他在愤怒中松手让赵凯斯坠落，没有第一时间意识到项链断了。三秒后他低头看胸口，项链不见了——他的手停在键盘上，第一次完全沉默。这是他整个系统里唯一一次被情绪影响判断，也是他「以为超越了人类情绪局限」这个信念最深刻的讽刺。</p>
+
+        <h4>他的深层悲剧</h4>
+        <div class="quote-block">
+          <p>他以为在帮L1，实际上他的每一个野心、冷血计算、对进化的渴望，都是L1最需要的高质量情绪数据。他和L3的情绪牛马本质上没有区别，只是更高级的情绪牛马。他花了一生试图超越人类情绪的局限，却不知道他的「超越」本身就是最浓烈的情绪。</p>
+        </div>
+
+        <h4>S2结局的真正含义</h4>
+        <p>Meme病毒爆发，面罩碎裂，所有权限撤销，收到了自己设计的招募邀请。手指悬在「点击加入」上方的定格画面，是整个S2最重要的一帧——他设计了这个系统来收割别人，现在系统在收割他。而他的手指没有离开屏幕。</p>
+
+        <h4>标志性台词</h4>
+        <p style="color:var(--gold);font-style:italic">「市场可以让你破产，但市场拿不走你的判断力。」——教给赵凯斯的话，EP5用同一句话击穿了他</p>
+        <p style="color:var(--text-dim);font-style:italic">「Victor Jr. — anomaly。」——他给赵凯斯的系统标注，也是他对自己的注释</p>
+      </div>
+    </div>
+
+    <!-- 阿明 -->
+    <div class="char-detail" id="aming">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(46,204,113,0.1);border-color:#2ECC71">😎</div>
+        <div>
+          <div class="char-detail-name">阿明</div>
+          <div class="char-detail-subtitle">L3顶级牛马 · P小匠 · Meme天才 · 黑色幽默担当</div>
+        </div>
+      </div>
+      <div class="char-images">
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/1t5qW12C/image.png')">
+          <img src="https://i.ibb.co/1t5qW12C/image.png" alt="阿明兴奋">
+          <div class="char-image-label">// L3如鱼得水·高谈阔论</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/RGV9Fbf4/image.png')">
+          <img src="https://i.ibb.co/RGV9Fbf4/image.png" alt="阿明工服">
+          <div class="char-image-label">// 工服版（最随意的那个）</div>
+        </div>
+      </div>
+      <div class="char-detail-body">
+        <h4>形象特征</h4>
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">标准造型</div>
+            <p>棕色蓬乱短发·轻微胡茬·白色工服（领口大开最随意的那个）·袖子随意卷起·桌上多个K线图屏幕</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">关键设定</div>
+            <p>他是L3里唯一把工服穿出邋遢感的人。头顶数据管道抽走他情绪的速度比任何人都快——因为他的FOMO和自信是系统最高质量的燃料。</p>
+          </div>
+        </div>
+        <h4>他在L3如鱼得水</h4>
+        <p>阿明在L3找到了现实世界从来没给过他的东西——<strong style="color:var(--gold)">被认可</strong>。他做Meme表情包是顶级技能，其他工人都来请教他。他不想出去。</p>
+        <div class="quote-block">
+          <p>S2结局：最后一个离开工厂，也是最伤心的人（工厂被破坏了）。给妈妈发消息：「妈，我想吃你做的早餐。」</p>
+        </div>
+        <h4>即梦提示词</h4>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// L3顶级牛马版</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">半写实3D动漫风格，电影级渲染，上半身，9:16，
+二十多岁亚洲男性，棕色蓬乱短发，轻微胡茬，
+白色工服领口大开随意，袖子卷起，
+双手比划讲解姿势，过度自信的大笑，
+「我已经看穿庄家了」的表情，
+桌上多个屏幕显示K线图，
+旁边工人低头工作，只有他在高谈阔论，
+头顶数据管道正在往下滴落数据粒子，
+背景：L3格子间冷蓝绿灰色调，工位编号可见，
+8K电影级渲染</div>
+        </div>
+
+        <hr class="divider">
+        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
+
+        <h4>他是谁</h4>
+        <p>二十多岁，没有固定工作，是小猪女侠猪圈社区里的活跃成员。Meme表情包天才，P图技术顶级，对Web3最新热点极度敏感。他的妈妈开着一家早餐店，凌晨四点起床揉面，攒了一辈子的钱，准备去朝圣。他把那笔钱拿去炒Meme，输光了。</p>
+
+        <h4>为什么进L3</h4>
+        <p>不是被骗进来的，不是被强迫的。他主动进来，想赚回妈妈的那笔钱。系统的招募邀请对他来说是最完美的诱饵：「你的内容激发越多人情绪，你赚得越多。」他太擅长这件事了。</p>
+
+        <h4>为什么不想出去</h4>
+        <p>在L3，他第一次感到被真正认可。他的Meme技术是顶级技能，其他工人都来请教他，他是这里的「专家」。现实世界里他是输钱的废物；在L3他是被需要的人。系统最聪明的地方不是关住他，而是给了他他最缺少的东西。</p>
+
+        <h4>觉醒的触发</h4>
+        <div class="quote-block">
+          <p>小猪女侠对他说：「你做的Meme，收割的是和你妈妈一样的普通人。」他第一次想到：妈妈凌晨四点揉面的那双手，和他Meme引发的FOMO，指向了同一群人。他看见了闭环。</p>
+        </div>
+
+        <h4>EP6的点火索</h4>
+        <p>想起妈妈凌晨四点揉面等他——不是为了责怪自己，而是因为那个画面让他想起了「外面有人在等我」。他跳上桌子大喊，不是在喊交易信号，而是在喊：「我想起来了。我们不只是数据工人。」这一喊点燃了集体情绪。</p>
+
+        <h4>他的「情绪之证」</h4>
+        <p>阿明代表的现实：互联网上有无数个阿明，天才横溢，在错误的系统里把才华消耗殆尽，以为在赢，实际上在为系统提供最高质量的情绪燃料。他的觉醒不是因为他变聪明了，而是因为他突然记起了爱。这是系统永远无法算法化的东西。</p>
+
+        <h4>标志性台词</h4>
+        <p style="color:var(--gold);font-style:italic">「妈，我想吃你做的早餐。」——S2结局，走出工厂后给妈妈发的消息</p>
+        <p style="color:var(--text-dim);font-style:italic">「如果这次赚到了，我就带我妈去海南。」——林牧觉醒触发的话，他自己不知道意义有多大</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- EPISODES -->
+  <section class="section" id="episodes">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">六集大纲与剧本</h2>
+    </div>
+
+    <div class="quote-block">
+      <p>故事发生在72小时内。赵凯斯坠落L3时，距离记忆清零还剩72小时。整个S2就是这72小时里发生的事。</p>
+    </div>
+
+    <div class="ep-list">
+      <div class="ep-card open" id="ep1">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP1</span>
+          <span class="ep-title">天降神针</span>
+          <span class="ep-time">0-10小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「我在修复系统」→「系统才是问题」</div>
+          <ul class="ep-events">
+            <li>天降神针触发，L2市场崩盘大规模收割</li>
+            <li>赵凯斯追踪数据异常→找到陈维克多控制室→砸碎天降神针物理按钮</li>
+            <li>L2地板因能量失衡出现裂缝，附近无辜市民开始坠落</li>
+            <li>陈维克多出现，推赵凯斯坠落，用代码修复裂缝（坠落的人永远回不来）</li>
+            <li>赵凯斯无意带走冷钱包（陈维克多的唯一失误）</li>
+            <li>在L3醒来：无恐慌情绪，系统延迟处理，被小猪女侠拖入404号工位桌底</li>
+          </ul>
+          <p style="font-size:13px;color:var(--gold);margin-top:16px">结尾：「距离记忆清零：72小时。」</p>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep2">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP2</span>
+          <span class="ep-title">小匠的狂想</span>
+          <span class="ep-time">10-20小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「你以为自己是赢家，其实你是最高级的燃料」</div>
+          <ul class="ep-events">
+            <li>赵凯斯和小猪建立初步信任</li>
+            <li>了解L3机制：KPI系统、消费循环、后排工位的秘密</li>
+            <li>阿明出现：如鱼得水的顶级牛马，小猪认出他是猪圈社区的人</li>
+            <li>小猪展示：情绪之门存在，但我一直找不到它在哪里</li>
+            <li>小猪开始编译Meme病毒</li>
+            <li>陈维克多发现冷钱包不见了，派出数据猎犬追踪</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep3">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP3</span>
+          <span class="ep-title">粉色暗池的走私客</span>
+          <span class="ep-time">20-30小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「你以为在帮忙，其实是共谋」</div>
+          <ul class="ep-events">
+            <li>赵凯斯分析冷钱包，发现密钥与情绪之门的关系</li>
+            <li>小猪追踪异常监听节点，找到质检室，找到林牧</li>
+            <li>林牧：「我等你很久了。」他早就感知到她的存在</li>
+            <li>特洛伊木马战术确立：CA指挥棒+Meme病毒+冷钱包密钥三合一计划</li>
+            <li>小何从L2发出第一个信号，触发隐私保护协议</li>
+            <li>陈维克多察觉：「为什么系统在自动传播一个我没有授权的Meme？」</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep4">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP4</span>
+          <span class="ep-title">跨阶层Ping</span>
+          <span class="ep-time">30-38小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「你的善意，是系统最好的包装」</div>
+          <ul class="ep-events">
+            <li>主角团向植物人区域移动，赵凯斯开始感知逆向信号：「跟着痛走」</li>
+            <li>小猪找到阿明说明真相，阿明第一次动摇</li>
+            <li>林牧预警：陈维克多开始追踪，你们有5分钟</li>
+            <li>小何触发隐私保护协议，制造5分钟追踪盲区，代价：操作记录被监控</li>
+            <li>陈维克多绕过防线，粉色暗池崩塌，主角团被迫深入植物人区域</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep5">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP5</span>
+          <span class="ep-title">零日漏洞</span>
+          <span class="ep-time">38-41小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「你以为认识他，其实你认识的是谎言」</div>
+          <ul class="ep-events">
+            <li>穿越植物人区域：赵凯斯认出因他坠落而变成植物人的市民，第一次真正愤怒</li>
+            <li>赵凯斯感知到逆向信号最强处：「出口就在这里」</li>
+            <li>陈维克多全息投影降临，说出那句话：「市场可以让你破产，但市场拿不走你的判断力。」</li>
+            <li>赵凯斯愣住：「老陈……？」</li>
+            <li>小猪想立刻触发病毒，赵凯斯拦住：「还不是时候，阿明还没准备好」</li>
+            <li>陈维克多开始追踪病毒源头，准备定向清算</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ep-card" id="ep6">
+        <div class="ep-header" onclick="toggleEp(this)">
+          <span class="ep-num">EP6</span>
+          <span class="ep-title">情绪之证</span>
+          <span class="ep-time">41-72小时</span>
+          <span class="ep-toggle">▼</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-core">情感核心：「人类最不理性的选择，是算法永远无法预测的」</div>
+          <ul class="ep-events">
+            <li>林牧牺牲：摘下布条，第一次睁眼，把双手插进数据管道。「苏晴，海南的海是什么颜色的？」</li>
+            <li>阿明跳上桌子大喊，点燃集体情绪</li>
+            <li>小猪第三次使用CA指挥棒，全力一击，摘下面具露出真实的脸</li>
+            <li>赵凯斯感知临界点：「现在。」小猪按下回车，注入Meme病毒</li>
+            <li>赵凯斯用冷钱包密钥触碰情绪之门，小何引爆CEX服务器触发3秒全局回滚</li>
+            <li>Meme病毒爆发，天花板碎裂，阳光第一次照进L3，所有人涌向出口</li>
+          </ul>
+          <h4 style="margin-top:20px">各角色结局</h4>
+          <ul class="ep-events">
+            <li><strong style="color:var(--text-bright)">阿明</strong>：最后一个离开，最伤心的人。给妈妈：「妈，我想吃你做的早餐。」</li>
+            <li><strong style="color:var(--text-bright)">小猪</strong>：走出工厂敲代码，然后跟着赵凯斯回L3入口方向。</li>
+            <li><strong style="color:var(--text-bright)">赵凯斯</strong>：选择留在L3。「有人需要知道外面有光。」</li>
+            <li><strong style="color:var(--text-bright)">小何</strong>：「L1已经注意到我了。」光明顶灯熄灭。未完待续。</li>
+            <li><strong style="color:var(--text-bright)">陈维克多</strong>：手指悬在「点击加入」上方。未完待续。</li>
+            <li><strong style="color:var(--text-bright)">林牧</strong>：「献给所有在黑暗里做了正确的事，却没有人看见的人。」</li>
+          </ul>
+          <div class="ep-core" style="margin-top:16px;border-color:var(--red);color:var(--red)">
+            彩蛋：L1系统日志 → ERROR: UNABLE TO CALCULATE——无法建模「在看见真相之后仍然选择相信人类价值」这种情绪。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMPTS -->
+  <section class="section" id="world-shorts-section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">创作指引 · 世界观短片库</h2>
+    </div>
+
+    <div style="background:rgba(212,160,23,0.05);border:1px solid var(--border);border-radius:10px;padding:24px;text-align:center">
+      <div style="font-size:32px;margin-bottom:12px">📦</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">内容已迁移至「永信城世界观」章节</div>
+      <div style="font-size:13px;color:var(--text-dim);line-height:1.8;margin-bottom:20px">
+        招募机制·独立世界观短片库·情绪感知网络<br>
+        现在都在世界观模块的以下版块中：
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="#hidden-system" style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:8px 16px;background:rgba(212,160,23,0.1);border:1px solid var(--border);border-radius:6px;color:var(--gold);text-decoration:none">情绪感知网络 ↑</a>
+        <a href="#world-shorts" style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:8px 16px;background:rgba(212,160,23,0.1);border:1px solid var(--border);border-radius:6px;color:var(--gold);text-decoration:none">独立世界观短片库 ↑</a>
+        <a href="#recruitment-detail" style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:8px 16px;background:rgba(212,160,23,0.1);border:1px solid var(--border);border-radius:6px;color:var(--gold);text-decoration:none">招募机制完整设定 ↑</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- RULES -->
   <!-- EP1 SCENE PACKAGES -->
   <section class="section" id="ep1-scenes">
     <div class="section-header">
-      <span class="section-num">02</span>
+      <span class="section-num">04</span>
       <h2 class="section-title">EP1 · 场景包（内部制作参考）</h2>
     </div>
 
@@ -1941,122 +2836,56 @@
 
       <div class="rl-section-title">A类 · 纯场景渲染（无需角色定妆照）</div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-01</div><div><div class="rl-name">永信城L2核心街区航拍</div><div class="rl-sub">场景A · 建立世界 · 第1镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">清晨，L2核心金融区。金色霓虹还未完全熄灭，K线图招牌在楼宇间闪烁。和任何一座现实城市没有区别——这是最重要的视觉原则。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">视角</div><div class="rl-item-val">航拍俯瞰·缓慢扫过</div></div><div class="rl-item"><div class="rl-item-lbl">色调</div><div class="rl-item-val">金色霓虹·冷蓝天空·头顶隐约算法网格</div></div></div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-01</div><div><div class="rl-name">永信城L2核心街区航拍</div><div class="rl-sub">场景A · 建立世界 · 第1镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">清晨，L2核心金融区。金色霓虹还未完全熄灭，K线图招牌在楼宇间闪烁。和任何一座现实城市没有区别——这是最重要的视觉原则。</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-02</div><div><div class="rl-name">天空中的巨型钟摆（平时状态）</div><div class="rl-sub">场景A · 建立世界 · 第2镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">仰拍，钟摆在城市天空中来回摆动，规律，缓慢。晨光从钟摆后透过来。街道上没有人抬头看它——它一直都在，像背景一样存在。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">关键细节</div><div class="rl-item-val">钟摆正在摆动（运动模糊）·底部无红色针（平时不可见）</div></div><div class="rl-item"><div class="rl-item-lbl">尺度</div><div class="rl-item-val">城市级别·人类在画面中极小</div></div></div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-02</div><div><div class="rl-name">天空中的巨型钟摆（平时状态）</div><div class="rl-sub">场景A · 建立世界 · 第2镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">仰拍，钟摆在城市天空中来回摆动，规律，缓慢。晨光从钟摆后透过来。街道上没有人抬头看它——它一直都在，像背景一样存在。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">关键细节</div><div class="rl-item-val">钟摆正在摆动（运动模糊）·底部无红色针</div></div><div class="rl-item"><div class="rl-item-lbl">尺度</div><div class="rl-item-val">城市级别·人类在画面中极小</div></div></div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-03</div><div><div class="rl-name">域峰广场外观全景</div><div class="rl-sub">场景A · 建立世界 · 第3镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">域峰广场全景。灰鲸金融大厦居中矗立，深灰色钛合金幕墙。门口标志低调反光：「Grey Whale Capital · 灰鲸金融」。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">参考图</div><div class="rl-item-val">导演已提供域峰广场概念图</div></div><div class="rl-item"><div class="rl-item-lbl">关键元素</div><div class="rl-item-val">灰鲸金融标志·钟摆在远处天空可见</div></div></div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-03</div><div><div class="rl-name">域峰广场外观全景</div><div class="rl-sub">场景A · 建立世界 · 第3镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">域峰广场全景。灰鲸金融大厦居中矗立。门口标志：「Grey Whale Capital · 灰鲸金融」。钟摆在远处天空可见。</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-04</div><div><div class="rl-name">Meme街区+招工广告大屏</div><div class="rl-sub">场景A · 建立世界 · 第4镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">彩色霓虹，乱糟糟的活力。城市大屏滚动着招工广告：「你的情绪，是这个时代最稀缺的资产」。没有人在意。</div><div class="rl-note">⚠️ 大屏文字内容后期叠加，渲染时留白处理</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-04</div><div><div class="rl-name">Meme街区+招工广告大屏</div><div class="rl-sub">场景A · 建立世界 · 第4镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-done">已验证</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">彩色霓虹，乱糟糟的活力。城市大屏滚动着招工广告。长曝光版（人群虚化·情绪粒子弥漫）和个体聚焦版均已验证。</div><div class="rl-note">⚠️ 大屏文字内容后期叠加，渲染时留白处理</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-05~06</div><div><div class="rl-name">阿明妈妈早餐店（外观+内部）</div><div class="rl-sub">场景A · 建立世界 · 第5镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">清晨，烟气腾腾，温暖的黄色灯光。妈妈在灶台前忙碌。角落小电视播着招工广告，桌上有印着二维码的小卡片。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">人物设计</div><div class="rl-item-val">阿明妈妈·待导演确认设计</div></div><div class="rl-item"><div class="rl-item-lbl">重要说明</div><div class="rl-item-val">此镜头有对白·需配合录音</div></div></div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-05~06</div><div><div class="rl-name">阿明妈妈早餐店（外观+内部）</div><div class="rl-sub">场景A · 建立世界 · 第5镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-done">已验证</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">清晨，烟气腾腾，温暖的黄色灯光。妈妈背影在灶台前忙碌。角落小电视播着招工广告，桌上有印着二维码的小卡片。酱板鸭彩蛋保留。</div><div class="rl-note">⚠️ 此镜头有对白·需配合录音·阿明妈妈人物设计待确认</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-07</div><div><div class="rl-name">钟摆停止瞬间</div><div class="rl-sub">场景C · 天降神针触发 · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">仰拍，钟摆在天空中突然静止。极短的一瞬间。画面有轻微的运动模糊残影。钟摆底部有极微弱的红色能量开始聚集。「世界暂停了一秒」的窒息感。</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-07</div><div><div class="rl-name">钟摆停止瞬间</div><div class="rl-sub">场景C · 天降神针触发 · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">仰拍，钟摆在天空中突然静止。极短的一瞬间。画面有轻微的运动模糊残影。钟摆底部有极微弱的红色能量开始聚集。「世界暂停了一秒」的窒息感。</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-08</div><div><div class="rl-name">天降神针触发·红色能量针插地</div><div class="rl-sub">场景C · 核心镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">红色能量针从钟摆底部射出，笔直插入域峰广场地面。巨大光柱爆发。两侧K线屏幕全部变红，清算在这一瞬间完成。EP1最重要的视觉冲击镜头。</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-08</div><div><div class="rl-name">天降神针触发·红色能量针插地</div><div class="rl-sub">场景C · 核心镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">红色能量针从钟摆底部射出，笔直插入域峰广场地面。巨大光柱爆发。两侧K线屏幕全部变红。EP1最重要的视觉冲击镜头。</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-09</div><div><div class="rl-name">机械小兵狂喜 vs 散户错愕</div><div class="rl-sub">场景C · 天降神针触发</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">同一广场，两种极端反应。左：机械小兵机械臂伸出，集体狂喜。右：散户傻眼，账户清零，有人直接坐在地上。</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-09</div><div><div class="rl-name">机械小兵狂喜 vs 散户错愕</div><div class="rl-sub">场景C · 天降神针触发</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">同一广场，两种极端反应。左：机械小兵机械臂伸出，集体狂喜。右：散户傻眼，账户清零，有人直接坐在地上。</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-10</div><div><div class="rl-name">灰鲸金融大厦前台·大堂·吉祥物</div><div class="rl-sub">场景C2 · 混入灰鲸金融</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">灰鲸金融大厦内部大堂。极简冷灰色调。重点：门口大堂放着一个可爱的鲸鱼吉祥物——和「收割系统总部」本质形成极度反差，EP1最大彩蛋。</div><div class="rl-note">⚠️ 吉祥物设计图待导演提供</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-10</div><div><div class="rl-name">灰鲸金融大厦前台·大堂·吉祥物</div><div class="rl-sub">场景C2 · 混入灰鲸金融</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">灰鲸金融大厦内部大堂。极简冷灰色调。重点：门口大堂放着一个可爱的鲸鱼吉祥物——EP1最大彩蛋。</div><div class="rl-note">⚠️ 吉祥物设计图待导演提供</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-11</div><div><div class="rl-name">顶层走廊·Switch门锁</div><div class="rl-sub">场景C2 · 进入控制室前</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">顶层走廊尽头。两个机器人静止把守，门旁放着一台Switch游戏机。最严密收割系统的门锁。视觉上要有强烈的黑色幽默感。</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-11</div><div><div class="rl-name">顶层走廊·Switch门锁</div><div class="rl-sub">场景C2 · 进入控制室前</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">顶层走廊尽头。两个机器人静止把守，门旁放着一台Switch游戏机。最严密收割系统的门锁。视觉上要有强烈的黑色幽默感。</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-12</div><div><div class="rl-name">控制室全景</div><div class="rl-sub">场景D+E · 控制室</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">圆形控制室全景。全息星图天花板。透明地板下可见L3格子间幽绿光。中央：天降神针充能装置+倒计时牌。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">倒计时牌</div><div class="rl-item-val">「上次触发：20分钟前」「下次触发：6天23小时」</div></div><div class="rl-item"><div class="rl-item-lbl">透明地板</div><div class="rl-item-val">清晰可见L3格子间·工人低头工作·幽绿光</div></div></div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-12</div><div><div class="rl-name">控制室全景</div><div class="rl-sub">场景D+E · 控制室</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">圆形控制室全景。全息星图天花板。透明地板下可见L3格子间幽绿光。中央：天降神针充能装置+倒计时牌「上次触发：20分钟前」「下次触发：6天23小时」。</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">A-13~16</div><div><div class="rl-name">洞口·坠落空间·L3全景·404桌底</div><div class="rl-sub">场景D~H</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div>
-        <div class="rl-body"><div class="rl-desc">A-13 控制室洞口打开（幽绿光从下透来）· A-14 坠落过渡空间（惊恐挣扎的人群）· A-15 L3工厂全景（导演已有）· A-16 404号工位桌底（面具粉绿色光·唯一暖色角落）</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-13~16</div><div><div class="rl-name">洞口·坠落空间·L3全景·404桌底</div><div class="rl-sub">场景D~H</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">A-13 控制室洞口打开（幽绿光从下透来）· A-14 坠落过渡空间（惊恐挣扎的人群·情绪粒子）· A-15 L3工厂全景（导演已有）· A-16 404号工位桌底（面具粉绿色光·唯一暖色角落）</div></div></div>
 
       <div class="rl-section-title">B类 · 需要角色定妆照（赵凯斯主要镜头）</div>
       <div class="rl-note" style="margin-bottom:16px">📌 B类全部需要上传赵凯斯定妆照·L2版用于大部分场景·L3战斗版（熊猫眼）用于L3醒来场景·即梦角色特征强度75-80%</div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">B-01~04</div><div><div class="rl-name">赵凯斯·监控室·链上追踪四镜头</div><div class="rl-sub">场景A+B</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">B-01 工位正面（Diamond Hands便利贴·Victor Chen未读消息）· B-02 发现异常眉头微皱· B-03 地址追踪网络图展开身体前倾· B-04 Victor Chen名字出现·压制的表情</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-01~04</div><div><div class="rl-name">赵凯斯·监控室·链上追踪四镜头</div><div class="rl-sub">场景A+B</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-01 工位正面（Diamond Hands便利贴·Victor Chen未读消息）· B-02 发现异常眉头微皱· B-03 地址追踪网络图展开身体前倾· B-04 Victor Chen名字出现·压制的表情</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">B-05~07</div><div><div class="rl-name">赵凯斯·预感发作·天降神针·广场背影</div><div class="rl-sub">场景C · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">B-05 街道停步仰头看钟摆（预感发作）· B-06 主观预感画面（虚焦冷白胶片质感·他看见的红色针）· B-07 广场背影（四周散户傻眼·机械小兵狂喜·只有他看懂了）</div><div class="rl-note">⚠️ B-06需要特殊后期调色：虚焦·冷白·胶片划过质感</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-05~07</div><div><div class="rl-name">赵凯斯·预感发作·天降神针·广场背影</div><div class="rl-sub">场景C · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-05 街道停步仰头看钟摆（预感发作）· B-06 主观预感画面（虚焦冷白胶片质感·只有他看见的红色针）· B-07 广场背影（四周散户傻眼·机械小兵狂喜）</div><div class="rl-note">⚠️ B-06需要特殊后期调色：虚焦·冷白·胶片划过质感</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">B-08~09</div><div><div class="rl-name">赵凯斯·混入大厦·Switch通关开门</div><div class="rl-sub">场景C2</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">B-08 跟在员工身后自然混入大厦· B-09 顶层走廊拿起Switch打关（机器人在背景静止）——这个画面要有强烈喜感</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-08~09</div><div><div class="rl-name">赵凯斯·混入大厦·Switch通关开门</div><div class="rl-sub">场景C2</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-08 跟在员工身后自然混入大厦· B-09 顶层走廊拿起Switch打关（机器人在背景静止）——这个画面要有强烈喜感</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">B-10~12</div><div><div class="rl-name">赵凯斯·进控制室·发现装置·砸按钮</div><div class="rl-sub">场景D</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">B-10 第一眼看透明地板下L3（说不清的恶心）· B-11 发现天降神针按钮和倒计时牌（从困惑到确认）· B-12 砸按钮瞬间慢动作</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-10~12</div><div><div class="rl-name">赵凯斯·进控制室·发现装置·砸按钮</div><div class="rl-sub">场景D</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-10 第一眼看透明地板下L3（说不清的恶心）· B-11 发现天降神针按钮和倒计时牌（从困惑到确认）· B-12 砸按钮瞬间慢动作</div></div></div>
 
-      <div class="rl-card" style="border-color:var(--gold)">
-        <div class="rl-header"><div class="rl-id">B-15</div><div><div class="rl-name">★ 名场面·洞口·幼稚鬼</div><div class="rl-sub">场景E · EP1最重要镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">维克多蹲在洞口，机械臂抓住赵凯斯悬空的手，像要拉他上来。赵凯斯另一手抓住维克多胸口项链。仰拍，从洞口内向上看维克多，逆光，压迫感极强。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">需要定妆照</div><div class="rl-item-val">维克多控制室版+赵凯斯L2版·两张都需要</div></div><div class="rl-item"><div class="rl-item-lbl">构图参考</div><div class="rl-item-val">狮子王刀疤推木法沙·仰拍·逆光·史诗感</div></div></div></div>
-      </div>
+      <div class="rl-card" style="border-color:var(--gold)"><div class="rl-header"><div class="rl-id">B-15</div><div><div class="rl-name">★ 名场面·洞口·幼稚鬼</div><div class="rl-sub">场景E · EP1最重要镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">维克多蹲在洞口，机械臂抓住赵凯斯悬空的手。赵凯斯另一手抓住维克多胸口项链。仰拍·逆光·史诗感。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">需要定妆照</div><div class="rl-item-val">维克多控制室版+赵凯斯L2版·两张都需要</div></div><div class="rl-item"><div class="rl-item-lbl">构图参考</div><div class="rl-item-val">狮子王刀疤推木法沙·仰拍·逆光·史诗感</div></div></div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">B-16~17</div><div><div class="rl-name">赵凯斯·坠落握冷钱包·L3醒来</div><div class="rl-sub">场景E+G</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">B-16 链条断裂瞬间，手握冷钱包坠入黑暗· B-17 L3地板上醒来第一眼（L3战斗版定妆照·熊猫眼）</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-16~17</div><div><div class="rl-name">赵凯斯·坠落握冷钱包·L3醒来</div><div class="rl-sub">场景E+G</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-16 链条断裂瞬间，手握冷钱包坠入黑暗· B-17 L3地板上醒来第一眼（L3战斗版定妆照·熊猫眼）</div></div></div>
 
       <div class="rl-section-title">C类 · 其他角色镜头</div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">C-01~04</div><div><div class="rl-name">陈维克多·四个关键镜头</div><div class="rl-sub">场景D+E · 控制室</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">C-01 进入控制室背影· C-02 从胸口取下冷钱包项链插入电脑· C-03 修复完毕回头「五十万token」· C-04 发现项链不见了，机械臂横扫工作台，「Fuck。我的钱包。」</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">C-01~04</div><div><div class="rl-name">陈维克多·四个关键镜头</div><div class="rl-sub">场景D+E · 控制室</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">C-01 进入控制室背影· C-02 从胸口取下冷钱包项链插入电脑· C-03 修复完毕回头「五十万token」· C-04 发现项链不见了，机械臂横扫工作台，「Fuck。我的钱包。」</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">C-05</div><div><div class="rl-name">闪回·年轻的陈维克多（无面罩版）</div><div class="rl-sub">场景E · 幼稚鬼闪回 · 2-3秒</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">咖啡馆，暖色调，与控制室强烈反差。年轻陈维克多（约30岁），无面罩无机械臂，眼睛里有光，说「幼稚鬼」——温和，宠溺。整个EP1情感最重的2秒钟。</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">C-05</div><div><div class="rl-name">闪回·年轻的陈维克多（无面罩版）</div><div class="rl-sub">场景E · 幼稚鬼闪回 · 2-3秒</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">咖啡馆，暖色调。年轻陈维克多（约30岁），无面罩无机械臂，眼睛里有光，说「幼稚鬼」——温和，宠溺。整个EP1情感最重的2秒钟。</div></div></div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">C-06~07</div><div><div class="rl-name">小猪女侠·404桌底 / 阿明妈妈·灶台</div><div class="rl-sub">场景G+H / 场景A</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div>
-        <div class="rl-body"><div class="rl-desc">C-06 小猪女侠靠着桌腿坐着，面具粉绿色光，L3唯一暖色角落，冷静等待· C-07 阿明妈妈灶台前忙碌，头也没抬，「你要辣椒吗？」</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">C-06~07</div><div><div class="rl-name">小猪女侠·404桌底 / 阿明妈妈·灶台</div><div class="rl-sub">场景G+H / 场景A</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">C-06 小猪女侠靠着桌腿坐着，面具粉绿色光，L3唯一暖色角落· C-07 阿明妈妈灶台前忙碌，头也没抬，「你要辣椒吗？」</div></div></div>
 
       <div class="rl-section-title">D类 · 后期特效镜头</div>
 
-      <div class="rl-card">
-        <div class="rl-header"><div class="rl-id">D-01~05</div><div><div class="rl-name">五个后期特效任务</div><div class="rl-sub">全场景</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div>
-        <div class="rl-body"><div class="rl-desc">D-01 Victor Chen名字屏幕文字叠加· D-02 招工广告视觉设计（城市大屏+早餐店电视+桌上二维码·三版本）· D-03 预感画面视觉调色（虚焦·冷白·胶片划过）· D-04 街道裂缝·人群坠落特效· D-05 72小时红色倒计时·EP1最后一个画面</div></div>
-      </div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">D-01~05</div><div><div class="rl-name">五个后期特效任务</div><div class="rl-sub">全场景</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">D-01 Victor Chen名字屏幕文字叠加· D-02 招工广告视觉设计（城市大屏+早餐店电视+桌上二维码·三版本）· D-03 预感画面视觉调色（虚焦·冷白·胶片划过）· D-04 街道裂缝·人群坠落特效· D-05 72小时红色倒计时·EP1最后一个画面</div></div></div>
 
     </div><!-- end ep1tab-renders -->
 
@@ -2292,882 +3121,10 @@
     </div>
     </div><!-- end ep1tab-screenplay -->
 
-  </section>
-
-  <section class="section" id="characters">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <h2 class="section-title">核心角色档案</h2>
-    </div>
-
-    <!-- 赵凯斯 -->
-    <div class="char-detail" id="zhao">
-      <div class="char-detail-header">
-        <div class="char-icon" style="background:rgba(212,160,23,0.1);border-color:var(--gold)">🐼</div>
-        <div>
-          <div class="char-detail-name">赵凯斯</div>
-          <div class="char-detail-subtitle">ROARING PANDA · L2系统维护工程师 · 28岁 · 绝对主角</div>
-        </div>
-      </div>
-      <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/xS6tvdLT/L2.png')">
-          <img src="https://i.ibb.co/xS6tvdLT/L2.png" alt="赵凯斯L2版">
-          <div class="char-image-label">// L2 正常状态</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/0p37YznK/L3.png')">
-          <img src="https://i.ibb.co/0p37YznK/L3.png" alt="赵凯斯L3战斗版">
-          <div class="char-image-label">// L3 战斗状态（熊猫眼）</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/LDZvhXDL/image.png')">
-          <img src="https://i.ibb.co/LDZvhXDL/image.png" alt="赵凯斯正常">
-          <div class="char-image-label">// S1 参考风格</div>
-        </div>
-      </div>
-      <div class="char-detail-body">
-        <h4>形象特征</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">正常状态</div>
-            <p>黑色蓬松竖发·黑框方形眼镜·黑色皮夹克（金色细节）·Diamond Hands T恤·战术背包·编织手环·右手握发光冷钱包</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">战斗状态（熊猫眼）</div>
-            <p>摘下眼镜·眼睛下方黑色油彩熊猫眼妆（晕染感）·脸上轻微灰尘·皮夹克有破损·表情平静的决心</p>
-          </div>
-        </div>
-        <h4>核心能力</h4>
-        <p><strong style="color:var(--gold)">Diamond Hand：</strong>不被情绪左右，市场越跌越坚定。</p>
-        <p><strong style="color:var(--gold)">逆向感知（S2进化）：</strong>画上熊猫眼后能感知「亏损之痛」和「Builder之痛」的逆向信号，找到情绪之门方向。左眼金色感知L2，右眼绿色感知L3。</p>
-        <div class="quote-block">
-          <p>「市场可以让你破产，但市场拿不走你的判断力。」——陈维克多教他的话，也是最终击穿陈维克多的话。</p>
-        </div>
-        <h4>即梦提示词</h4>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// L2正常状态</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
-二十八岁亚洲男性，黑色蓬松竖发带不规则刘海，黑框方形粗眼镜，
-黑色磨砂皮革夹克微微开着，拉链头金色，肩部细金色缝线，
-里面露出黑色Diamond Hands哥特字体T恤，
-黑色军事战术双肩背包，手腕编织手环，深色工装裤，黑色战术靴，
-右手握一个小型发光硬件冷钱包散发蓝白色微光，
-背景：永信城L2夜晚街道，金色霓虹，K线图霓虹招牌，
-表情轻松自信，8K电影级渲染</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// L3战斗状态（熊猫眼）</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
-保持人物面部特征和发型不变，无眼镜，
-眼睛下方黑色油彩熊猫眼妆晕染感不规则，
-眼睛激活：左眼金色数据流，右眼绿色逆向信号，
-脸上有轻微灰尘，表情平静的决心不是愤怒，
-黑色皮夹克有破损，右手握发光冷钱包散发蓝白色光，
-背景：L3地下工厂冷蓝绿灰色调，无限延伸格子间，头顶数据管道，
-8K电影级渲染</div>
-        </div>
-
-        <hr class="divider">
-        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
-
-        <h4>与陈维克多相识</h4>
-        <p>两人在Web3早期社区论坛相遇。赵凯斯发了一篇帖子「GameStop事件证明了什么」，陈维克多看到后主动联系了他。陈维克多教了他所有技能：传统股票技术分析、链上数据分析、MEV Bot运作原理，以及Diamond Hand哲学。那句「市场可以让你破产，但市场拿不走你的判断力」是陈维克多亲口说的，后来成了赵凯斯的人生信条。</p>
-
-        <h4>S2开场前的处境</h4>
-        <p>在L2担任系统维护工程师多年，负责监控协议运行状态、发现异常就修复。他以为自己在维护系统稳定——实际上他在维护一台收割机器的稳定运转。他是L2的既得利益者，有稳定收入，信任这套系统，把陈维克多当作消失了的好友和老师。</p>
-
-        <h4>S2成长弧线</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">EP1-2：震惊期</div>
-            <p>不知道L3存在，不知道冷钱包有什么特别，不知道为什么陈维克多要推他。只有一个问题：「为什么是我？」</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">EP3-4：追踪期</div>
-            <p>用陈维克多教他的链上分析能力，回头审视所有天降神针事件，发现模式。第一次意识到：「这不像自然市场行为。」</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">EP5：崩塌期</div>
-            <p>确认陈维克多的身份。双重背叛的冲击——朋友的背叛，和老师的背叛：「他教我识别MEV Bot，是为了让我永远看不见他自己。」</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">EP6：选择期</div>
-            <p>天花板碎裂，他有机会回L2。但他选择留下。原因：「L2给我的一切，是用L3的人换来的。我不想再换了。」</p>
-          </div>
-        </div>
-
-        <h4>他的「超能力」为什么是熊猫眼</h4>
-        <div class="quote-block">
-          <p>熊猫眼妆 = 人类手工涂抹的标记。不完美、有温度、AI永远无法理解为什么一个人要在脸上画黑圈才能发挥最大战斗力。这是他的「情绪之证」——一种系统无法算法化的人类仪式。</p>
-        </div>
-
-        <h4>标志性台词</h4>
-        <p style="color:var(--gold);font-style:italic">「L2给我的一切，是用L3的人换来的。我不想再换了。」——EP6，选择留在L3时</p>
-        <p style="color:var(--text-dim);font-style:italic">「他教我所有的技能，包括怎么找到他。」——EP5，确认陈维克多身份时</p>
-      </div>
-    </div>
-
-    <!-- 小猪女侠 -->
-    <div class="char-detail" id="piggy">
-      <div class="char-detail-header">
-        <div class="char-icon" style="background:rgba(233,69,96,0.1);border-color:var(--red)">🐷</div>
-        <div>
-          <div class="char-detail-name">小猪女侠</div>
-          <div class="char-detail-subtitle">陈晚照 · Crypto_Piggy · 数据分析师转Web3创作者</div>
-        </div>
-      </div>
-      <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/TMSFy0zp/image.png')">
-          <img src="https://i.ibb.co/TMSFy0zp/image.png" alt="小猪女侠战斗版">
-          <div class="char-image-label">// 战斗状态（CA指挥棒）</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/dw2hW0zj/image.png')">
-          <img src="https://i.ibb.co/dw2hW0zj/image.png" alt="小猪女侠工服版">
-          <div class="char-image-label">// 工服潜伏状态</div>
-        </div>
-      </div>
-      <div class="char-detail-body">
-        <h4>形象特征</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">标准造型</div>
-            <p>薄荷绿+粉色渐变双丸子头·全息镭射bomber夹克·黑色crop top·黑色皮裤+皮腰带+金属链条·黑色厚底战靴</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">工服潜伏版</div>
-            <p>白色连体工服（领口大开随意）·双丸子头被工帽半遮·工服口袋透出粉色微光（CA指挥棒藏在里面）</p>
-          </div>
-        </div>
-        <h4>双武器系统（此消彼长）</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">猪头半脸面具 · 防御</div>
-            <p>覆盖眼睛到鼻子·猪耳朵造型·绿色+粉色霓虹发光轮廓·戴上后系统判定「无威胁」</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">CA指挥棒 · 攻击</div>
-            <p>顶端粉色猪头发出霓虹光·棒身绿色数据流·每次使用消耗面具掩盖容量·S2共使用三次</p>
-          </div>
-        </div>
-        <div class="quote-block">
-          <p>她的情绪之证：一个把情绪降为零来保护自己的人，在最关键的时刻选择让情绪涌现，用自己的暴露换取所有人的自由。</p>
-        </div>
-        <h4>即梦提示词</h4>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// L3潜伏版（正常状态）</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
-二十多岁亚洲女性，薄荷绿粉色渐变双丸子头，薄薄的齐刘海，
-全息镭射彩虹反光bomber夹克，黑色crop top，
-黑色皮裤配皮腰带和金属链条，黑色厚底战靴，
-右手持CA指挥棒：顶端粉色猪头霓虹光芒，棒身绿色数据流动，
-背景：L3工厂格子间冷蓝绿灰色调，只有她站在阴影里观察，
-表情：冷静观察，微微上扬的嘴角，
-8K电影级渲染</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// 工服潜伏版</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
-薄荷绿粉色渐变双丸子头被白色工帽半遮，
-全白色连体工作服领口大开随意，手腕绿色数据监控手环，
-工服口袋隐约有粉色微光透出（CA指挥棒藏在里面），
-背景：L3格子间，周围所有工人低头工作，只有她站直抬头，
-表情：面无表情但眼睛里有光，
-8K电影级渲染</div>
-        </div>
-
-        <hr class="divider">
-        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
-
-        <h4>进入永信城之前</h4>
-        <p>真实姓名陈晚照。曾是海外市场运营，被公司选为「背锅者」，替金融产品暴雷背责。这段经历让她深刻理解了一件事：系统永远让肉身挡子弹。进入Web3之后，她创建了「猪圈社区」，建立了自己的信任体系。社区成员开始失踪、发胡言乱语，她顺着线索追踪，找到了永信城L3的入口，主动破解进入。</p>
-        <p>她的故事写到「进入永信城来结束」——这篇背景故事是她带着这些经历和能力进入永信城的起点。</p>
-
-        <h4>为什么能进入L3</h4>
-        <p>她的情绪指标接近于零。不是她没有情绪，而是她把情绪管理做到了极致——系统检测不到她，判定她「无威胁」，入口自动开放。这是她长期被系统伤害后发展出的自我保护机制，也是她最大的武器，同时也是她无法「过情绪之门」的根本原因。</p>
-
-        <h4>她和阿明的关系</h4>
-        <p>阿明是她猪圈社区里的人。她进L3很大程度上是为了找他。但她发现阿明认识她，却不想跟她走——他在L3如鱼得水，第一次感到被认可，不觉得需要被「救」。这是她最大的痛苦：不是他们认不出她，而是他们认出了她，但不想回去。</p>
-
-        <h4>「共识锚定」超能力的本质</h4>
-        <div class="quote-block">
-          <p>她的真正超能力不是技术性的冻结和回滚，而是「共识锚定」——在关键时刻说出一句话，让所有人停止FOMO，回到自己。这是陈维克多的系统最无法算法化的东西：一个真正被信任的声音。</p>
-        </div>
-
-        <h4>S2成长弧线</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">进入L3时</div>
-            <p>情绪为零，系统看不见她。她是L3里唯一清醒的旁观者，知道真相，但还没有找到出口。</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">遇见赵凯斯</div>
-            <p>第一个从天花板掉下来的人。他看见了系统的背面，这让她相信：「他可能是我一直在等的人。」</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">EP6第三次使用CA指挥棒</div>
-            <p>全力一击后面具完全失效，情绪指标暴露。她主动摘下面具，第一次露出真实的脸，用自己的暴露换取所有人的自由。</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">S2结局</div>
-            <p>走出工厂后没有离开，跟着赵凯斯回到L3入口方向。她救了别人，现在她要帮更多人找到出路。</p>
-          </div>
-        </div>
-
-        <h4>标志性台词</h4>
-        <p style="color:var(--gold);font-style:italic">「从上面掉下来的人，和自己走进来的人，看见的永信城不一样。你看见了什么？」——第一次对赵凯斯说的话</p>
-        <p style="color:var(--text-dim);font-style:italic">「你做的Meme，收割的是和你妈妈一样的普通人。」——对阿明说，触发他觉醒的话</p>
-      </div>
-    </div>
-
-    <!-- 林牧 -->
-    <div class="char-detail" id="linmu">
-      <div class="char-detail-header">
-        <div class="char-icon" style="background:rgba(240,165,0,0.1);border-color:var(--amber)">🎧</div>
-        <div>
-          <div class="char-detail-name">林牧</div>
-          <div class="char-detail-subtitle">狮子羊 · 数学天才 · L3最深处的潜伏者 · S2牺牲角色</div>
-        </div>
-      </div>
-      <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/PGRYHLgP/image.png')">
-          <img src="https://i.ibb.co/PGRYHLgP/image.png" alt="林牧正脸版">
-          <div class="char-image-label">// 正脸·质检室</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/sXnWXL1/image.png')">
-          <img src="https://i.ibb.co/sXnWXL1/image.png" alt="林牧蒙眼版">
-          <div class="char-image-label">// 蒙眼·聆听数据</div>
-        </div>
-      </div>
-      <div class="char-detail-body">
-        <h4>形象特征</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">标准造型</div>
-            <p>黑色中长发内扣盖耳·轻微胡茬·深灰色衬衫袖子卷起·学院派气质·眼神深邃平静</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">标志性道具</div>
-            <p>写满废弃代码的白色布条（蒙眼用）·带裂痕的狐狸面具（放在桌上，象征他的双重身份）</p>
-          </div>
-        </div>
-        <h4>蒙眼的双重原因</h4>
-        <p><strong style="color:var(--gold)">主动选择：</strong>他知道牛马工厂是什么，不想被里面的逻辑侵蚀。布条上写满废弃代码，系统无法通过自己抛弃的东西侵入他的意识。</p>
-        <p><strong style="color:var(--gold)">被要求：</strong>陈维克多要求他必须蒙眼。两人要求的原因完全不同，结果相同。</p>
-        <div class="quote-block">
-          <p>「苏晴，海南的海是什么颜色的？」——他的最后一句话。赵凯斯后来回答了他：「海南的海，是蓝色的。」</p>
-        </div>
-        <h4>即梦提示词</h4>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// 正脸·质检室版</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，上半身，9:16，
-二十多岁亚洲男性，黑色中长发内扣盖住耳朵，刘海自然垂落，
-轻微胡茬，学院派气质，眼神深邃平静，
-深灰色简单衬衫领口微微敞开袖子卷起，
-道具：写满废弃代码纹路的白色布条握在手里，
-带裂痕的狐狸面具放在旁边桌上，
-背景：L3独立质检室，冷蓝灰色调，数据管道发蓝光，
-光线：冷蓝色侧光打亮半边脸，
-8K电影级渲染，浅景深</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// 蒙眼·聆听版</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，上半身，9:16，
-保持人物面部特征不变，
-用写满废弃代码纹路的白色布条蒙住眼睛，
-侧耳倾听姿态，头微微低下，发丝因低头垂落，
-双手放在数据接口上，嘴唇微微张开在聆听，
-旁边带裂痕的狐狸面具面朝他像在注视他，
-背景：L3质检室，数据管道有心跳频率波形，
-8K电影级渲染</div>
-        </div>
-
-        <hr class="divider">
-        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
-
-        <h4>他是谁</h4>
-        <p>数学天才，量化交易者，圈内代号「狮子羊」。妻子苏晴已怀孕（孩子代号「林数」）。他的能力来自对市场底层数据流的数学结构感知——不是预测，而是「听见」。他能感知未来的价格路径，能看见普通人看不见的数学规律叠加在现实世界上。</p>
-
-        <h4>进入L3的过程</h4>
-        <p>他在L2发现了天降神针的规律，知道某种力量在精确控制市场，但无法从外部阻止。陈维克多通过他的异常交易记录发现了他——那笔FHT合约交易，37秒内完成到几何参数预测终点的精准操作，被陈维克多的MEV Bot识别为「人类，但感知能力超越普通人类」。陈维克多用家人安全作为诱导，他顺势接受，成为L3的质检员，同时暗中寻找解法。</p>
-
-        <h4>蒙眼的双重含义</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">他自己选择蒙眼</div>
-            <p>他知道L3是什么，不想被工厂的逻辑侵蚀。布条上写满废弃代码——系统无法通过他自己已经抛弃的东西侵入他的意识。</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">陈维克多要求他蒙眼</div>
-            <p>如果他能看见L3工人的脸，他会认出他们是真实的人，就无法继续做质检工作。两人的要求原因完全不同，结果相同。</p>
-          </div>
-        </div>
-
-        <h4>觉醒的触发</h4>
-        <p>某天的质检报告里，他的听觉能力捕捉到一个熟悉的声音——阿明的声音，从数据管道里传来，阿明在创作内容时那种极度自信的语气。林牧认出了：这不是抽象的情绪数据，这是一个真实的人。他开始反向追踪：「我的质检报告，被用来做什么了？」</p>
-
-        <h4>他的愧疚</h4>
-        <div class="quote-block">
-          <p>他没有直接伤害任何人。但他的存在，让整个收割系统的效率提升了数倍。他知道在自己帮助下有多少人被收割了。这才是他最深的罪：不是主动作恶，而是用善意的理由参与了一个邪恶的系统。</p>
-        </div>
-
-        <h4>牺牲时刻</h4>
-        <p>林牧摘下布条，第一次睁开眼睛，把双手插进数据管道，注入人类心跳的噪音，让陈维克多的追踪系统完全失效。他不知道这对自己意味着什么，但他知道这是他能做的唯一偿还。</p>
-        <p style="color:var(--gold);font-style:italic">最后一句话：「苏晴，海南的海是什么颜色的？」</p>
-        <p style="color:var(--text-dim)">赵凯斯后来回答了他：「海南的海，是蓝色的。」</p>
-
-        <h4>标志性台词</h4>
-        <p style="color:var(--gold);font-style:italic">「苏晴，对不起。我以为我在养活你们。原来我在伤害别人。」——牺牲前</p>
-        <p style="color:var(--text-dim);font-style:italic">「我等你很久了。」——第一次见到小猪女侠时</p>
-      </div>
-    </div>
-
-    <!-- 客服小何 -->
-    <div class="char-detail" id="xiaohe">
-      <div class="char-detail-header">
-        <div class="char-icon" style="background:rgba(26,143,170,0.1);border-color:var(--teal-bright)">📞</div>
-        <div>
-          <div class="char-detail-name">客服小何</div>
-          <div class="char-detail-subtitle">K线山光明顶高级客服 · S1盟友 · 长线人物</div>
-        </div>
-      </div>
-      <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/nHL455Q/image.png')">
-          <img src="https://i.ibb.co/nHL455Q/image.png" alt="客服小何工作版">
-          <div class="char-image-label">// 日常工作状态</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/S4mfZStT/image.png')">
-          <img src="https://i.ibb.co/S4mfZStT/image.png" alt="客服小何激活版">
-          <div class="char-image-label">// 权限激活·头发散开</div>
-        </div>
-      </div>
-      <div class="char-detail-body">
-        <h4>形象特征</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">标准造型</div>
-            <p>黑色高马尾+红色发圈·金色圆耳环·白色西装外套（领口金色线条细节）·酒红色高领内搭·左手腕发光手环（蓝白色CEX权限道具）</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">激活状态（EP6）</div>
-            <p>高马尾在能量爆发中散开飞扬·红色发圈断开飘落·手环爆发强烈蓝白色光芒沿手臂蔓延·表情反而最平静</p>
-          </div>
-        </div>
-        <h4>「Robinhood困境」</h4>
-        <p>她做了正确的事，但系统判定她违规。就像Robinhood在GameStop事件中被SEC审查——系统设计出来不是为了判断对错，而是维护「市场稳定」，而稳定的定义由L1决定。</p>
-        <div class="quote-block">
-          <p>S2结局：「他们找到出口了，但L1已经注意到我了。」光明顶的灯一盏一盏熄灭。「未完待续。」</p>
-        </div>
-        <h4>即梦提示词</h4>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// 日常工作版</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
-三十多岁亚洲女性，精致五官，黑色高马尾红色发圈，金色圆耳环，
-白色修身西装外套领口和袖口有极细金色线条，胸口低调金色菱形标志，
-内搭酒红色高领，黑色修身西裤，黑色高跟踝靴，
-左手腕发光手环金色+蓝白色交替发光，
-右手拿发光透明平板显示市场数据，
-背景：K线山光明顶，CEX操作台，多屏幕市场数据，
-表情温暖自信，8K电影级渲染</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// 权限激活版（头发散开）</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，史诗级慢动作定格，9:16，
-保持人物面部特征不变，
-高马尾发圈在能量爆发中断开，长发在气流中向后飘散，
-发丝在蓝白色光芒中飞扬，断开的红色发圈在空中飘落，
-左手腕手环爆发强烈蓝白色光芒沿手臂向上蔓延，
-举起左手朝向正前方，衣角和头发同时向后飘，
-背景CEX屏幕出现系统审查警告，
-表情：平静而坚定，这是她知道代价但还是选择的瞬间，
-8K电影级渲染</div>
-        </div>
-
-        <hr class="divider">
-        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
-
-        <h4>她在永信城里的真实处境</h4>
-        <p>全球用户量最大的加密货币交易所的高级客服，驻守K线山光明顶。她的每一句话都可能成为游资制造Meme盘子的工具——不是她的错，但发生在她身上。她知道系统有问题，选择留在内部做有限的好事，而不是离开。这是她和赵凯斯、小猪女侠最大的区别：她的战场在L2。</p>
-
-        <h4>她真正的影响力</h4>
-        <p>在真实加密世界里，像她这样的机构声音，一句表态就能带动数百万用户的FOMO或恐慌。她的超能力「暂停交易+触发隐私保护协议」对应的正是这个现实——CEX在关键时刻可以冻结账户、回滚交易，而她选择用这个权力保护散户而不是机构。</p>
-
-        <h4>为什么留在L2</h4>
-        <div class="quote-block">
-          <p>「如果我离开，这个位置会被一个更不在乎用户的人占据。至少我在这里，还能做一些事。」——这是她的选择，沉重的、痛苦的，但真实的。</p>
-        </div>
-
-        <h4>「Robinhood困境」的深层含义</h4>
-        <p>她做了正确的事，但系统判定她违规。类比Robinhood在GameStop事件中被SEC审查：系统的设计不是为了判断对错，而是维护「市场稳定」，而稳定的定义由L1决定。她违反了规则，但她的规则是对的。</p>
-
-        <h4>S2结局与悬念</h4>
-        <p>EP6发出最后一条加密消息「他们找到出口了，但L1已经注意到我了」，光明顶的灯一盏一盏熄灭。她的命运是S3最大的悬念之一——她是否已经被L1系统「清除」了？</p>
-
-        <h4>标志性台词</h4>
-        <p style="color:var(--gold);font-style:italic">「你拖住Block，我传Payload。」——EP4对赵凯斯说</p>
-        <p style="color:var(--text-dim);font-style:italic">「他们找到出口了，但L1已经注意到我了。」——S2最后一条消息</p>
-      </div>
-    </div>
-
-    <!-- 陈维克多 -->
-    <div class="char-detail" id="victor">
-      <div class="char-detail-header">
-        <div class="char-icon" style="background:rgba(77,175,255,0.1);border-color:#4DAFFF">⚙️</div>
-        <div>
-          <div class="char-detail-name">陈维克多</div>
-          <div class="char-detail-subtitle">MEV PHANTOM · 进化架构师 · L2最高权限者 · 38岁</div>
-        </div>
-      </div>
-      <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/jkvbG749/image.png')">
-          <img src="https://i.ibb.co/jkvbG749/image.png" alt="陈维克多控制室版">
-          <div class="char-image-label">// L2控制室·面罩版</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/nMp1xgpG/image.png')">
-          <img src="https://i.ibb.co/nMp1xgpG/image.png" alt="陈维克多正常">
-          <div class="char-image-label">// 控制室全景</div>
-        </div>
-      </div>
-      <div class="char-detail-body">
-        <h4>形象特征</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">标志性设计</div>
-            <p>概率云图面罩（覆盖眼睛到鼻梁，金色数据流实时流动）·右臂完全机械化（蓝色LED关节）·左眼机械义眼蓝色LED·右眼仍是人类深褐色</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">服装</div>
-            <p>深灰色高领长款风衣·哑光金属纤维·衣领处有细密电路纹路·整体极简无多余装饰</p>
-          </div>
-        </div>
-        <h4>最重要的设计原则</h4>
-        <p><strong style="color:var(--red)">永远不能让观众看见他完整的脸。</strong>概率云图面罩覆盖眼鼻区域，金色数据流实时流动。直到EP5揭露时刻，面罩出现短暂裂缝，那是他唯一的人性残留时刻。</p>
-        <p>胸口永远挂着冷钱包项链——他的图腾，他的仪式密钥，也是他唯一没有意识到的情感依附。工作台边缘还放着一个破损的旧硬件钱包，是他当年开发第一个MEV Bot时用的，从未扔掉。</p>
-        <div class="quote-block">
-          <p>S2结局：收到了自己设计的招募邀请——「您的愤怒、绝望、对失败的不甘，都是这个时代最稀缺的资产。」手指悬在「点击加入」上方。定格。「未完待续。」</p>
-        </div>
-        <h4>即梦提示词</h4>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// 控制室标准版（带冷钱包项链）</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
-参考图：上传控制室面罩版定妆照，勾选角色特征75%，
-
-三十八岁亚洲男性，黑色短发干净利落，
-概率云图面罩覆盖眼睛到鼻梁，
-半透明黑色镜面材质，
-表面实时流动金色概率数据流，
-左眼机械义眼蓝色LED从面罩下隐约可见，
-右眼人类深褐色，
-
-深灰色高领长款风衣，哑光金属纤维，衣领细密电路纹路，
-右臂完全机械化：黑色钛合金外骨骼，关节处蓝色LED发光，
-左臂人类手臂，手腕有银色数据接口植入，
-
-关键细节：胸口挂着一条细链项链，
-链条末端是一个小型硬件冷钱包，
-设备表面有微弱蓝白色发光，
-像图腾一样贴近胸口，
-
-背景：L2顶层圆形控制室，
-全息星图天花板，数据网络可视化屏幕，
-透明玻璃地板下可见L3幽绿光，
-工作台边有一个破损的旧硬件钱包，
-
-8K电影级渲染，压迫感十足，
-参考风格：上传图片中的控制室氛围和机械臂质感</div>
-        </div>
-
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// 名场面·洞口蹲下（EP1关键镜头）</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，9:16，
-参考图：上传控制室面罩版定妆照，勾选角色特征75%，
-
-场景：控制室中央透明地板，一个圆形洞口打开，
-洞口边缘发出幽绿色L3的光，
-
-维克多蹲在洞口边缘，
-俯身向下，
-右手（机械臂）抓住洞口下方某人的手，
-姿势像要拉人上来，但表情隐藏在面罩后无法看见，
-
-胸口项链自然垂落，
-冷钱包悬在半空，
-在幽绿色的光照下发出蓝白色微光，
-
-视角：微微仰拍，从洞口内向上看维克多，
-他的轮廓逆光，压迫感极强，
-
-光线：身后控制室冷蓝色，
-洞口透上来的幽绿色L3光，
-两种颜色在他身上交界，
-
-8K电影级渲染，狮子王名场面构图，
-史诗感，命运感</div>
-        </div>
-
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// 三秒后·发现项链不见了</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，特写，9:16，
-参考图：上传控制室面罩版定妆照，勾选角色特征75%，
-
-胸口特写：
-深灰色风衣胸口区域，
-项链链条断裂的痕迹清晰可见，
-原来挂着冷钱包的位置空了，
-只剩一小截断裂的链条，
-
-前景：维克多的左手（人类手臂）
-手指悬停在键盘上方，
-没有按下去，
-
-面罩在画面上方虚化，
-但金色数据流停止了流动，
-整个面罩黯淡了一秒，
-
-光线：屏幕冷蓝色光，
-胸口空白处有一个极小的阴影，
-那是冷钱包刚才还在的地方，
-
-这是整个EP1最安静的一刻，
-8K电影级渲染，情绪特写，浅景深</div>
-        </div>
-
-        <hr class="divider">
-        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
-
-        <h4>人生轨迹（五个阶段）</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">第一阶段 25-30岁·理想主义者</div>
-            <p>Web3早期布道者，真正相信去中心化能终结金融不公平。写过被社区奉为圭臬的白皮书，参与过多个头部公链底层设计，是赵凯斯仰慕的精神领袖。</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">第二阶段 28-33岁·MEV Bot开发者</div>
-            <p>开发MEV Bot，第一次站在收割者的位置，开始发现：算法比人类诚实——算法不会因为FOMO而失误，算法不会被情绪左右。「去中心化从来没有实现过，只是换了一套更隐蔽的中心化。」</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">第三阶段 33岁·觉醒崩溃</div>
-            <p>三年链上数据分析后得出结论：「去中心化是个谎言。」试图告诉赵凯斯，赵凯斯选择继续相信，陈维克多沉默了很久说：「你比我以前的自己更像我。我希望你是对的。」然后消失了两年。</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">第四阶段 33-35岁·黑暗期</div>
-            <p>退出所有公开身份，删除社交媒体，卖掉「信仰」的持仓，独自研究数据。结论：人类的问题不是被资本控制，而是情绪让他们永远无法自救。AI没有这个缺陷，AI是进化的方向。</p>
-          </div>
-        </div>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">第五阶段 35-38岁·进化架构师</div>
-            <p>回来了，但变了。开始半机械化改造自己，设计天降神针算法，招募林牧，建立L3收割体系，积累向L1献祭的资产。工作台边始终放着当年第一次开发MEV Bot用的旧硬件钱包，从未扔掉。</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">与赵凯斯的关系标注</div>
-            <p>他在系统数据里给赵凯斯标注了一个备注：「Victor Jr. — anomaly」。这既是他对赵凯斯的定义，也是他对自己曾经的自己的定义。他最终错的那一步，就是低估了这个anomaly。</p>
-          </div>
-        </div>
-
-        <h4>冷钱包·他的图腾</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">冷钱包的本质</div>
-            <p>不只是存储设备。这是向L1献祭的「仪式密钥」——没有它，收割来的所有资产和情绪数据无法完成最终的献祭程序。整个S2计划的核心。</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">为什么挂在胸口</div>
-            <p>他把它做成项链挂在胸口，像图腾，像护身符。他以为自己超越了情感依附——但他把最重要的东西放在离心脏最近的地方。他自己没有意识到这个矛盾。</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">修复系统时需要插入使用</div>
-            <p>EP1控制室场景：赵凯斯砸碎按钮后，维克多修复漏洞时需要从胸口取下冷钱包插入电脑。赵凯斯亲眼看见了这个动作，意识到这东西是整个系统的核心。</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">失去的瞬间</div>
-            <p>维克多在洞口松手让赵凯斯坠落时，赵凯斯另一只手抓住了他的项链。链条断裂，冷钱包随赵凯斯一起坠入L3。维克多三秒后才发现项链不见了——他整个S2计划最大的失误。</p>
-          </div>
-        </div>
-
-        <h4>他计划的致命漏洞</h4>
-        <p>他在愤怒中松手让赵凯斯坠落，没有第一时间意识到项链断了。三秒后他低头看胸口，项链不见了——他的手停在键盘上，第一次完全沉默。这是他整个系统里唯一一次被情绪影响判断，也是他「以为超越了人类情绪局限」这个信念最深刻的讽刺。</p>
-
-        <h4>他的深层悲剧</h4>
-        <div class="quote-block">
-          <p>他以为在帮L1，实际上他的每一个野心、冷血计算、对进化的渴望，都是L1最需要的高质量情绪数据。他和L3的情绪牛马本质上没有区别，只是更高级的情绪牛马。他花了一生试图超越人类情绪的局限，却不知道他的「超越」本身就是最浓烈的情绪。</p>
-        </div>
-
-        <h4>S2结局的真正含义</h4>
-        <p>Meme病毒爆发，面罩碎裂，所有权限撤销，收到了自己设计的招募邀请。手指悬在「点击加入」上方的定格画面，是整个S2最重要的一帧——他设计了这个系统来收割别人，现在系统在收割他。而他的手指没有离开屏幕。</p>
-
-        <h4>标志性台词</h4>
-        <p style="color:var(--gold);font-style:italic">「市场可以让你破产，但市场拿不走你的判断力。」——教给赵凯斯的话，EP5用同一句话击穿了他</p>
-        <p style="color:var(--text-dim);font-style:italic">「Victor Jr. — anomaly。」——他给赵凯斯的系统标注，也是他对自己的注释</p>
-      </div>
-    </div>
-
-    <!-- 阿明 -->
-    <div class="char-detail" id="aming">
-      <div class="char-detail-header">
-        <div class="char-icon" style="background:rgba(46,204,113,0.1);border-color:#2ECC71">😎</div>
-        <div>
-          <div class="char-detail-name">阿明</div>
-          <div class="char-detail-subtitle">L3顶级牛马 · P小匠 · Meme天才 · 黑色幽默担当</div>
-        </div>
-      </div>
-      <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/1t5qW12C/image.png')">
-          <img src="https://i.ibb.co/1t5qW12C/image.png" alt="阿明兴奋">
-          <div class="char-image-label">// L3如鱼得水·高谈阔论</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/RGV9Fbf4/image.png')">
-          <img src="https://i.ibb.co/RGV9Fbf4/image.png" alt="阿明工服">
-          <div class="char-image-label">// 工服版（最随意的那个）</div>
-        </div>
-      </div>
-      <div class="char-detail-body">
-        <h4>形象特征</h4>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="info-box-label">标准造型</div>
-            <p>棕色蓬乱短发·轻微胡茬·白色工服（领口大开最随意的那个）·袖子随意卷起·桌上多个K线图屏幕</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box-label">关键设定</div>
-            <p>他是L3里唯一把工服穿出邋遢感的人。头顶数据管道抽走他情绪的速度比任何人都快——因为他的FOMO和自信是系统最高质量的燃料。</p>
-          </div>
-        </div>
-        <h4>他在L3如鱼得水</h4>
-        <p>阿明在L3找到了现实世界从来没给过他的东西——<strong style="color:var(--gold)">被认可</strong>。他做Meme表情包是顶级技能，其他工人都来请教他。他不想出去。</p>
-        <div class="quote-block">
-          <p>S2结局：最后一个离开工厂，也是最伤心的人（工厂被破坏了）。给妈妈发消息：「妈，我想吃你做的早餐。」</p>
-        </div>
-        <h4>即梦提示词</h4>
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <span class="prompt-title">// L3顶级牛马版</span>
-            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-          </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，上半身，9:16，
-二十多岁亚洲男性，棕色蓬乱短发，轻微胡茬，
-白色工服领口大开随意，袖子卷起，
-双手比划讲解姿势，过度自信的大笑，
-「我已经看穿庄家了」的表情，
-桌上多个屏幕显示K线图，
-旁边工人低头工作，只有他在高谈阔论，
-头顶数据管道正在往下滴落数据粒子，
-背景：L3格子间冷蓝绿灰色调，工位编号可见，
-8K电影级渲染</div>
-        </div>
-
-        <hr class="divider">
-        <h3 style="color:var(--teal-bright)">深度背景档案</h3>
-
-        <h4>他是谁</h4>
-        <p>二十多岁，没有固定工作，是小猪女侠猪圈社区里的活跃成员。Meme表情包天才，P图技术顶级，对Web3最新热点极度敏感。他的妈妈开着一家早餐店，凌晨四点起床揉面，攒了一辈子的钱，准备去朝圣。他把那笔钱拿去炒Meme，输光了。</p>
-
-        <h4>为什么进L3</h4>
-        <p>不是被骗进来的，不是被强迫的。他主动进来，想赚回妈妈的那笔钱。系统的招募邀请对他来说是最完美的诱饵：「你的内容激发越多人情绪，你赚得越多。」他太擅长这件事了。</p>
-
-        <h4>为什么不想出去</h4>
-        <p>在L3，他第一次感到被真正认可。他的Meme技术是顶级技能，其他工人都来请教他，他是这里的「专家」。现实世界里他是输钱的废物；在L3他是被需要的人。系统最聪明的地方不是关住他，而是给了他他最缺少的东西。</p>
-
-        <h4>觉醒的触发</h4>
-        <div class="quote-block">
-          <p>小猪女侠对他说：「你做的Meme，收割的是和你妈妈一样的普通人。」他第一次想到：妈妈凌晨四点揉面的那双手，和他Meme引发的FOMO，指向了同一群人。他看见了闭环。</p>
-        </div>
-
-        <h4>EP6的点火索</h4>
-        <p>想起妈妈凌晨四点揉面等他——不是为了责怪自己，而是因为那个画面让他想起了「外面有人在等我」。他跳上桌子大喊，不是在喊交易信号，而是在喊：「我想起来了。我们不只是数据工人。」这一喊点燃了集体情绪。</p>
-
-        <h4>他的「情绪之证」</h4>
-        <p>阿明代表的现实：互联网上有无数个阿明，天才横溢，在错误的系统里把才华消耗殆尽，以为在赢，实际上在为系统提供最高质量的情绪燃料。他的觉醒不是因为他变聪明了，而是因为他突然记起了爱。这是系统永远无法算法化的东西。</p>
-
-        <h4>标志性台词</h4>
-        <p style="color:var(--gold);font-style:italic">「妈，我想吃你做的早餐。」——S2结局，走出工厂后给妈妈发的消息</p>
-        <p style="color:var(--text-dim);font-style:italic">「如果这次赚到了，我就带我妈去海南。」——林牧觉醒触发的话，他自己不知道意义有多大</p>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- EPISODES -->
-  <section class="section" id="episodes">
+  </section>  <section class="section" id="prompts">
     <div class="section-header">
       <span class="section-num">04</span>
-      <h2 class="section-title">六集大纲</h2>
-    </div>
-
-    <div class="quote-block">
-      <p>故事发生在72小时内。赵凯斯坠落L3时，距离记忆清零还剩72小时。整个S2就是这72小时里发生的事。</p>
-    </div>
-
-    <div class="ep-list">
-      <div class="ep-card open" id="ep1">
-        <div class="ep-header" onclick="toggleEp(this)">
-          <span class="ep-num">EP1</span>
-          <span class="ep-title">天降神针</span>
-          <span class="ep-time">0-10小时</span>
-          <span class="ep-toggle">▼</span>
-        </div>
-        <div class="ep-body">
-          <div class="ep-core">情感核心：「我在修复系统」→「系统才是问题」</div>
-          <ul class="ep-events">
-            <li>天降神针触发，L2市场崩盘大规模收割</li>
-            <li>赵凯斯追踪数据异常→找到陈维克多控制室→砸碎天降神针物理按钮</li>
-            <li>L2地板因能量失衡出现裂缝，附近无辜市民开始坠落</li>
-            <li>陈维克多出现，推赵凯斯坠落，用代码修复裂缝（坠落的人永远回不来）</li>
-            <li>赵凯斯无意带走冷钱包（陈维克多的唯一失误）</li>
-            <li>在L3醒来：无恐慌情绪，系统延迟处理，被小猪女侠拖入404号工位桌底</li>
-          </ul>
-          <p style="font-size:13px;color:var(--gold);margin-top:16px">结尾：「距离记忆清零：72小时。」</p>
-        </div>
-      </div>
-
-      <div class="ep-card" id="ep2">
-        <div class="ep-header" onclick="toggleEp(this)">
-          <span class="ep-num">EP2</span>
-          <span class="ep-title">小匠的狂想</span>
-          <span class="ep-time">10-20小时</span>
-          <span class="ep-toggle">▼</span>
-        </div>
-        <div class="ep-body">
-          <div class="ep-core">情感核心：「你以为自己是赢家，其实你是最高级的燃料」</div>
-          <ul class="ep-events">
-            <li>赵凯斯和小猪建立初步信任</li>
-            <li>了解L3机制：KPI系统、消费循环、后排工位的秘密</li>
-            <li>阿明出现：如鱼得水的顶级牛马，小猪认出他是猪圈社区的人</li>
-            <li>小猪展示：情绪之门存在，但我一直找不到它在哪里</li>
-            <li>小猪开始编译Meme病毒</li>
-            <li>陈维克多发现冷钱包不见了，派出数据猎犬追踪</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="ep-card" id="ep3">
-        <div class="ep-header" onclick="toggleEp(this)">
-          <span class="ep-num">EP3</span>
-          <span class="ep-title">粉色暗池的走私客</span>
-          <span class="ep-time">20-30小时</span>
-          <span class="ep-toggle">▼</span>
-        </div>
-        <div class="ep-body">
-          <div class="ep-core">情感核心：「你以为在帮忙，其实是共谋」</div>
-          <ul class="ep-events">
-            <li>赵凯斯分析冷钱包，发现密钥与情绪之门的关系</li>
-            <li>小猪追踪异常监听节点，找到质检室，找到林牧</li>
-            <li>林牧：「我等你很久了。」他早就感知到她的存在</li>
-            <li>特洛伊木马战术确立：CA指挥棒+Meme病毒+冷钱包密钥三合一计划</li>
-            <li>小何从L2发出第一个信号，触发隐私保护协议</li>
-            <li>陈维克多察觉：「为什么系统在自动传播一个我没有授权的Meme？」</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="ep-card" id="ep4">
-        <div class="ep-header" onclick="toggleEp(this)">
-          <span class="ep-num">EP4</span>
-          <span class="ep-title">跨阶层Ping</span>
-          <span class="ep-time">30-38小时</span>
-          <span class="ep-toggle">▼</span>
-        </div>
-        <div class="ep-body">
-          <div class="ep-core">情感核心：「你的善意，是系统最好的包装」</div>
-          <ul class="ep-events">
-            <li>主角团向植物人区域移动，赵凯斯开始感知逆向信号：「跟着痛走」</li>
-            <li>小猪找到阿明说明真相，阿明第一次动摇</li>
-            <li>林牧预警：陈维克多开始追踪，你们有5分钟</li>
-            <li>小何触发隐私保护协议，制造5分钟追踪盲区，代价：操作记录被监控</li>
-            <li>陈维克多绕过防线，粉色暗池崩塌，主角团被迫深入植物人区域</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="ep-card" id="ep5">
-        <div class="ep-header" onclick="toggleEp(this)">
-          <span class="ep-num">EP5</span>
-          <span class="ep-title">零日漏洞</span>
-          <span class="ep-time">38-41小时</span>
-          <span class="ep-toggle">▼</span>
-        </div>
-        <div class="ep-body">
-          <div class="ep-core">情感核心：「你以为认识他，其实你认识的是谎言」</div>
-          <ul class="ep-events">
-            <li>穿越植物人区域：赵凯斯认出因他坠落而变成植物人的市民，第一次真正愤怒</li>
-            <li>赵凯斯感知到逆向信号最强处：「出口就在这里」</li>
-            <li>陈维克多全息投影降临，说出那句话：「市场可以让你破产，但市场拿不走你的判断力。」</li>
-            <li>赵凯斯愣住：「老陈……？」</li>
-            <li>小猪想立刻触发病毒，赵凯斯拦住：「还不是时候，阿明还没准备好」</li>
-            <li>陈维克多开始追踪病毒源头，准备定向清算</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="ep-card" id="ep6">
-        <div class="ep-header" onclick="toggleEp(this)">
-          <span class="ep-num">EP6</span>
-          <span class="ep-title">情绪之证</span>
-          <span class="ep-time">41-72小时</span>
-          <span class="ep-toggle">▼</span>
-        </div>
-        <div class="ep-body">
-          <div class="ep-core">情感核心：「人类最不理性的选择，是算法永远无法预测的」</div>
-          <ul class="ep-events">
-            <li>林牧牺牲：摘下布条，第一次睁眼，把双手插进数据管道。「苏晴，海南的海是什么颜色的？」</li>
-            <li>阿明跳上桌子大喊，点燃集体情绪</li>
-            <li>小猪第三次使用CA指挥棒，全力一击，摘下面具露出真实的脸</li>
-            <li>赵凯斯感知临界点：「现在。」小猪按下回车，注入Meme病毒</li>
-            <li>赵凯斯用冷钱包密钥触碰情绪之门，小何引爆CEX服务器触发3秒全局回滚</li>
-            <li>Meme病毒爆发，天花板碎裂，阳光第一次照进L3，所有人涌向出口</li>
-          </ul>
-          <h4 style="margin-top:20px">各角色结局</h4>
-          <ul class="ep-events">
-            <li><strong style="color:var(--text-bright)">阿明</strong>：最后一个离开，最伤心的人。给妈妈：「妈，我想吃你做的早餐。」</li>
-            <li><strong style="color:var(--text-bright)">小猪</strong>：走出工厂敲代码，然后跟着赵凯斯回L3入口方向。</li>
-            <li><strong style="color:var(--text-bright)">赵凯斯</strong>：选择留在L3。「有人需要知道外面有光。」</li>
-            <li><strong style="color:var(--text-bright)">小何</strong>：「L1已经注意到我了。」光明顶灯熄灭。未完待续。</li>
-            <li><strong style="color:var(--text-bright)">陈维克多</strong>：手指悬在「点击加入」上方。未完待续。</li>
-            <li><strong style="color:var(--text-bright)">林牧</strong>：「献给所有在黑暗里做了正确的事，却没有人看见的人。」</li>
-          </ul>
-          <div class="ep-core" style="margin-top:16px;border-color:var(--red);color:var(--red)">
-            彩蛋：L1系统日志 → ERROR: UNABLE TO CALCULATE——无法建模「在看见真相之后仍然选择相信人类价值」这种情绪。
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROMPTS -->
-  <section class="section" id="prompts">
-    <div class="section-header">
-      <span class="section-num">05</span>
-      <h2 class="section-title">场景即梦提示词</h2>
+      <h2 class="section-title">创作指引 · 即梦提示词</h2>
     </div>
 
     <p>所有图片默认 <strong style="color:var(--gold)">9:16</strong>。所有视频提示词针对即梦优化。</p>
@@ -3239,29 +3196,6 @@
   </section>
 
   <!-- RECRUITMENT - 内容已迁移至世界观模块 -->
-  <section class="section" id="recruitment">
-    <div class="section-header">
-      <span class="section-num">06</span>
-      <h2 class="section-title">L3招募机制 · 独立世界观短片</h2>
-    </div>
-
-    <div style="background:rgba(212,160,23,0.05);border:1px solid var(--border);border-radius:10px;padding:24px;text-align:center">
-      <div style="font-size:32px;margin-bottom:12px">📦</div>
-      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">内容已迁移至「永信城世界观」章节</div>
-      <div style="font-size:13px;color:var(--text-dim);line-height:1.8;margin-bottom:20px">
-        招募机制·独立世界观短片库·情绪感知网络<br>
-        现在都在世界观模块的以下版块中：
-      </div>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-        <a href="#hidden-system" style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:8px 16px;background:rgba(212,160,23,0.1);border:1px solid var(--border);border-radius:6px;color:var(--gold);text-decoration:none">情绪感知网络 ↑</a>
-        <a href="#world-shorts" style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:8px 16px;background:rgba(212,160,23,0.1);border:1px solid var(--border);border-radius:6px;color:var(--gold);text-decoration:none">独立世界观短片库 ↑</a>
-        <a href="#recruitment-detail" style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:8px 16px;background:rgba(212,160,23,0.1);border:1px solid var(--border);border-radius:6px;color:var(--gold);text-decoration:none">招募机制完整设定 ↑</a>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- RULES -->
   <section class="section" id="rules">
     <div class="section-header">
       <span class="section-num">07</span>
@@ -3332,8 +3266,6 @@
     <p class="footer-sub">你在这个故事里创作的每一个镜头，都是你对这个问题的回答。</p>
     <div class="footer-tag">凡人修币录 S2 · 情绪之证 · PROOF OF EMOTION · CREATOR BIBLE v2.0</div>
   </footer>
-
-</main>
 
 <script>
   function switchEP1Tab(tab, btn) {
