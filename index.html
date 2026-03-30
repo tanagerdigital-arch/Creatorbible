@@ -326,10 +326,9 @@
 
   /* IMAGE GALLERY */
   .char-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
-    padding: 32px 40px;
+    display: flex;
+    justify-content: center;
+    padding: 24px 40px;
     border-bottom: 1px solid var(--border);
     background: rgba(0,0,0,0.2);
   }
@@ -341,6 +340,8 @@
     border: 1px solid var(--border);
     transition: border-color 0.3s, transform 0.3s;
     cursor: pointer;
+    width: 220px;
+    flex-shrink: 0;
   }
 
   .char-image-item:hover {
@@ -350,7 +351,8 @@
 
   .char-image-item img {
     width: 100%;
-    height: 320px;
+    height: auto;
+    aspect-ratio: 9/16;
     object-fit: cover;
     object-position: top;
     display: block;
@@ -717,7 +719,7 @@
     .hero h1 { font-size: 40px; }
     .hero::after { display: none; }
     .layers-grid, .rules-grid, .info-grid { grid-template-columns: 1fr; }
-    .char-images { grid-template-columns: 1fr 1fr; padding: 20px 24px; }
+    .char-images { justify-content: center; padding: 20px 24px; }
     .footer { padding: 60px 24px; }
   }
 </style>
@@ -743,9 +745,9 @@
   <div class="nav-section">
     <div class="nav-section-label">世界观</div>
     <a href="#world" class="nav-link">永信城世界观</a>
-    <a href="#hidden-system" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 情绪感知网络</a>
-    <a href="#world-shorts" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 独立短片库</a>
-    <a href="#recruitment-detail" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 招募机制</a>
+    <a href="#hidden-system" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 情绪感知网络 & 天降神针</a>
+    <a href="#recruitment-detail" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 永信城牛马情绪工厂</a>
+    <a href="#world-shorts" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 永信城概念短片</a>
     <a href="#theme" class="nav-link">核心主题</a>
   </div>
 
@@ -762,6 +764,7 @@
   <div class="nav-section">
     <div class="nav-section-label">六集大纲</div>
     <a href="#ep1" class="nav-link">EP1 天降神针</a>
+    <a href="#ep1-scenes" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright)">↳ EP1 场景包</a>
     <a href="#ep2" class="nav-link">EP2 小匠的狂想</a>
     <a href="#ep3" class="nav-link">EP3 粉色暗池</a>
     <a href="#ep4" class="nav-link">EP4 跨阶层Ping</a>
@@ -869,7 +872,7 @@
         </div>
 
         <div class="info-box">
-          <div class="info-box-label">Meme街 · 散户集市</div>
+          <div class="info-box-label">归零街（Meme街）· 散户集市</div>
           <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">L2草根区域 · 阿明活动的地方</div>
           <p>永信城最混乱也最有活力的区域。Meme文化、「下一个要爆的项目」、各种喊单群和内幕消息在这里流通。彩色霓虹，24小时不关机。</p>
           <p style="margin-top:8px">阿明坠落前在这里创作内容，是这条街最受欢迎的P图博主。他不知道自己每次爆火的内容，都在精准地为域峰广场的下一次天降神针制造情绪燃料。</p>
@@ -898,31 +901,6 @@
 
       </div>
 
-      <h3>天降神针 · 视觉设计（创作者必看）</h3>
-
-      <div style="border-radius:8px;overflow:hidden;margin:16px 0;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/1Yz4yNR6/domain-peak.png')">
-        <img src="https://i.ibb.co/1Yz4yNR6/domain-peak.png" alt="域峰广场概念图" style="width:100%;display:block;max-height:360px;object-fit:cover;background:#0D1220;transition:opacity 0.2s" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-        <div style="padding:12px 16px;background:var(--dark-2);display:flex;justify-content:space-between;align-items:center">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim)">// 域峰广场 · 天降神针触发瞬间 · 导演概念参考图</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim)">点击查看全图 ↗</div>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0">
-        <div class="info-box">
-          <div class="info-box-label" style="color:var(--text-dim)">平时 · 钟摆摆动</div>
-          <p>钟摆悬在域峰广场上空，来回摆动，是所有L2市民的日常背景，象征「市场稳定运行」。没有人知道它是收割装置的一部分。红色的针平时完全不可见。</p>
-        </div>
-        <div class="info-box">
-          <div class="info-box-label" style="color:var(--red)">触发瞬间 · 三阶段</div>
-          <p>① 钟摆突然停止（0.5秒）——所有人感到一种说不清的不对劲<br><br>② 红色能量针从钟摆底部射出，插入广场地面，巨大光柱爆发，两侧K线屏幕全变红，清算在这一瞬间完成<br><br>③ 针消失，钟摆重新摆动，「一切恢复正常」</p>
-        </div>
-        <div class="info-box">
-          <div class="info-box-label">人群反应对比</div>
-          <p><strong style="color:var(--red)">机械小兵：</strong>西装外表平时站在各交易场所「维护市场秩序」，天降神针触发时机械臂伸出，集体狂喜欢呼。<br><br><strong style="color:var(--text-dim)">散户：</strong>错愕傻眼，看着清零的账户，手机握在手里，不知道刚才发生了什么。没有人注意到钟摆刚才停了一下。</p>
-        </div>
-      </div>
-
       <h3>陈维克多的消失（创作者必知背景）</h3>
       <div class="quote-block">
         <p>S1结束后不久，陈维克多在Discord发出最后一条消息：「Web3已死。不是被外部力量杀死的，是被我们自己的贪婪杀死的。我不想再参与这场表演了。保重。」随后注销账号，删除所有社交媒体，链上地址停止活动。赵凯斯联系不上他，以为他真的退圈了。</p>
@@ -934,23 +912,50 @@
       <h2 style="font-family:'Noto Serif SC',serif;font-size:18px;color:var(--gold);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border)">核心设定</h2>
 
       <!-- 隐藏机制 -->
-      <h3 id="hidden-system">情绪感知网络</h3>
+      <h3 id="hidden-system">情绪感知网络 & 天降神针</h3>
       <div class="quote-block">
-        <p>整个永信城是一台巨大的情绪收割机。天降神针是终点，但收割从你踏入这座城市的第一秒就已经开始了。</p>
+        <p>整个永信城是一台巨大的情绪收割机。情绪感知网络负责实时采集，天降神针负责最终收割。两套系统共同运作，构成永信城最核心的隐藏机制。</p>
       </div>
+
+      <h4 style="color:var(--red);margin:20px 0 12px">天降神针 · 视觉设计</h4>
+
+      <div style="border-radius:8px;overflow:hidden;margin:16px 0;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/1Yz4yNR6/domain-peak.png')">
+        <img src="https://i.ibb.co/1Yz4yNR6/domain-peak.png" alt="域峰广场概念图" style="width:100%;display:block;max-height:320px;object-fit:cover;background:#0D1220;transition:opacity 0.2s" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+        <div style="padding:12px 16px;background:var(--dark-2);display:flex;justify-content:space-between;align-items:center">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim)">// 域峰广场 · 天降神针触发瞬间 · 导演概念参考图</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim)">点击查看全图 ↗</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0">
+        <div class="info-box">
+          <div class="info-box-label" style="color:var(--gold)">装置造型 · K线灯烛形</div>
+          <p>造型灵感来自K线图的蜡烛柱体，但是抽象化的精密金融仪器——不是真实蜡烛，不是古老钟摆。主体是粗壮的六棱柱金属体，上下各有细长的金属影线延伸，材质拉丝钛合金，冷银色。它来回摆动，提醒着时间的流逝，没有人知道它在计时什么。</p>
+        </div>
+        <div class="info-box">
+          <div class="info-box-label" style="color:var(--red)">触发瞬间 · 三阶段</div>
+          <p>① 装置突然停止（0.5秒）——所有人感到一种说不清的不对劲<br><br>② 红色能量针从装置底部影线射出，插入广场地面，巨大光柱爆发，两侧K线屏幕全变红，清算在这一瞬间完成<br><br>③ 针消失，装置重新摆动，「一切恢复正常」</p>
+        </div>
+      </div>
+      <div class="info-box" style="margin-bottom:24px">
+        <div class="info-box-label">人群反应对比</div>
+        <p><strong style="color:var(--red)">机械小兵：</strong>西装外表，天降神针触发时机械臂伸出，集体狂喜欢呼。<br><strong style="color:var(--text-dim)">散户：</strong>错愕傻眼，账户清零，没有人注意到装置刚才停了一下。</p>
+      </div>
+
+      <h4 style="color:var(--gold);margin:20px 0 12px">情绪感知网络 · 两层系统</h4>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0">
         <div class="info-box">
           <div class="info-box-label" style="color:var(--gold)">硬件层 · 情感灯柱</div>
-          <p>外观和普通城市路灯几乎完全一样。唯一区别：灯头顶部有一圈极细的金色感应环，缓慢旋转，约10秒转一圈。在Meme街的霓虹环境里几乎看不出来。</p>
+          <p>外观和普通城市路灯几乎完全一样。唯一区别：灯头顶部有一圈极细的金色感应环，缓慢旋转，约10秒转一圈。在归零街（Meme街）的霓虹环境里几乎看不出来。</p>
           <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">功能：持续扫描经过的人群，检测心跳变化·瞳孔扩张·表情微变·声纹情绪分析，实时上传灰鲸金融顶层。</p>
-          <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">分布密度：Meme街每隔5米一根（最密）·L2核心区每隔20米·域峰广场最密集，天降神针触发时全部超载运行。</p>
+          <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">分布密度：归零街（Meme街）每隔5米一根（最密）·L2核心区每隔20米·域峰广场最密集，天降神针触发时全部超载运行。</p>
         </div>
         <div class="info-box">
           <div class="info-box-label" style="color:var(--gold)">信号层 · 情绪尘</div>
           <p>永信城空气里漂浮的极细小金色粒子，比灰尘还小。在霓虹灯光下像空气里的光晕，普通人以为是光污染或雾气。</p>
           <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">行为规律：平时随机漂浮·当有人情绪激动时周围粒子轻微聚集形成淡金色光晕·然后向上飘散，方向永远朝向灰鲸金融大厦。</p>
-          <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">浓度分布：Meme街夜晚最浓（肉眼隐约可见）·早餐店极淡·L3工厂完全没有（情绪已被完全抽取，空气是「空」的）。</p>
+          <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">浓度分布：归零街（Meme街）夜晚最浓（肉眼隐约可见）·早餐店极淡·L3工厂完全没有（情绪已被完全抽取，空气是「空」的）。</p>
         </div>
       </div>
 
@@ -975,18 +980,18 @@
       <hr style="border:none;border-top:1px solid var(--border);margin:40px 0">
 
       <!-- 独立世界观短片库 -->
-      <h3 id="world-shorts">独立世界观短片库</h3>
+      <h3 id="world-shorts">永信城概念短片</h3>
       <div class="quote-block">
         <p>这些内容不是主线剧情的一部分，而是永信城世界观的「素材库」。随时可以剪入主线作为转场或闪回，也可以单独发布作为社交媒体预热内容，或给社区创作者作为世界观参考。</p>
       </div>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0">
 
-        <!-- 短片1：Meme街区 -->
+        <!-- 短片1：归零街（Meme街） -->
         <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
           <div style="padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(212,160,23,0.05)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">独立短片 01</div>
-            <div style="font-size:15px;font-weight:600;color:var(--text-bright)">Meme街区 · 永信城的草根宇宙</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text-bright)">归零街（Meme街） · 永信城的草根宇宙</div>
           </div>
           <div style="padding:16px 20px">
             <p style="font-size:12px;color:var(--text);line-height:1.8;margin-bottom:12px">三个区域，三种气质：主街（霓虹赛博朋克·Times Square风）·小巷（华强北山寨市场·接地气）·食街（东南亚夜市·曼谷Khao San Road加密版）。白天和晚上完全不同。</p>
@@ -1008,7 +1013,7 @@
             <div style="font-size:15px;font-weight:600;color:var(--text-bright)">阿明妈妈早餐店 · 永信城最真实的地方</div>
           </div>
           <div style="padding:16px 20px">
-            <p style="font-size:12px;color:var(--text);line-height:1.8;margin-bottom:12px">Meme街区边缘，清晨6点。暖黄色灯光和窗外霓虹的对比。妈妈凌晨四点就起来。这是整个S2最重要的情感锚点——EP6阿明觉醒时想起的就是这里。</p>
+            <p style="font-size:12px;color:var(--text);line-height:1.8;margin-bottom:12px">归零街（Meme街）边缘，清晨6点。暖黄色灯光和窗外霓虹的对比。妈妈凌晨四点就起来。这是整个S2最重要的情感锚点——EP6阿明觉醒时想起的就是这里。</p>
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 关键视觉细节</div>
             <div style="font-size:12px;color:var(--text-dim);line-height:1.8">
               角落小电视播着招工广告·桌上有二维码卡片·酱板鸭彩蛋保留·阿明只露手不露脸（手机蓝光vs暖黄灯光）
@@ -1061,8 +1066,16 @@
       </div>
 
       <!-- 招募机制完整设定 -->
-      <h3 id="recruitment-detail">招募机制 · 完整设定</h3>
-      <p>L3从来不强迫任何人进去。它只是设计了一套完美的诱导机制，让人<strong style="color:var(--gold)">自愿选择进入</strong>。广告说的每一句话都是真的——这才是最恐怖的地方。</p>
+      <h3 id="recruitment-detail">永信城牛马情绪工厂</h3>
+
+      <div style="background:rgba(26,143,170,0.08);border:1px solid rgba(26,143,170,0.3);border-radius:8px;padding:16px 20px;margin:16px 0">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright);margin-bottom:10px">// L3核心设定</div>
+        <div style="font-size:13px;color:var(--text);line-height:1.9">
+          L3情绪牛马工厂是永信城地下的核心场所，也是整个收割系统的终点站。<br><br>
+          <strong style="color:var(--gold)">记忆清除机制：</strong>工厂每<strong style="color:var(--red)">7天</strong>对所有工人执行一次全体记忆清除——清除的不是所有记忆，而是精准清除「为什么进来」和「为什么要出去」这两类记忆。清除后，工人会重新回到刚入职时的亢奋开工状态，继续高效地产出情绪数据。<br><br>
+          <strong style="color:var(--gold)">进入方式：</strong>L3从来不强迫任何人进去。它只是设计了一套完美的诱导机制，让人<strong style="color:var(--gold)">自愿选择进入</strong>。广告说的每一句话都是真的——这才是最恐怖的地方。
+        </div>
+      </div>
 
       <h4>系统锁定的目标人群</h4>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0">
@@ -1125,17 +1138,9 @@
         </div>
       </div>
       <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/xS6tvdLT/L2.png')">
-          <img src="https://i.ibb.co/xS6tvdLT/L2.png" alt="赵凯斯L2版">
-          <div class="char-image-label">// L2 正常状态</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/0p37YznK/L3.png')">
-          <img src="https://i.ibb.co/0p37YznK/L3.png" alt="赵凯斯L3战斗版">
-          <div class="char-image-label">// L3 战斗状态（熊猫眼）</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/LDZvhXDL/image.png')">
-          <img src="https://i.ibb.co/LDZvhXDL/image.png" alt="赵凯斯正常">
-          <div class="char-image-label">// S1 参考风格</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/rf1mGbjK/2.jpg')">
+          <img src="https://i.ibb.co/rf1mGbjK/2.jpg" alt="赵凯斯定妆照">
+          <div class="char-image-label">// ROARING PANDA · L3战斗状态</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1236,13 +1241,9 @@
         </div>
       </div>
       <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/TMSFy0zp/image.png')">
-          <img src="https://i.ibb.co/TMSFy0zp/image.png" alt="小猪女侠战斗版">
-          <div class="char-image-label">// 战斗状态（CA指挥棒）</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/dw2hW0zj/image.png')">
-          <img src="https://i.ibb.co/dw2hW0zj/image.png" alt="小猪女侠工服版">
-          <div class="char-image-label">// 工服潜伏状态</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/hvpsQRN/1.jpg')">
+          <img src="https://i.ibb.co/hvpsQRN/1.jpg" alt="小猪女侠定妆照">
+          <div class="char-image-label">// 小猪女侠 · L3工服版</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1354,13 +1355,9 @@
         </div>
       </div>
       <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/PGRYHLgP/image.png')">
-          <img src="https://i.ibb.co/PGRYHLgP/image.png" alt="林牧正脸版">
-          <div class="char-image-label">// 正脸·质检室</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/sXnWXL1/image.png')">
-          <img src="https://i.ibb.co/sXnWXL1/image.png" alt="林牧蒙眼版">
-          <div class="char-image-label">// 蒙眼·聆听数据</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/C3qbGC5k/1.jpg')">
+          <img src="https://i.ibb.co/C3qbGC5k/1.jpg" alt="林牧定妆照">
+          <div class="char-image-label">// 林牧 · L3质检员</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1462,13 +1459,9 @@
         </div>
       </div>
       <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/nHL455Q/image.png')">
-          <img src="https://i.ibb.co/nHL455Q/image.png" alt="客服小何工作版">
-          <div class="char-image-label">// 日常工作状态</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/S4mfZStT/image.png')">
-          <img src="https://i.ibb.co/S4mfZStT/image.png" alt="客服小何激活版">
-          <div class="char-image-label">// 权限激活·头发散开</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/yc7cwYjw/2.jpg')">
+          <img src="https://i.ibb.co/yc7cwYjw/2.jpg" alt="客服小何定妆照">
+          <div class="char-image-label">// 客服小何 · K线山光明顶</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1555,13 +1548,9 @@
         </div>
       </div>
       <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/jkvbG749/image.png')">
-          <img src="https://i.ibb.co/jkvbG749/image.png" alt="陈维克多控制室版">
-          <div class="char-image-label">// L2控制室·面罩版</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/nMp1xgpG/image.png')">
-          <img src="https://i.ibb.co/nMp1xgpG/image.png" alt="陈维克多正常">
-          <div class="char-image-label">// 控制室全景</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/YTRFK9hT/2.jpg')">
+          <img src="https://i.ibb.co/YTRFK9hT/2.jpg" alt="陈维克多定妆照">
+          <div class="char-image-label">// MEV PHANTOM · 控制室版</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1757,13 +1746,9 @@
         </div>
       </div>
       <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/1t5qW12C/image.png')">
-          <img src="https://i.ibb.co/1t5qW12C/image.png" alt="阿明兴奋">
-          <div class="char-image-label">// L3如鱼得水·高谈阔论</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/RGV9Fbf4/image.png')">
-          <img src="https://i.ibb.co/RGV9Fbf4/image.png" alt="阿明工服">
-          <div class="char-image-label">// 工服版（最随意的那个）</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/Mx4V0rNz/image.png')">
+          <img src="https://i.ibb.co/Mx4V0rNz/image.png" alt="阿明定妆照">
+          <div class="char-image-label">// 阿明 · 归零街直播状态</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -2006,22 +1991,22 @@
   <section class="section" id="ep1-scenes">
     <div class="section-header">
       <span class="section-num">04</span>
-      <h2 class="section-title">EP1 · 场景包（内部制作参考）</h2>
+      <h2 class="section-title">EP1 · 场景包</h2>
     </div>
 
     <div class="quote-block">
-      <p>EP1由导演+核心创作者内部完成，作为S2视觉基调的标准样本。场景包、渲染需求、完整剧本均在此页面内查看。</p>
+      <p>EP1场景包·渲染需求·完整剧本均在此页面内查看。默认显示完整剧本，可切换至场景总览和渲染需求清单。</p>
     </div>
 
     <!-- EP1 三标签页 -->
     <div class="ep1-tab-nav">
-      <button class="ep1-tab-btn active" onclick="switchEP1Tab('overview', this)">📊 场景总览</button>
+      <button class="ep1-tab-btn" onclick="switchEP1Tab('overview', this)">📊 场景总览</button>
       <button class="ep1-tab-btn" onclick="switchEP1Tab('renders', this)">📋 渲染需求清单</button>
-      <button class="ep1-tab-btn" onclick="switchEP1Tab('screenplay', this)">🎬 完整剧本</button>
+      <button class="ep1-tab-btn active" onclick="switchEP1Tab('screenplay', this)">🎬 完整剧本</button>
     </div>
 
     <!-- 标签1：场景状态总览 -->
-    <div class="ep1-tab-page active" id="ep1tab-overview">
+    <div class="ep1-tab-page" id="ep1tab-overview">
     <h3>EP1 · 场景状态总览</h3>
     <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
       <table style="width:100%;border-collapse:collapse;font-size:12px">
@@ -2040,7 +2025,7 @@
             <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">A</td>
             <td style="padding:10px 14px;color:var(--text)">建立世界·六个地点</td>
             <td style="padding:10px 14px;color:var(--text-dim)">45-60s</td>
-            <td style="padding:10px 14px;color:var(--text-dim);font-size:11px">L2街道·钟摆·域峰广场<br>Meme街·早餐店·监控室</td>
+            <td style="padding:10px 14px;color:var(--text-dim);font-size:11px">L2街道·钟摆·域峰广场<br>归零街·早餐店·监控室</td>
             <td style="padding:10px 14px"><span style="color:#2ECC71;font-size:11px">✓ 阿明妈妈有对白</span></td>
             <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待上传</span></td>
           </tr>
@@ -2127,7 +2112,7 @@
           <li><strong>镜头A-1（8秒）·L2核心街区航拍</strong> 清晨，金色霓虹还未完全熄灭，K线图招牌在楼宇间闪烁。人流开始涌现。和任何一座现实城市没有区别——这是最重要的视觉原则。字幕：「永信城 · L2 · 清晨」</li>
           <li><strong>镜头A-2（8秒）·天空中的巨型钟摆</strong> 仰拍，钟摆在城市天空中来回摆动，规律，缓慢。晨光从钟摆后透过来。街道上的人没有人抬头看它——它一直都在。</li>
           <li><strong>镜头A-3（6秒）·域峰广场外观</strong> 域峰广场全景，灰鲸金融大厦居中。门口标志低调反光：「Grey Whale Capital · 灰鲸金融」。广场上有交易终端和人流。</li>
-          <li><strong>镜头A-4（8秒）·Meme街区+招工广告大屏</strong> 彩色霓虹，乱糟糟的活力。城市大屏上滚动着招工广告：「你的情绪，是这个时代最稀缺的资产」。没有人在意。</li>
+          <li><strong>镜头A-4（8秒）·归零街（Meme街）+招工广告大屏</strong> 彩色霓虹，乱糟糟的活力。城市大屏上滚动着招工广告：「你的情绪，是这个时代最稀缺的资产」。没有人在意。</li>
           <li><strong>镜头A-5（12秒）·阿明妈妈早餐店（有对白）</strong> 清晨，烟气腾腾，妈妈在灶台前忙碌。店里小电视也播着招工广告，桌上有印着二维码的小卡片。顾客问阿明去哪了，妈妈头也没抬：「去搞什么数字游民活动，说是能赚钱……你要辣椒吗？」</li>
           <li><strong>镜头A-6（8秒）·落到赵凯斯监控室工位</strong> 系统运维写字楼内，赵凯斯已坐了一夜。Diamond Hands便利贴，凉掉的咖啡。屏幕角落Victor Chen未读消息：「老陈，S1我们赢了，你在哪？」他的手停了一下，关掉窗口，继续工作。</li>
         </ul>
@@ -2135,7 +2120,7 @@
         <div style="background:rgba(212,160,23,0.05);border:1px solid var(--border);border-radius:6px;padding:16px;margin:16px 0">
           <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:12px">// 招工广告在场景A出现两次——这是整个S2最重要的伏笔之一</div>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.8">
-            第一次：Meme街区城市大屏（夜间霓虹风格）<br>
+            第一次：归零街（Meme街）城市大屏（夜间霓虹风格）<br>
             第二次：阿明妈妈早餐店小电视+桌上二维码卡片<br>
             核心文案：「你的情绪，是这个时代最稀缺的资产」<br>
             这就是L3牛马工厂的入口广告
@@ -2842,7 +2827,7 @@
 
       <div class="rl-card"><div class="rl-header"><div class="rl-id">A-03</div><div><div class="rl-name">域峰广场外观全景</div><div class="rl-sub">场景A · 建立世界 · 第3镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">域峰广场全景。灰鲸金融大厦居中矗立。门口标志：「Grey Whale Capital · 灰鲸金融」。钟摆在远处天空可见。</div></div></div>
 
-      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-04</div><div><div class="rl-name">Meme街区+招工广告大屏</div><div class="rl-sub">场景A · 建立世界 · 第4镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-done">已验证</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">彩色霓虹，乱糟糟的活力。城市大屏滚动着招工广告。长曝光版（人群虚化·情绪粒子弥漫）和个体聚焦版均已验证。</div><div class="rl-note">⚠️ 大屏文字内容后期叠加，渲染时留白处理</div></div></div>
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-04</div><div><div class="rl-name">归零街（Meme街）+招工广告大屏</div><div class="rl-sub">场景A · 建立世界 · 第4镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-done">已验证</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">彩色霓虹，乱糟糟的活力。城市大屏滚动着招工广告。长曝光版（人群虚化·情绪粒子弥漫）和个体聚焦版均已验证。</div><div class="rl-note">⚠️ 大屏文字内容后期叠加，渲染时留白处理</div></div></div>
 
       <div class="rl-card"><div class="rl-header"><div class="rl-id">A-05~06</div><div><div class="rl-name">阿明妈妈早餐店（外观+内部）</div><div class="rl-sub">场景A · 建立世界 · 第5镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-done">已验证</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">清晨，烟气腾腾，温暖的黄色灯光。妈妈背影在灶台前忙碌。角落小电视播着招工广告，桌上有印着二维码的小卡片。酱板鸭彩蛋保留。</div><div class="rl-note">⚠️ 此镜头有对白·需配合录音·阿明妈妈人物设计待确认</div></div></div>
 
@@ -2889,8 +2874,73 @@
 
     </div><!-- end ep1tab-renders -->
 
+    <!-- 标签2：渲染需求清单 -->
+    <div class="ep1-tab-page" id="ep1tab-renders">
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px;font-family:'Share Tech Mono',monospace;font-size:11px">
+        <span><span style="color:#E94560">●</span> 优先级1·第一批</span>
+        <span><span style="color:#F0A500">●</span> 优先级2·第二批</span>
+        <span><span style="color:#1A8FAA">●</span> 优先级3·第三批</span>
+        <span><span style="color:#2ECC71">●</span> 已完成</span>
+        <span style="color:var(--text-dim)">SCENE=纯场景 CHAR=需定妆照 FX=后期特效</span>
+      </div>
+
+      <div class="rl-section-title">A类 · 纯场景渲染（无需角色定妆照）</div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-01</div><div><div class="rl-name">永信城L2核心街区航拍</div><div class="rl-sub">场景A · 建立世界 · 第1镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">清晨，L2核心金融区。金色霓虹还未完全熄灭，K线图招牌在楼宇间闪烁。和任何一座现实城市没有区别——这是最重要的视觉原则。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">视角</div><div class="rl-item-val">航拍俯瞰·缓慢扫过</div></div><div class="rl-item"><div class="rl-item-lbl">色调</div><div class="rl-item-val">金色霓虹·冷蓝天空·头顶隐约算法网格</div></div></div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-02</div><div><div class="rl-name">天空中的巨型钟摆（平时状态）</div><div class="rl-sub">场景A · 建立世界 · 第2镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">仰拍，钟摆在城市天空中来回摆动，规律，缓慢。晨光从钟摆后透过来。街道上没有人抬头看它——它一直都在，像背景一样存在。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">关键细节</div><div class="rl-item-val">钟摆正在摆动（运动模糊）·底部无红色针（平时不可见）</div></div><div class="rl-item"><div class="rl-item-lbl">尺度</div><div class="rl-item-val">城市级别·人类在画面中极小</div></div></div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-03</div><div><div class="rl-name">域峰广场外观全景</div><div class="rl-sub">场景A · 建立世界 · 第3镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">域峰广场全景。灰鲸金融大厦居中矗立，深灰色钛合金幕墙。门口标志低调反光：「Grey Whale Capital · 灰鲸金融」。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">参考图</div><div class="rl-item-val">导演已提供域峰广场概念图</div></div><div class="rl-item"><div class="rl-item-lbl">关键元素</div><div class="rl-item-val">灰鲸金融标志·钟摆在远处天空可见</div></div></div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-04</div><div><div class="rl-name">归零街（Meme街）+招工广告大屏</div><div class="rl-sub">场景A · 建立世界 · 第4镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-done">已验证</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">彩色霓虹，乱糟糟的活力。城市大屏滚动着招工广告：「你的情绪，是这个时代最稀缺的资产」。皮克斯3D风格·长曝光版（人群是光影）+个体聚焦版（情绪越激动粒子越浓）均已验证。</div><div class="rl-note">⚠️ 大屏文字内容后期叠加，渲染时留白处理</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-05~06</div><div><div class="rl-name">阿明妈妈早餐店（外观+内部）</div><div class="rl-sub">场景A · 建立世界 · 第5镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-done">已验证</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">清晨，烟气腾腾，温暖的黄色灯光。妈妈在灶台前忙碌。角落小电视播着招工广告，桌上有印着二维码的小卡片。酱板鸭彩蛋保留。皮克斯3D风格已验证。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">人物设计</div><div class="rl-item-val">阿明妈妈·待导演确认设计</div></div><div class="rl-item"><div class="rl-item-lbl">重要说明</div><div class="rl-item-val">此镜头有对白·需配合录音</div></div></div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-07</div><div><div class="rl-name">钟摆停止瞬间</div><div class="rl-sub">场景C · 天降神针触发 · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">仰拍，钟摆在天空中突然静止。极短的一瞬间。画面有轻微的运动模糊残影。钟摆底部有极微弱的红色能量开始聚集。「世界暂停了一秒」的窒息感。</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-08</div><div><div class="rl-name">天降神针触发·红色能量针插地</div><div class="rl-sub">场景C · 核心镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">红色能量针从钟摆底部射出，笔直插入域峰广场地面。巨大光柱爆发。两侧K线屏幕全部变红，清算在这一瞬间完成。EP1最重要的视觉冲击镜头。</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-09</div><div><div class="rl-name">机械小兵狂喜 vs 散户错愕</div><div class="rl-sub">场景C · 天降神针触发</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">同一广场，两种极端反应。左：机械小兵机械臂伸出，集体狂喜。右：散户傻眼，账户清零，有人直接坐在地上。</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-10</div><div><div class="rl-name">灰鲸金融大厦前台·大堂·吉祥物</div><div class="rl-sub">场景C2 · 混入灰鲸金融</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">灰鲸金融大厦内部大堂。极简冷灰色调。重点：门口大堂放着一个可爱的鲸鱼吉祥物——和「收割系统总部」本质形成极度反差，EP1最大彩蛋。</div><div class="rl-note">⚠️ 吉祥物设计图待导演提供</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-11</div><div><div class="rl-name">顶层走廊·Switch门锁</div><div class="rl-sub">场景C2 · 进入控制室前</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">顶层走廊尽头。两个机器人静止把守，门旁放着一台Switch游戏机。最严密收割系统的门锁。视觉上要有强烈的黑色幽默感。</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-12</div><div><div class="rl-name">控制室全景</div><div class="rl-sub">场景D+E · 控制室</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">圆形控制室全景。全息星图天花板。透明地板下可见L3格子间幽绿光。中央：天降神针充能装置+倒计时牌。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">倒计时牌</div><div class="rl-item-val">「上次触发：20分钟前」「下次触发：6天23小时」</div></div><div class="rl-item"><div class="rl-item-lbl">透明地板</div><div class="rl-item-val">清晰可见L3格子间·工人低头工作·幽绿光</div></div></div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">A-13~16</div><div><div class="rl-name">洞口·坠落空间·L3全景·404桌底</div><div class="rl-sub">场景D~H</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">A-13 控制室洞口打开（幽绿光从下透来）· A-14 坠落过渡空间（惊恐挣扎的人群）· A-15 L3工厂全景（导演已有）· A-16 404号工位桌底（面具粉绿色光·唯一暖色角落）</div></div></div>
+
+      <div class="rl-section-title">B类 · 需要角色定妆照（赵凯斯主要镜头）</div>
+      <div class="rl-note" style="margin-bottom:16px">📌 B类全部需要上传赵凯斯定妆照·L2版用于大部分场景·L3战斗版（熊猫眼）用于L3醒来场景·即梦角色特征强度75-80%</div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-01~04</div><div><div class="rl-name">赵凯斯·监控室·链上追踪四镜头</div><div class="rl-sub">场景A+B</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-01 工位正面（Diamond Hands便利贴·Victor Chen未读消息）· B-02 发现异常眉头微皱· B-03 地址追踪网络图展开身体前倾· B-04 Victor Chen名字出现·压制的表情</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-05~07</div><div><div class="rl-name">赵凯斯·预感发作·天降神针·广场背影</div><div class="rl-sub">场景C · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-05 街道停步仰头看钟摆（预感发作）· B-06 主观预感画面（虚焦冷白胶片质感·他看见的红色针）· B-07 广场背影（四周散户傻眼·机械小兵狂喜·只有他看懂了）</div><div class="rl-note">⚠️ B-06需要特殊后期调色：虚焦·冷白·胶片划过质感</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-08~09</div><div><div class="rl-name">赵凯斯·混入大厦·Switch通关开门</div><div class="rl-sub">场景C2</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-08 跟在员工身后自然混入大厦· B-09 顶层走廊拿起Switch打关（机器人在背景静止）——这个画面要有强烈喜感</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-10~12</div><div><div class="rl-name">赵凯斯·进控制室·发现装置·砸按钮</div><div class="rl-sub">场景D</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-10 第一眼看透明地板下L3（说不清的恶心）· B-11 发现天降神针按钮和倒计时牌（从困惑到确认）· B-12 砸按钮瞬间慢动作</div></div></div>
+
+      <div class="rl-card" style="border-color:var(--gold)"><div class="rl-header"><div class="rl-id">B-15</div><div><div class="rl-name">★ 名场面·洞口·幼稚鬼</div><div class="rl-sub">场景E · EP1最重要镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">维克多蹲在洞口，机械臂抓住赵凯斯悬空的手，像要拉他上来。赵凯斯另一手抓住维克多胸口项链。仰拍，从洞口内向上看维克多，逆光，压迫感极强。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">需要定妆照</div><div class="rl-item-val">维克多控制室版+赵凯斯L2版·两张都需要</div></div><div class="rl-item"><div class="rl-item-lbl">构图参考</div><div class="rl-item-val">狮子王刀疤推木法沙·仰拍·逆光·史诗感</div></div></div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">B-16~17</div><div><div class="rl-name">赵凯斯·坠落握冷钱包·L3醒来</div><div class="rl-sub">场景E+G</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-16 链条断裂瞬间，手握冷钱包坠入黑暗· B-17 L3地板上醒来第一眼（L3战斗版定妆照·熊猫眼）</div></div></div>
+
+      <div class="rl-section-title">C类 · 其他角色镜头</div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">C-01~04</div><div><div class="rl-name">陈维克多·四个关键镜头</div><div class="rl-sub">场景D+E · 控制室</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">C-01 进入控制室背影· C-02 从胸口取下冷钱包项链插入电脑· C-03 修复完毕回头「五十万token」· C-04 发现项链不见了，机械臂横扫工作台，「Fuck。我的钱包。」</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">C-05</div><div><div class="rl-name">闪回·年轻的陈维克多（无面罩版）</div><div class="rl-sub">场景E · 幼稚鬼闪回 · 2-3秒</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">咖啡馆，暖色调，与控制室强烈反差。年轻陈维克多（约30岁），无面罩无机械臂，眼睛里有光，说「幼稚鬼」——温和，宠溺。整个EP1情感最重的2秒钟。</div></div></div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">C-06~07</div><div><div class="rl-name">小猪女侠·404桌底 / 阿明妈妈·灶台</div><div class="rl-sub">场景G+H / 场景A</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">C-06 小猪女侠靠着桌腿坐着，面具粉绿色光，L3唯一暖色角落，冷静等待· C-07 阿明妈妈灶台前忙碌，头也没抬，「你要辣椒吗？」</div></div></div>
+
+      <div class="rl-section-title">D类 · 后期特效镜头</div>
+
+      <div class="rl-card"><div class="rl-header"><div class="rl-id">D-01~05</div><div><div class="rl-name">五个后期特效任务</div><div class="rl-sub">全场景</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">D-01 Victor Chen名字屏幕文字叠加· D-02 招工广告视觉设计（城市大屏+早餐店电视+桌上二维码·三版本）· D-03 预感画面视觉调色（虚焦·冷白·胶片划过）· D-04 街道裂缝·人群坠落特效· D-05 72小时红色倒计时·EP1最后一个画面</div></div></div>
+
+    </div><!-- end ep1tab-renders -->
     <!-- 标签3：完整剧本 -->
-    <div class="ep1-tab-page" id="ep1tab-screenplay">
+    <div class="ep1-tab-page active" id="ep1tab-screenplay">
     <div style="max-width:680px;margin:0 auto">
 
       <!-- 场景A -->
@@ -2902,7 +2952,7 @@
         <div class="script-action-text">航拍镜头缓慢扫过永信城L2核心区。清晨，金色霓虹还未完全熄灭，K线图招牌在楼宇间闪烁。人流开始涌现。和任何一座现实城市没有区别。<br><br>字幕：<em>「永信城 · L2 · 清晨」</em></div>
         <div class="script-action-text">镜头仰拍。永信城天空中，巨型钟摆悬在城市上方，来回摆动，规律，缓慢。晨光从钟摆后透过来。街道上的人没有人抬头看它——它一直都在。</div>
         <div class="script-action-text">域峰广场全景。灰鲸金融大厦居中矗立，深灰色钛合金幕墙。门口标志：<em>「Grey Whale Capital · 灰鲸金融」</em></div>
-        <div class="script-action-text">切换到Meme街区。彩色霓虹，乱糟糟的活力。城市大屏滚动着招工广告：</div>
+        <div class="script-action-text">切换到归零街（Meme街）。彩色霓虹，乱糟糟的活力。城市大屏滚动着招工广告：</div>
         <div class="script-dir">【城市大屏 · 招工广告 · 第一次出现】<br>「你的情绪，是这个时代最稀缺的资产」<br>「永信城情绪创作园区 · 现开放新一批数字游民招募」<br>「稳定收入 · 弹性工作 · 发挥你的创作天赋」·[二维码]</div>
         <div class="script-loc">阿明妈妈早餐店 · 清晨</div>
         <div class="script-action-text">清晨，烟气腾腾，妈妈在灶台前忙碌。小电视播着同款招工广告，桌上有印着二维码的小卡片。</div>
