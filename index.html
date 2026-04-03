@@ -329,6 +329,7 @@
   .char-images {
     display: flex;
     justify-content: center;
+    gap: 16px;
     padding: 24px 40px;
     border-bottom: 1px solid var(--border);
     background: rgba(0,0,0,0.2);
@@ -420,11 +421,12 @@
 
   .info-box-label {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 10px;
+    font-size: 13px;
     color: var(--gold-dim);
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-weight: 600;
   }
 
   .info-box p { font-size: 13px; color: var(--text); max-width: 100%; margin: 0; }
@@ -860,7 +862,7 @@
 
         <div class="info-box">
           <div class="info-box-label">K线山 · 光明顶</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright);margin-bottom:8px">永信城中央地标 · S2以远景出现为主</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--teal-bright);margin-bottom:8px">永信城中央地标 · S2以远景出现为主</div>
           <p>形状如巨型K线蜡烛的山峰，是永信城最重要的精神地标。山峰轮廓是K线蜡烛形——中间是粗壮的方形山体，山顶和山脚各有细长的山脊延伸。</p>
           <p style="margin-top:8px"><strong style="color:var(--gold)">光明顶广场：</strong>山顶是宽阔的平台，全球顶级加密公司总部聚集——币安（客服小何所在公司）也在此设有总部。每个大公司楼顶都有能量管道向上延伸，金色光柱直插L1底部。这里是L2与L1连接最密集的地方，也是整个永信城L1看得最清楚的地方。</p>
           <p style="margin-top:8px"><strong style="color:var(--gold)">民俗：</strong>每逢熊市，散户会去光明顶「拜拜」，求K线山保佑。他们面对的不是神像，而是实时K线图大屏。他们不知道，这座山的能量正在源源不断输往L1。</p>
@@ -879,7 +881,7 @@
 
         <div class="info-box">
           <div class="info-box-label" style="color:var(--red)">域峰广场 · 灰鲸金融总部</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--red);margin-bottom:8px">陈维克多的势力范围 · 收割指挥中枢</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--red);margin-bottom:8px">陈维克多的势力范围 · 收割指挥中枢</div>
           <p>永信城最重要的金融广场。「灰鲸金融 · Grey Whale Capital」总部所在地——表面是正规大型做市商集团，永信城最有影响力的金融机构，实际上是天降神针的触发中枢。</p>
           <p style="margin-top:8px"><strong style="color:var(--gold)">地标：</strong>广场上空悬挂着巨型K线灯烛形装置，平时来回摆动，所有人视为市场稳定运行的象征。天降神针触发时，装置停止，底部影线向下延伸，红色能量针射出完成收割，一切「恢复正常」。</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0">
@@ -967,19 +969,25 @@
 
         <div class="info-box">
           <div class="info-box-label">归零街（Meme街）· 散户集市</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">L2草根区域 · 阿明活动的地方</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">L2草根区域 · 阿明活动的地方</div>
           <p>永信城最混乱也最有活力的区域。Meme文化、「下一个要爆的项目」、各种喊单群和内幕消息在这里流通。彩色霓虹，24小时不关机。</p>
           <p style="margin-top:8px">阿明坠落前在这里创作内容，是这条街最受欢迎的P图博主。他不知道自己每次爆火的内容，都在精准地为域峰广场的下一次天降神针制造情绪燃料。</p>
           <p style="margin-top:8px;font-size:11px;color:var(--text-dim)">现实映射：加密Twitter/X上的Meme文化圈，流量博主的每一次爆火都可能被游资利用。</p>
-          <div style="border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer;margin:12px 0" onclick="openLightbox('https://i.ibb.co/YFgMj8GJ/Me-ME-1.png')">
-          <img src="https://i.ibb.co/YFgMj8GJ/Me-ME-1.png" alt="归零街（Meme街）· 白天街景 · 概念参考图" style="width:100%;display:block;object-fit:cover;background:#0D1220;transition:opacity 0.2s" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-          <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 归零街（Meme街）· 白天街景 · 概念参考图</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0">
+          <div style="border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/YFgMj8GJ/Me-ME-1.png')">
+            <img src="https://i.ibb.co/YFgMj8GJ/Me-ME-1.png" alt="归零街白天街景(1)" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 归零街 · 白天街景(1)</div></div>
+          </div>
+          <div style="border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/SDztGpHB/3.png')">
+            <img src="https://i.ibb.co/SDztGpHB/3.png" alt="归零街白天街景(2)" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 归零街 · 白天街景(2)</div></div>
+          </div>
         </div>
         </div>
 
         <div class="info-box">
           <div class="info-box-label" style="color:var(--teal-bright)">L3入口 · 情绪牛马工厂</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright);margin-bottom:8px">在L2地下 · 入口单向</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--teal-bright);margin-bottom:8px">在L2地下 · 入口单向</div>
           <p>不是一个独立的「地方」，而是L2地下的物理终点。入口单向——进去容易，出来极难。不是因为物理锁住了人，而是因为进去的人大多数不想出来。</p>
           <p style="margin-top:8px"><strong style="color:var(--gold)">进入条件：</strong>当一个人的情绪被系统完全捕获，L3状态深入到临界点，系统会把他物理性地吸纳进工厂。工厂持续投喂满足感，让人忘记外面的世界有什么值得回去。</p>
           <p style="margin-top:8px;font-size:11px;color:var(--text-dim)">现实映射：深度沉迷于Meme交易、短视频内容创作的人群——他们的情绪和注意力被算法完全收割，但他们以为自己在「赢」。</p>
@@ -997,13 +1005,13 @@
 
         <div class="info-box">
           <div class="info-box-label">算法坊 · 链下巷 · 创客园</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">S2地图已解锁区域 · 待开放</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">S2地图已解锁区域 · 待开放</div>
           <p>永信城其他已知区域，S2剧情推进中陆续出现。具体设定待补充。</p>
         </div>
 
         <div class="info-box">
           <div class="info-box-label">清算广场 · ???</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">完全未知区域 · 社区设计大赛填充</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">完全未知区域 · 社区设计大赛填充</div>
           <p>S2全集发布后开放「永信城区域设计大赛」，由社区创作者填充这些未知区域的视觉和设定。</p>
         </div>
 
@@ -1328,10 +1336,14 @@
           <div class="char-detail-subtitle">ROARING PANDA · L2系统维护工程师 · 28岁 · 绝对主角</div>
         </div>
       </div>
-      <div class="char-images">
+      <div class="char-images" style="gap:12px">
         <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/rf1mGbjK/2.jpg')">
-          <img src="https://i.ibb.co/rf1mGbjK/2.jpg" alt="赵凯斯定妆照">
-          <div class="char-image-label">// ROARING PANDA · L3战斗状态</div>
+          <img src="https://i.ibb.co/rf1mGbjK/2.jpg" alt="赵凯斯 · L3战斗状态">
+          <div class="char-image-label">// 赵凯斯 · L3战斗状态</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/svh07cRk/1.jpg')">
+          <img src="https://i.ibb.co/svh07cRk/1.jpg" alt="赵凯斯 · 第二定妆">
+          <div class="char-image-label">// 赵凯斯 · 第二定妆</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1431,10 +1443,18 @@
           <div class="char-detail-subtitle">陈晚照 · Crypto_Piggy · 数据分析师转Web3创作者</div>
         </div>
       </div>
-      <div class="char-images">
+      <div class="char-images" style="gap:12px">
         <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/hvpsQRN/1.jpg')">
-          <img src="https://i.ibb.co/hvpsQRN/1.jpg" alt="小猪女侠定妆照">
+          <img src="https://i.ibb.co/hvpsQRN/1.jpg" alt="小猪女侠 · L3工服版">
           <div class="char-image-label">// 小猪女侠 · L3工服版</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/zHnkfRbw/2.jpg')">
+          <img src="https://i.ibb.co/zHnkfRbw/2.jpg" alt="小猪女侠 · 第二定妆">
+          <div class="char-image-label">// 小猪女侠 · 第二定妆</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/9HVJ3xWF/jimeng-2026-04-03-3605.png')">
+          <img src="https://i.ibb.co/9HVJ3xWF/jimeng-2026-04-03-3605.png" alt="小猪女侠 · 第三定妆">
+          <div class="char-image-label">// 小猪女侠 · 第三定妆</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1545,10 +1565,14 @@
           <div class="char-detail-subtitle">狮子羊 · 数学天才 · L3最深处的潜伏者 · S2牺牲角色</div>
         </div>
       </div>
-      <div class="char-images">
+      <div class="char-images" style="gap:12px">
         <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/C3qbGC5k/1.jpg')">
-          <img src="https://i.ibb.co/C3qbGC5k/1.jpg" alt="林牧定妆照">
+          <img src="https://i.ibb.co/C3qbGC5k/1.jpg" alt="林牧 · L3质检员">
           <div class="char-image-label">// 林牧 · L3质检员</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/279MQRKz/2.jpg')">
+          <img src="https://i.ibb.co/279MQRKz/2.jpg" alt="林牧 · 第二定妆">
+          <div class="char-image-label">// 林牧 · 第二定妆</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1649,10 +1673,14 @@
           <div class="char-detail-subtitle">K线山光明顶高级客服 · S1盟友 · 长线人物</div>
         </div>
       </div>
-      <div class="char-images">
+      <div class="char-images" style="gap:12px">
         <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/yc7cwYjw/2.jpg')">
           <img src="https://i.ibb.co/yc7cwYjw/2.jpg" alt="客服小何定妆照">
           <div class="char-image-label">// 客服小何 · K线山光明顶</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/ZpwjKF8P/1.jpg')">
+          <img src="https://i.ibb.co/ZpwjKF8P/1.jpg" alt="客服小何第二定妆">
+          <div class="char-image-label">// 客服小何 · 第二定妆</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1738,10 +1766,14 @@
           <div class="char-detail-subtitle">MEV PHANTOM · 进化架构师 · L2最高权限者 · 38岁</div>
         </div>
       </div>
-      <div class="char-images">
+      <div class="char-images" style="gap:12px">
         <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/YTRFK9hT/2.jpg')">
-          <img src="https://i.ibb.co/YTRFK9hT/2.jpg" alt="陈维克多定妆照">
-          <div class="char-image-label">// MEV PHANTOM · 控制室版</div>
+          <img src="https://i.ibb.co/YTRFK9hT/2.jpg" alt="陈维克多 · 控制室版">
+          <div class="char-image-label">// 陈维克多 · 控制室版</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/7JVvyxwp/jimeng-2026-03-29-1213-3-D.png')">
+          <img src="https://i.ibb.co/7JVvyxwp/jimeng-2026-03-29-1213-3-D.png" alt="陈维克多 · 第二定妆">
+          <div class="char-image-label">// 陈维克多 · 第二定妆</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -1936,10 +1968,14 @@
           <div class="char-detail-subtitle">L3顶级牛马 · P小匠 · Meme天才 · 黑色幽默担当</div>
         </div>
       </div>
-      <div class="char-images">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/Mx4V0rNz/image.png')">
-          <img src="https://i.ibb.co/Mx4V0rNz/image.png" alt="阿明定妆照">
-          <div class="char-image-label">// 阿明 · 归零街直播状态</div>
+      <div class="char-images" style="gap:12px">
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/NdPjB5Y0/image.png')">
+          <img src="https://i.ibb.co/NdPjB5Y0/image.png" alt="阿明定妆照">
+          <div class="char-image-label">// 阿明 · 定妆照</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/GvQ8bfVs/1.png')">
+          <img src="https://i.ibb.co/GvQ8bfVs/1.png" alt="阿明第二定妆">
+          <div class="char-image-label">// 阿明 · 第二定妆</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -2359,12 +2395,12 @@
         <h4>参考图（待上传）</h4>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:24px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// L2街道·写字楼外观</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// L2街道·写字楼外观</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">正常现代城市感<br>金色霓虹为主<br>头顶隐约算法网格</div>
           </div>
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:24px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 监控室内部</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 监控室内部</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">弧形操作台<br>冷蓝色多屏幕<br>凌晨氛围</div>
           </div>
@@ -2430,12 +2466,12 @@
         <h4>参考图（待上传）</h4>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:24px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 监控室大屏幕特写</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 监控室大屏幕特写</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">链上地址追踪网络图<br>金色线条汇聚效果<br>冷蓝色屏幕光</div>
           </div>
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:24px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// Victor Chen名字特写</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// Victor Chen名字特写</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">屏幕+赵凯斯侧脸<br>情绪特写<br>「压制」的表情</div>
           </div>
@@ -2490,7 +2526,7 @@
         <div class="ep-core">情感核心：「所有人都在庆祝，只有他一个人看见了什么在发生」</div>
 
         <div style="background:rgba(26,143,170,0.08);border:1px solid rgba(26,143,170,0.3);border-radius:6px;padding:16px;margin:16px 0">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright);margin-bottom:8px">// S2强化设定：赵凯斯的预感能力</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--teal-bright);margin-bottom:8px">// S2强化设定：赵凯斯的预感能力</div>
           <div style="font-size:12px;color:var(--text);line-height:1.8">
             赵凯斯能提前约<strong style="color:var(--gold)">10秒</strong>感知到重大市场事件，以「主观画面」的形式出现：<strong>虚焦·冷白色调·胶片质感</strong>。他提前10秒「看见」了钟摆停止和红色针插地的画面，然后真的发生了。<br><br>
             关键设定：<strong style="color:var(--red)">红色能量针只有赵凯斯能看见</strong>。普通人只看到账户清零——他们不知道针的存在。这个视觉用主观/客观镜头切换来表达，不用台词解释。<br><br>
@@ -2664,12 +2700,12 @@
         <h4>参考图（待上传）</h4>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:24px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 灰鲸金融大厦外观</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 灰鲸金融大厦外观</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">正规现代金融大厦<br>钛合金灰+冷蓝色<br>门口有「Grey Whale Capital」标志</div>
           </div>
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:24px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 大厦入口/检票口</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 大厦入口/检票口</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">现代安检门<br>员工刷卡进入<br>看起来完全正常</div>
           </div>
@@ -2752,17 +2788,17 @@
         <h4>参考图（待上传）</h4>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0">
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:20px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 控制室全景</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 控制室全景</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">圆形空间<br>全息星图天花板<br>透明地板·L3可见</div>
           </div>
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:20px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 天降神针按钮特写</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 天降神针按钮特写</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">充能中的物理按钮<br>金色能量<br>倒计时</div>
           </div>
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:20px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 洞口·幽绿光</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 洞口·幽绿光</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">透明地板打开<br>L3幽绿色光透上来<br>两个世界交界</div>
           </div>
@@ -2843,7 +2879,7 @@
 
         <h4>参考图（待上传）</h4>
         <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:24px;text-align:center;margin:16px 0">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 坠落过渡空间</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 坠落过渡空间</div>
           <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
           <div style="font-size:10px;color:var(--text-dim);margin-top:8px">黑暗中的坠落·数据流像流星<br>多人同时坠落·失重感<br>下方透来冷绿色L3光</div>
         </div>
@@ -2885,7 +2921,7 @@
         <div class="ep-core">情感核心：「这里有什么不对，但我说不清楚——然后有人在等他」</div>
 
         <div style="background:rgba(26,143,170,0.08);border:1px solid rgba(26,143,170,0.3);border-radius:6px;padding:16px;margin:16px 0">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright);margin-bottom:8px">// L3记忆重置机制（创作者必知）</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--teal-bright);margin-bottom:8px">// L3记忆重置机制（创作者必知）</div>
           <div style="font-size:12px;color:var(--text);line-height:1.8">
             L3每<strong style="color:var(--gold)">7天</strong>全体清零记忆一次——不是针对个人，是整个工厂的运行周期。赵凯斯进来时，距离下一次全体清零还剩<strong style="color:var(--red)">72小时</strong>。过了这个时间，他不是「出不去」，而是<strong>「不会再想出去了」</strong>——他会忘记妈妈，忘记老陈，忘记自己为什么要出去，然后带着空洞的笑容继续工作。<br><br>
             EP6名场面：所有工人同时停止，眼神变空白，然后重新亮起，继续工作。
@@ -2906,12 +2942,12 @@
         <h4>参考图</h4>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
           <div style="background:var(--dark-3);border:1px solid var(--teal-bright);border-radius:6px;padding:20px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright);margin-bottom:8px">✓ L3工厂全景</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--teal-bright);margin-bottom:8px">✓ L3工厂全景</div>
             <div style="font-size:12px;color:var(--text-dim)">导演手上已有</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">待上传至相册后替换此处</div>
           </div>
           <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:20px;text-align:center">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 404号工位区域</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 404号工位区域</div>
             <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:8px">特定格子间区域<br>桌底可见的昏暗空间<br>冷蓝绿灰色调</div>
           </div>
@@ -2990,7 +3026,7 @@
 
         <h4>参考图（待上传）</h4>
         <div style="background:var(--dark-3);border:1px dashed var(--border);border-radius:6px;padding:24px;text-align:center;margin:16px 0">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:8px">// 404号桌底·小猪等待</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-bottom:8px">// 404号桌底·小猪等待</div>
           <div style="font-size:12px;color:var(--text-dim)">待渲染后上传</div>
           <div style="font-size:10px;color:var(--text-dim);margin-top:8px">桌底昏暗空间<br>面具粉绿色光·唯一暖色<br>冷静等待的眼神</div>
         </div>
