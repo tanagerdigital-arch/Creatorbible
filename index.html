@@ -7,22 +7,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
   :root {
-    --gold: #D4A017;
-    --gold-dim: #8B6914;
-    --gold-bright: #F0C040;
-    --dark: #080C14;
-    --dark-2: #0D1220;
-    --dark-3: #111827;
+    --gold: #E8B84B;
+    --gold-dim: #A07830;
+    --gold-bright: #F5D060;
+    --dark: #0F1520;
+    --dark-2: #151D2E;
+    --dark-3: #1A2338;
     --teal: #0E4D5C;
-    --teal-bright: #1A8FAA;
-    --red: #E94560;
+    --teal-bright: #2AADCC;
+    --red: #F05070;
     --green: #2D6A4F;
     --amber: #F0A500;
-    --text: #C8D0DC;
-    --text-dim: #6B7280;
-    --text-bright: #EEF2FF;
-    --border: rgba(212,160,23,0.2);
-    --border-bright: rgba(212,160,23,0.5);
+    --text: #E2E8F0;
+    --text-dim: #94A3B8;
+    --text-bright: #F8FAFF;
+    --border: rgba(232,184,75,0.25);
+    --border-bright: rgba(232,184,75,0.6);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,8 +32,9 @@
     background: var(--dark);
     color: var(--text);
     font-family: 'Noto Sans SC', sans-serif;
-    font-weight: 300;
-    line-height: 1.8;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
     overflow-x: hidden;
   }
 
@@ -42,8 +43,8 @@
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(rgba(212,160,23,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(212,160,23,0.03) 1px, transparent 1px);
+      linear-gradient(rgba(232,184,75,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,184,75,0.05) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
     z-index: 0;
@@ -55,7 +56,7 @@
     left: 0; top: 0; bottom: 0;
     width: 260px;
     background: var(--dark-2);
-    border-right: 1px solid var(--border);
+    border-right: 1px solid var(--border-bright);
     z-index: 100;
     overflow-y: auto;
     padding: 32px 0;
@@ -87,10 +88,10 @@
   .nav-section { padding: 0 24px; margin-bottom: 8px; }
 
   .nav-section-label {
-    font-size: 10px;
+    font-size: 11px;
     font-family: 'Share Tech Mono', monospace;
-    color: var(--gold-dim);
-    letter-spacing: 0.15em;
+    color: var(--gold);
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: 8px;
     padding-top: 16px;
@@ -99,8 +100,8 @@
 
   .nav-link {
     display: block;
-    padding: 6px 12px;
-    font-size: 13px;
+    padding: 7px 12px;
+    font-size: 14px;
     color: var(--text-dim);
     text-decoration: none;
     border-radius: 4px;
@@ -217,14 +218,14 @@
 
   h3 {
     font-family: 'Noto Serif SC', serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--gold);
     margin: 40px 0 16px;
   }
 
   h4 {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--teal-bright);
     letter-spacing: 0.1em;
@@ -238,6 +239,7 @@
     color: var(--text);
     margin-bottom: 16px;
     max-width: 760px;
+    line-height: 1.9;
   }
 
   /* WORLD LAYERS */
@@ -320,7 +322,7 @@
 
   .char-detail-subtitle {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--text-dim);
     margin-top: 4px;
   }
@@ -332,7 +334,7 @@
     gap: 16px;
     padding: 24px 40px;
     border-bottom: 1px solid var(--border);
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.15);
   }
 
   .char-image-item {
@@ -422,14 +424,14 @@
   .info-box-label {
     font-family: 'Share Tech Mono', monospace;
     font-size: 13px;
-    color: var(--gold-dim);
-    letter-spacing: 0.1em;
+    color: var(--gold);
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 600;
   }
 
-  .info-box p { font-size: 13px; color: var(--text); max-width: 100%; margin: 0; }
+  .info-box p { font-size: 14px; color: var(--text); max-width: 100%; margin: 0; line-height: 1.85; }
 
   .quote-block {
     margin: 24px 0;
@@ -439,7 +441,7 @@
     border-radius: 0 6px 6px 0;
   }
 
-  .quote-block p { font-size: 15px; color: var(--text-bright); font-style: italic; max-width: 100%; margin: 0; }
+  .quote-block p { font-size: 16px; color: var(--text-bright); font-style: italic; max-width: 100%; margin: 0; line-height: 2; }
 
   /* PROMPT CARDS */
   .prompt-card {
@@ -525,22 +527,24 @@
   .ep-core {
     padding: 16px 20px;
     margin: 20px 0;
-    background: rgba(212,160,23,0.05);
+    background: rgba(232,184,75,0.07);
     border-left: 3px solid var(--gold);
     border-radius: 0 4px 4px 0;
-    font-size: 13px;
+    font-size: 15px;
     color: var(--gold);
     font-style: italic;
+    line-height: 1.9;
   }
 
   .ep-events { list-style: none; margin: 16px 0; }
 
   .ep-events li {
-    padding: 6px 0 6px 20px;
+    padding: 7px 0 7px 20px;
     position: relative;
-    font-size: 13px;
-    color: var(--text-dim);
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 14px;
+    color: var(--text);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    line-height: 1.8;
   }
 
   .ep-events li::before { content: '▸'; position: absolute; left: 0; color: var(--gold-dim); font-size: 10px; top: 8px; }
@@ -560,8 +564,8 @@
 
   .rule-label {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
+    font-size: 12px;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
@@ -573,12 +577,12 @@
   .rule-list { list-style: none; }
 
   .rule-list li {
-    padding: 8px 0 8px 20px;
+    padding: 9px 0 9px 20px;
     position: relative;
-    font-size: 13px;
-    color: var(--text-dim);
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    line-height: 1.7;
+    font-size: 14px;
+    color: var(--text);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    line-height: 1.85;
   }
 
   .rule-list li:last-child { border-bottom: none; }
@@ -656,7 +660,7 @@
   .script-scene-name { font-family:'Noto Serif SC',serif; font-size:16px; font-weight:600; color:var(--text-bright); margin-bottom:4px; }
   .script-scene-time { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--text-dim); margin-bottom:16px; }
   .script-loc { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--gold-dim); letter-spacing:0.15em; text-transform:uppercase; padding:6px 12px; background:rgba(0,0,0,0.2); border-radius:4px; display:inline-block; margin-bottom:16px; }
-  .script-action-text { font-size:13px; color:var(--text); line-height:2; margin-bottom:16px; }
+  .script-action-text { font-size:14px; color:var(--text); line-height:2.1; margin-bottom:16px; }
   .script-dlg { margin: 16px 0 16px 32px; }
   .script-char-name { font-family:'Share Tech Mono',monospace; font-size:10px; letter-spacing:0.15em; margin-bottom:3px; }
   .script-char-zhao { color:var(--gold); }
@@ -1021,7 +1025,7 @@
 
               <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px 14px;border-left:3px solid var(--gold)">
                 <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px">88F · 总控室（维克多的地盘）</div>
-                <div style="font-size:12px;color:var(--text);line-height:1.8">圆形控制室，全息星图天花板（永信城全网实时节点分布图）。维克多的半圆形控制台居中。<br>
+                <div style="font-size:14px;color:var(--text);line-height:1.9">圆形控制室，全息星图天花板（永信城全网实时节点分布图）。维克多的半圆形控制台居中。<br>
                 地板分两个半圆，可切换：<br>
                 <strong style="color:var(--red)">左半圆洞口</strong> → 俯视交易斗兽场，维克多可下降到斗兽场上空接受机械小兵膜拜·对他们喊话<br>
                 <strong style="color:var(--teal-bright)">右半圆洞口</strong> → 俯视L3通道，极少打开，只有EP1赵凯斯事件才触发，把人直接扔入L3</div>
@@ -1029,36 +1033,36 @@
 
               <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px 14px;border-left:3px solid rgba(233,69,96,0.6)">
                 <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--red);margin-bottom:6px">13-87F · 斗兽场天空（左半圆）</div>
-                <div style="font-size:12px;color:var(--text);line-height:1.8">巨大的开放竖向空间，无楼层隔断，红色能量氛围。维克多从88层洞口下降后悬浮在这片天空，机械小兵在下方仰视膜拜。能量柱在此空间内最为壮观。</div>
+                <div style="font-size:14px;color:var(--text);line-height:1.9">巨大的开放竖向空间，无楼层隔断，红色能量氛围。维克多从88层洞口下降后悬浮在这片天空，机械小兵在下方仰视膜拜。能量柱在此空间内最为壮观。</div>
               </div>
 
               <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px 14px;border-left:3px solid rgba(233,69,96,0.4)">
                 <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#E8835A;margin-bottom:6px">4-13F · 交易斗兽场（左半圆）</div>
-                <div style="font-size:12px;color:var(--text);line-height:1.8">罗马斗兽场风格的10层竖向竞技场。每层都有悬浮平台，机械小兵在各层作业。地面熔岩裂缝+红色电弧。K线屏幕墙环绕四周。天降神针触发时这里是真正的仪式现场。</div>
+                <div style="font-size:14px;color:var(--text);line-height:1.9">罗马斗兽场风格的10层竖向竞技场。每层都有悬浮平台，机械小兵在各层作业。地面熔岩裂缝+红色电弧。K线屏幕墙环绕四周。天降神针触发时这里是真正的仪式现场。</div>
               </div>
 
               <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px 14px;border-left:3px solid rgba(255,255,255,0.1)">
                 <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:6px">2-3F · 人类员工办公区</div>
-                <div style="font-size:12px;color:var(--text);line-height:1.8">正常的办公室。处理对外的合规·法务·公关事务。这里的人不知道4层以上发生了什么。</div>
+                <div style="font-size:14px;color:var(--text);line-height:1.9">正常的办公室。处理对外的合规·法务·公关事务。这里的人不知道4层以上发生了什么。</div>
               </div>
 
               <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px 14px;border-left:3px solid var(--gold)">
                 <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px">1F · 大堂（最重要的彩蛋）</div>
-                <div style="font-size:12px;color:var(--text);line-height:1.8">正常金融机构大堂，冷灰色+金色。旋转玻璃门，安检门禁，前台接待。<br>
+                <div style="font-size:14px;color:var(--text);line-height:1.9">正常金融机构大堂，冷灰色+金色。旋转玻璃门，安检门禁，前台接待。<br>
                 <strong style="color:var(--gold)">吉祥物彩蛋：</strong>大堂正中央摆着一个黄色圆滚滚的吉祥物——金色穹顶头·圆框眼镜·黑色围巾·蹲伏姿势。整个永信城最恐怖的收割机构，门口放着最可爱的东西。<br>
                 <strong style="color:var(--text-dim)">隐藏细节：</strong>电梯按钮只有「1-3F」和「88F」，没有中间楼层。</div>
               </div>
 
               <div style="background:rgba(26,143,170,0.08);border-radius:6px;padding:12px 14px;border-left:3px solid var(--teal-bright)">
                 <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright);margin-bottom:6px">右半圆 · L3通道</div>
-                <div style="font-size:12px;color:var(--text);line-height:1.8">从大厦内部向下延伸的幽暗通道，通道壁有绿色数据流，直连地下L3牛马工厂。这是L3的内部入口，区别于城市里隐藏的外部入口。</div>
+                <div style="font-size:14px;color:var(--text);line-height:1.9">从大厦内部向下延伸的幽暗通道，通道壁有绿色数据流，直连地下L3牛马工厂。这是L3的内部入口，区别于城市里隐藏的外部入口。</div>
               </div>
 
             </div>
 
             <div style="margin-top:14px;background:rgba(212,160,23,0.05);border:1px solid var(--border);border-radius:6px;padding:12px 14px">
               <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:8px">// 能量柱 · 整个系统的脊梁</div>
-              <div style="font-size:12px;color:var(--text);line-height:1.8">
+              <div style="font-size:14px;color:var(--text);line-height:1.9">
                 从L3地下一直贯穿到建筑顶部，穿出屋顶后继续向上延伸，直接连接L1底部。同时吸取两种燃料：<br>
                 <strong style="color:var(--red)">左侧·交易资金</strong>（来自斗兽场·每次天降神针清算的资金）<br>
                 <strong style="color:var(--gold)">右侧·人类情绪</strong>（来自L3工厂·工人情绪粒子通过数据管道汇入）<br>
@@ -1137,11 +1141,11 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <div>
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px">整体气质</div>
-            <div style="font-size:12px;color:var(--text);line-height:1.8">深圳南山+新加坡乌节路的混合体。干净·整洁·发达·科技感。不是破旧的赛博朋克，而是一座非常现代的金融科技城市。<strong style="color:var(--gold)">表面繁荣正常——这才是它最恐怖的地方。</strong></div>
+            <div style="font-size:14px;color:var(--text);line-height:1.9">深圳南山+新加坡乌节路的混合体。干净·整洁·发达·科技感。不是破旧的赛博朋克，而是一座非常现代的金融科技城市。<strong style="color:var(--gold)">表面繁荣正常——这才是它最恐怖的地方。</strong></div>
           </div>
           <div>
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px">两种气质并存</div>
-            <div style="font-size:12px;color:var(--text);line-height:1.8">金融区：现代摩天楼·极简冷灰·玻璃幕墙。市井区：整洁的骑楼商业街·精致的小餐馆·咖啡馆烟火气。两种气质都是发达的，不是贫富对立。</div>
+            <div style="font-size:14px;color:var(--text);line-height:1.9">金融区：现代摩天楼·极简冷灰·玻璃幕墙。市井区：整洁的骑楼商业街·精致的小餐馆·咖啡馆烟火气。两种气质都是发达的，不是贫富对立。</div>
           </div>
         </div>
       </div>
@@ -1171,7 +1175,7 @@
       <!-- 新增：L3入口多种形态 -->
       <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:8px;padding:20px;margin:24px 0">
         <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:12px">// L3入口 · 城市中的隐藏形态（创作者必读）</div>
-        <div style="font-size:12px;color:var(--text);line-height:1.8;margin-bottom:16px">
+        <div style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:16px">
           L3的外部入口散布在整个永信城L2，伪装成各种普通的城市设施。<strong style="color:var(--red)">极度隐藏——第一遍看完全看不出来，只有第二遍回看才发现。</strong>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
@@ -1333,13 +1337,13 @@
         <div style="background:rgba(46,204,113,0.05);border:2px solid rgba(46,204,113,0.3);border-radius:8px;padding:24px;text-align:center">
           <div style="width:40px;height:40px;background:rgba(46,204,113,0.2);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:20px">🔵</div>
           <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:#2ECC71;margin-bottom:12px">蓝色药丸</div>
-          <p style="font-size:12px;color:var(--text);line-height:1.8">「加入创作者社区，开始你的数字游民之旅，实现你的创作梦想，让内容改变生活。」</p>
+          <p style="font-size:14px;color:var(--text);line-height:1.9">「加入创作者社区，开始你的数字游民之旅，实现你的创作梦想，让内容改变生活。」</p>
           <p style="font-size:11px;color:var(--text-dim);margin-top:12px">按钮占满整个屏幕<br>字体大·颜色饱和·充满希望</p>
         </div>
         <div style="background:rgba(233,69,96,0.05);border:2px solid rgba(233,69,96,0.2);border-radius:8px;padding:24px;text-align:center">
           <div style="width:40px;height:40px;background:rgba(233,69,96,0.1);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:20px">🔴</div>
           <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--red);margin-bottom:12px">红色药丸</div>
-          <p style="font-size:12px;color:var(--text);line-height:1.8">「拒绝」</p>
+          <p style="font-size:14px;color:var(--text);line-height:1.9">「拒绝」</p>
           <p style="font-size:11px;color:var(--text-dim);margin-top:12px">按钮极小·颜色灰暗·<br>放在屏幕最角落<br>字体几乎看不清</p>
         </div>
       </div>
@@ -2604,7 +2608,7 @@
 
         <div style="background:rgba(26,143,170,0.08);border:1px solid rgba(26,143,170,0.3);border-radius:6px;padding:16px;margin:16px 0">
           <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--teal-bright);margin-bottom:8px">// S2强化设定：赵凯斯的预感能力</div>
-          <div style="font-size:12px;color:var(--text);line-height:1.8">
+          <div style="font-size:14px;color:var(--text);line-height:1.9">
             赵凯斯能提前约<strong style="color:var(--gold)">10秒</strong>感知到重大市场事件，以「主观画面」的形式出现：<strong>虚焦·冷白色调·胶片质感</strong>。他提前10秒「看见」了钟摆停止和红色针插地的画面，然后真的发生了。<br><br>
             关键设定：<strong style="color:var(--red)">红色能量针只有赵凯斯能看见</strong>。普通人只看到账户清零——他们不知道针的存在。这个视觉用主观/客观镜头切换来表达，不用台词解释。<br><br>
             S2里他开始意识到：「这不是预感，是有人在触发这件事。」他的能力从「感知」进化成了「理解」。
@@ -2999,7 +3003,7 @@
 
         <div style="background:rgba(26,143,170,0.08);border:1px solid rgba(26,143,170,0.3);border-radius:6px;padding:16px;margin:16px 0">
           <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--teal-bright);margin-bottom:8px">// L3记忆重置机制（创作者必知）</div>
-          <div style="font-size:12px;color:var(--text);line-height:1.8">
+          <div style="font-size:14px;color:var(--text);line-height:1.9">
             L3每<strong style="color:var(--gold)">7天</strong>全体清零记忆一次——不是针对个人，是整个工厂的运行周期。赵凯斯进来时，距离下一次全体清零还剩<strong style="color:var(--red)">72小时</strong>。过了这个时间，他不是「出不去」，而是<strong>「不会再想出去了」</strong>——他会忘记妈妈，忘记老陈，忘记自己为什么要出去，然后带着空洞的笑容继续工作。<br><br>
             EP6名场面：所有工人同时停止，眼神变空白，然后重新亮起，继续工作。
           </div>
@@ -3616,7 +3620,7 @@
           <div style="font-size:15px;font-weight:600;color:var(--text-bright)">归零街（Meme街）· 永信城的草根宇宙</div>
         </div>
         <div style="padding:16px 20px">
-          <p style="font-size:12px;color:var(--text);line-height:1.8;margin-bottom:12px">三个区域，三种气质：主街（霓虹赛博朋克·Times Square风）·小巷（华强北山寨市场·接地气）·食街（东南亚夜市·曼谷Khao San Road加密版）。白天和晚上完全不同。</p>
+          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">三个区域，三种气质：主街（霓虹赛博朋克·Times Square风）·小巷（华强北山寨市场·接地气）·食街（东南亚夜市·曼谷Khao San Road加密版）。白天和晚上完全不同。</p>
           <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:6px">// 视觉已验证的两种镜头</div>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.8">
             <strong style="color:var(--text)">长曝光版：</strong>人群是流动的光影，情绪粒子在空气中弥漫。<br>
@@ -3633,7 +3637,7 @@
           <div style="font-size:15px;font-weight:600;color:var(--text-bright)">阿明妈妈早餐店 · 永信城最真实的地方</div>
         </div>
         <div style="padding:16px 20px">
-          <p style="font-size:12px;color:var(--text);line-height:1.8;margin-bottom:12px">归零街边缘，清晨6点。暖黄色灯光和窗外霓虹的对比。这是整个S2最重要的情感锚点——EP6阿明觉醒时想起的就是这里。</p>
+          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">归零街边缘，清晨6点。暖黄色灯光和窗外霓虹的对比。这是整个S2最重要的情感锚点——EP6阿明觉醒时想起的就是这里。</p>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.8">角落小电视播着招工广告·桌上有二维码卡片·酱板鸭彩蛋保留·阿明只露手不露脸</div>
           <div style="margin-top:10px;padding:6px 10px;background:rgba(0,0,0,0.2);border-radius:4px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright)">✓ 渲染已验证 · 皮克斯3D风格</div>
         </div>
@@ -3646,7 +3650,7 @@
           <div style="font-size:15px;font-weight:600;color:var(--text-bright)">招工广告完整版 · 60-90秒</div>
         </div>
         <div style="padding:16px 20px">
-          <p style="font-size:12px;color:var(--text);line-height:1.8;margin-bottom:12px">完全用招募广告的语气和格式制作。用户第一眼以为是真实广告，然后发现这是《凡人修币录》的——这就是最好的病毒营销。</p>
+          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">完全用招募广告的语气和格式制作。用户第一眼以为是真实广告，然后发现这是《凡人修币录》的——这就是最好的病毒营销。</p>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.8">
             <strong style="color:var(--text)">第一层·公开广告：</strong>「你的情绪，是这个时代最稀缺的资产」<br>
             <strong style="color:var(--text)">第二层·系统私信：</strong>「您的创作者潜力评分：94/100 · 名额有限 · 24小时过期」
@@ -3665,7 +3669,7 @@
           <div style="font-size:15px;font-weight:600;color:var(--text-bright)">L3快乐工作宣传片 · 60秒</div>
         </div>
         <div style="padding:16px 20px">
-          <p style="font-size:12px;color:var(--text);line-height:1.8;margin-bottom:12px">以L3工厂为背景，用「企业文化宣传片」的格式制作。画面是工人们「愉快地」创作内容，空洞的笑容被包装成「热情」。</p>
+          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">以L3工厂为背景，用「企业文化宣传片」的格式制作。画面是工人们「愉快地」创作内容，空洞的笑容被包装成「热情」。</p>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.8">看完第一遍：羡慕。看完剧情再回看：不寒而栗。</div>
           <div style="margin-top:10px">
             <span style="font-family:'Share Tech Mono',monospace;font-size:9px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500;border:1px solid rgba(240,165,0,0.3)">待制作</span>
