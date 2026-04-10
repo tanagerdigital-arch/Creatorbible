@@ -3228,12 +3228,12 @@
     <div class="ep1-tab-page" id="ep1tab-renders">
 
       <div style="margin-bottom:20px">
-        <div style="display:flex;gap:12px;flex-wrap:wrap;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">
-          <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#2AADCC;margin-right:4px"></span>场景渲染</span>
-          <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#2ECC71;margin-right:4px"></span>角色镜头</span>
-          <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#F0A500;margin-right:4px"></span>后期特效</span>
-          <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#6B7280;margin-right:4px"></span>口播/对白</span>
-          <span style="color:var(--text-dim)">· 点击场景行可展开详细渲染卡片</span>
+        <div style="display:flex;flex-direction:column;gap:8px;font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text)">
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#2AADCC;margin-right:8px;vertical-align:middle"></span>A类 · 纯场景渲染（不需要定妆照）</span>
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#2ECC71;margin-right:8px;vertical-align:middle"></span>B类 · 需要定妆照（角色镜头）</span>
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#F0A500;margin-right:8px;vertical-align:middle"></span>C类 · 其他角色镜头</span>
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#E94560;margin-right:8px;vertical-align:middle"></span>D类 · 后期特效</span>
+          <span style="color:var(--text-dim);font-size:11px;margin-top:4px">· 点击场景行可展开详细渲染卡片</span>
         </div>
       </div>
 
@@ -3242,14 +3242,14 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">开场</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">倒叙钩子 · 赵凯斯坠落</div>
-            <div style="font-size:11px;color:var(--text-dim)">5秒 · 无对白</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">倒叙钩子 · 赵凯斯坠落</div>
+            <div style="font-size:12px;color:var(--text-dim)">5秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯坠落姿态</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">握冷钱包项链特写</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">「12小时前」字幕</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯坠落姿态</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">握冷钱包项链特写</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">「12小时前」字幕</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
@@ -3265,16 +3265,16 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 01</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">链上追踪 · 锁定灰鲸</div>
-            <div style="font-size:11px;color:var(--text-dim)">15-20秒 · 有独白</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">链上追踪 · 锁定灰鲸</div>
+            <div style="font-size:12px;color:var(--text-dim)">15-20秒 · 有独白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">书房/监控室场景</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·专注看盘</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">发现异常·眉头微皱</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">屏幕数据叠加</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">独白录音</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">书房/监控室场景</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·专注看盘</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">发现异常·眉头微皱</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">屏幕数据叠加</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">独白录音</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
@@ -3294,15 +3294,15 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 02</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">天降神针触发 · 域峰广场</div>
-            <div style="font-size:11px;color:var(--text-dim)">20秒 · 无对白</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">天降神针触发 · 域峰广场</div>
+            <div style="font-size:12px;color:var(--text-dim)">20秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">域峰广场全景</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">钟摆停止瞬间</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯预感发作</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">红色能量针特效</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">域峰广场全景</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">钟摆停止瞬间</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯预感发作</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">红色能量针特效</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
@@ -3324,14 +3324,14 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 03</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">混入灰鲸金融</div>
-            <div style="font-size:11px;color:var(--text-dim)">15秒 · 有对白</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">混入灰鲸金融</div>
+            <div style="font-size:12px;color:var(--text-dim)">15秒 · 有对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">灰鲸大厦大堂</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">透明电梯·4层斗兽场</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯混入·打Switch</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">灰鲸大厦大堂</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">透明电梯·4层斗兽场</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯混入·打Switch</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
@@ -3349,14 +3349,14 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 04</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">控制室 · 发现装置 · 砸按钮</div>
-            <div style="font-size:11px;color:var(--text-dim)">15秒 · 无对白</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">控制室 · 发现装置 · 砸按钮</div>
+            <div style="font-size:12px;color:var(--text-dim)">15秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">88F控制室全景</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">透明地板·L3俯视</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯砸按钮</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">88F控制室全景</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">透明地板·L3俯视</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯砸按钮</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
@@ -3373,14 +3373,14 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid rgba(232,184,75,0.3)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">场景 05 ★</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">维克多出现 · 幼稚鬼</div>
-            <div style="font-size:11px;color:var(--text-dim)">10秒 · EP1名场面</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">维克多出现 · 幼稚鬼</div>
+            <div style="font-size:12px;color:var(--text-dim)">10秒 · EP1名场面</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">维克多·控制室入场</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">两人对峙·洞口边</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">「幼稚鬼」台词</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">维克多·控制室入场</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">两人对峙·洞口边</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">「幼稚鬼」台词</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
@@ -3396,14 +3396,14 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 06</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">闪回 · 咖啡馆</div>
-            <div style="font-size:11px;color:var(--text-dim)">5秒 · EP1情感最重</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">闪回 · 咖啡馆</div>
+            <div style="font-size:12px;color:var(--text-dim)">5秒 · EP1情感最重</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">咖啡馆暖色场景</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">年轻维克多·年轻赵凯斯</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">闪回调色</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">咖啡馆暖色场景</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">年轻维克多·年轻赵凯斯</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">闪回调色</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
@@ -3421,14 +3421,14 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 07</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">坠落 · 拽走冷钱包</div>
-            <div style="font-size:11px;color:var(--text-dim)">10秒 · 无对白</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">坠落 · 拽走冷钱包</div>
+            <div style="font-size:12px;color:var(--text-dim)">10秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">L3洞口打开</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯坠落·拽项链</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">坠落特效</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">L3洞口打开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯坠落·拽项链</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">坠落特效</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
@@ -3446,14 +3446,14 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 08</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">L3初醒 · 小猪出现</div>
-            <div style="font-size:11px;color:var(--text-dim)">10秒 · 无对白</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">L3初醒 · 小猪出现</div>
+            <div style="font-size:12px;color:var(--text-dim)">10秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">L3工厂全景 ★</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯醒来</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">小猪从桌底出现</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">L3工厂全景 ★</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯醒来</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">小猪从桌底出现</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
@@ -3471,14 +3471,14 @@
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid rgba(240,80,112,0.2)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--red);margin-bottom:4px">场景 09 · 结尾</div>
-            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">72小时 · EP1钩子</div>
-            <div style="font-size:11px;color:var(--text-dim)">10秒 · 黑屏结束</div>
+            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">72小时 · EP1钩子</div>
+            <div style="font-size:12px;color:var(--text-dim)">10秒 · 黑屏结束</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,80,112,0.12);color:var(--red)">72:00:00倒计时</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">小猪正面·面具发光</span>
-            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">「你就不会再想出去了」</span>
-            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(240,80,112,0.12);color:var(--red)">72:00:00倒计时</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">小猪正面·面具发光</span>
+            <span style="font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">「你就不会再想出去了」</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
           </div>
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
