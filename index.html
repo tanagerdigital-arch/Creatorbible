@@ -632,25 +632,48 @@
   /* EP1 内嵌标签页 */
   .ep1-tab-nav {
     display: flex;
-    gap: 0;
-    border-bottom: 1px solid var(--border-bright);
-    margin-bottom: 32px;
+    flex-direction: column;
+    gap: 4px;
+    width: 200px;
+    flex-shrink: 0;
+    padding-right: 24px;
+    border-right: 1px solid var(--border);
+    position: sticky;
+    top: 32px;
+    align-self: flex-start;
   }
   .ep1-tab-btn {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    padding: 10px 24px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    padding: 12px 16px;
     border: none;
     background: transparent;
     color: var(--text-dim);
     cursor: pointer;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
+    border-left: 3px solid transparent;
+    text-align: left;
+    border-radius: 0 4px 4px 0;
     transition: all 0.2s;
+    line-height: 1.4;
   }
-  .ep1-tab-btn:hover { color: var(--text); }
-  .ep1-tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .ep1-tab-btn:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+  .ep1-tab-btn.active {
+    color: var(--gold);
+    border-left-color: var(--gold);
+    background: rgba(232,184,75,0.07);
+  }
+  .ep1-tab-wrapper {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+  .ep1-tab-content {
+    flex: 1;
+    padding-left: 32px;
+    min-width: 0;
+  }
   .ep1-tab-page { display: none; }
   .ep1-tab-page.active { display: block; }
 
@@ -898,7 +921,7 @@
           <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">功能：持续扫描经过的人群，检测心跳变化·瞳孔扩张·表情微变·声纹情绪分析，实时上传灰鲸金融顶层。</p>
           <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">分布密度：归零街（Meme街）每隔5米一根（最密）·L2核心区每隔20米·域峰广场最密集，天降神针触发时全部超载运行。</p>
           <div style="border-radius:6px;overflow:hidden;margin-top:12px;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/xSxw4YBQ/Me-Me.png')">
-            <img src="https://i.ibb.co/xSxw4YBQ/Me-Me.png" alt="情感灯柱概念图" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <img src="https://i.ibb.co/xSxw4YBQ/Me-Me.png" alt="情感灯柱概念图" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
             <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 情感灯柱 · 概念参考图</div></div>
           </div>
         </div>
@@ -908,7 +931,7 @@
           <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">行为规律：平时随机漂浮·当有人情绪激动时周围粒子轻微聚集形成淡金色光晕·然后向上飘散，方向永远朝向灰鲸金融大厦。</p>
           <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">浓度分布：归零街（Meme街）夜晚最浓（肉眼隐约可见）·早餐店极淡·L3工厂完全没有（情绪已被完全抽取，空气是「空」的）。</p>
           <div style="border-radius:6px;overflow:hidden;margin-top:12px;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/23HJfskN/jimeng-2026-03-30-1721-3-D-9-16-Meme.png')">
-            <img src="https://i.ibb.co/23HJfskN/jimeng-2026-03-30-1721-3-D-9-16-Meme.png" alt="情绪尘概念图" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <img src="https://i.ibb.co/23HJfskN/jimeng-2026-03-30-1721-3-D-9-16-Meme.png" alt="情绪尘概念图" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
             <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 信号层·情绪尘 · 概念参考图</div></div>
           </div>
         </div>
@@ -987,11 +1010,11 @@
           <p style="margin-top:8px"><strong style="color:var(--text-dim)">S2定位：</strong>K线山在S2主要以远景地标出现，不是主要事件发生地。无需刻画山峰细节，远景带过即可。</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0">
           <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/HTs28FRC/image.png')">
-            <img src="https://i.ibb.co/HTs28FRC/image.png" alt="K线山·光明顶(1)" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <img src="https://i.ibb.co/HTs28FRC/image.png" alt="K线山·光明顶(1)" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
             <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// K线山·光明顶(1)</div></div>
           </div>
           <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/99RbZQt7/image.png')">
-            <img src="https://i.ibb.co/99RbZQt7/image.png" alt="K线山·光明顶(2)" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <img src="https://i.ibb.co/99RbZQt7/image.png" alt="K线山·光明顶(2)" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
             <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// K线山·光明顶(2)</div></div>
           </div>
         </div>
@@ -1004,11 +1027,11 @@
           <p style="margin-top:8px"><strong style="color:var(--gold)">地标：</strong>广场上空悬挂着巨型K线灯烛形装置，平时来回摆动，所有人视为市场稳定运行的象征。天降神针触发时，装置停止，底部影线向下延伸，红色能量针射出完成收割，一切「恢复正常」。</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0">
             <div style="border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/5xrZb6Hy/image.png')">
-              <img src="https://i.ibb.co/5xrZb6Hy/image.png" alt="域峰广场·灰鲸金融大厦外观" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              <img src="https://i.ibb.co/5xrZb6Hy/image.png" alt="域峰广场·灰鲸金融大厦外观" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
               <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 域峰广场·灰鲸金融大厦外观</div></div>
             </div>
             <div style="border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/DPg2VJ5D/image.png')">
-              <img src="https://i.ibb.co/DPg2VJ5D/image.png" alt="灰鲸金融大厦·另一角度" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              <img src="https://i.ibb.co/DPg2VJ5D/image.png" alt="灰鲸金融大厦·另一角度" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
               <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 灰鲸金融大厦·另一角度</div></div>
             </div>
           </div>
@@ -1074,11 +1097,11 @@
 
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0">
             <div style="border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/xqL3dGDt/image.png')">
-              <img src="https://i.ibb.co/xqL3dGDt/image.png" alt="灰鲸金融内部·斗兽场" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              <img src="https://i.ibb.co/xqL3dGDt/image.png" alt="灰鲸金融内部·斗兽场" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
               <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 灰鲸金融内部·斗兽场交易大厅</div></div>
             </div>
             <div style="border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/0RxvBLtY/image-3.png')">
-              <img src="https://i.ibb.co/0RxvBLtY/image-3.png" alt="灰鲸金融内部·贪婪狂欢" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              <img src="https://i.ibb.co/0RxvBLtY/image-3.png" alt="灰鲸金融内部·贪婪狂欢" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
               <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 灰鲸金融内部·贪婪狂欢现场</div></div>
             </div>
           </div>
@@ -1093,11 +1116,11 @@
           <p style="margin-top:8px;font-size:11px;color:var(--text-dim)">现实映射：加密Twitter/X上的Meme文化圈，流量博主的每一次爆火都可能被游资利用。</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0">
           <div style="border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/B5kxsjRv/Me-ME-1.png')">
-            <img src="https://i.ibb.co/B5kxsjRv/Me-ME-1.png" alt="归零街白天街景(1)" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <img src="https://i.ibb.co/B5kxsjRv/Me-ME-1.png" alt="归零街白天街景(1)" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
             <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 归零街 · 白天街景(1)</div></div>
           </div>
           <div style="border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/SDztGpHB/3.png')">
-            <img src="https://i.ibb.co/SDztGpHB/3.png" alt="归零街白天街景(2)" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <img src="https://i.ibb.co/SDztGpHB/3.png" alt="归零街白天街景(2)" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
             <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// 归零街 · 白天街景(2)</div></div>
           </div>
         </div>
@@ -1111,11 +1134,11 @@
           <p style="margin-top:8px;font-size:11px;color:var(--text-dim)">现实映射：深度沉迷于Meme交易、短视频内容创作的人群——他们的情绪和注意力被算法完全收割，但他们以为自己在「赢」。</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0">
           <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/7NNysxRz/image-1.png')">
-            <img src="https://i.ibb.co/7NNysxRz/image-1.png" alt="L3入口·牛马情绪工厂(1)" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <img src="https://i.ibb.co/7NNysxRz/image-1.png" alt="L3入口·牛马情绪工厂(1)" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
             <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// L3入口·牛马情绪工厂(1)</div></div>
           </div>
           <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLightbox('https://i.ibb.co/N2b6YyjS/image.png')">
-            <img src="https://i.ibb.co/N2b6YyjS/image.png" alt="L3入口·牛马情绪工厂(2)" style="width:100%;display:block;object-fit:cover;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <img src="https://i.ibb.co/N2b6YyjS/image.png" alt="L3入口·牛马情绪工厂(2)" style="width:100%;display:block;object-fit:cover;max-height:200px;background:#0D1220" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
             <div style="padding:6px 10px;background:var(--dark-2)"><div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--gold-dim)">// L3入口·牛马情绪工厂(2)</div></div>
           </div>
         </div>
@@ -2099,26 +2122,28 @@
           <div class="char-image-label">// 阿明妈妈 · 早餐店灶台前</div>
         </div>
       </div>
-      <div class="char-bio">
-        <div class="char-bio-item">
-          <div class="char-bio-label">角色定位</div>
-          <div class="char-bio-value">配角·情感锚点。她不参与任何剧情冲突，但她的存在是整个S2最重要的情感基础。</div>
-        </div>
-        <div class="char-bio-item">
-          <div class="char-bio-label">日常</div>
-          <div class="char-bio-value">凌晨四点起床，归零街边缘开早餐店。阿明进L3之后，她以为儿子去「数字游民活动」赚钱了。她不知道发生了什么。她继续每天凌晨四点起床。</div>
-        </div>
-        <div class="char-bio-item">
-          <div class="char-bio-label">EP1出现</div>
-          <div class="char-bio-value">场景A建立世界时出现。顾客问阿明去哪了，她头也没抬：「去搞什么数字游民活动，说是能赚钱……你要辣椒吗？」这是整个EP1最平凡也最令人心酸的一句话。</div>
-        </div>
-        <div class="char-bio-item">
-          <div class="char-bio-label">EP6作用</div>
-          <div class="char-bio-value">阿明在记忆清零前的最后时刻，想起的就是她。早餐店的烟气，锅铲声，「你要辣椒吗」。这个记忆是他抵抗清零的最后防线。</div>
-        </div>
-        <div class="char-bio-item">
-          <div class="char-bio-label">视觉彩蛋</div>
-          <div class="char-bio-value">早餐店里挂着酱板鸭（网络梗保留）。桌上有招工广告二维码小卡片——她从来没注意过那张卡片，但阿明就是从那里被吸引进去的。</div>
+      <div class="char-detail-body">
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-box-label">角色定位</div>
+            <p>配角·情感锚点。她不参与任何剧情冲突，但她的存在是整个S2最重要的情感基础。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">日常</div>
+            <p>凌晨四点起床，归零街边缘开早餐店。阿明进L3之后，她以为儿子去「数字游民活动」赚钱了。她不知道发生了什么。她继续每天凌晨四点起床。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">EP1出现</div>
+            <p>顾客问阿明去哪了，她头也没抬：「去搞什么数字游民活动，说是能赚钱……你要辣椒吗？」这是整个EP1最平凡也最令人心酸的一句话。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">EP6作用</div>
+            <p>阿明在记忆清零前的最后时刻，想起的就是她。早餐店的烟气，锅铲声，「你要辣椒吗」。这个记忆是他抵抗清零的最后防线。</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box-label">视觉彩蛋</div>
+            <p>早餐店里挂着酱板鸭（网络梗保留）。桌上有招工广告二维码小卡片——她从来没注意过那张卡片，但阿明就是从那里被吸引进去的。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -2277,20 +2302,21 @@
   <!-- EP1 SCENE PACKAGES -->
   <section class="section" id="ep1-scenes">
     <div class="section-header">
-      <span class="section-num">04</span>
-      <h2 class="section-title">EP1 · 场景包</h2>
+      <h2 class="section-title" style="font-family:'Noto Serif SC',serif;font-size:32px;font-weight:700;color:var(--text-bright)">EP1 · 场景包</h2>
     </div>
 
     <div class="quote-block">
       <p>EP1场景包·渲染需求·完整剧本均在此页面内查看。默认显示完整剧本，可切换至场景总览和渲染需求清单。</p>
     </div>
 
-    <!-- EP1 三标签页 -->
-    <div class="ep1-tab-nav">
-      <button class="ep1-tab-btn" onclick="switchEP1Tab('overview', this)">📊 场景总览</button>
-      <button class="ep1-tab-btn" onclick="switchEP1Tab('renders', this)">📋 渲染需求清单</button>
-      <button class="ep1-tab-btn active" onclick="switchEP1Tab('screenplay', this)">🎬 完整剧本</button>
-    </div>
+    <!-- EP1 竖向标签页 -->
+    <div class="ep1-tab-wrapper">
+      <div class="ep1-tab-nav">
+        <button class="ep1-tab-btn" onclick="switchEP1Tab('overview', this)">📊 场景总览</button>
+        <button class="ep1-tab-btn" onclick="switchEP1Tab('renders', this)">📋 渲染需求清单</button>
+        <button class="ep1-tab-btn active" onclick="switchEP1Tab('screenplay', this)">🎬 完整剧本</button>
+      </div>
+      <div class="ep1-tab-content">
 
     <!-- 标签1：场景状态总览 -->
     <div class="ep1-tab-page" id="ep1tab-overview">
@@ -3523,6 +3549,8 @@
 
     </div>
     </div><!-- end ep1tab-screenplay -->
+    </div><!-- end ep1-tab-content -->
+    </div><!-- end ep1-tab-wrapper -->
 
   </section>  <section class="section" id="prompts">
     <div class="section-header">
