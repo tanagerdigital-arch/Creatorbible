@@ -3233,169 +3233,264 @@
           <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#2ECC71;margin-right:4px"></span>角色镜头</span>
           <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#F0A500;margin-right:4px"></span>后期特效</span>
           <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#6B7280;margin-right:4px"></span>口播/对白</span>
-          <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--gold);margin-right:4px"></span>已有参考图</span>
+          <span style="color:var(--text-dim)">· 点击场景行可展开详细渲染卡片</span>
         </div>
       </div>
 
       <!-- 开场 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">开场</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">倒叙钩子 · 赵凯斯坠落</div>
-          <div style="font-size:11px;color:var(--text-dim)">5秒 · 无对白</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">开场</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">倒叙钩子 · 赵凯斯坠落</div>
+            <div style="font-size:11px;color:var(--text-dim)">5秒 · 无对白</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯坠落姿态</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">握冷钱包项链特写</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">「12小时前」字幕</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯坠落姿态</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">握冷钱包项链特写</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">「12小时前」字幕叠加</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">角色镜头</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">开场-01</div><div><div class="rl-name">赵凯斯坠落中·握冷钱包</div><div class="rl-sub">倒叙开场 · 第一个画面</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯在坠落中，不是尖叫不是挣扎，手紧握冷钱包项链，表情平静。定妆照：L2版。关键细节：冷钱包项链必须清晰可见。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">定妆照版本</div><div class="rl-item-val">赵凯斯 L2版</div></div><div class="rl-item"><div class="rl-item-lbl">表情要求</div><div class="rl-item-val">平静·不是恐惧·这很重要</div></div></div></div></div>
+          <div class="rl-section-title">后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">开场-FX</div><div><div class="rl-name">「12小时前」字幕叠加</div><div class="rl-sub">后期制作</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">黑屏后白色等宽字体「12小时前」出现，简洁，不花哨。</div></div></div>
         </div>
       </div>
 
       <!-- 场景01 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 01</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">链上追踪 · 锁定灰鲸</div>
-          <div style="font-size:11px;color:var(--text-dim)">15-20秒 · 有独白</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 01</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">链上追踪 · 锁定灰鲸</div>
+            <div style="font-size:11px;color:var(--text-dim)">15-20秒 · 有独白</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">书房/监控室场景</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·专注看盘</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">发现异常·眉头微皱</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">屏幕数据叠加</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">独白录音</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">书房/监控室场景</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·专注看盘</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">发现异常·眉头微皱</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">Victor Chen名字出现</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">屏幕数据文字叠加</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">独白录音</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-01</div><div><div class="rl-name">赵凯斯书房·监控室全景</div><div class="rl-sub">场景01 · 建立赵凯斯的世界</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯自己加装的监控室，密密麻麻的屏幕，四周贴着「Diamond Hands」便利贴，冷蓝光。和任何一个加密散户的「战情室」没有区别——这是他的舒适区。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">关键细节</div><div class="rl-item-val">屏幕上有Victor Chen未读消息·贴满便利贴·冷蓝色光</div></div><div class="rl-item"><div class="rl-item-lbl">气氛</div><div class="rl-item-val">克制·专注·略带疲惫</div></div></div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-note" style="margin-bottom:12px">📌 以下镜头需要赵凯斯 L2版定妆照·角色特征强度75-80%</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-01</div><div><div class="rl-name">赵凯斯工位正面·发现异常</div><div class="rl-sub">场景01 · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯坐在监控室，正面镜头。屏幕光打在脸上。他发现链上异常，眉头微微皱起——不是愤怒，是困惑转为确认的过程。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">表情要求</div><div class="rl-item-val">困惑→确认·不是愤怒</div></div><div class="rl-item"><div class="rl-item-lbl">光线</div><div class="rl-item-val">冷蓝色屏幕光·室内暗</div></div></div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-02</div><div><div class="rl-name">赵凯斯·追踪网络图展开</div><div class="rl-sub">场景01 · 时间差攻击过程</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯身体前倾，多块屏幕展示链上地址追踪网络图。他的手指在键盘上飞速敲击。屏幕上出现Victor Chen的最高权限地址。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">后期叠加</div><div class="rl-item-val">Victor Chen名字文字·注册时间=老陈消失那天</div></div></div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">D-01</div><div><div class="rl-name">Victor Chen名字·屏幕文字叠加</div><div class="rl-sub">场景01 · 后期制作</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">「Victor Chen」名字在屏幕上高亮出现，注册时间戳「=老陈消失那天」红色标注。等宽字体，数据感强。</div></div></div>
         </div>
       </div>
 
       <!-- 场景02 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 02</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">天降神针触发 · 域峰广场</div>
-          <div style="font-size:11px;color:var(--text-dim)">20秒 · 无对白</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 02</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">天降神针触发 · 域峰广场</div>
+            <div style="font-size:11px;color:var(--text-dim)">20秒 · 无对白</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">域峰广场全景</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">钟摆停止瞬间</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯预感发作</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">红色能量针特效</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">域峰广场全景 ★</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">钟摆停止瞬间</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯预感发作·仰头</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯主观视角·红针</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">机械小兵狂喜·散户错愕</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">红色能量针特效 ★</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">预感画面调色</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-02</div><div><div class="rl-name">域峰广场全景·钟摆平时状态</div><div class="rl-sub">场景02 · 建立环境</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">域峰广场全景，灰鲸金融大厦居中，上空钟摆正在摆动（运动模糊），街道上散户来往，没有人抬头看钟摆。和任何一座繁华金融广场没有区别。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">关键细节</div><div class="rl-item-val">钟摆摆动中·底部无红色针</div></div><div class="rl-item"><div class="rl-item-lbl">尺度</div><div class="rl-item-val">城市级别·人类在画面中极小</div></div></div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-03</div><div><div class="rl-name">钟摆停止瞬间</div><div class="rl-sub">场景02 · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">仰拍，钟摆在天空中突然静止。极短的一瞬间。轻微运动模糊残影。钟摆底部有极微弱的红色能量开始聚集。「世界暂停了一秒」的窒息感。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-04</div><div><div class="rl-name">机械小兵狂喜 · 散户错愕</div><div class="rl-sub">场景02 · 对比镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">同一广场，两种极端反应。机械小兵机械臂伸出，集体狂喜欢呼。散户傻眼，账户清零，有人直接坐在地上。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-03</div><div><div class="rl-name">赵凯斯·预感发作·仰头看钟摆</div><div class="rl-sub">场景02 · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">街道上，赵凯斯突然停步，仰头看天空钟摆。周围人群正常走动，只有他停下来。预感能力触发的第一个镜头。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">定妆照版本</div><div class="rl-item-val">赵凯斯 L2版</div></div><div class="rl-item"><div class="rl-item-lbl">关键要求</div><div class="rl-item-val">只有他停下来·周围人群模糊继续走动</div></div></div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-04</div><div><div class="rl-name">赵凯斯·主观预感画面（只有他看见的红针）</div><div class="rl-sub">场景02 · 特殊镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯主观视角·他眼中的世界：虚焦，冷白色调，胶片质感。钟摆底部有清晰的红色能量针在蓄力——这是只有他能看见的画面。普通人看不见这个。</div><div class="rl-note">⚠️ 需要特殊后期调色：虚焦·冷白·胶片划过质感</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">D-02</div><div><div class="rl-name">红色能量针插地·K线屏幕变红</div><div class="rl-sub">场景02 · 核心特效</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">红色能量针从钟摆底部射出，插入广场地面，巨大光柱爆发，两侧K线屏幕全变红。EP1最重要的视觉冲击特效。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">D-03</div><div><div class="rl-name">预感画面特殊调色</div><div class="rl-sub">场景02 · 后期</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">B-04主观视角镜头的后期调色：虚焦处理·整体冷白色调·胶片划过效果·与正常画面形成强烈对比。</div></div></div>
         </div>
       </div>
 
       <!-- 场景03 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 03</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">混入灰鲸金融</div>
-          <div style="font-size:11px;color:var(--text-dim)">15秒 · 有对白</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 03</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">混入灰鲸金融</div>
+            <div style="font-size:11px;color:var(--text-dim)">15秒 · 有对白</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">灰鲸大厦大堂</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">透明电梯·4层斗兽场</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯混入·打Switch</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">灰鲸大厦前台大堂</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">透明电梯</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">4层斗兽场</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">顶层走廊·Switch门锁</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯混入·打Switch</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">招工广告大屏叠加</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">对白录音</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-05</div><div><div class="rl-name">灰鲸金融大厦前台·大堂·吉祥物</div><div class="rl-sub">场景03 · 混入</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">灰鲸金融大厦内部大堂。极简冷灰色调，金色logo。大堂正中央摆着可爱的鲸鱼吉祥物——EP1最大彩蛋。电梯按钮只有1-3F和88F。</div><div class="rl-note">⚠️ 吉祥物设计图待导演确认</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-06</div><div><div class="rl-name">透明电梯·4层斗兽场俯视</div><div class="rl-sub">场景03 · 灰鲸内部</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">透明电梯从1层上升，透过玻璃可以看见4层的罗马斗兽场式交易大厅。机械小兵在各层作业，红色电弧，K线屏幕墙环绕。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-07</div><div><div class="rl-name">顶层走廊·Switch门锁</div><div class="rl-sub">场景03 · 黑色幽默镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">顶层走廊尽头，两个机器人静止把守，门旁放着一台Nintendo Switch游戏机。最严密收割系统的门锁——这个画面要有强烈的黑色幽默感。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-05</div><div><div class="rl-name">赵凯斯·混入大厦·打Switch通关</div><div class="rl-sub">场景03</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-05a 赵凯斯跟在员工身后自然混入大厦·B-05b 顶层走廊拿起Switch打关（机器人在背景静止）——这个画面要有强烈喜感。</div></div></div>
         </div>
       </div>
 
       <!-- 场景04 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 04</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">控制室 · 发现装置 · 砸按钮</div>
-          <div style="font-size:11px;color:var(--text-dim)">15秒 · 无对白</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 04</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">控制室 · 发现装置 · 砸按钮</div>
+            <div style="font-size:11px;color:var(--text-dim)">15秒 · 无对白</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">88F控制室全景</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">透明地板·L3俯视</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯砸按钮</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">88F控制室全景</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">透明地板·L3俯视</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯发现装置</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">砸按钮慢动作</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-08</div><div><div class="rl-name">88F控制室全景</div><div class="rl-sub">场景04</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">圆形控制室全景。全息星图天花板（永信城全网实时节点分布图）。中央：天降神针充能装置+倒计时牌。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-09</div><div><div class="rl-name">透明地板·俯视L3格子间</div><div class="rl-sub">场景04 · 关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">从控制室透明地板往下看，L3无限延伸的格子间幽绿色光。赵凯斯第一次看见L3，脸上是说不清的恶心感。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-06</div><div><div class="rl-name">赵凯斯·发现装置·砸按钮慢动作</div><div class="rl-sub">场景04</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">B-06a 发现天降神针按钮和倒计时牌（从困惑到确认）·B-06b 砸按钮瞬间慢动作，表情平静决心。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">表情要求</div><div class="rl-item-val">平静决心·不是冲动</div></div><div class="rl-item"><div class="rl-item-lbl">定妆照版本</div><div class="rl-item-val">赵凯斯 L2版</div></div></div></div></div>
         </div>
       </div>
 
       <!-- 场景05 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid rgba(232,184,75,0.4);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid rgba(232,184,75,0.3)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">场景 05 ★</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">维克多出现 · 幼稚鬼</div>
-          <div style="font-size:11px;color:var(--text-dim)">10秒 · EP1名场面</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid rgba(232,184,75,0.4);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid rgba(232,184,75,0.3)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">场景 05 ★</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">维克多出现 · 幼稚鬼</div>
+            <div style="font-size:11px;color:var(--text-dim)">10秒 · EP1名场面</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">维克多·控制室入场</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">两人对峙·洞口边</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">「幼稚鬼」台词</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">维克多·控制室入场背影</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">维克多蹲洞口·机械臂抓手</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯抓项链·两人对峙</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">「幼稚鬼」台词录音</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">B类 · 需要定妆照（两个角色）</div>
+          <div class="rl-note" style="margin-bottom:12px">📌 此场景需要赵凯斯L2版+陈维克多控制室版两张定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-07</div><div><div class="rl-name">陈维克多·进入控制室背影</div><div class="rl-sub">场景05 · 维克多登场</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">维克多从背后进入控制室，深灰色风衣，右臂机械臂，背影。他不慌不忙地走向控制台，修复被砸的装置。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">关键细节</div><div class="rl-item-val">永远不能看见维克多完整脸部</div></div></div></div></div>
+          <div class="rl-card" style="border-color:var(--gold)"><div class="rl-header"><div class="rl-id">B-08</div><div><div class="rl-name">★ 名场面·洞口对峙·「幼稚鬼」</div><div class="rl-sub">场景05 · EP1最重要镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">维克多蹲在洞口边，机械臂抓住赵凯斯悬空的手。赵凯斯另一手抓住维克多胸口项链。仰拍，逆光，史诗感。维克多说出「幼稚鬼」。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">构图参考</div><div class="rl-item-val">狮子王刀疤推木法沙·仰拍·逆光·史诗感</div></div><div class="rl-item"><div class="rl-item-lbl">需要两张定妆照</div><div class="rl-item-val">维克多控制室版+赵凯斯L2版</div></div></div></div></div>
         </div>
       </div>
 
       <!-- 场景06 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 06</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">闪回 · 咖啡馆</div>
-          <div style="font-size:11px;color:var(--text-dim)">5秒 · EP1情感最重</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 06</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">闪回 · 咖啡馆</div>
+            <div style="font-size:11px;color:var(--text-dim)">5秒 · EP1情感最重</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">咖啡馆暖色场景</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">年轻维克多·年轻赵凯斯</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">闪回调色</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">咖啡馆暖色场景</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">年轻维克多（无面罩）</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">年轻赵凯斯</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">闪回调色·暖色滤镜</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">对白录音</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-10</div><div><div class="rl-name">咖啡馆·暖色调场景</div><div class="rl-sub">场景06 · 闪回</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">温暖的咖啡馆，木质桌椅，暖黄灯光。与整个EP1的冷色调形成强烈对比。这里是整个故事里最温暖的2秒钟。</div></div></div>
+          <div class="rl-section-title">C类 · 其他角色镜头</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">C-01</div><div><div class="rl-name">年轻陈维克多（无面罩版）·「幼稚鬼」</div><div class="rl-sub">场景06 · EP1情感核心</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">咖啡馆，约30岁，无面罩无机械臂，眼睛里有光，温和地对年轻赵凯斯说「幼稚鬼」——宠溺，不是嘲讽。整个EP1情感最重的2秒钟。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">关键要求</div><div class="rl-item-val">无面罩·眼睛有光·温和笑容</div></div><div class="rl-item"><div class="rl-item-lbl">对比</div><div class="rl-item-val">和现在的维克多形成强烈反差</div></div></div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">D-04</div><div><div class="rl-name">闪回调色·暖色滤镜</div><div class="rl-sub">场景06 · 后期</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">整体暖黄色调，轻微胶片颗粒感，与现代场景形成时间感对比。</div></div></div>
         </div>
       </div>
 
       <!-- 场景07 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 07</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">坠落 · 拽走冷钱包</div>
-          <div style="font-size:11px;color:var(--text-dim)">10秒 · 无对白</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 07</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">坠落 · 拽走冷钱包</div>
+            <div style="font-size:11px;color:var(--text-dim)">10秒 · 无对白</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">L3洞口打开</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯坠落·拽项链</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">坠落特效</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">L3洞口打开·幽绿光</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯坠落瞬间</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">手握冷钱包项链特写</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">坠落·链条断裂特效</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-11</div><div><div class="rl-name">控制室洞口打开·幽绿光从下透来</div><div class="rl-sub">场景07</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">控制室地板右半圆洞口打开，幽绿色的光从L3深处透上来。这是赵凯斯坠落前的最后一个场景镜头。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-09</div><div><div class="rl-name">赵凯斯坠落·手握冷钱包项链</div><div class="rl-sub">场景07 · 与开场呼应</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">链条断裂瞬间，赵凯斯手握冷钱包项链坠入黑暗。这个镜头与开场倒叙呼应。表情平静——他早就知道会有这一天。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">关键道具</div><div class="rl-item-val">冷钱包项链·必须清晰可见</div></div><div class="rl-item"><div class="rl-item-lbl">表情</div><div class="rl-item-val">平静·不是恐惧</div></div></div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">D-05</div><div><div class="rl-name">坠落·链条断裂·黑暗吞没特效</div><div class="rl-sub">场景07</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">坠落过程特效：速度感，幽绿色光从四周收缩，黑暗逐渐吞没画面。</div></div></div>
         </div>
       </div>
 
       <!-- 场景08 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 08</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">L3初醒 · 小猪出现</div>
-          <div style="font-size:11px;color:var(--text-dim)">10秒 · 无对白</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 08</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">L3初醒 · 小猪出现</div>
+            <div style="font-size:11px;color:var(--text-dim)">10秒 · 无对白</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">L3工厂全景 ★</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯醒来</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">小猪从桌底出现</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">L3工厂全景 ★已有</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(42,173,204,0.15);color:#2AADCC">404号工位区域</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯L3版·醒来第一眼</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">小猪女侠·桌底出现</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">A-12</div><div><div class="rl-name">L3工厂全景·404号工位区域</div><div class="rl-sub">场景08</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-done">已有概念图</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">L3牛马情绪工厂内部，冷蓝绿灰色调，无限延伸格子间，工人低头工作面带空洞的笑。404号工位桌底有唯一的暖色光点——小猪面具的粉绿色光。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-10</div><div><div class="rl-name">赵凯斯L3版·地板上醒来</div><div class="rl-sub">场景08</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯躺在L3地板上，第一眼睁开，冷绿色光打在脸上。已画好熊猫眼（L3战斗状态）。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">定妆照版本</div><div class="rl-item-val">赵凯斯 L3战斗版（熊猫眼）</div></div></div></div></div>
+          <div class="rl-section-title">C类 · 其他角色</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">C-02</div><div><div class="rl-name">小猪女侠·404桌底出现</div><div class="rl-sub">场景08</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小猪女侠靠着404号工位桌腿坐着，面具发出粉绿色光，是L3里唯一温暖的角落。她看着刚醒来的赵凯斯。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">关键视觉</div><div class="rl-item-val">面具粉绿色光·L3唯一暖色</div></div></div></div></div>
         </div>
       </div>
 
       <!-- 场景09 -->
-      <div style="display:flex;gap:0;margin-bottom:8px;border-radius:8px;border:1px solid rgba(240,80,112,0.3);overflow:hidden;background:var(--dark-2)">
-        <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid rgba(240,80,112,0.2)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--red);margin-bottom:4px">场景 09 · 结尾</div>
-          <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">72小时 · EP1钩子</div>
-          <div style="font-size:11px;color:var(--text-dim)">10秒 · 黑屏结束</div>
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid rgba(240,80,112,0.3);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid rgba(240,80,112,0.2)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--red);margin-bottom:4px">场景 09 · 结尾</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">72小时 · EP1钩子</div>
+            <div style="font-size:11px;color:var(--text-dim)">10秒 · 黑屏结束</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,80,112,0.12);color:var(--red)">72:00:00倒计时</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">小猪正面·面具发光</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">「你就不会再想出去了」</span>
+            <span style="font-size:11px;color:var(--text-dim);margin-left:auto;padding:3px 8px">▼ 展开</span>
+          </div>
         </div>
-        <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start">
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,80,112,0.12);color:var(--red)">72:00:00红色倒计时</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">小猪女侠正面·面具发光</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(107,114,128,0.2);color:var(--text-dim)">「你就不会再想出去了」</span>
-          <span style="font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500">黑屏切换</span>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">C类 · 其他角色</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">C-03</div><div><div class="rl-name">小猪女侠正面·说台词</div><div class="rl-sub">场景09 · EP1最后一个镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小猪女侠正面，面具粉绿色霓虹光，表情看不见，语气极度平静地说出「你就不会再想出去了」。</div><div class="rl-grid"><div class="rl-item"><div class="rl-item-lbl">语气要求</div><div class="rl-item-val">极度平静·不是威胁·是陈述事实</div></div></div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">D-06</div><div><div class="rl-name">72:00:00红色倒计时·黑屏切换</div><div class="rl-sub">场景09 · EP1收尾</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">系统消息弹出，红色等宽字体「距离全体记忆重置：72:00:00」。小猪说完最后一个字立刻切黑，不留停顿。</div></div></div>
         </div>
       </div>
 
     </div><!-- end ep1tab-renders -->
+
     <!-- 标签3：完整剧本 -->
     <div class="ep1-tab-page active" id="ep1tab-screenplay">
     <div style="max-width:680px;margin:0 auto">
