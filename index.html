@@ -679,7 +679,7 @@
 
   /* 剧本样式 */
   .script-scene-block { margin-bottom: 48px; border-left: 2px solid var(--border); padding-left: 24px; }
-  .script-scene-label { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--gold); background:rgba(212,160,23,0.1); border:1px solid var(--border); padding:4px 12px; border-radius:4px; display:inline-block; margin-bottom:12px; }
+  .script-scene-label { font-family:'Share Tech Mono',monospace; font-size:13px; color:#0D1220; background:var(--gold); border:none; padding:6px 16px; border-radius:4px; display:inline-block; margin-bottom:14px; font-weight:600; letter-spacing:0.08em; }
   .script-scene-name { font-family:'Noto Serif SC',serif; font-size:16px; font-weight:600; color:var(--text-bright); margin-bottom:4px; }
   .script-scene-time { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--text-dim); margin-bottom:16px; }
   .script-loc { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--gold-dim); letter-spacing:0.15em; text-transform:uppercase; padding:6px 12px; background:rgba(0,0,0,0.2); border-radius:4px; display:inline-block; margin-bottom:16px; }
@@ -1469,13 +1469,34 @@
           <p>「市场可以让你破产，但市场拿不走你的判断力。」——陈维克多教他的话，也是最终击穿陈维克多的话。</p>
         </div>
         <h4>即梦提示词</h4>
+
+        <div style="background:rgba(232,184,75,0.05);border:1px solid var(--gold);border-radius:8px;padding:16px 20px;margin-bottom:20px">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:12px">// 赵凯斯 · 标志性装束（所有场景必须遵守）</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px;color:var(--text);line-height:1.9">
+            <div>
+              <strong style="color:var(--gold)">必须保留：</strong><br>
+              ✓ 黑框方形粗眼镜·标志性·任何场景不能去掉<br>
+              ✓ 黑色「Diamond Hands」哥特字体T恤<br>
+              ✓ 冷钱包项链·蓝白色微光<br>
+              ✓ 黑色蓬松竖发·不规则刘海
+            </div>
+            <div>
+              <strong style="color:var(--gold)">版本区分：</strong><br>
+              L2版：黑色皮夹克在外·轻松自信<br>
+              书房版：只穿T恤·疲惫专注·T恤背面「L2 CITADEL」<br>
+              L3战斗版：熊猫眼·眼镜保留·平静决心<br>
+              年轻闪回版：20岁·无皮夹克·无冷钱包
+            </div>
+          </div>
+        </div>
+
         <div class="prompt-card">
           <div class="prompt-header">
             <span class="prompt-title">// L2正常状态</span>
             <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
           </div>
           <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
-二十八岁亚洲男性，黑色蓬松竖发带不规则刘海，黑框方形粗眼镜，
+二十八岁亚洲男性，黑色蓬松竖发带不规则刘海，黑框方形粗眼镜（标志性·必须保留），
 黑色磨砂皮革夹克微微开着，拉链头金色，肩部细金色缝线，
 里面露出黑色Diamond Hands哥特字体T恤，
 黑色军事战术双肩背包，手腕编织手环，深色工装裤，黑色战术靴，
@@ -1483,19 +1504,66 @@
 背景：永信城L2夜晚街道，金色霓虹，K线图霓虹招牌，
 表情轻松自信，8K电影级渲染</div>
         </div>
+
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 书房·监控室版</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">皮克斯3D动画电影风格，电影级渲染，室内场景，9:16竖构图，从人物背后上方45度角俯视。
+
+赵凯斯坐在椅子上，背对镜头身体微微前倾，专注盯着屏幕，右手在鼠标上，
+黑色「Diamond Hands」T恤，背面字体清晰，背面左下角有「L2 CITADEL」小字，
+黑框方形粗眼镜（标志性·必须保留）。
+
+三块弧形显示器，中央屏幕红色高亮「Victor Chen · 域峰广场 · 88层」，
+两侧屏幕是密集的链上追踪网络图发光节点连线。
+
+桌面：翻开的笔记本·两个空咖啡杯·一包薯片·《凡人修币录》小说靠在桌角·币安小说菌手办立在显示器旁·揉皱的废纸团。
+
+墙上便利贴密密麻麻，最显眼：「Diamond Hands」「不卖」「等」。
+
+色调：冷蓝色屏幕光为主·室内暗·便利贴暖黄为唯一暖色。
+8K，电影级光影渲染，强叙事感，9:16。</div>
+        </div>
+
         <div class="prompt-card">
           <div class="prompt-header">
             <span class="prompt-title">// L3战斗状态（熊猫眼）</span>
             <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
           </div>
-          <div class="prompt-body">半写实3D动漫风格，电影级渲染，全身照，9:16，
-保持人物面部特征和发型不变，无眼镜，
-眼睛下方黑色油彩熊猫眼妆晕染感不规则，
-眼睛激活：左眼金色数据流，右眼绿色逆向信号，
-脸上有轻微灰尘，表情平静的决心不是愤怒，
-黑色皮夹克有破损，右手握发光冷钱包散发蓝白色光，
+          <div class="prompt-body">皮克斯3D动画电影风格，电影级渲染，全身照，9:16，
+二十八岁亚洲男性，黑色蓬松竖发带不规则刘海，
+黑框方形粗眼镜（标志性·熊猫眼状态下必须保留眼镜），
+眼睛下方黑色油彩熊猫眼妆·晕染感·不规则，
+表情：眉头微微锁着·不是愤怒·是已经做了决定的重量感·坚定，
+黑色Diamond Hands T恤，黑色皮夹克有破损，
+右手握发光冷钱包散发蓝白色光，
 背景：L3地下工厂冷蓝绿灰色调，无限延伸格子间，头顶数据管道，
-8K电影级渲染</div>
+8K电影级渲染，9:16。</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <span class="prompt-title">// 年轻版·咖啡馆闪回（20岁）</span>
+            <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
+          </div>
+          <div class="prompt-body">皮克斯3D动画电影风格，电影级渲染，上半身，9:16竖构图。
+
+赵凯斯，男，约20岁年轻版本，脸部线条更柔和略带青涩，
+短黑发略显凌乱，黑框眼镜，亚洲面孔，
+休闲深色帽衫或卫衣，没有皮夹克没有冷钱包项链。
+
+表情：眼睛睁得大而认真，眉头微微拢着，
+嘴唇微微张着像刚说完一个思考了很久的问题，
+这种困惑是真诚的·天真的·他真的相信web3可以改变世界。
+
+身体微微向前倾，双手捧着写着「KEEP BUILDING」的咖啡杯，
+桌上有手机·Web3相关书籍。
+
+背景：咖啡馆，暖黄灯光，木质桌椅，窗外城市黄昏。
+全暖色调·没有任何冷色·这是整个S2最温暖的画面。
+8K，电影级光影渲染，9:16。</div>
         </div>
 
         <hr class="divider">
