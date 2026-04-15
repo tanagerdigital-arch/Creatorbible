@@ -682,21 +682,87 @@
   .script-scene-label { font-family:'Share Tech Mono',monospace; font-size:13px; color:#0D1220; background:var(--gold); border:none; padding:6px 16px; border-radius:4px; display:inline-block; margin-bottom:14px; font-weight:600; letter-spacing:0.08em; }
   .script-scene-name { font-family:'Noto Serif SC',serif; font-size:20px; font-weight:600; color:var(--text-bright); margin-bottom:6px; }
   .script-scene-time { font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--text-dim); margin-bottom:20px; }
-  .script-loc { font-family:'Share Tech Mono',monospace; font-size:13px; color:var(--gold); letter-spacing:0.08em; padding:6px 14px; background:rgba(212,160,23,0.1); border:1px solid rgba(212,160,23,0.25); border-radius:4px; display:inline-flex; align-items:center; gap:8px; margin-bottom:20px; }
-  .script-loc::before { content:'📍 场景地点'; font-size:9px; color:var(--gold-dim); letter-spacing:0.15em; background:rgba(212,160,23,0.2); padding:2px 6px; border-radius:3px; white-space:nowrap; }
+  /* 📍 场景地点 */
+  .script-loc {
+    font-family:'Share Tech Mono',monospace;
+    font-size:15px; color:var(--gold); letter-spacing:0.06em;
+    padding:10px 18px;
+    background:rgba(212,160,23,0.12);
+    border:1px solid rgba(212,160,23,0.35);
+    border-left:4px solid var(--gold);
+    border-radius:0 6px 6px 0;
+    display:block; margin-bottom:24px;
+  }
+  .script-loc::before {
+    content:'📍 场景地点';
+    display:block;
+    font-size:11px; color:var(--gold-dim);
+    letter-spacing:0.2em; margin-bottom:5px;
+    font-weight:400;
+  }
+
+  /* 正文动作描述 */
   .script-action-text { font-size:15px; color:var(--text); line-height:2.2; margin-bottom:20px; }
-  .script-dlg { margin: 20px 0 20px 0; padding: 14px 20px; background:rgba(0,0,0,0.15); border-radius:6px; border-left:3px solid rgba(255,255,255,0.1); }
-  .script-char-name { font-family:'Share Tech Mono',monospace; font-size:12px; letter-spacing:0.12em; margin-bottom:5px; font-weight:600; }
-  .script-char-name::before { content:'💬 '; font-size:11px; }
+
+  /* 💬 对白区块 */
+  .script-dlg {
+    margin: 24px 0;
+    padding: 18px 22px;
+    background:rgba(255,255,255,0.04);
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.08);
+    border-left:4px solid rgba(255,255,255,0.2);
+  }
+
+  /* 角色名 */
+  .script-char-name {
+    font-family:'Share Tech Mono',monospace;
+    font-size:15px; letter-spacing:0.1em;
+    margin-bottom:6px; font-weight:700;
+    display:flex; align-items:center; gap:8px;
+  }
+  .script-char-name::before {
+    content:'💬';
+    font-size:14px;
+    flex-shrink:0;
+  }
   .script-char-zhao { color:var(--gold); }
   .script-char-victor { color:#E94560; }
   .script-char-xiaozhu { color:#E879A0; }
   .script-char-npc { color:var(--teal-bright); }
   .script-char-robot { color:var(--text-dim); }
-  .script-paren-text { font-size:13px; color:var(--text-dim); font-style:italic; margin-bottom:5px; }
-  .script-speech { font-size:16px; color:var(--text-bright); line-height:1.9; margin-bottom:10px; font-weight:400; }
-  .script-dir { font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--teal-bright); background:rgba(26,143,170,0.08); border:1px solid rgba(26,143,170,0.2); border-left:3px solid var(--teal-bright); border-radius:0 4px 4px 0; padding:12px 16px; margin:20px 0; line-height:1.9; }
-  .script-dir::before { content:'🎬 镜头视角 / 系统消息'; display:block; font-size:9px; color:var(--teal-bright); letter-spacing:0.15em; margin-bottom:8px; opacity:0.7; }
+
+  /* 括号动作说明 */
+  .script-paren-text {
+    font-size:13px; color:var(--text-dim);
+    font-style:italic; margin-bottom:6px;
+    padding-left:22px;
+  }
+
+  /* 对白/独白内容 */
+  .script-speech {
+    font-size:17px; color:var(--text-bright);
+    line-height:2.0; margin-bottom:6px;
+    font-weight:500; padding-left:22px;
+  }
+
+  /* 🎬 镜头视角/系统消息 */
+  .script-dir {
+    font-family:'Share Tech Mono',monospace;
+    font-size:13px; color:var(--teal-bright);
+    background:rgba(26,143,170,0.08);
+    border:1px solid rgba(26,143,170,0.25);
+    border-left:4px solid var(--teal-bright);
+    border-radius:0 6px 6px 0;
+    padding:14px 18px; margin:24px 0; line-height:2.0;
+  }
+  .script-dir::before {
+    content:'🎬 镜头视角 / 系统消息';
+    display:block;
+    font-size:11px; color:var(--teal-bright);
+    letter-spacing:0.2em; margin-bottom:10px;
+    opacity:0.8; font-weight:600;
+  }
   .script-flashback-box { background:rgba(212,160,23,0.05); border:1px solid rgba(212,160,23,0.2); border-radius:6px; padding:16px 20px; margin:16px 0; }
   .script-flashback-lbl { font-family:'Share Tech Mono',monospace; font-size:9px; color:var(--gold-dim); letter-spacing:0.2em; margin-bottom:10px; }
   .script-countdown-display { font-family:'Share Tech Mono',monospace; font-size:32px; color:#E94560; text-align:center; padding:24px; animation: ep1pulse 1s infinite; }
