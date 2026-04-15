@@ -680,20 +680,23 @@
   /* 剧本样式 */
   .script-scene-block { margin-bottom: 48px; border-left: 2px solid var(--border); padding-left: 24px; }
   .script-scene-label { font-family:'Share Tech Mono',monospace; font-size:13px; color:#0D1220; background:var(--gold); border:none; padding:6px 16px; border-radius:4px; display:inline-block; margin-bottom:14px; font-weight:600; letter-spacing:0.08em; }
-  .script-scene-name { font-family:'Noto Serif SC',serif; font-size:16px; font-weight:600; color:var(--text-bright); margin-bottom:4px; }
-  .script-scene-time { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--text-dim); margin-bottom:16px; }
-  .script-loc { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--gold-dim); letter-spacing:0.15em; text-transform:uppercase; padding:6px 12px; background:rgba(0,0,0,0.2); border-radius:4px; display:inline-block; margin-bottom:16px; }
-  .script-action-text { font-size:14px; color:var(--text); line-height:2.1; margin-bottom:16px; }
-  .script-dlg { margin: 16px 0 16px 32px; }
-  .script-char-name { font-family:'Share Tech Mono',monospace; font-size:10px; letter-spacing:0.15em; margin-bottom:3px; }
+  .script-scene-name { font-family:'Noto Serif SC',serif; font-size:20px; font-weight:600; color:var(--text-bright); margin-bottom:6px; }
+  .script-scene-time { font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--text-dim); margin-bottom:20px; }
+  .script-loc { font-family:'Share Tech Mono',monospace; font-size:13px; color:var(--gold); letter-spacing:0.08em; padding:6px 14px; background:rgba(212,160,23,0.1); border:1px solid rgba(212,160,23,0.25); border-radius:4px; display:inline-flex; align-items:center; gap:8px; margin-bottom:20px; }
+  .script-loc::before { content:'📍 场景地点'; font-size:9px; color:var(--gold-dim); letter-spacing:0.15em; background:rgba(212,160,23,0.2); padding:2px 6px; border-radius:3px; white-space:nowrap; }
+  .script-action-text { font-size:15px; color:var(--text); line-height:2.2; margin-bottom:20px; }
+  .script-dlg { margin: 20px 0 20px 0; padding: 14px 20px; background:rgba(0,0,0,0.15); border-radius:6px; border-left:3px solid rgba(255,255,255,0.1); }
+  .script-char-name { font-family:'Share Tech Mono',monospace; font-size:12px; letter-spacing:0.12em; margin-bottom:5px; font-weight:600; }
+  .script-char-name::before { content:'💬 '; font-size:11px; }
   .script-char-zhao { color:var(--gold); }
   .script-char-victor { color:#E94560; }
   .script-char-xiaozhu { color:#E879A0; }
   .script-char-npc { color:var(--teal-bright); }
   .script-char-robot { color:var(--text-dim); }
-  .script-paren-text { font-size:11px; color:var(--text-dim); font-style:italic; margin-bottom:3px; }
-  .script-speech { font-size:14px; color:var(--text-bright); line-height:1.8; margin-bottom:8px; }
-  .script-dir { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--teal-bright); background:rgba(26,143,170,0.08); border:1px solid rgba(26,143,170,0.2); border-radius:4px; padding:10px 14px; margin:16px 0; line-height:1.7; }
+  .script-paren-text { font-size:13px; color:var(--text-dim); font-style:italic; margin-bottom:5px; }
+  .script-speech { font-size:16px; color:var(--text-bright); line-height:1.9; margin-bottom:10px; font-weight:400; }
+  .script-dir { font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--teal-bright); background:rgba(26,143,170,0.08); border:1px solid rgba(26,143,170,0.2); border-left:3px solid var(--teal-bright); border-radius:0 4px 4px 0; padding:12px 16px; margin:20px 0; line-height:1.9; }
+  .script-dir::before { content:'🎬 镜头视角 / 系统消息'; display:block; font-size:9px; color:var(--teal-bright); letter-spacing:0.15em; margin-bottom:8px; opacity:0.7; }
   .script-flashback-box { background:rgba(212,160,23,0.05); border:1px solid rgba(212,160,23,0.2); border-radius:6px; padding:16px 20px; margin:16px 0; }
   .script-flashback-lbl { font-family:'Share Tech Mono',monospace; font-size:9px; color:var(--gold-dim); letter-spacing:0.2em; margin-bottom:10px; }
   .script-countdown-display { font-family:'Share Tech Mono',monospace; font-size:32px; color:#E94560; text-align:center; padding:24px; animation: ep1pulse 1s infinite; }
@@ -704,7 +707,7 @@
   .rl-card { background:var(--dark-2); border:1px solid var(--border); border-radius:8px; margin-bottom:10px; overflow:hidden; }
   .rl-header { display:grid; grid-template-columns:64px 1fr auto; align-items:center; gap:12px; padding:14px 18px; }
   .rl-id { font-family:'Share Tech Mono',monospace; font-size:11px; color:var(--gold); }
-  .rl-name { font-size:13px; color:var(--text-bright); font-weight:500; }
+  .rl-name { font-size:14px; color:var(--text-bright); font-weight:600; }
   .rl-sub { font-size:11px; color:var(--text-dim); margin-top:2px; }
   .rl-badges { display:flex; gap:5px; flex-shrink:0; }
   .rl-badge { font-family:'Share Tech Mono',monospace; font-size:9px; padding:2px 7px; border-radius:3px; }
@@ -3485,8 +3488,8 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">开场</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">倒叙钩子 · 赵凯斯坠落</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">开场</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">倒叙钩子 · 赵凯斯坠落</div>
             <div style="font-size:12px;color:var(--text-dim)">5秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -3508,8 +3511,8 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 01</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">链上追踪 · 锁定灰鲸</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 01</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">链上追踪 · 锁定灰鲸</div>
             <div style="font-size:12px;color:var(--text-dim)">15-20秒 · 有独白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -3548,8 +3551,8 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 02</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">归零街 · 早餐店 · 天降神针</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 02</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">归零街 · 早餐店 · 天降神针</div>
             <div style="font-size:12px;color:var(--text-dim)">25秒 · 有对白+视觉冲击</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -3587,8 +3590,8 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 03</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">混入灰鲸金融</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 03</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">混入灰鲸金融</div>
             <div style="font-size:12px;color:var(--text-dim)">15秒 · 有对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -3638,8 +3641,8 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 04</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">控制室 · 发现装置 · 砸按钮</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 04</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">控制室 · 发现装置 · 砸按钮</div>
             <div style="font-size:12px;color:var(--text-dim)">15秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -3676,7 +3679,7 @@ L3格子间某工位桌底，昏暗狭小空间。
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid rgba(232,184,75,0.3)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">场景 05 ★</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">维克多出现 · 幼稚鬼</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">维克多出现 · 幼稚鬼</div>
             <div style="font-size:12px;color:var(--text-dim)">10秒 · EP1名场面</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -3698,8 +3701,8 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 06</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">闪回 · 咖啡馆</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 06</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">闪回 · 咖啡馆</div>
             <div style="font-size:12px;color:var(--text-dim)">5秒 · EP1情感最重</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -3723,8 +3726,8 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 07</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">坠落 · 拽走冷钱包</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 07</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">坠落 · 拽走冷钱包</div>
             <div style="font-size:12px;color:var(--text-dim)">10秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -3748,8 +3751,8 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:4px">场景 08</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">L3初醒 · 小猪出现</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 08</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">L3初醒 · 小猪出现</div>
             <div style="font-size:12px;color:var(--text-dim)">10秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -3774,7 +3777,7 @@ L3格子间某工位桌底，昏暗狭小空间。
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
           <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid rgba(240,80,112,0.2)">
             <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--red);margin-bottom:4px">场景 09 · 结尾</div>
-            <div style="font-size:15px;font-weight:500;color:var(--text-bright);margin-bottom:6px;line-height:1.4">72小时 · EP1钩子</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">72小时 · EP1钩子</div>
             <div style="font-size:12px;color:var(--text-dim)">10秒 · 黑屏结束</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
