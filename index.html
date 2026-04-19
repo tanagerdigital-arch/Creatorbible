@@ -767,6 +767,7 @@
   .script-flashback-lbl { font-family:'Share Tech Mono',monospace; font-size:9px; color:var(--gold-dim); letter-spacing:0.2em; margin-bottom:10px; }
   .script-countdown-display { font-family:'Share Tech Mono',monospace; font-size:32px; color:#E94560; text-align:center; padding:24px; animation: ep1pulse 1s infinite; }
   @keyframes ep1pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.85)} }
   .script-end-card { text-align:center; font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--gold); padding:32px; border:1px solid var(--border); border-radius:8px; margin-top:48px; letter-spacing:0.2em; }
 
   /* 渲染清单内嵌样式 */
@@ -914,6 +915,19 @@
       是在看见真相之后，仍然选择相信彼此。
     </p>
   </section>
+
+  <!-- 最后更新时间 -->
+  <div style="position:sticky;top:0;z-index:150;background:rgba(13,18,32,0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(232,184,75,0.2);padding:8px 24px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:7px;height:7px;border-radius:50%;background:#2ECC71;box-shadow:0 0 6px #2ECC71;animation:pulse 2s infinite"></div>
+      <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#2ECC71;letter-spacing:0.08em">LIVE · Creator Bible S2</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:20px">
+      <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">最后更新</span>
+      <span style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--gold);font-weight:600">2026 · 04 · 19</span>
+      <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);padding:3px 10px;border:1px solid var(--border);border-radius:20px">v2.7</span>
+    </div>
+  </div>
 
   <!-- WORLD -->
   <section class="section" id="world">
@@ -1791,8 +1805,9 @@
         </div>
 
         <h4>标志性台词</h4>
-        <p style="color:var(--gold);font-style:italic">「L2给我的一切，是用L3的人换来的。我不想再换了。」——EP6，选择留在L3时</p>
-        <p style="color:var(--text-dim);font-style:italic">「他教我所有的技能，包括怎么找到他。」——EP5，确认陈维克多身份时</p>
+        <p style="color:var(--gold);font-style:italic">「市场可以让你破产，但市场拿不走你的判断力。」——维克多当年教他的话，也是最终击穿维克多系统的话</p>
+        <p style="color:var(--gold);font-style:italic">「他教我所有的技能，包括怎么找到他。」——EP5，确认陈维克多身份时</p>
+        <p style="color:var(--text-dim);font-style:italic">「工厂能处理多少同时涌现的判断力？」——EP2，Meme病毒计划的起点</p>
       </div>
     </div>
 
