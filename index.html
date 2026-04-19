@@ -767,7 +767,8 @@
   .script-flashback-lbl { font-family:'Share Tech Mono',monospace; font-size:9px; color:var(--gold-dim); letter-spacing:0.2em; margin-bottom:10px; }
   .script-countdown-display { font-family:'Share Tech Mono',monospace; font-size:32px; color:#E94560; text-align:center; padding:24px; animation: ep1pulse 1s infinite; }
   @keyframes ep1pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.85)} }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.8)} }
+  @keyframes scanline { 0%{left:-100%} 60%,100%{left:200%} }
   .script-end-card { text-align:center; font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--gold); padding:32px; border:1px solid var(--border); border-radius:8px; margin-top:48px; letter-spacing:0.2em; }
 
   /* 渲染清单内嵌样式 */
@@ -840,7 +841,109 @@
     <div class="title">凡人修币录</div>
     <div class="title" style="font-size:14px;color:#8B6914">第二季 · 情绪之证</div>
     <div class="subtitle">CREATOR BIBLE v2.0</div>
+
+    <!-- 最后更新时间·金色粒子版 -->
+    <div id="update-banner" style="margin-top:16px;border-radius:10px;position:relative;overflow:hidden;border:1px solid rgba(232,184,75,0.35);background:rgba(13,18,32,0.9)">
+      <!-- 金色粒子canvas -->
+      <canvas id="dust-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none"></canvas>
+      <!-- 扫光 -->
+      <div style="position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(232,184,75,0.08),transparent);animation:scanline 4s ease-in-out infinite;pointer-events:none"></div>
+      <!-- 内容 -->
+      <div style="position:relative;z-index:2;padding:14px 16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+          <div style="width:9px;height:9px;border-radius:50%;background:#E8B84B;box-shadow:0 0 10px #E8B84B,0 0 20px rgba(232,184,75,0.4);animation:pulse 2s infinite;flex-shrink:0"></div>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.2em">最后更新</span>
+          <span style="margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 8px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v2.7</span>
+        </div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:26px;font-weight:700;color:#fff;letter-spacing:0.08em;line-height:1.1;text-shadow:0 0 20px rgba(232,184,75,0.3)">2026<span style="color:var(--gold)">·</span>04<span style="color:var(--gold)">·</span>19</div>
+        <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(232,184,75,0.15)">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);line-height:1.9">
+            <span style="color:var(--gold)">+</span> 天降神针三阶段颜色<br>
+            <span style="color:var(--gold)">+</span> 人设补丁·林牧·陈晚照<br>
+            <span style="color:var(--gold)">+</span> 情绪之门机制<br>
+            <span style="color:var(--gold)">+</span> EP6结局修正
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script>
+  // 金色尘粒效果
+  (function() {
+    function initDust() {
+      var canvas = document.getElementById('dust-canvas');
+      if (!canvas) return;
+      var banner = document.getElementById('update-banner');
+      var ctx = canvas.getContext('2d');
+      var W, H, particles = [];
+
+      function resize() {
+        W = canvas.width = banner.offsetWidth;
+        H = canvas.height = banner.offsetHeight;
+      }
+
+      function Particle() {
+        this.reset();
+      }
+      Particle.prototype.reset = function() {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.size = Math.random() * 1.8 + 0.4;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = -Math.random() * 0.5 - 0.2;
+        this.opacity = Math.random() * 0.7 + 0.2;
+        this.life = 0;
+        this.maxLife = Math.random() * 180 + 80;
+      };
+      Particle.prototype.update = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.life++;
+        var progress = this.life / this.maxLife;
+        this.opacity = progress < 0.2
+          ? progress / 0.2 * 0.8
+          : (1 - (progress - 0.2) / 0.8) * 0.8;
+        if (this.life >= this.maxLife || this.y < -5) this.reset();
+      };
+      Particle.prototype.draw = function() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        // 随机金色色调
+        var hue = 38 + Math.random() * 12;
+        ctx.fillStyle = 'hsl(' + hue + ',90%,65%)';
+        ctx.shadowBlur = 4;
+        ctx.shadowColor = 'rgba(232,184,75,0.6)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      };
+
+      resize();
+      // 生成40个粒子
+      for (var i = 0; i < 40; i++) {
+        var p = new Particle();
+        p.life = Math.floor(Math.random() * p.maxLife);
+        particles.push(p);
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(function(p) { p.update(); p.draw(); });
+        requestAnimationFrame(animate);
+      }
+      animate();
+      window.addEventListener('resize', resize);
+    }
+    // 等DOM加载完再初始化
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initDust);
+    } else {
+      initDust();
+    }
+  })();
+  </script>
 
   <div class="nav-section">
     <div class="nav-section-label">世界观</div>
@@ -915,19 +1018,6 @@
       是在看见真相之后，仍然选择相信彼此。
     </p>
   </section>
-
-  <!-- 最后更新时间 -->
-  <div style="position:sticky;top:0;z-index:150;background:rgba(13,18,32,0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(232,184,75,0.2);padding:8px 24px;display:flex;align-items:center;justify-content:space-between">
-    <div style="display:flex;align-items:center;gap:10px">
-      <div style="width:7px;height:7px;border-radius:50%;background:#2ECC71;box-shadow:0 0 6px #2ECC71;animation:pulse 2s infinite"></div>
-      <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#2ECC71;letter-spacing:0.08em">LIVE · Creator Bible S2</span>
-    </div>
-    <div style="display:flex;align-items:center;gap:20px">
-      <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">最后更新</span>
-      <span style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--gold);font-weight:600">2026 · 04 · 19</span>
-      <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);padding:3px 10px;border:1px solid var(--border);border-radius:20px">v2.7</span>
-    </div>
-  </div>
 
   <!-- WORLD -->
   <section class="section" id="world">
