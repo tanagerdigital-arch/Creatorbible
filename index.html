@@ -823,6 +823,107 @@
     .char-images { justify-content: center; padding: 20px 24px; }
     .footer { padding: 60px 24px; }
   }
+
+  /* ── 场景包模态窗口 ── */
+  .scene-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  .scene-modal-overlay.open { display: block; }
+  .scene-modal {
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: var(--dark);
+    position: relative;
+  }
+  .scene-modal-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--dark-2);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .scene-modal-title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+  .scene-modal-close {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .scene-modal-close:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .scene-modal-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 0 28px;
+    background: var(--dark-2);
+    border-bottom: 1px solid var(--border);
+  }
+  .scene-modal-tab {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 12px 18px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+  }
+  .scene-modal-tab:hover { color: var(--text); }
+  .scene-modal-tab.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+  .scene-modal-body { padding: 28px; }
+  .scene-modal-page { display: none; }
+  .scene-modal-page.active { display: block; }
+  .open-scene-pack-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background: rgba(212,160,23,0.08);
+    border: 1px solid rgba(212,160,23,0.4);
+    border-radius: 6px;
+    color: var(--gold);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  .open-scene-pack-btn:hover {
+    background: rgba(212,160,23,0.15);
+    border-color: var(--gold);
+  }
 </style>
 </head>
 <body>
@@ -969,11 +1070,11 @@
   </div>
 
   <div class="nav-section">
-    <div class="nav-section-label">六集大纲</div>
+    <div class="nav-section-label">六集大纲 / 剧本</div>
     <a href="#ep1" class="nav-link">EP1 天降神针</a>
-    <a href="#ep1-scenes" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright)">↳ EP1 场景包</a>
+    <a onclick="openSceneModal('ep1')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP1 场景包 ↗</a>
     <a href="#ep2" class="nav-link">EP2 小匠的狂想</a>
-    <a href="#ep2-scenes" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright)">↳ EP2 场景包</a>
+    <a onclick="openSceneModal('ep2')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP2 场景包 ↗</a>
     <a href="#ep3" class="nav-link">EP3 粉色暗池</a>
     <a href="#ep4" class="nav-link">EP4 跨阶层Ping</a>
     <a href="#ep5" class="nav-link">EP5 零日漏洞</a>
@@ -2649,20 +2750,6 @@
         <div class="ep-body">
           <div class="ep-core">情感核心：「世界从来都是这样运作的，只是你现在看见了」</div>
 
-          <h4>场景总览</h4>
-          <ul class="ep-events">
-            <li><strong>开场（5秒）</strong> 赵凯斯坠落中·握冷钱包·「12小时前」</li>
-            <li><strong>场景01（15-20秒）</strong> 书房追踪·锁定Victor Chen·「肯定是同名的人」</li>
-            <li><strong>场景02（25秒）</strong> 归零街清晨→早餐店→域峰广场→天降神针触发</li>
-            <li><strong>场景03（15秒）</strong> 蹭员工混入→透明电梯→Switch门锁通关</li>
-            <li><strong>场景04（15秒）</strong> 控制室透明地板→发现装置→砸按钮→大屏警报</li>
-            <li><strong>场景05（10秒）</strong> 维克多进来修复→推赵凯斯→「幼稚鬼」</li>
-            <li><strong>场景06（5秒）</strong> 闪回·咖啡馆·年轻维克多·「幼稚鬼」（温和宠溺版）</li>
-            <li><strong>场景07（10秒）</strong> 坠落·链条断裂·维克多：「Fuck。我的钱包。」</li>
-            <li><strong>场景08（10秒）</strong> L3醒来·无限格子间·小猪从404桌底出现</li>
-            <li><strong>场景09（10秒）</strong> 72:00:00红色倒计时→「你就不会再想出去了」→画面切黑</li>
-          </ul>
-
           <h4>完整剧本</h4>
           <div style="max-width:680px">
           <!-- 开场钩子 -->
@@ -2879,6 +2966,11 @@
       </div>
 
     </div>
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border)">
+            <button class="open-scene-pack-btn" onclick="openSceneModal('ep1')">
+              🎬 打开 EP1 场景包 &nbsp;→
+            </button>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:12px">场景总览 · 渲染需求 · 定稿图库</span>
           </div>
         </div>
       </div>
@@ -2892,20 +2984,6 @@
         </div>
         <div class="ep-body">
           <div class="ep-core">情感核心：「你以为自己是赢家，其实你是最高级的燃料」</div>
-
-          <h4>场景总览</h4>
-          <ul class="ep-events">
-            <li><strong>开场（5秒）</strong> ERROR·机械小兵扫描赵凯斯·无法匹配·散户被带走·只剩他一人</li>
-            <li><strong>场景01（20秒）</strong> 两人跟踪机械小兵·目睹强制入职·只有蓝色药丸·300%收益加成</li>
-            <li><strong>场景02（15秒）</strong> 桌底·小猪解释ERROR的意义·62小时倒计时·「我们有62小时」</li>
-            <li><strong>场景03（20秒）</strong> 走进格子间·金色粒子闪回归零街·「那不是雾气」</li>
-            <li><strong>场景04（15秒）</strong> 休息时间·工人沾沾自喜·「我太了解他们了」</li>
-            <li><strong>场景05（15秒）</strong> 赵凯斯推算粒子去向·「如果这些粒子一直在往上输……」</li>
-            <li><strong>场景06（20秒）</strong> 小猪再次找阿明·后排接应计划·「你妈妈还在等你」</li>
-            <li><strong>场景07（15秒）</strong> 赵凯斯认出坠落的散户·「是我把他们带下来的」</li>
-            <li><strong>场景08（15秒）</strong> 感知出口方向·后排边界·「有什么东西在那里」</li>
-            <li><strong>场景09（10秒）</strong> 冷钱包脉冲·维克多启动追踪·「找到你了」</li>
-          </ul>
 
           <h4>完整剧本</h4>
 
@@ -3166,6 +3244,12 @@
             <div class="script-countdown-display">EP2 · 完</div>
           </div>
 
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border)">
+            <button class="open-scene-pack-btn" onclick="openSceneModal('ep2')">
+              🎬 打开 EP2 场景包 &nbsp;→
+            </button>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:12px">场景总览 · 渲染需求 · 定稿图库</span>
+          </div>
         </div>
       </div>
 
@@ -3266,27 +3350,536 @@
   <!-- PROMPTS -->
   <!-- EP1 SCENE PACKAGES -->
   <!-- EP1 SCENE PACKAGES -->
-  <section class="section" id="ep1-scenes">
+
+  <!-- 02 创作红线 -->
+  <section class="section" id="rules">
     <div class="section-header">
-      <h2 class="section-title" style="font-family:'Noto Serif SC',serif;font-size:32px;font-weight:700;color:var(--text-bright)">EP1 · 场景包</h2>
+      <span class="section-num">02</span>
+      <h2 class="section-title">创作红线</h2>
     </div>
 
     <div class="quote-block">
-      <p>EP1场景包·渲染需求·完整剧本均在此页面内查看。默认显示完整剧本，可切换至场景总览和渲染需求清单。</p>
+      <p>以下红线是《凡人修币录》S2创作的底层逻辑。违反任何一条·都会让整个故事失去它最重要的东西：<strong style="color:var(--gold)">让人不寒而栗的真实感。</strong></p>
     </div>
 
-    <!-- EP1 竖向标签页 -->
-    <div class="ep1-tab-wrapper">
-      <div class="ep1-tab-nav">
-        <button class="ep1-tab-btn" onclick="switchEP1Tab('overview', this)">📊 场景总览</button>
-        <button class="ep1-tab-btn" onclick="switchEP1Tab('renders', this)">📋 渲染需求清单</button>
-        <button class="ep1-tab-btn active" onclick="switchEP1Tab('screenplay', this)">🎬 完整剧本</button>
-        <button class="ep1-tab-btn" onclick="switchEP1Tab('gallery', this)">🖼️ 场景定稿图库</button>
-      </div>
-      <div class="ep1-tab-content">
+    <!-- 01 世界观红线 -->
+    <div class="rule-card danger" style="margin-bottom:16px">
+      <div class="rule-label">❌ 01 · 世界观红线（绝对不能违反）</div>
 
-    <!-- 标签1：场景状态总览 -->
-    <div class="ep1-tab-page" id="ep1tab-overview">
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--red);margin-bottom:10px">// L3的工人是「快乐的」·不是痛苦的</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9">L3的恐怖在于「满足感」·不在于「痛苦」。工人们觉得自己终于被看见·觉得自己在发挥才华·觉得这里比外面好。不能把L3描绘成明显的痛苦场所·越快乐·越恐怖。</p>
+      </div>
+
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--red);margin-bottom:10px">// 每个人都是系统的参与者·没有纯粹的旁观者</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9">不能把任何角色写成「完全无辜的受害者」。</p>
+        <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px 16px;margin-top:10px;font-size:13px;color:var(--text-dim);line-height:2">
+          阿明做内容 → 帮系统制造FOMO燃料<br>
+          散户刷内容 → 帮系统传播情绪信号<br>
+          工人努力工作 → 帮L1训练收割算法·让下一批人更难逃脱<br>
+          赵凯斯砸按钮 → 把散户带进了L3<br>
+          <span style="color:var(--gold)">每个人的行为都在不知不觉中成为系统运转的一部分。</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--red);margin-bottom:10px">// 天降神针颜色三阶段·不能搞错</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;font-size:13px">
+          <div style="background:rgba(232,184,75,0.08);border:1px solid rgba(232,184,75,0.3);border-radius:6px;padding:12px">
+            <div style="color:var(--gold);font-weight:600;margin-bottom:6px">🟡 平时状态</div>
+            <div style="color:var(--text-dim);line-height:1.8">金黄色光泽·暖黄棱边线光·来回摆动·针尖收起·没有人在意</div>
+          </div>
+          <div style="background:rgba(233,69,96,0.06);border:1px solid rgba(233,69,96,0.2);border-radius:6px;padding:12px">
+            <div style="color:var(--red);font-weight:600;margin-bottom:6px">🔴 触发前</div>
+            <div style="color:var(--text-dim);line-height:1.8">金黄渐变深红·只有赵凯斯能感知到颜色变化·普通人感觉「不对劲」</div>
+          </div>
+          <div style="background:rgba(233,69,96,0.12);border:1px solid rgba(233,69,96,0.4);border-radius:6px;padding:12px">
+            <div style="color:var(--red);font-weight:600;margin-bottom:6px">🔴 触发中</div>
+            <div style="color:var(--text-dim);line-height:1.8">整体强烈红色·红色能量柱从底部射出·完成后恢复黄色</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--red);margin-bottom:10px">// 情绪之门机制·不能改写</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9">情绪之门检测的是<strong style="color:var(--gold)">身体层面的物理信号</strong>·不是内心情绪。不能写成「只要你真心想出去就能过门」。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;font-size:13px">
+          <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.2);border-radius:6px;padding:12px">
+            <div style="color:#2ECC71;margin-bottom:8px;font-weight:600">✅ 能过门·举例</div>
+            <div style="color:var(--text-dim);line-height:1.9">阿明想起妈妈凌晨四点揉面→心跳加快·眼眶发热·手抖·声音哽咽。这些身体反应·门能感知到。</div>
+          </div>
+          <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:12px">
+            <div style="color:var(--red);margin-bottom:8px;font-weight:600">❌ 过不了门·举例</div>
+            <div style="color:var(--text-dim);line-height:1.9">小猪内心强烈想出去·但身体已学会不表达·心跳平稳·面部无反应·门感知不到任何信号。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 角色行为红线 -->
+    <div class="rule-card" style="border-color:rgba(240,165,0,0.4);margin-bottom:16px">
+      <div class="rule-label" style="color:var(--amber)">⚠ 02 · 角色行为红线（最容易违反）</div>
+
+      <div style="margin-bottom:24px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--amber);margin-bottom:12px">// 最重要：禁止「理性觉醒」失真</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">角色在<strong style="color:var(--gold)">没有明确触发事件</strong>的情况下·自行想通了系统对自己的剥削·并用清晰逻辑表达出来。这是最常见的创作失误。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px">
+          <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.2);border-radius:6px;padding:14px">
+            <div style="color:var(--red);margin-bottom:10px;font-weight:600">❌ 错误示范·阿明</div>
+            <div style="color:var(--text-dim);line-height:1.9;font-style:italic">「我知道我做的内容会伤害到和我一样的散户·但那是系统的问题·不是我的问题。」</div>
+            <div style="color:var(--red);font-size:11px;margin-top:8px">→ 逻辑太清晰·阿明不会有这种认知</div>
+          </div>
+          <div style="background:rgba(46,204,113,0.05);border:1px solid rgba(46,204,113,0.15);border-radius:6px;padding:14px">
+            <div style="color:#2ECC71;margin-bottom:10px;font-weight:600">✅ 正确示范·阿明</div>
+            <div style="color:var(--text-dim);line-height:1.9;font-style:italic">「我今天情绪激发指数97.3·我太了解他们了·我自己经历过这种心情·我知道什么时候推一把他们就动。」</div>
+            <div style="color:#2ECC71;font-size:11px;margin-top:8px">→ 完全沉浸在系统评价体系里</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:24px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--amber);margin-bottom:12px">// 禁止「上帝视角」渗透</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:10px">角色说出了只有看完整个故事才能理解的话。创作者知道的东西·不等于角色知道。</p>
+        <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;font-size:13px;color:var(--text-dim);line-height:2">
+          ❌ L3工人开始反思「我做的内容是不是在帮系统收割人」→ L3工人不会有这种思考<br>
+          ❌ 散户坠落后立刻明白系统在做什么→ 他们应该是困惑·惊慌<br>
+          ❌ 阿明在没有触发事件的情况下突然理解了自己在伤害谁→ 需要具体情感触发
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--amber);margin-bottom:12px">// 各角色行为准则</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
+          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--gold)">
+            <div style="color:var(--gold);font-weight:600;margin-bottom:8px">赵凯斯</div>
+            <div style="color:var(--text-dim);line-height:2">
+              · 熊猫眼 = 仪式感·只有需要剧烈对抗·唤醒众人时才画·不是超能力开关<br>
+              · 逆向感知是天生的·感知「人在麻痹中身体残留的痛的方向」·不需要道具激活<br>
+              · EP2优先级是「怎么出去」·不是「怎么打败系统」·EP2他还是蒙的
+            </div>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--pink)">
+            <div style="color:var(--pink);font-weight:600;margin-bottom:8px">陈晚照（小猪女侠）</div>
+            <div style="color:var(--text-dim);line-height:2">
+              · 面具遮蔽的是身体物理情绪信号·不是内心情绪·她有情绪·不能写成「小猪没有情绪」<br>
+              · 面具使用有次数限制·用一次少一次·不能随意无限使用<br>
+              · S2结局她出不去情绪之门·转身走回L3深处·不能自行改写·原因是导演保留信息
+            </div>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--amber)">
+            <div style="color:var(--amber);font-weight:600;margin-bottom:8px">林牧</div>
+            <div style="color:var(--text-dim);line-height:2">
+              · 他知道自己在做什么·他的愧疚是真实积累的·不能写成「他不知情」<br>
+              · 牺牲结果是悬念·「死没死」不能在S2任何创作里写明
+            </div>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--teal-bright)">
+            <div style="color:var(--teal-bright);font-weight:600;margin-bottom:8px">阿明</div>
+            <div style="color:var(--text-dim);line-height:2">
+              · 他对L3的热爱是真实的·不是被洗脑·「终于被看见」的满足感是真实的<br>
+              · 他不理性·不冷静·完全沉浸在排名和数据里·根本没有空间去思考系统对别人的影响<br>
+              · 他的觉醒必须有具体情感触发：「你做的Meme·收割的是和你妈妈一样的普通人」
+            </div>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--text-dim)">
+            <div style="color:var(--text-dim);font-weight:600;margin-bottom:8px">客服小何</div>
+            <div style="color:var(--text-dim);line-height:2">
+              · 她的战场在L2·不是L3·S2里她不会出现在L3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 剧情红线 -->
+    <div class="rule-card" style="border-color:rgba(42,173,204,0.4);margin-bottom:16px">
+      <div class="rule-label" style="color:var(--teal-bright)">📖 03 · 剧情红线</div>
+
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);margin-bottom:10px">// 系统不能被写成「显而易见的恶」</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9">这个系统最恐怖的地方·是每个人都觉得自己在做对的事。如果你把系统写成一眼就能看出是骗局的东西·整个故事就失去了意义。</p>
+      </div>
+
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);margin-bottom:10px">// 永信城不会在S2被摧毁</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9">S2结局只有天花板有一道裂缝·阳光照进来·仅此而已。系统还在运转·L1还在运转·永信城还在。</p>
+      </div>
+
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);margin-bottom:10px">// 陈维克多不是传统反派</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9">他是一个相信自己在做正确的事的人·冷静·精准·孤独。不能写成大笑的邪恶boss·不能写成他以伤害人为乐。</p>
+      </div>
+
+      <div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);margin-bottom:10px">// 阿明的觉醒不能提前</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9">阿明的真正觉醒发生在EP5·需要具体的情感触发点。EP2-EP4的创作·阿明只能是沉浸在排名和数据里的状态·不能提前让他觉醒。</p>
+      </div>
+    </div>
+
+    <!-- 04 重要道具 & 标志性设计红线 -->
+    <div class="rule-card" style="border-color:rgba(232,184,75,0.4);margin-bottom:16px">
+      <div class="rule-label" style="color:var(--gold)">🔮 04 · 重要道具 & 标志性设计红线</div>
+
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">// 角色标志性视觉·不能缺失</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13px">
+          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px">
+            <div style="color:var(--gold);margin-bottom:6px;font-weight:600">赵凯斯</div>
+            <div style="color:var(--text-dim);line-height:1.9">黑框方形粗眼镜·除非剧情中受到明确物理撞击·任何场景不能去掉<br>黑色「Diamond Hands」T恤</div>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px">
+            <div style="color:var(--red);margin-bottom:6px;font-weight:600">陈维克多</div>
+            <div style="color:var(--text-dim);line-height:1.9">机械臂永远是右臂·左臂是人类手臂<br>脸部永远不完整呈现·逆光·阴影·侧面轮廓</div>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px">
+            <div style="color:var(--pink);margin-bottom:6px;font-weight:600">小猪女侠</div>
+            <div style="color:var(--text-dim);line-height:1.9">猪头半脸面具·粉色+绿色两种霓虹光·不能改成其他颜色</div>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px">
+            <div style="color:var(--amber);margin-bottom:6px;font-weight:600">林牧</div>
+            <div style="color:var(--text-dim);line-height:1.9">工作场景蒙白色布条·狐狸面具放在桌上<br>蒙眼原因：牛马工厂有AI面部与眼部生物扫描·通过面部微表情监测情绪产出质量</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">// 冷钱包·CA指挥棒·面具·布条</div>
+        <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;font-size:13px;color:var(--text-dim);line-height:2">
+          <span style="color:var(--gold)">冷钱包：</span>维克多的仪式密钥·同时承载赵凯斯在L3积累的真实情绪重量·EP6用它触碰情绪之门<br>
+          <span style="color:var(--pink)">CA指挥棒：</span>小猪的信息权限工具·指向哪个CA地址哪个代币就波动·不是战斗武器<br>
+          <span style="color:var(--pink)">猪头面具：</span>骗过AI面部扫描·屏蔽身体物理情绪信号·使用有次数限制<br>
+          <span style="color:var(--amber)">白色布条：</span>写满废弃代码·系统无法通过他已抛弃的东西侵入他的意识
+        </div>
+      </div>
+
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">// 情绪粒子·数据管道·监测系统</div>
+        <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;font-size:13px;color:var(--text-dim);line-height:2">
+          <span style="color:var(--gold)">情绪粒子：</span>工人工作时产出的情绪以金色粒子形式散发·管道自动收集·输往L1用于训练算法<br>
+          <span style="color:var(--gold)">双轨监测：</span>管道收粒子（收割成果）+ AI面部扫描（质量监控）两套系统同时运行<br>
+          <span style="color:var(--gold)">情绪粒子颜色：</span>只能是金色·不能改成其他颜色·金色是L3唯一的暖色
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">// 色彩系统·不能搞错</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;font-size:12px">
+          <div style="background:rgba(77,175,255,0.08);border:1px solid rgba(77,175,255,0.2);border-radius:6px;padding:10px;text-align:center">
+            <div style="color:#4DAFFF;font-weight:600;margin-bottom:4px">L1</div>
+            <div style="color:var(--text-dim)">冷蓝白色·不能出现暖色</div>
+          </div>
+          <div style="background:rgba(232,184,75,0.08);border:1px solid rgba(232,184,75,0.2);border-radius:6px;padding:10px;text-align:center">
+            <div style="color:var(--gold);font-weight:600;margin-bottom:4px">L2</div>
+            <div style="color:var(--text-dim)">金色霓虹·暖色为主</div>
+          </div>
+          <div style="background:rgba(42,173,204,0.08);border:1px solid rgba(42,173,204,0.2);border-radius:6px;padding:10px;text-align:center">
+            <div style="color:var(--teal-bright);font-weight:600;margin-bottom:4px">L3格子间</div>
+            <div style="color:var(--text-dim)">冷绿色·情绪粒子金色是唯一例外</div>
+          </div>
+          <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.05);border-radius:6px;padding:10px;text-align:center">
+            <div style="color:var(--text-dim);font-weight:600;margin-bottom:4px">后排深渊</div>
+            <div style="color:var(--text-dim)">比格子间更暗更冷·几乎无光源</div>
+          </div>
+          <div style="background:rgba(240,112,144,0.08);border:1px solid rgba(240,112,144,0.2);border-radius:6px;padding:10px;text-align:center">
+            <div style="color:var(--pink);font-weight:600;margin-bottom:4px">小猪面具</div>
+            <div style="color:var(--text-dim)">粉色+绿色·只有这两种</div>
+          </div>
+          <div style="background:rgba(13,18,32,0.5);border:1px solid rgba(255,255,255,0.05);border-radius:6px;padding:10px;text-align:center">
+            <div style="color:var(--text-dim);font-weight:600;margin-bottom:4px">所有图片</div>
+            <div style="color:var(--text-dim)">9:16竖屏·皮克斯3D风格·no text</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 导演保留信息·禁区 -->
+    <div class="rule-card danger">
+      <div class="rule-label">🚫 05 · 导演保留信息·创作者禁区</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:16px">以下内容是导演保留设定·<strong style="color:var(--red)">绝对不能在任何创作中写明或暗示</strong>：</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:14px;font-size:13px">
+          <div style="color:var(--red);font-weight:600;margin-bottom:6px">① 陈晚照出不去情绪之门的原因</div>
+          <div style="color:var(--text-dim);line-height:1.8">创作者只能写「她没有出去」·转身走回L3更深处。不能解释为什么·不能暗示原因。</div>
+        </div>
+        <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:14px;font-size:13px">
+          <div style="color:var(--red);font-weight:600;margin-bottom:6px">② 赵凯斯回头发现小猪没跟出来的那一刻</div>
+          <div style="color:var(--text-dim);line-height:1.8">这个画面属于EP6结局。EP2-EP5的创作不能提前呈现这个瞬间。</div>
+        </div>
+        <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:14px;font-size:13px">
+          <div style="color:var(--red);font-weight:600;margin-bottom:6px">③ 林牧牺牲之后到底发生了什么</div>
+          <div style="color:var(--text-dim);line-height:1.8">「死没死」是S2最大的钩子之一。不能在任何S2创作里写明结果。</div>
+        </div>
+        <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:14px;font-size:13px">
+          <div style="color:var(--red);font-weight:600;margin-bottom:6px">④ S3的任何内容</div>
+          <div style="color:var(--text-dim);line-height:1.8">S3设定是导演保留信息。创作者不能自行延伸S3剧情·不能写赵凯斯第二次进L3·不能写小猪在L3深处的经历。</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 03 评分标准 -->
+  <section class="section" id="scoring">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">评分标准</h2>
+    </div>
+
+    <div class="rule-card" style="border-color:var(--gold)">
+      <div class="rule-label" style="color:var(--gold)">Story Agent评分维度</div>
+      <ul class="rule-list">
+        <li>叙事完整度：这段内容有清晰的起伏吗？</li>
+        <li>情绪张力：最高点和最低点之间的落差够大吗？</li>
+        <li>人物塑造：角色行为符合人设吗？</li>
+        <li>Web3共鸣：加密用户看完会有「这说的是我」的感受吗？</li>
+        <li>传播潜力：有没有一个让人想截图分享的瞬间？</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- 04 概念图合辑 -->
+  <section class="section" id="gallery">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">概念图合辑</h2>
+    </div>
+
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px">
+      <a href="https://fanrenxiubi.imgbb.com/albums" target="_blank" style="display:flex;align-items:center;gap:12px;background:rgba(232,184,75,0.08);border:1px solid var(--gold);border-radius:8px;padding:16px 24px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='rgba(232,184,75,0.15)'" onmouseout="this.style.background='rgba(232,184,75,0.08)'">
+        <span style="font-size:24px">🖼️</span>
+        <div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.1em">概念图合辑</div>
+          <div style="font-size:12px;color:var(--text-dim);margin-top:2px">所有场景参考图 · 定妆照 · 即梦渲染图</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-top:4px">fanrenxiubi.imgbb.com/albums ↗</div>
+        </div>
+      </a>
+    </div>
+    <p style="font-size:13px;color:var(--text-dim)">所有已完成的概念图和渲染图均上传至此相册，按角色·场景·世界观分类管理。</p>
+
+  </section>
+
+  <!-- RECRUITMENT - 内容已迁移至世界观模块 -->
+
+  <!-- 永信城概念短片 独立章节 -->
+  <section class="section" id="concept-shorts-section">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">永信城概念短片</h2>
+    </div>
+
+    <div class="quote-block">
+      <p>这些内容不是主线剧情的一部分，而是永信城世界观的「素材库」。随时可以剪入主线作为转场或闪回，也可以单独发布作为社交媒体预热内容，或给社区创作者作为世界观参考。</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0">
+
+      <!-- 短片01 -->
+      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(212,160,23,0.05)">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">独立短片 01</div>
+          <div style="font-size:15px;font-weight:600;color:var(--text-bright)">归零街（Meme街）· 永信城的草根宇宙</div>
+        </div>
+        <div style="padding:16px 20px">
+          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">三个区域，三种气质：主街（霓虹赛博朋克·Times Square风）·小巷（华强北山寨市场·接地气）·食街（东南亚夜市·曼谷Khao San Road加密版）。白天和晚上完全不同。</p>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:6px">// 视觉已验证的两种镜头</div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.8">
+            <strong style="color:var(--text)">长曝光版：</strong>人群是流动的光影，情绪粒子在空气中弥漫。<br>
+            <strong style="color:var(--text)">个体聚焦版：</strong>3-4个有故事感的人物，情绪越激动粒子越浓。
+          </div>
+          <div style="margin-top:10px;padding:6px 10px;background:rgba(0,0,0,0.2);border-radius:4px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright)">✓ 渲染已验证 · 皮克斯3D风格</div>
+        </div>
+      </div>
+
+      <!-- 短片02 -->
+      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(212,160,23,0.05)">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">独立短片 02</div>
+          <div style="font-size:15px;font-weight:600;color:var(--text-bright)">阿明妈妈早餐店 · 永信城最真实的地方</div>
+        </div>
+        <div style="padding:16px 20px">
+          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">归零街边缘，清晨6点。暖黄色灯光和窗外霓虹的对比。这是整个S2最重要的情感锚点——EP6阿明觉醒时想起的就是这里。</p>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.8">角落小电视播着招工广告·桌上有二维码卡片·酱板鸭彩蛋保留·阿明只露手不露脸</div>
+          <div style="margin-top:10px;padding:6px 10px;background:rgba(0,0,0,0.2);border-radius:4px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright)">✓ 渲染已验证 · 皮克斯3D风格</div>
+        </div>
+      </div>
+
+      <!-- 短片03 -->
+      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(212,160,23,0.05)">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">独立短片 03 · 高优先级</div>
+          <div style="font-size:15px;font-weight:600;color:var(--text-bright)">招工广告完整版 · 60-90秒</div>
+        </div>
+        <div style="padding:16px 20px">
+          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">完全用招募广告的语气和格式制作。用户第一眼以为是真实广告，然后发现这是《凡人修币录》的——这就是最好的病毒营销。</p>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.8">
+            <strong style="color:var(--text)">第一层·公开广告：</strong>「你的情绪，是这个时代最稀缺的资产」<br>
+            <strong style="color:var(--text)">第二层·系统私信：</strong>「您的创作者潜力评分：94/100 · 名额有限 · 24小时过期」
+          </div>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <span style="font-family:'Share Tech Mono',monospace;font-size:9px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500;border:1px solid rgba(240,165,0,0.3)">待制作</span>
+            <span style="font-family:'Share Tech Mono',monospace;font-size:9px;padding:3px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2)">病毒传播潜力最高</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 短片04 -->
+      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(212,160,23,0.05)">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">独立短片 04</div>
+          <div style="font-size:15px;font-weight:600;color:var(--text-bright)">L3快乐工作宣传片 · 60秒</div>
+        </div>
+        <div style="padding:16px 20px">
+          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">以L3工厂为背景，用「企业文化宣传片」的格式制作。画面是工人们「愉快地」创作内容，空洞的笑容被包装成「热情」。</p>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.8">看完第一遍：羡慕。看完剧情再回看：不寒而栗。</div>
+          <div style="margin-top:10px">
+            <span style="font-family:'Share Tech Mono',monospace;font-size:9px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500;border:1px solid rgba(240,165,0,0.3)">待制作</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-quote">
+      市场可以让你破产，<br>但是市场拿不走你的判断力。
+    </div>
+    <p class="footer-sub">《凡人修币录》S2 · 情绪之证</p>
+    <div class="footer-tag">凡人修币录 S2 · 情绪之证 · PROOF OF EMOTION · CREATOR BIBLE v2.0</div>
+  </footer>
+
+<script>
+  function switchEP1Tab(tab, btn) {
+  document.querySelectorAll('.ep1-tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.ep1-tab-page').forEach(p => p.classList.remove('active'));
+  document.getElementById('ep1tab-' + tab).classList.add('active');
+}
+
+function switchEP2Tab(tab, btn) {
+  const wrapper = btn.closest('.ep1-tab-wrapper');
+  wrapper.querySelectorAll('.ep1-tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  wrapper.querySelectorAll('.ep1-tab-page').forEach(p => {
+    p.classList.remove('active');
+    p.style.display = 'none';
+  });
+  const target = document.getElementById('ep2tab-' + tab);
+  if (target) { target.style.display = 'block'; target.classList.add('active'); }
+}
+
+function toggleEp(header) {
+    header.parentElement.classList.toggle('open');
+  }
+
+  function copyPrompt(btn) {
+    const body = btn.closest('.prompt-card').querySelector('.prompt-body');
+    navigator.clipboard.writeText(body.textContent.trim()).then(() => {
+      btn.textContent = '已复制 ✓';
+      btn.style.color = '#2ECC71';
+      btn.style.borderColor = '#2ECC71';
+      setTimeout(() => {
+        btn.textContent = '复制';
+        btn.style.color = '';
+        btn.style.borderColor = '';
+      }, 2000);
+    });
+  }
+
+  function toggleMenu() {
+    document.getElementById('sidebar').classList.toggle('open');
+  }
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('active');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  });
+
+  function openSceneModal(ep) {
+    document.getElementById('modal-' + ep).classList.add('open');
+    document.body.style.overflow = 'hidden';
+    // 重置到第一个tab
+    switchSceneTab(ep, 'overview', 
+      document.querySelector('#modal-' + ep + ' .scene-modal-tab'));
+  }
+
+  function closeSceneModal(ep) {
+    document.getElementById('modal-' + ep).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function switchSceneTab(ep, tab, btn) {
+    const modal = document.getElementById('modal-' + ep);
+    modal.querySelectorAll('.scene-modal-tab').forEach(b => b.classList.remove('active'));
+    modal.querySelectorAll('.scene-modal-page').forEach(p => p.style.display = 'none');
+    if (btn) btn.classList.add('active');
+    const page = document.getElementById(ep + '-modal-' + tab);
+    if (page) page.style.display = 'block';
+  }
+
+  // ESC键关闭模态
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.scene-modal-overlay.open').forEach(m => {
+        m.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+  });
+
+  // 点击遮罩关闭
+  document.querySelectorAll('.scene-modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+</script>
+
+<!-- EP1场景包·模态窗口 -->
+<div class="scene-modal-overlay" id="modal-ep1">
+  <div class="scene-modal">
+    <div class="scene-modal-header">
+      <div class="scene-modal-title">EP1 · 场景包 · 天降神针</div>
+      <button class="scene-modal-close" onclick="closeSceneModal('ep1')">✕</button>
+    </div>
+    <div class="scene-modal-tabs">
+      <button class="scene-modal-tab active" onclick="switchSceneTab('ep1','overview',this)">📊 场景总览</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep1','renders',this)">📋 渲染需求清单</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep1','gallery',this)">🖼️ 场景定稿图库</button>
+    </div>
+    <div class="scene-modal-body">
+      <div class="scene-modal-page active" id="ep1-modal-overview">
+        <div class="ep1-tab-page" id="ep1tab-overview">
     <h3>EP1 · 场景状态总览</h3>
     <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
       <table style="width:100%;border-collapse:collapse;font-size:12px">
@@ -4291,9 +4884,9 @@ L3格子间某工位桌底，昏暗狭小空间。
     </div>
 
 </div><!-- end ep1tab-overview -->
-
-    <!-- 标签2：渲染需求清单 时间线视图 -->
-    <div class="ep1-tab-page" id="ep1tab-renders">
+      </div>
+      <div class="scene-modal-page" id="ep1-modal-renders">
+        <div class="ep1-tab-page" id="ep1tab-renders">
 
       <div style="margin-bottom:20px">
         <div style="display:flex;flex-direction:column;gap:8px;font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text)">
@@ -4630,228 +5223,9 @@ L3格子间某工位桌底，昏暗狭小空间。
       </div>
 
     </div><!-- end ep1tab-renders -->
-
-    <!-- 标签3：完整剧本 -->
-    <div class="ep1-tab-page active" id="ep1tab-screenplay">
-    <div style="max-width:680px;margin:0 auto">
-
-      <!-- 开场钩子 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">开场 · 5秒</span></div>
-        <div class="script-scene-name">倒叙钩子 · 赵凯斯坠落中</div>
-        <div class="script-action-text">赵凯斯在坠落中。不是尖叫，不是挣扎。他的手紧握着一条项链——陈维克多的冷钱包。表情平静，像早就知道会有这一天。</div>
-        <div class="script-action-text">黑屏。白色等宽字体出现：</div>
-        <div class="script-dir">「12小时前」</div>
       </div>
-
-      <!-- 场景01 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">场景 01 · 15-20秒</span></div>
-        <div class="script-scene-name">链上追踪 · 锁定灰鲸</div>
-        <div class="script-scene-time">赵凯斯书房 · 独白</div>
-        <div class="script-loc">书房 · 监控室 · 深夜</div>
-        <div class="script-action-text">赵凯斯已在自己加的书房里坐了半年。屏幕上，他通过长达半年的追踪，发现所有Meme coin大崩盘都由同一波相互缠绕的账号和手法导致。</div>
-        <div class="script-action-text">他用「时间差攻击」——对比节点收到指令的时间戳和链上交易被打包的时间戳，通过固定延迟推算出节点物理距离，结合永信城网络拓扑图，最终锁定：</div>
-        <div class="script-dir">【屏幕显示】<br>「域峰广场 · 灰鲸金融大厦 · 顶层 · 第88层」<br>「最高权限地址：Victor Chen」<br>「节点注册时间：[老陈消失那天]」</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-zhao">赵凯斯</div>
-          <div class="script-paren-text">（极轻，几乎是气声）</div>
-          <div class="script-speech">「……不可能。老陈说他退了。」</div>
-          <div class="script-paren-text">（压下，站起来拿外套）</div>
-          <div class="script-speech">「肯定是同名的人。我去修掉这个节点。」</div>
-        </div>
-      </div>
-
-      <!-- 场景02 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">场景 02 · 25秒</span></div>
-        <div class="script-scene-name">穿越归零街 · 阿明妈妈早餐店 · 天降神针触发</div>
-        <div class="script-scene-time">有对白（早餐店）· 视觉冲击最强（天降神针）</div>
-        <div class="script-loc">归零街（Meme街）· 清晨</div>
-        <div class="script-action-text">赵凯斯拿起外套出门。他要去域峰广场。最快的路穿过归零街。</div>
-        <div class="script-action-text">归零街清晨。霓虹还没熄，「100倍合约」「P图工室」的招牌在晨光里显得有点落寞。赵凯斯快步走过。</div>
-
-        <div class="script-loc" style="margin-top:16px">阿明妈妈早餐店 · 街角</div>
-        <div class="script-action-text">街角那家早餐店的卷帘门半开，烟气腾腾。阿明妈妈背对门口在灶台忙碌。老顾客坐在门口小桌喝粥。</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-npc">老顾客</div>
-          <div class="script-speech">「阿姨，阿明最近怎么不见了？他那个账号也好久没更新了。」</div>
-        </div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-npc">阿明妈妈</div>
-          <div class="script-paren-text">（停顿了一下，没有回头，声音平静但叹了口气）</div>
-          <div class="script-speech">「唉，说是去参加什么数字游民活动，能赚钱……年轻人嘛，他有他自己的想法。」</div>
-          <div class="script-paren-text">（停顿，声音低了一点）</div>
-          <div class="script-speech">「就是也不知道在哪里，发消息也不怎么回。」</div>
-          <div class="script-paren-text">（很快振作起来，扬声问）</div>
-          <div class="script-speech">「你要辣椒吗？」</div>
-        </div>
-        <div class="script-action-text">赵凯斯在门口站了一秒。低头看了一眼桌上的二维码小卡片——「永信城创作者社区·扫码了解」。若有所思，继续走。</div>
-        <div class="script-dir">【镜头落在】桌上那张二维码小卡片。没有人注意它。</div>
-
-        <div class="script-loc" style="margin-top:16px">永信城L2街道 · 赶往域峰广场途中</div>
-        <div class="script-action-text">赵凯斯快步走在街道上。突然脚步慢下来——一种从胸腔里涌上来的熟悉感。他停下来，抬头看向天空中的钟摆。</div>
-        <div class="script-dir">【赵凯斯主观视角 · 预感画面】<br>虚焦 · 冷白色调 · 轻微胶片质感<br>他「看见」：钟摆停止，红色能量针从底部射出插入广场地面，光柱爆发。<br>持续1-2秒，画面「弹回」现实。</div>
-        <div class="script-action-text">钟摆还在摆动。一切正常。赵凯斯低头看手表。一秒，两秒……<br><br><strong>钟摆停了。</strong> 就那么一瞬间。不到一秒。周围的人没有人注意到。</div>
-        <div class="script-dir">【赵凯斯主观视角】他看见了那根针——红色能量从钟摆底部射出，笔直向下，巨大，压迫，无声。<br><br>【普通人视角切换】屏幕突然全变红，数字瀑布般清零。有人傻住，有人坐在地上。<strong>他们没有看见针。</strong><br><br>【机械小兵】域峰广场四周，机械臂伸出，集体狂喜欢呼。针消失，钟摆重新摆动，一切「恢复正常」。</div>
-      </div>
-
-      <!-- 场景03 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">场景 03 · 15秒</span></div>
-        <div class="script-scene-name">混入灰鲸金融</div>
-        <div class="script-scene-time">有对白 · 黑色幽默</div>
-        <div class="script-loc">灰鲸金融大厦门口</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-npc">员工A</div>
-          <div class="script-paren-text">（叹气）</div>
-          <div class="script-speech">「今天这波跌得真惨……」</div>
-        </div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-npc">员工B</div>
-          <div class="script-speech">「没事，等会儿去B1吃个沙茶面，安慰一下自己。」</div>
-        </div>
-        <div class="script-action-text">赵凯斯路过，停了一下。</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-zhao">赵凯斯</div>
-          <div class="script-speech">「那个沙茶面还有开吗？」</div>
-        </div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-npc">员工B</div>
-          <div class="script-speech">「有！特好吃！」</div>
-        </div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-zhao">赵凯斯</div>
-          <div class="script-paren-text">（自然地跟上）</div>
-          <div class="script-speech">「一起一起！」</div>
-        </div>
-        <div class="script-action-text">员工们刷卡进入，没有人注意到赵凯斯跟着走了进去。<br><br>透明电梯上升，经过4层——赵凯斯低头俯视，交易斗兽场。机械小兵，熔岩裂缝，罗马斗兽场式的空间。他按住电梯壁，继续上升。<br><br>顶层走廊尽头：门口控制面板旁放着一台 <strong>Switch游戏机</strong>。赵凯斯停步，拿起来，打了一局，通关。「咔嗒」，门开了。</div>
-      </div>
-
-      <!-- 场景04 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">场景 04 · 15秒</span></div>
-        <div class="script-scene-name">控制室 · 发现装置 · 砸按钮</div>
-        <div class="script-scene-time">无对白</div>
-        <div class="script-loc">灰鲸金融顶层 · 圆形控制室 · 88层</div>
-        <div class="script-action-text">赵凯斯走进来。第一眼——地板是透明的。下面：无数格子间，工人们低着头，空洞地笑着。他感到一种说不清的恶心。<br><br>他看见控制室中央——天降神针装置。充能中的物理按钮。旁边倒计时牌：</div>
-        <div class="script-dir">「上次触发：20分钟前」 · 「下次触发：6天23小时」</div>
-        <div class="script-action-text">他走过去，举起手，<strong>砸下去。</strong><br><br>大屏亮起警报——永信城街道出现裂缝，无辜市民从裂缝坠落。</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-zhao">赵凯斯</div>
-          <div class="script-speech">「不对，这不对——」</div>
-        </div>
-      </div>
-
-      <!-- 场景05 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">场景 05 · 10秒</span></div>
-        <div class="script-scene-name">维克多出现 · 幼稚鬼</div>
-        <div class="script-scene-time">「幼稚鬼」台词 · EP1情感最高点</div>
-        <div class="script-loc">灰鲸金融顶层 · 圆形控制室</div>
-        <div class="script-action-text">门开了。陈维克多走进来，看见被砸碎的按钮，停顿了零点五秒。他径直走向电脑，从胸口取下冷钱包项链插入电脑。赵凯斯亲眼看见这个动作——意识到这东西是系统核心。</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-zhao">赵凯斯</div>
-          <div class="script-paren-text">（声音发抖）</div>
-          <div class="script-speech">「老陈……是你吗？你去哪了这两年？」</div>
-        </div>
-        <div class="script-action-text">修复完成。维克多转过身，右眼扫过来。</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-victor">维克多</div>
-          <div class="script-paren-text">（平静，每个字都像在算账）</div>
-          <div class="script-speech">「不仅这笔没收割成，修复这个漏洞还花了我五十万token。」</div>
-          <div class="script-speech">「毁了我好事的人，扔下去。」</div>
-        </div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-robot">机器人</div>
-          <div class="script-speech">「系统规定，L3只接受主动进入的用户。需要您完成权限修改才能执行强制转移。」</div>
-        </div>
-        <div class="script-action-text">地板打开洞口，幽绿色L3光透上来。维克多把赵凯斯拖到洞口边缘。赵凯斯抓住边缘，身体悬空，往下看——L3工人们依然在狂欢创作，完全没有抬头。</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-victor">维克多</div>
-          <div class="script-paren-text">（极轻）</div>
-          <div class="script-speech">「你不是有情绪吗。去用你的情绪，把我的亏损全部补上。」</div>
-          <div class="script-speech">「幼稚鬼。」</div>
-        </div>
-      </div>
-
-      <!-- 场景06 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">场景 06 · 5秒</span></div>
-        <div class="script-scene-name">闪回 · 年轻维克多与赵凯斯</div>
-        <div class="script-scene-time">咖啡馆 · 多年前 · EP1情感最重瞬间</div>
-        <div class="script-flashback-box">
-          <div class="script-flashback-lbl">// 闪回 · 5秒 · 暖色调 · 咖啡馆 · 多年前</div>
-          <div class="script-dlg">
-            <div class="script-char-name" style="color:var(--amber)">年轻赵凯斯</div>
-            <div class="script-speech" style="font-size:13px">「Victor，web3概念这么好，为什么老是割韭菜？是不是builder就得学会拉盘——不然牛市你build，他赚钱，你还挨骂。」</div>
-          </div>
-          <div class="script-dlg">
-            <div class="script-char-name" style="color:var(--amber)">年轻陈维克多</div>
-            <div class="script-paren-text">（摇头，轻笑，温和宠溺）</div>
-            <div class="script-speech" style="font-size:13px">「幼稚鬼。」</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 场景07 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">场景 07 · 10秒</span></div>
-        <div class="script-scene-name">坠落 · 拽走冷钱包</div>
-        <div class="script-scene-time">无对白</div>
-        <div class="script-loc">灰鲸金融控制室 · 洞口边缘</div>
-        <div class="script-action-text">维克多蹲下来，抓住赵凯斯悬空的手。像要拉他上来。赵凯斯另一只手本能地抓住了维克多胸口的冷钱包项链。</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-zhao">赵凯斯</div>
-          <div class="script-speech">「……老陈——！」</div>
-          <div class="script-paren-text">（坠落，链条断裂，冷钱包随赵凯斯坠入黑暗）</div>
-        </div>
-        <div class="script-action-text">维克多转身，继续操作。三秒后——低头看胸口。项链不见了。他站起来，机械右臂横扫工作台，所有东西扫落在地。然后，极轻地：</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-victor">维克多</div>
-          <div class="script-speech">「Fuck。我的钱包。」</div>
-        </div>
-      </div>
-
-      <!-- 场景08 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">场景 08 · 10秒</span></div>
-        <div class="script-scene-name">L3初醒 · 小猪出现</div>
-        <div class="script-scene-time">无对白</div>
-        <div class="script-loc">L3情绪牛马工厂 · 404号工位</div>
-        <div class="script-action-text">赵凯斯从黑暗中醒来。地板是硬的，灯光是冷的。他撑起身体，往四周看——<em>无限延伸的格子间。</em> 无数工人，白色工服，低着头，专注地创作内容。他们在笑——空洞的，满足的笑。没有人注意到他。<br><br>赵凯斯慢慢坐起来，手里还握着冷钱包。就在他要站起来的那一刻——一只手从桌底伸出，抓住他的手腕，用力往下拽。</div>
-        <div class="script-action-text">昏暗，狭小。穿白色工服的人——猪头半脸面具，面具边缘透出微弱的粉色+绿色光。整个L3里唯一一点不是冷色的东西。</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-xiaozhu">小猪女侠</div>
-          <div class="script-paren-text">（压低声音，平静，直接）</div>
-          <div class="script-speech">「兄弟，你可能有点懵。但你现在没时间懵了。」</div>
-        </div>
-      </div>
-
-      <!-- 场景09 -->
-      <div class="script-scene-block">
-        <div><span class="script-scene-label">场景 09 · 10秒</span></div>
-        <div class="script-scene-name">72小时 · EP1结尾钩子</div>
-        <div class="script-scene-time">小猪台词 · 黑屏</div>
-        <div class="script-loc">L3情绪牛马工厂 · 404号工位桌底</div>
-        <div class="script-dir">【系统消息弹出 · 赵凯斯视野角落】<br>「新用户检测完成 · 情绪指标：已激活 · 入职流程启动」<br>「距离全体记忆重置：72:00:00」</div>
-        <div class="script-dlg">
-          <div class="script-char-name script-char-xiaozhu">小猪女侠</div>
-          <div class="script-speech">「你还有72个小时。」</div>
-          <div class="script-speech">「每7天，所有人的记忆全部清零一次。」</div>
-          <div class="script-speech">「过了这个时间——」</div>
-          <div class="script-paren-text">（停顿）</div>
-          <div class="script-speech">「你就<strong>不会再想出去了</strong>。」</div>
-        </div>
-        <div class="script-countdown-display">72:00:00</div>
-        <div class="script-action-text" style="text-align:center;color:var(--text-dim)">画面切黑。</div>
-        <div class="script-end-card">EP1 · 完<br><span style="font-size:9px;color:var(--text-dim);display:block;margin-top:8px;letter-spacing:0.05em">EP2 将讲述：赵凯斯与小猪女侠如何在L3展开反击</span></div>
-      </div>
-
-    </div>
-    </div><!-- end ep1tab-screenplay -->
-
-    <!-- 标签4：场景定稿图库 -->
+      <div class="scene-modal-page" id="ep1-modal-gallery">
+        <!-- 标签4：场景定稿图库 -->
     <div class="ep1-tab-page" id="ep1tab-gallery">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)">
         <div>
@@ -5248,31 +5622,26 @@ L3格子间某工位桌底，昏暗狭小空间。
       </div>
 
     </div><!-- end ep1tab-gallery -->
-    </div><!-- end ep1-tab-content -->
-    </div><!-- end ep1-tab-wrapper -->
-
-  </section
-  <section class="section" id="ep2-scenes">
-    <div class="section-header">
-      <h2 class="section-title" style="font-family:'Noto Serif SC',serif;font-size:32px;font-weight:700;color:var(--text-bright)">EP2 · 场景包</h2>
-    </div>
-
-    <div class="quote-block">
-      <p>EP2场景包·制作进行中。完整剧本已完成，渲染需求清单和场景定稿图库将在渲染工作开始后陆续填充。</p>
-    </div>
-
-    <!-- EP2 竖向标签页 -->
-    <div class="ep1-tab-wrapper">
-      <div class="ep1-tab-nav">
-        <button class="ep1-tab-btn" onclick="switchEP2Tab('overview', this)">📊 场景总览</button>
-        <button class="ep1-tab-btn" onclick="switchEP2Tab('renders', this)">📋 渲染需求清单</button>
-        <button class="ep1-tab-btn active" onclick="switchEP2Tab('screenplay', this)">🎬 完整剧本</button>
-        <button class="ep1-tab-btn" onclick="switchEP2Tab('gallery', this)">🖼️ 场景定稿图库</button>
       </div>
-      <div class="ep1-tab-content">
+    </div>
+  </div>
+</div>
 
-    <!-- 标签1：场景总览 -->
-    <div class="ep1-tab-page" id="ep2tab-overview">
+<!-- EP2场景包·模态窗口 -->
+<div class="scene-modal-overlay" id="modal-ep2">
+  <div class="scene-modal">
+    <div class="scene-modal-header">
+      <div class="scene-modal-title">EP2 · 场景包 · 小匠的狂想</div>
+      <button class="scene-modal-close" onclick="closeSceneModal('ep2')">✕</button>
+    </div>
+    <div class="scene-modal-tabs">
+      <button class="scene-modal-tab active" onclick="switchSceneTab('ep2','overview',this)">📊 场景总览</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep2','renders',this)">📋 渲染需求清单</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep2','gallery',this)">🖼️ 场景定稿图库</button>
+    </div>
+    <div class="scene-modal-body">
+      <div class="scene-modal-page active" id="ep2-modal-overview">
+        <div class="ep1-tab-page" id="ep2tab-overview">
       <h3>EP2 · 场景状态总览</h3>
       <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
         <table style="width:100%;border-collapse:collapse;font-size:12px">
@@ -5352,8 +5721,9 @@ L3格子间某工位桌底，昏暗狭小空间。
         // EP2渲染工作尚未开始 · 场景定稿图库待填充 · 渲染需求清单制作中
       </div>
     </div><!-- end ep2tab-overview -->
-
-    <!-- 标签2：渲染需求清单 -->
+      </div>
+      <div class="scene-modal-page" id="ep2-modal-renders">
+        <!-- 标签2：渲染需求清单 -->
     <div class="ep1-tab-page" id="ep2tab-renders" style="display:none">
       <div style="text-align:center;padding:60px 20px">
         <div style="font-size:48px;margin-bottom:20px">📋</div>
@@ -5361,269 +5731,9 @@ L3格子间某工位桌底，昏暗狭小空间。
         <div style="font-size:14px;color:var(--text-dim);line-height:1.9">EP2剧本已完成·渲染工作即将开始<br>渲染需求清单将在EP1渲染完成后陆续补充</div>
       </div>
     </div><!-- end ep2tab-renders -->
-
-    <!-- 标签3：完整剧本 -->
-    <div class="ep1-tab-page active" id="ep2tab-screenplay">
-    <div style="max-width:680px;margin:0 auto">
-      <div class="script-scene-block">
-            <div><span class="script-scene-label">开场 · 5秒</span></div>
-            <div class="script-scene-name">ERROR · 只剩他一人</div>
-            <div class="script-loc">L3情绪牛马工厂·坠落区·幽绿色冷光·无限延伸的格子间</div>
-            <p class="script-action-text">赵凯斯从地板上撑起身体。黑色皮夹克，黑框方形眼镜歪了，右手握着冷钱包项链，蓝白色微光。和他一起坠落的散户也陆续落地。中年男性西装，蒙着头。年轻女性，攥着手提包。外卖小哥，背包还在背上。他们落地后第一反应：惊慌，站起来，四处张望。有人大叫「这是哪里」，有人往来路跑，有人用手机打电话，没有信号。</p>
-            <p class="script-action-text">机械小兵出现了。每个散户身边各站一个，动作完全一致，机械右臂轻轻搭在散户肩膀上，没有说话，只是引导方向。散户们挣扎，推开。机械小兵不反抗，只是继续引导，一个个把散户带走，消失在格子间深处。</p>
-            <p class="script-action-text">一个机械小兵走向赵凯斯。停在他面前。红色扫描光从上到下扫过他。机械小兵胸口屏幕显示：</p>
-            <div class="script-dir">ERROR · 无法匹配 · 入场方式异常 · 处理延迟中……</div>
-            <p class="script-action-text">机械小兵停顿两秒，转身离开。赵凯斯站在原地，看着空荡荡的坠落区，只剩他一个人。桌底伸出一只手，抓住他手腕往下拽。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪（从桌底，声音极轻）</div>
-              <p class="script-speech">「别站在那里。快进来。」</p>
-            </div>
-          </div>
-
-          <div class="script-scene-block">
-            <div><span class="script-scene-label">场景01 · 20秒</span></div>
-            <div class="script-scene-name">强制入职 · 只有蓝色药丸</div>
-            <div class="script-loc">L3入职缓冲区·一排小隔间·每个隔间门缝透出屏幕的光</div>
-            <p class="script-action-text">两人跟着机械小兵，保持距离，偷偷跟踪。机械小兵把散户们一个个送进小隔间，门关上。赵凯斯和小猪趴在隔间外，从门缝偷看。隔间里：整洁，正规，暖色调，让人放松警惕。桌子正中央放着一个蓝色药丸。红色药丸的位置是空的。</p>
-            <div class="script-dir">系统声音：欢迎来到永信城创作者社区。您的入职流程已完毕。新用户专属：前72小时收益加成300%。限时福利。请选择：立即开始工作。屏幕上只有一个按钮：「立即开始」</div>
-            <p class="script-action-text">散户们坐在隔间里，看着屏幕，沉默了一会儿，然后一个个按下去了。不是被强迫，是因为没有别的可以按，而且300%的收益加成，谁会拒绝？</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪（极轻，在赵凯斯耳边）</div>
-              <p class="script-speech">「我进来的时候走过这里。那时候还有红色药丸。」</p>
-              <div class="script-char-name script-char-zhao">赵凯斯</div>
-              <p class="script-speech">「现在没有了。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「第一次是诱导。第二次是事实。系统不需要再给你选择了。」</p>
-              <div class="script-char-name script-char-zhao">赵凯斯</div>
-              <p class="script-speech">「他们还有收益加成。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「对。让他们觉得自己赚到了。这是系统最后一个善意。」</p>
-            </div>
-          </div>
-
-          <div class="script-scene-block">
-            <div><span class="script-scene-label">场景02 · 15秒</span></div>
-            <div class="script-scene-name">桌底 · ERROR的意义 · 62小时</div>
-            <div class="script-loc">404号工位桌底·昏暗·面具粉绿色光是唯一暖色</div>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯</div>
-              <p class="script-speech">「为什么机械小兵没有带走我？」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「我也不知道。你不是从外面地面的裂缝掉进来的，你是从上面，从控制室的洞口进来的。可能入场方式不一样，系统找不到匹配你的档案。但我也只是猜。」</p>
-              <div class="script-char-name script-char-zhao">赵凯斯</div>
-              <p class="script-speech">「这个状态会维持多久？」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「不知道。早晚系统会来处理你。」</p>
-            </div>
-            <div class="script-dir">小猪抬手·赵凯斯视野角落弹出倒计时：「62:00:00」</div>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「还有另一个问题。每七天，系统清零所有人的记忆。不是全部，是你为什么进来，和你为什么要出去。七天后，你还会在这里工作，但你不会记得为什么要离开。」</p>
-              <div class="script-char-name script-char-zhao">赵凯斯（盯着数字）</div>
-              <p class="script-speech">「所以我有62小时。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「我们有62小时。」</p>
-            </div>
-          </div>
-
-          <div class="script-scene-block">
-            <div><span class="script-scene-label">场景03 · 20秒</span></div>
-            <div class="script-scene-name">走进格子间 · 那不是雾气</div>
-            <div class="script-loc">L3格子间工人区·无限延伸的工位·幽绿色冷光·头顶数据管道</div>
-            <p class="script-action-text">小猪带着赵凯斯走进格子间，两人穿着白色工服混在工人里。赵凯斯第一次真正看清楚：每个工位前坐着一个工人，白色工服，低头工作，屏幕上是Meme图、推文草稿、K线配图、FOMO标题。工人们脸上带着空洞的满足感，不是痛苦，不是恐惧，就是满足。头顶数据管道缓慢发光，金色情绪粒子沿管道向上流走，无声，持续。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯（极轻）</div>
-              <p class="script-speech">「这些内容是给谁看的？」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪（没有停步）</div>
-              <p class="script-speech">「给L2的散户看的。你进来之前在L2刷到的那些内容，可能就是这里的人做的。」</p>
-            </div>
-            <p class="script-action-text">赵凯斯停住了，仰头看数据管道里向上流动的金色粒子。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯</div>
-              <p class="script-speech">「这些粒子……我在哪里见过这个。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪（停下来，看着他）</div>
-              <p class="script-speech">「你没觉得很熟悉吗？」</p>
-            </div>
-            <div class="script-dir">【闪回·0.5秒·L2归零街·清晨·空气里漂浮着极细小的金色光晕·赵凯斯当时以为是光污染·是霓虹灯的雾气】</div>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯（声音很轻）</div>
-              <p class="script-speech">「归零街……那不是雾气。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「不是。L2所有人散发的情绪，都以这种形式被收集，然后输到这里，再从这里输往更上面。你在L2感受到的那种说不清的焦虑和亢奋，不是市场造成的。是这个系统造成的。」</p>
-            </div>
-          </div>
-
-          <div class="script-scene-block">
-            <div><span class="script-scene-label">场景04 · 15秒</span></div>
-            <div class="script-scene-name">休息时间 · 工人们的沾沾自喜</div>
-            <div class="script-loc">格子间休息区·几张简单桌椅·工人们短暂停歇</div>
-            <div class="script-dir">系统广播：// 短暂休息时间 · 15分钟</div>
-            <p class="script-action-text">工人们放下手头工作，三三两两聚在休息区。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-npc">工人A（兴奋，压低声音）</div>
-              <p class="script-speech">「我今天那条推文，情绪激发指数冲到99.2！」</p>
-              <div class="script-char-name script-char-npc">工人B</div>
-              <p class="script-speech">「怎么做到的？」</p>
-              <div class="script-char-name script-char-npc">工人A</div>
-              <p class="script-speech">「精准踩痛点。我自己经历过这种心情，几百遍了，我太了解他们了。我知道什么时候他们最焦虑，什么时候一推就动。」</p>
-              <div class="script-char-name script-char-npc">工人B（羡慕）</div>
-              <p class="script-speech">「你这周能进前五了。」</p>
-              <div class="script-char-name script-char-npc">工人A</div>
-              <p class="script-speech">「前三。我盯着前三。」</p>
-            </div>
-            <p class="script-action-text">赵凯斯和小猪站在角落，假装在休息，实际上在听。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯（极轻，只有小猪能听见）</div>
-              <p class="script-speech">「他们知道这些内容发给的是跟他们一样的人吗？」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪（同样极轻）</div>
-              <p class="script-speech">「知道。只是他们觉得，那是系统的问题，不是他们的问题。」</p>
-            </div>
-            <p class="script-action-text">赵凯斯没有再说话。</p>
-          </div>
-
-          <div class="script-scene-block">
-            <div><span class="script-scene-label">场景05 · 15秒</span></div>
-            <div class="script-scene-name">推算 · 如果这些粒子一直在往上输……</div>
-            <div class="script-loc">格子间一处角落·赵凯斯仰头看数据管道</div>
-            <p class="script-action-text">赵凯斯仰头，眼睛跟着金色粒子沿管道向上移动，往上，往上，管道消失在天花板里。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯（低声）</div>
-              <p class="script-speech">「这些粒子往上走，去哪里？」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「我不知道去哪里。但我知道它们被收走了。三个月了，从来没有停过。」</p>
-            </div>
-            <p class="script-action-text">赵凯斯看着管道，沉默了几秒，慢慢说：</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯</div>
-              <p class="script-speech">「我在L2追踪过域峰广场那个装置。每次触发之后，下一次收割的时机都比上一次更准。」</p>
-              <p class="script-paren-text">（他停住了）</p>
-              <p class="script-speech">「如果这些粒子一直在往上输……」</p>
-            </div>
-            <p class="script-action-text">他没有说完。但结论已经在空气里了。小猪盯着他。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪（很轻）</div>
-              <p class="script-speech">「你是第一个告诉我上面是什么的人。」</p>
-            </div>
-            <p class="script-action-text">沉默了几秒。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「我在这里研究了三个月。我知道粒子在被收走，但我不知道为什么。你说的这个，让我觉得时间比我想的更紧。」</p>
-            </div>
-            <p class="script-action-text">赵凯斯低下头，右手握紧了冷钱包。</p>
-          </div>
-
-          <div class="script-scene-block">
-            <div><span class="script-scene-label">场景06 · 20秒</span></div>
-            <div class="script-scene-name">小猪再次找阿明 · 后排接应计划</div>
-            <div class="script-loc">格子间·阿明工位附近·趁休息时间靠近</div>
-            <p class="script-action-text">阿明坐在工位前，没有参加休息区的聊天，独自看自己今天的数据。屏幕上：「本周排名：#3」「情绪激发指数：97.3」。他的肩膀随着某个节奏微微晃动，像在享受工作。小猪走过来，在相邻工位坐下。赵凯斯站在不远处，保持距离。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪（声音极低，不看他）</div>
-              <p class="script-speech">「阿明。我需要你帮忙。」</p>
-              <div class="script-char-name script-char-npc">阿明（没有抬头）</div>
-              <p class="script-speech">「你来过多少次了。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「这次不一样。我需要去后排探一探。但一个人进去太危险，我需要有人在外面接应，确保我还能回来。」</p>
-              <div class="script-char-name script-char-npc">阿明（这才抬头）</div>
-              <p class="script-speech">「后排？那边有什么？」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「我不知道。但我感觉那里不只是空着的。可能还有其他人被困在那里，只是方式不一样。我需要弄清楚。」</p>
-            </div>
-            <p class="script-action-text">她指了指不远处的赵凯斯。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「他系统无法识别，可以进后排不被察觉。但后排是一大片黑暗，没有人知道里面是什么，进去了需要有人在外面守着。」</p>
-              <div class="script-char-name script-char-npc">阿明（皱眉）</div>
-              <p class="script-speech">「你让我为了一个你自己都不确定的事放弃我的排名？」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「我不是让你放弃排名。我只是需要你在边界守着。你的排名越高，你在那里站着越不起眼。」</p>
-            </div>
-            <p class="script-action-text">阿明沉默了。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「人多好办事。进去了还能出来，才算真的找到出口。」</p>
-            </div>
-            <p class="script-action-text">阿明看了赵凯斯一眼，又看了看自己的排名数据，没有说话。小猪站起来，离开前极轻地说——</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「你妈妈应该还在等你回家吃早餐。」</p>
-            </div>
-            <p class="script-action-text">阿明的手指停住了。他没有说话。小猪离开了。</p>
-          </div>
-
-          <div class="script-scene-block">
-            <div><span class="script-scene-label">场景07 · 15秒</span></div>
-            <div class="script-scene-name">是我把他们带下来的</div>
-            <div class="script-loc">格子间中段区域·工人正在工作</div>
-            <p class="script-action-text">两人继续在格子间里走。赵凯斯一直在看工人的脸。然后他停住了。</p>
-            <p class="script-action-text">中年男性，西装，坐在工位前，低头工作，空洞的满足感。</p>
-            <div class="script-dir">【闪回·0.5秒·坠落空间·那个中年男性·西装·手机飞出·四肢乱挥】</div>
-            <p class="script-action-text">他继续往前走，又停下来。年轻女性，长发，空洞的笑。</p>
-            <div class="script-dir">【闪回·0.5秒·坠落·手提包·长发向上飘】</div>
-            <p class="script-action-text">赵凯斯站在格子间中间，没有再走，右手不自觉握紧了冷钱包。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯（极轻，声音很平）</div>
-              <p class="script-speech">「是和我一起坠落的。」</p>
-            </div>
-            <p class="script-action-text">小猪回头看他。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯</div>
-              <p class="script-speech">「是我砸了那个按钮，地面裂开，是我把他们带下来的。」</p>
-            </div>
-            <p class="script-action-text">他抬头，看着格子间里无数个低头工作的背影，头顶管道，金色粒子无声向上流走。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯（很轻，但很重）</div>
-              <p class="script-speech">「他们现在在这里。因为我。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「愧疚留着。但现在先走。」</p>
-            </div>
-          </div>
-
-          <div class="script-scene-block">
-            <div><span class="script-scene-label">场景08 · 15秒</span></div>
-            <div class="script-scene-name">感知出口方向 · 有什么东西在那里</div>
-            <div class="script-loc">格子间最深处·靠近后排边界·光线越来越暗·温度越来越低</div>
-            <p class="script-action-text">小猪带着赵凯斯走到格子间最深处。周围的工人越来越少，光线越来越暗，温度越来越低。前方是一道隐约的边界，边界那边是更深的黑暗，后排深渊的轮廓隐约可见。经过这里的工人，眼神从不往那边看，像集体默契地忽视了它的存在。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-xiaozhu">小猪（看着那片黑暗）</div>
-              <p class="script-speech">「我在这里待了三个月。我一直有一种感觉，出口可能在那个方向。但那里要走很远很远，感觉永远走不到一样。而且越往后走越冷，越没有人气，前排的工人没有理由去那里，我也没有去看过。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「要进后排，需要让自己的排名很低。但我要研究系统的结构，要自由移动，我没法让自己掉到后排去。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪</div>
-              <p class="script-speech">「你能感觉到什么吗？」</p>
-            </div>
-            <p class="script-action-text">赵凯斯闭上眼睛。在这片麻木的空间里，他的逆向感知慢慢展开——不是情绪，是更底层的东西，像一道极其微弱的信号，从很远很远的黑暗深处传来。他睁开眼。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯</div>
-              <p class="script-speech">「有什么东西在那里。很远。但是在那里。」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪（很轻）</div>
-              <p class="script-speech">「我知道。」</p>
-            </div>
-            <p class="script-action-text">两人站在边界前，都没有再说话。</p>
-          </div>
-
-          <div class="script-scene-block">
-            <div><span class="script-scene-label">场景09 · 10秒</span></div>
-            <div class="script-scene-name">冷钱包脉冲 · EP2结尾钩子</div>
-            <div class="script-loc">404号工位桌底·深夜·幽绿色冷光</div>
-            <p class="script-action-text">赵凯斯坐着，右手握着冷钱包，蓝白色微光，低头思考。突然——冷钱包发出一次异常脉冲，蓝白色光强烈闪烁，比平时强十倍，持续约一秒，然后恢复平静。赵凯斯和小猪同时愣住。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-zhao">赵凯斯（看着冷钱包，困惑）</div>
-              <p class="script-speech">「这是……」</p>
-              <div class="script-char-name script-char-xiaozhu">小猪（盯着冷钱包，声音很低）</div>
-              <p class="script-speech">「我不知道。但不正常。」</p>
-            </div>
-            <div class="script-dir">【画面切换·88层控制室·维克多站在控制台前·屏幕弹出警报：「⚠ 仪式密钥信号异常 · 位置检测中…… · L3 · 第7区 · 信号强度：已确认」】</div>
-            <p class="script-action-text">他的机械右臂缓慢抬起，食指在屏幕上轻轻点下：「启动追踪协议」。他的侧面轮廓在逆光里。胸口——什么都没有。</p>
-            <div class="script-dlg">
-              <div class="script-char-name script-char-victor">维克多（极轻）</div>
-              <p class="script-speech">「找到你了。」</p>
-            </div>
-            <div class="script-countdown-display">EP2 · 完</div>
-    </div>
-    </div><!-- end ep2tab-screenplay -->
-
-    <!-- 标签4：场景定稿图库 -->
+      </div>
+      <div class="scene-modal-page" id="ep2-modal-gallery">
+        <!-- 标签4：场景定稿图库 -->
     <div class="ep1-tab-page" id="ep2tab-gallery" style="display:none">
       <div style="text-align:center;padding:60px 20px">
         <div style="font-size:48px;margin-bottom:20px">🖼️</div>
@@ -5631,544 +5741,9 @@ L3格子间某工位桌底，昏暗狭小空间。
         <div style="font-size:14px;color:var(--text-dim);line-height:1.9">渲染完成后将陆续上传至此<br>EP2渲染工作尚未开始</div>
       </div>
     </div><!-- end ep2tab-gallery -->
-
-      </div><!-- end ep2-tab-content -->
-    </div><!-- end ep2-tab-wrapper -->
-
-  </section>
-
->
-
-  <section class="section" id="prompts">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <h2 class="section-title">提示词实例</h2>
-    </div>
-
-    <div class="quote-block">
-      <p>所有创作者在制作《凡人修币录》S2的视觉内容时，必须遵守以下统一的美术风格规范。风格统一是整部剧集质量的基础。</p>
-    </div>
-
-    <!-- 基础规格 -->
-    <h3>基础规格</h3>
-    <div class="info-grid">
-      <div class="info-box">
-        <div class="info-box-label">画面比例</div>
-        <p>所有图片和视频帧统一使用 <strong style="color:var(--gold)">9:16 竖屏</strong>，不接受横屏或正方形输出。</p>
       </div>
     </div>
-
-    <!-- 美术风格 -->
-    <h3>统一美术风格</h3>
-    <div class="info-grid">
-      <div class="info-box">
-        <div class="info-box-label">核心风格定义</div>
-        <p>高品质 3D CG 动画电影风格，电影级光影渲染。皮克斯 3D 动漫风格，电影级渲染。</p>
-      </div>
-      <div class="info-box">
-        <div class="info-box-label">禁止的风格</div>
-        <p style="color:var(--red)">❌ 写实摄影风格<br>❌ 日系手绘二次元<br>❌ 低多边形 Low Poly<br>❌ 油画/水彩质感<br>❌ 任何平面插画风格</p>
-      </div>
-    </div>
-
-    <!-- 必须包含的提示词关键词 -->
-    <h3>通用基础提示词</h3>
-    <div class="quote-block">
-      <p>以下关键词是每一张渲染图的基础，在此基础上加入具体的场景和角色描述。</p>
-    </div>
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-title">// 通用基础提示词（每张图必须包含）</span>
-        <button class="prompt-copy" onclick="copyPrompt(this)">复制</button>
-      </div>
-      <div class="prompt-body">高品质3D CG动画电影风格，皮克斯3D动漫风格，电影级光影渲染，次表面散射皮肤质感，体积光效果，景深模糊，8K超高清，9:16竖屏构图，赛博朋克都市氛围，冷暖色对比强烈，影视级色调分级</div>
-    </div>
-
-    <!-- 构图规范 -->
-    <h3>构图规范</h3>
-    <div class="info-grid">
-      <div class="info-box">
-        <div class="info-box-label">角色镜头</div>
-        <p>人物占画面60-75%高度，留出顶部空间显示城市环境。全身照视角略低于眼睛高度，制造仰视感。</p>
-      </div>
-      <div class="info-box">
-        <div class="info-box-label">场景镜头</div>
-        <p>建立环境的全景镜头优先使用轻微仰拍或航拍视角，强调城市的压迫感和宏大感。避免平视角的建筑全景。</p>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- 02 创作红线 -->
-  <section class="section" id="rules">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <h2 class="section-title">创作红线</h2>
-    </div>
-
-    <div class="quote-block">
-      <p>以下红线是《凡人修币录》S2创作的底层逻辑。违反任何一条·都会让整个故事失去它最重要的东西：<strong style="color:var(--gold)">让人不寒而栗的真实感。</strong></p>
-    </div>
-
-    <!-- 01 世界观红线 -->
-    <div class="rule-card danger" style="margin-bottom:16px">
-      <div class="rule-label">❌ 01 · 世界观红线（绝对不能违反）</div>
-
-      <div style="margin-bottom:20px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--red);margin-bottom:10px">// L3的工人是「快乐的」·不是痛苦的</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.9">L3的恐怖在于「满足感」·不在于「痛苦」。工人们觉得自己终于被看见·觉得自己在发挥才华·觉得这里比外面好。不能把L3描绘成明显的痛苦场所·越快乐·越恐怖。</p>
-      </div>
-
-      <div style="margin-bottom:20px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--red);margin-bottom:10px">// 每个人都是系统的参与者·没有纯粹的旁观者</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.9">不能把任何角色写成「完全无辜的受害者」。</p>
-        <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px 16px;margin-top:10px;font-size:13px;color:var(--text-dim);line-height:2">
-          阿明做内容 → 帮系统制造FOMO燃料<br>
-          散户刷内容 → 帮系统传播情绪信号<br>
-          工人努力工作 → 帮L1训练收割算法·让下一批人更难逃脱<br>
-          赵凯斯砸按钮 → 把散户带进了L3<br>
-          <span style="color:var(--gold)">每个人的行为都在不知不觉中成为系统运转的一部分。</span>
-        </div>
-      </div>
-
-      <div style="margin-bottom:20px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--red);margin-bottom:10px">// 天降神针颜色三阶段·不能搞错</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;font-size:13px">
-          <div style="background:rgba(232,184,75,0.08);border:1px solid rgba(232,184,75,0.3);border-radius:6px;padding:12px">
-            <div style="color:var(--gold);font-weight:600;margin-bottom:6px">🟡 平时状态</div>
-            <div style="color:var(--text-dim);line-height:1.8">金黄色光泽·暖黄棱边线光·来回摆动·针尖收起·没有人在意</div>
-          </div>
-          <div style="background:rgba(233,69,96,0.06);border:1px solid rgba(233,69,96,0.2);border-radius:6px;padding:12px">
-            <div style="color:var(--red);font-weight:600;margin-bottom:6px">🔴 触发前</div>
-            <div style="color:var(--text-dim);line-height:1.8">金黄渐变深红·只有赵凯斯能感知到颜色变化·普通人感觉「不对劲」</div>
-          </div>
-          <div style="background:rgba(233,69,96,0.12);border:1px solid rgba(233,69,96,0.4);border-radius:6px;padding:12px">
-            <div style="color:var(--red);font-weight:600;margin-bottom:6px">🔴 触发中</div>
-            <div style="color:var(--text-dim);line-height:1.8">整体强烈红色·红色能量柱从底部射出·完成后恢复黄色</div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--red);margin-bottom:10px">// 情绪之门机制·不能改写</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.9">情绪之门检测的是<strong style="color:var(--gold)">身体层面的物理信号</strong>·不是内心情绪。不能写成「只要你真心想出去就能过门」。</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;font-size:13px">
-          <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.2);border-radius:6px;padding:12px">
-            <div style="color:#2ECC71;margin-bottom:8px;font-weight:600">✅ 能过门·举例</div>
-            <div style="color:var(--text-dim);line-height:1.9">阿明想起妈妈凌晨四点揉面→心跳加快·眼眶发热·手抖·声音哽咽。这些身体反应·门能感知到。</div>
-          </div>
-          <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:12px">
-            <div style="color:var(--red);margin-bottom:8px;font-weight:600">❌ 过不了门·举例</div>
-            <div style="color:var(--text-dim);line-height:1.9">小猪内心强烈想出去·但身体已学会不表达·心跳平稳·面部无反应·门感知不到任何信号。</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 02 角色行为红线 -->
-    <div class="rule-card" style="border-color:rgba(240,165,0,0.4);margin-bottom:16px">
-      <div class="rule-label" style="color:var(--amber)">⚠ 02 · 角色行为红线（最容易违反）</div>
-
-      <div style="margin-bottom:24px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--amber);margin-bottom:12px">// 最重要：禁止「理性觉醒」失真</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">角色在<strong style="color:var(--gold)">没有明确触发事件</strong>的情况下·自行想通了系统对自己的剥削·并用清晰逻辑表达出来。这是最常见的创作失误。</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px">
-          <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.2);border-radius:6px;padding:14px">
-            <div style="color:var(--red);margin-bottom:10px;font-weight:600">❌ 错误示范·阿明</div>
-            <div style="color:var(--text-dim);line-height:1.9;font-style:italic">「我知道我做的内容会伤害到和我一样的散户·但那是系统的问题·不是我的问题。」</div>
-            <div style="color:var(--red);font-size:11px;margin-top:8px">→ 逻辑太清晰·阿明不会有这种认知</div>
-          </div>
-          <div style="background:rgba(46,204,113,0.05);border:1px solid rgba(46,204,113,0.15);border-radius:6px;padding:14px">
-            <div style="color:#2ECC71;margin-bottom:10px;font-weight:600">✅ 正确示范·阿明</div>
-            <div style="color:var(--text-dim);line-height:1.9;font-style:italic">「我今天情绪激发指数97.3·我太了解他们了·我自己经历过这种心情·我知道什么时候推一把他们就动。」</div>
-            <div style="color:#2ECC71;font-size:11px;margin-top:8px">→ 完全沉浸在系统评价体系里</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-bottom:24px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--amber);margin-bottom:12px">// 禁止「上帝视角」渗透</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:10px">角色说出了只有看完整个故事才能理解的话。创作者知道的东西·不等于角色知道。</p>
-        <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;font-size:13px;color:var(--text-dim);line-height:2">
-          ❌ L3工人开始反思「我做的内容是不是在帮系统收割人」→ L3工人不会有这种思考<br>
-          ❌ 散户坠落后立刻明白系统在做什么→ 他们应该是困惑·惊慌<br>
-          ❌ 阿明在没有触发事件的情况下突然理解了自己在伤害谁→ 需要具体情感触发
-        </div>
-      </div>
-
-      <div>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--amber);margin-bottom:12px">// 各角色行为准则</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
-          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--gold)">
-            <div style="color:var(--gold);font-weight:600;margin-bottom:8px">赵凯斯</div>
-            <div style="color:var(--text-dim);line-height:2">
-              · 熊猫眼 = 仪式感·只有需要剧烈对抗·唤醒众人时才画·不是超能力开关<br>
-              · 逆向感知是天生的·感知「人在麻痹中身体残留的痛的方向」·不需要道具激活<br>
-              · EP2优先级是「怎么出去」·不是「怎么打败系统」·EP2他还是蒙的
-            </div>
-          </div>
-          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--pink)">
-            <div style="color:var(--pink);font-weight:600;margin-bottom:8px">陈晚照（小猪女侠）</div>
-            <div style="color:var(--text-dim);line-height:2">
-              · 面具遮蔽的是身体物理情绪信号·不是内心情绪·她有情绪·不能写成「小猪没有情绪」<br>
-              · 面具使用有次数限制·用一次少一次·不能随意无限使用<br>
-              · S2结局她出不去情绪之门·转身走回L3深处·不能自行改写·原因是导演保留信息
-            </div>
-          </div>
-          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--amber)">
-            <div style="color:var(--amber);font-weight:600;margin-bottom:8px">林牧</div>
-            <div style="color:var(--text-dim);line-height:2">
-              · 他知道自己在做什么·他的愧疚是真实积累的·不能写成「他不知情」<br>
-              · 牺牲结果是悬念·「死没死」不能在S2任何创作里写明
-            </div>
-          </div>
-          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--teal-bright)">
-            <div style="color:var(--teal-bright);font-weight:600;margin-bottom:8px">阿明</div>
-            <div style="color:var(--text-dim);line-height:2">
-              · 他对L3的热爱是真实的·不是被洗脑·「终于被看见」的满足感是真实的<br>
-              · 他不理性·不冷静·完全沉浸在排名和数据里·根本没有空间去思考系统对别人的影响<br>
-              · 他的觉醒必须有具体情感触发：「你做的Meme·收割的是和你妈妈一样的普通人」
-            </div>
-          </div>
-          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;border-left:3px solid var(--text-dim)">
-            <div style="color:var(--text-dim);font-weight:600;margin-bottom:8px">客服小何</div>
-            <div style="color:var(--text-dim);line-height:2">
-              · 她的战场在L2·不是L3·S2里她不会出现在L3
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 03 剧情红线 -->
-    <div class="rule-card" style="border-color:rgba(42,173,204,0.4);margin-bottom:16px">
-      <div class="rule-label" style="color:var(--teal-bright)">📖 03 · 剧情红线</div>
-
-      <div style="margin-bottom:20px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);margin-bottom:10px">// 系统不能被写成「显而易见的恶」</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.9">这个系统最恐怖的地方·是每个人都觉得自己在做对的事。如果你把系统写成一眼就能看出是骗局的东西·整个故事就失去了意义。</p>
-      </div>
-
-      <div style="margin-bottom:20px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);margin-bottom:10px">// 永信城不会在S2被摧毁</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.9">S2结局只有天花板有一道裂缝·阳光照进来·仅此而已。系统还在运转·L1还在运转·永信城还在。</p>
-      </div>
-
-      <div style="margin-bottom:20px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);margin-bottom:10px">// 陈维克多不是传统反派</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.9">他是一个相信自己在做正确的事的人·冷静·精准·孤独。不能写成大笑的邪恶boss·不能写成他以伤害人为乐。</p>
-      </div>
-
-      <div>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);margin-bottom:10px">// 阿明的觉醒不能提前</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.9">阿明的真正觉醒发生在EP5·需要具体的情感触发点。EP2-EP4的创作·阿明只能是沉浸在排名和数据里的状态·不能提前让他觉醒。</p>
-      </div>
-    </div>
-
-    <!-- 04 重要道具 & 标志性设计红线 -->
-    <div class="rule-card" style="border-color:rgba(232,184,75,0.4);margin-bottom:16px">
-      <div class="rule-label" style="color:var(--gold)">🔮 04 · 重要道具 & 标志性设计红线</div>
-
-      <div style="margin-bottom:20px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">// 角色标志性视觉·不能缺失</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13px">
-          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px">
-            <div style="color:var(--gold);margin-bottom:6px;font-weight:600">赵凯斯</div>
-            <div style="color:var(--text-dim);line-height:1.9">黑框方形粗眼镜·除非剧情中受到明确物理撞击·任何场景不能去掉<br>黑色「Diamond Hands」T恤</div>
-          </div>
-          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px">
-            <div style="color:var(--red);margin-bottom:6px;font-weight:600">陈维克多</div>
-            <div style="color:var(--text-dim);line-height:1.9">机械臂永远是右臂·左臂是人类手臂<br>脸部永远不完整呈现·逆光·阴影·侧面轮廓</div>
-          </div>
-          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px">
-            <div style="color:var(--pink);margin-bottom:6px;font-weight:600">小猪女侠</div>
-            <div style="color:var(--text-dim);line-height:1.9">猪头半脸面具·粉色+绿色两种霓虹光·不能改成其他颜色</div>
-          </div>
-          <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:12px">
-            <div style="color:var(--amber);margin-bottom:6px;font-weight:600">林牧</div>
-            <div style="color:var(--text-dim);line-height:1.9">工作场景蒙白色布条·狐狸面具放在桌上<br>蒙眼原因：牛马工厂有AI面部与眼部生物扫描·通过面部微表情监测情绪产出质量</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-bottom:20px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">// 冷钱包·CA指挥棒·面具·布条</div>
-        <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;font-size:13px;color:var(--text-dim);line-height:2">
-          <span style="color:var(--gold)">冷钱包：</span>维克多的仪式密钥·同时承载赵凯斯在L3积累的真实情绪重量·EP6用它触碰情绪之门<br>
-          <span style="color:var(--pink)">CA指挥棒：</span>小猪的信息权限工具·指向哪个CA地址哪个代币就波动·不是战斗武器<br>
-          <span style="color:var(--pink)">猪头面具：</span>骗过AI面部扫描·屏蔽身体物理情绪信号·使用有次数限制<br>
-          <span style="color:var(--amber)">白色布条：</span>写满废弃代码·系统无法通过他已抛弃的东西侵入他的意识
-        </div>
-      </div>
-
-      <div style="margin-bottom:20px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">// 情绪粒子·数据管道·监测系统</div>
-        <div style="background:rgba(0,0,0,0.2);border-radius:6px;padding:14px;font-size:13px;color:var(--text-dim);line-height:2">
-          <span style="color:var(--gold)">情绪粒子：</span>工人工作时产出的情绪以金色粒子形式散发·管道自动收集·输往L1用于训练算法<br>
-          <span style="color:var(--gold)">双轨监测：</span>管道收粒子（收割成果）+ AI面部扫描（质量监控）两套系统同时运行<br>
-          <span style="color:var(--gold)">情绪粒子颜色：</span>只能是金色·不能改成其他颜色·金色是L3唯一的暖色
-        </div>
-      </div>
-
-      <div>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:12px">// 色彩系统·不能搞错</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;font-size:12px">
-          <div style="background:rgba(77,175,255,0.08);border:1px solid rgba(77,175,255,0.2);border-radius:6px;padding:10px;text-align:center">
-            <div style="color:#4DAFFF;font-weight:600;margin-bottom:4px">L1</div>
-            <div style="color:var(--text-dim)">冷蓝白色·不能出现暖色</div>
-          </div>
-          <div style="background:rgba(232,184,75,0.08);border:1px solid rgba(232,184,75,0.2);border-radius:6px;padding:10px;text-align:center">
-            <div style="color:var(--gold);font-weight:600;margin-bottom:4px">L2</div>
-            <div style="color:var(--text-dim)">金色霓虹·暖色为主</div>
-          </div>
-          <div style="background:rgba(42,173,204,0.08);border:1px solid rgba(42,173,204,0.2);border-radius:6px;padding:10px;text-align:center">
-            <div style="color:var(--teal-bright);font-weight:600;margin-bottom:4px">L3格子间</div>
-            <div style="color:var(--text-dim)">冷绿色·情绪粒子金色是唯一例外</div>
-          </div>
-          <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.05);border-radius:6px;padding:10px;text-align:center">
-            <div style="color:var(--text-dim);font-weight:600;margin-bottom:4px">后排深渊</div>
-            <div style="color:var(--text-dim)">比格子间更暗更冷·几乎无光源</div>
-          </div>
-          <div style="background:rgba(240,112,144,0.08);border:1px solid rgba(240,112,144,0.2);border-radius:6px;padding:10px;text-align:center">
-            <div style="color:var(--pink);font-weight:600;margin-bottom:4px">小猪面具</div>
-            <div style="color:var(--text-dim)">粉色+绿色·只有这两种</div>
-          </div>
-          <div style="background:rgba(13,18,32,0.5);border:1px solid rgba(255,255,255,0.05);border-radius:6px;padding:10px;text-align:center">
-            <div style="color:var(--text-dim);font-weight:600;margin-bottom:4px">所有图片</div>
-            <div style="color:var(--text-dim)">9:16竖屏·皮克斯3D风格·no text</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 05 导演保留信息·禁区 -->
-    <div class="rule-card danger">
-      <div class="rule-label">🚫 05 · 导演保留信息·创作者禁区</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:16px">以下内容是导演保留设定·<strong style="color:var(--red)">绝对不能在任何创作中写明或暗示</strong>：</p>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:14px;font-size:13px">
-          <div style="color:var(--red);font-weight:600;margin-bottom:6px">① 陈晚照出不去情绪之门的原因</div>
-          <div style="color:var(--text-dim);line-height:1.8">创作者只能写「她没有出去」·转身走回L3更深处。不能解释为什么·不能暗示原因。</div>
-        </div>
-        <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:14px;font-size:13px">
-          <div style="color:var(--red);font-weight:600;margin-bottom:6px">② 赵凯斯回头发现小猪没跟出来的那一刻</div>
-          <div style="color:var(--text-dim);line-height:1.8">这个画面属于EP6结局。EP2-EP5的创作不能提前呈现这个瞬间。</div>
-        </div>
-        <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:14px;font-size:13px">
-          <div style="color:var(--red);font-weight:600;margin-bottom:6px">③ 林牧牺牲之后到底发生了什么</div>
-          <div style="color:var(--text-dim);line-height:1.8">「死没死」是S2最大的钩子之一。不能在任何S2创作里写明结果。</div>
-        </div>
-        <div style="background:rgba(233,69,96,0.05);border:1px solid rgba(233,69,96,0.15);border-radius:6px;padding:14px;font-size:13px">
-          <div style="color:var(--red);font-weight:600;margin-bottom:6px">④ S3的任何内容</div>
-          <div style="color:var(--text-dim);line-height:1.8">S3设定是导演保留信息。创作者不能自行延伸S3剧情·不能写赵凯斯第二次进L3·不能写小猪在L3深处的经历。</div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- 03 评分标准 -->
-  <section class="section" id="scoring">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <h2 class="section-title">评分标准</h2>
-    </div>
-
-    <div class="rule-card" style="border-color:var(--gold)">
-      <div class="rule-label" style="color:var(--gold)">Story Agent评分维度</div>
-      <ul class="rule-list">
-        <li>叙事完整度：这段内容有清晰的起伏吗？</li>
-        <li>情绪张力：最高点和最低点之间的落差够大吗？</li>
-        <li>人物塑造：角色行为符合人设吗？</li>
-        <li>Web3共鸣：加密用户看完会有「这说的是我」的感受吗？</li>
-        <li>传播潜力：有没有一个让人想截图分享的瞬间？</li>
-      </ul>
-    </div>
-
-  </section>
-
-  <!-- 04 概念图合辑 -->
-  <section class="section" id="gallery">
-    <div class="section-header">
-      <span class="section-num">04</span>
-      <h2 class="section-title">概念图合辑</h2>
-    </div>
-
-    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px">
-      <a href="https://fanrenxiubi.imgbb.com/albums" target="_blank" style="display:flex;align-items:center;gap:12px;background:rgba(232,184,75,0.08);border:1px solid var(--gold);border-radius:8px;padding:16px 24px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='rgba(232,184,75,0.15)'" onmouseout="this.style.background='rgba(232,184,75,0.08)'">
-        <span style="font-size:24px">🖼️</span>
-        <div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.1em">概念图合辑</div>
-          <div style="font-size:12px;color:var(--text-dim);margin-top:2px">所有场景参考图 · 定妆照 · 即梦渲染图</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-top:4px">fanrenxiubi.imgbb.com/albums ↗</div>
-        </div>
-      </a>
-    </div>
-    <p style="font-size:13px;color:var(--text-dim)">所有已完成的概念图和渲染图均上传至此相册，按角色·场景·世界观分类管理。</p>
-
-  </section>
-
-  <!-- RECRUITMENT - 内容已迁移至世界观模块 -->
-
-  <!-- 永信城概念短片 独立章节 -->
-  <section class="section" id="concept-shorts-section">
-    <div class="section-header">
-      <span class="section-num">05</span>
-      <h2 class="section-title">永信城概念短片</h2>
-    </div>
-
-    <div class="quote-block">
-      <p>这些内容不是主线剧情的一部分，而是永信城世界观的「素材库」。随时可以剪入主线作为转场或闪回，也可以单独发布作为社交媒体预热内容，或给社区创作者作为世界观参考。</p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0">
-
-      <!-- 短片01 -->
-      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
-        <div style="padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(212,160,23,0.05)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">独立短片 01</div>
-          <div style="font-size:15px;font-weight:600;color:var(--text-bright)">归零街（Meme街）· 永信城的草根宇宙</div>
-        </div>
-        <div style="padding:16px 20px">
-          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">三个区域，三种气质：主街（霓虹赛博朋克·Times Square风）·小巷（华强北山寨市场·接地气）·食街（东南亚夜市·曼谷Khao San Road加密版）。白天和晚上完全不同。</p>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:6px">// 视觉已验证的两种镜头</div>
-          <div style="font-size:12px;color:var(--text-dim);line-height:1.8">
-            <strong style="color:var(--text)">长曝光版：</strong>人群是流动的光影，情绪粒子在空气中弥漫。<br>
-            <strong style="color:var(--text)">个体聚焦版：</strong>3-4个有故事感的人物，情绪越激动粒子越浓。
-          </div>
-          <div style="margin-top:10px;padding:6px 10px;background:rgba(0,0,0,0.2);border-radius:4px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright)">✓ 渲染已验证 · 皮克斯3D风格</div>
-        </div>
-      </div>
-
-      <!-- 短片02 -->
-      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
-        <div style="padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(212,160,23,0.05)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">独立短片 02</div>
-          <div style="font-size:15px;font-weight:600;color:var(--text-bright)">阿明妈妈早餐店 · 永信城最真实的地方</div>
-        </div>
-        <div style="padding:16px 20px">
-          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">归零街边缘，清晨6点。暖黄色灯光和窗外霓虹的对比。这是整个S2最重要的情感锚点——EP6阿明觉醒时想起的就是这里。</p>
-          <div style="font-size:12px;color:var(--text-dim);line-height:1.8">角落小电视播着招工广告·桌上有二维码卡片·酱板鸭彩蛋保留·阿明只露手不露脸</div>
-          <div style="margin-top:10px;padding:6px 10px;background:rgba(0,0,0,0.2);border-radius:4px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright)">✓ 渲染已验证 · 皮克斯3D风格</div>
-        </div>
-      </div>
-
-      <!-- 短片03 -->
-      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
-        <div style="padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(212,160,23,0.05)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">独立短片 03 · 高优先级</div>
-          <div style="font-size:15px;font-weight:600;color:var(--text-bright)">招工广告完整版 · 60-90秒</div>
-        </div>
-        <div style="padding:16px 20px">
-          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">完全用招募广告的语气和格式制作。用户第一眼以为是真实广告，然后发现这是《凡人修币录》的——这就是最好的病毒营销。</p>
-          <div style="font-size:12px;color:var(--text-dim);line-height:1.8">
-            <strong style="color:var(--text)">第一层·公开广告：</strong>「你的情绪，是这个时代最稀缺的资产」<br>
-            <strong style="color:var(--text)">第二层·系统私信：</strong>「您的创作者潜力评分：94/100 · 名额有限 · 24小时过期」
-          </div>
-          <div style="margin-top:10px;display:flex;gap:8px">
-            <span style="font-family:'Share Tech Mono',monospace;font-size:9px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500;border:1px solid rgba(240,165,0,0.3)">待制作</span>
-            <span style="font-family:'Share Tech Mono',monospace;font-size:9px;padding:3px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2)">病毒传播潜力最高</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 短片04 -->
-      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
-        <div style="padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(212,160,23,0.05)">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:4px">独立短片 04</div>
-          <div style="font-size:15px;font-weight:600;color:var(--text-bright)">L3快乐工作宣传片 · 60秒</div>
-        </div>
-        <div style="padding:16px 20px">
-          <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px">以L3工厂为背景，用「企业文化宣传片」的格式制作。画面是工人们「愉快地」创作内容，空洞的笑容被包装成「热情」。</p>
-          <div style="font-size:12px;color:var(--text-dim);line-height:1.8">看完第一遍：羡慕。看完剧情再回看：不寒而栗。</div>
-          <div style="margin-top:10px">
-            <span style="font-family:'Share Tech Mono',monospace;font-size:9px;padding:3px 8px;border-radius:4px;background:rgba(240,165,0,0.15);color:#F0A500;border:1px solid rgba(240,165,0,0.3)">待制作</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-quote">
-      市场可以让你破产，<br>但是市场拿不走你的判断力。
-    </div>
-    <p class="footer-sub">《凡人修币录》S2 · 情绪之证</p>
-    <div class="footer-tag">凡人修币录 S2 · 情绪之证 · PROOF OF EMOTION · CREATOR BIBLE v2.0</div>
-  </footer>
-
-<script>
-  function switchEP1Tab(tab, btn) {
-  document.querySelectorAll('.ep1-tab-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.ep1-tab-page').forEach(p => p.classList.remove('active'));
-  document.getElementById('ep1tab-' + tab).classList.add('active');
-}
-
-function switchEP2Tab(tab, btn) {
-  const wrapper = btn.closest('.ep1-tab-wrapper');
-  wrapper.querySelectorAll('.ep1-tab-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  wrapper.querySelectorAll('.ep1-tab-page').forEach(p => {
-    p.classList.remove('active');
-    p.style.display = 'none';
-  });
-  const target = document.getElementById('ep2tab-' + tab);
-  if (target) { target.style.display = 'block'; target.classList.add('active'); }
-}
-
-function toggleEp(header) {
-    header.parentElement.classList.toggle('open');
-  }
-
-  function copyPrompt(btn) {
-    const body = btn.closest('.prompt-card').querySelector('.prompt-body');
-    navigator.clipboard.writeText(body.textContent.trim()).then(() => {
-      btn.textContent = '已复制 ✓';
-      btn.style.color = '#2ECC71';
-      btn.style.borderColor = '#2ECC71';
-      setTimeout(() => {
-        btn.textContent = '复制';
-        btn.style.color = '';
-        btn.style.borderColor = '';
-      }, 2000);
-    });
-  }
-
-  function toggleMenu() {
-    document.getElementById('sidebar').classList.toggle('open');
-  }
-
-  function openLightbox(src) {
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox').classList.add('active');
-  }
-
-  function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('active');
-  }
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeLightbox();
-  });
-
-  const sections = document.querySelectorAll('[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 120) current = s.id;
-    });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-    });
-  });
-</script>
+  </div>
+</div>
 </body>
 </html>
