@@ -3776,22 +3776,26 @@
 
 <script>
   function switchEP1Tab(tab, btn) {
-  document.querySelectorAll('.ep1-tab-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.ep1-tab-page').forEach(p => p.classList.remove('active'));
-  document.getElementById('ep1tab-' + tab).classList.add('active');
-}
+    // EP1模态里的三个tab
+    document.querySelectorAll('.ep1-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    ['overview','renders','gallery'].forEach(function(t) {
+      var el = document.getElementById('ep1tab-' + t);
+      if (el) el.style.display = (t === tab) ? 'block' : 'none';
+    });
+    // 滚动到模态内容顶部
+    var modalBody = btn.closest('.scene-modal');
+    if (modalBody) modalBody.scrollTop = 0;
+  }
 
 function switchEP2Tab(tab, btn) {
-  const wrapper = btn.closest('.ep1-tab-wrapper');
-  wrapper.querySelectorAll('.ep1-tab-btn').forEach(b => b.classList.remove('active'));
+  var wrapper = btn.closest('.ep1-tab-wrapper');
+  wrapper.querySelectorAll('.ep1-tab-btn').forEach(function(b) { b.classList.remove('active'); });
   btn.classList.add('active');
-  wrapper.querySelectorAll('.ep1-tab-page').forEach(p => {
-    p.classList.remove('active');
-    p.style.display = 'none';
+  ['overview','renders','gallery'].forEach(function(t) {
+    var el = document.getElementById('ep2tab-' + t);
+    if (el) el.style.display = (t === tab) ? 'block' : 'none';
   });
-  const target = document.getElementById('ep2tab-' + tab);
-  if (target) { target.style.display = 'block'; target.classList.add('active'); }
 }
 
 function toggleEp(header) {
@@ -3829,8 +3833,9 @@ function toggleEp(header) {
     if (e.key === 'Escape') closeLightbox();
   });
 
+  // 导航高亮·只对有href的链接生效·排除onclick链接
   const sections = document.querySelectorAll('[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link[href]');
 
   window.addEventListener('scroll', () => {
     let current = '';
@@ -3840,6 +3845,22 @@ function toggleEp(header) {
     navLinks.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  });
+
+  // 初始化EP1 Tab显示状态·模态里默认显示overview
+  window.addEventListener('DOMContentLoaded', function() {
+    // EP1模态里的tab（overview·renders·gallery）
+    var ep1ModalTabs = ['overview','renders','gallery'];
+    ep1ModalTabs.forEach(function(t) {
+      var el = document.getElementById('ep1tab-' + t);
+      if (el) el.style.display = (t === 'overview') ? 'block' : 'none';
+    });
+    // EP2模态里的tab（overview·renders·gallery）
+    var ep2ModalTabs = ['overview','renders','gallery'];
+    ep2ModalTabs.forEach(function(t) {
+      var el = document.getElementById('ep2tab-' + t);
+      if (el) el.style.display = (t === 'overview') ? 'block' : 'none';
     });
   });
 
