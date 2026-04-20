@@ -835,10 +835,7 @@
     display: block !important;
   }
   .scene-modal-page {
-    display: none;
-  }
-  .scene-modal-page.active {
-    display: block !important;
+    /* display controlled by JS inline style */
   }
   /* 模态内的ep1-tab-wrapper和ep1-tab-nav隐藏 */
   .scene-modal .ep1-tab-wrapper { display: block !important; }
@@ -922,8 +919,6 @@
     border-bottom-color: var(--gold);
   }
   .scene-modal-body { padding: 28px; }
-  .scene-modal-page { display: none; }
-  .scene-modal-page.active { display: block; }
   .open-scene-pack-btn {
     display: inline-flex;
     align-items: center;
@@ -4006,7 +4001,7 @@ function toggleEp(header) {
       <button class="scene-modal-tab" onclick="switchSceneTab('ep1','gallery',this)">🖼️ 场景定稿图库</button>
     </div>
     <div class="scene-modal-body">
-      <div class="scene-modal-page active" id="ep1-modal-overview">
+      <div class="scene-modal-page" id="ep1-modal-overview" style="display:block">
         <div class="modal-inner-content" id="ep1tab-overview">
     <h3>EP1 · 场景状态总览</h3>
     <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
@@ -5013,7 +5008,7 @@ L3格子间某工位桌底，昏暗狭小空间。
 
 </div><!-- end ep1tab-overview -->
       </div>
-      <div class="scene-modal-page" id="ep1-modal-renders">
+      <div class="scene-modal-page" id="ep1-modal-renders" style="display:none">
         <div class="modal-inner-content" id="ep1tab-renders">
 
       <div style="margin-bottom:20px">
@@ -5352,7 +5347,7 @@ L3格子间某工位桌底，昏暗狭小空间。
 
     </div><!-- end ep1tab-renders -->
       </div>
-      <div class="scene-modal-page" id="ep1-modal-gallery">
+      <div class="scene-modal-page" id="ep1-modal-gallery" style="display:none">
         <!-- 标签4：场景定稿图库 -->
     <div class="modal-inner-content" id="ep1tab-gallery">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)">
@@ -5768,7 +5763,7 @@ L3格子间某工位桌底，昏暗狭小空间。
       <button class="scene-modal-tab" onclick="switchSceneTab('ep2','gallery',this)">🖼️ 场景定稿图库</button>
     </div>
     <div class="scene-modal-body">
-      <div class="scene-modal-page active" id="ep2-modal-overview">
+      <div class="scene-modal-page" id="ep2-modal-overview" style="display:block">
         <div class="modal-inner-content" id="ep2tab-overview">
       <h3>EP2 · 场景状态总览</h3>
       <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
@@ -5850,7 +5845,7 @@ L3格子间某工位桌底，昏暗狭小空间。
       </div>
     </div><!-- end ep2tab-overview -->
       </div>
-      <div class="scene-modal-page" id="ep2-modal-renders">
+      <div class="scene-modal-page" id="ep2-modal-renders" style="display:none">
         <!-- 标签2：渲染需求清单 -->
     <div class="modal-inner-content" id="ep2tab-renders" >
       <div style="text-align:center;padding:60px 20px">
@@ -5860,7 +5855,7 @@ L3格子间某工位桌底，昏暗狭小空间。
       </div>
     </div><!-- end ep2tab-renders -->
       </div>
-      <div class="scene-modal-page" id="ep2-modal-gallery">
+      <div class="scene-modal-page" id="ep2-modal-gallery" style="display:none">
         <!-- 标签4：场景定稿图库 -->
     <div class="modal-inner-content" id="ep2tab-gallery" >
       <div style="text-align:center;padding:60px 20px">
