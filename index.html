@@ -3788,6 +3788,19 @@
     if (modalBody) modalBody.scrollTop = 0;
   }
 
+  function switchSceneTab(ep, tab, btn) {
+    var modal = document.getElementById('modal-' + ep);
+    modal.querySelectorAll('.scene-modal-tab').forEach(function(b) { b.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
+    // 操作scene-modal-page外层wrapper
+    modal.querySelectorAll('.scene-modal-page').forEach(function(p) { p.style.display = 'none'; });
+    var page = document.getElementById(ep + '-modal-' + tab);
+    if (page) page.style.display = 'block';
+    // 滚回顶部
+    var modalEl = modal.querySelector('.scene-modal');
+    if (modalEl) modalEl.scrollTop = 0;
+  }
+
 function switchEP2Tab(tab, btn) {
   var wrapper = btn.closest('.ep1-tab-wrapper');
   wrapper.querySelectorAll('.ep1-tab-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -3902,10 +3915,11 @@ function toggleEp(header) {
     }
   });
 
-  // 点击遮罩关闭
-  document.querySelectorAll('.scene-modal-overlay').forEach(function(overlay) {
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) {
+  // 点击遮罩背景关闭·点击.scene-modal内部不关闭
+  document.addEventListener('click', function(e) {
+    document.querySelectorAll('.scene-modal-overlay.open').forEach(function(overlay) {
+      var modal = overlay.querySelector('.scene-modal');
+      if (modal && !modal.contains(e.target) && !e.target.closest('.open-scene-pack-btn')) {
         overlay.classList.remove('open');
         document.body.style.overflow = '';
       }
