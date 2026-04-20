@@ -3372,6 +3372,67 @@
   <!-- EP1 SCENE PACKAGES -->
   <!-- EP1 SCENE PACKAGES -->
 
+  <!-- 01 提示词实例 -->
+  <section class="section" id="prompts">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">提示词实例</h2>
+    </div>
+
+    <div class="quote-block">
+      <p>所有创作者在制作《凡人修币录》S2的视觉内容时，必须遵守以下统一的美术风格规范。风格统一是整部剧集质量的基础。</p>
+    </div>
+
+    <h3>基础规格</h3>
+    <div class="info-grid">
+      <div class="info-box">
+        <div class="info-box-label">画面比例</div>
+        <p>所有图片·视频·9:16竖屏。不接受横屏。手机全屏优先。</p>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label">渲染风格</div>
+        <p>皮克斯3D动画电影风格·高品质3D CG·电影级光影渲染·半写实动漫质感</p>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label">禁止的风格</div>
+        <p>真实人物摄影·2D平面插画·像素风·低多边形·写实照片风格</p>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label">必须包含的关键词</div>
+        <p>皮克斯3D动画电影风格·高品质3D CG·电影级光影渲染·9:16竖构图·no text·no watermark·8K</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:32px">提示词关键词库</h3>
+    <div class="info-grid">
+      <div class="info-box">
+        <div class="info-box-label" style="color:var(--gold)">L2永信城</div>
+        <p>金色霓虹·现代金融大都市·K线山地标·繁华正常·暖金色调·算法网格隐约可见</p>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label" style="color:var(--teal-bright)">L3情绪工厂</div>
+        <p>冷蓝绿灰色调·无限延伸格子间·工人白色工服·空洞满足的笑容·头顶金色情绪粒子管道·幽绿色冷光</p>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label" style="color:#4DAFFF">L1算法神殿</div>
+        <p>冷蓝白色·神经网络结构·数据瀑布·无人类形象·悬浮城市上方</p>
+      </div>
+      <div class="info-box">
+        <div class="info-box-label" style="color:var(--red)">后排深渊</div>
+        <p>比格子间更暗更冷·几乎无光源·越往深处越黑·导管连接·意识残留</p>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;padding:16px 20px;background:rgba(212,160,23,0.05);border:1px solid rgba(212,160,23,0.2);border-radius:8px">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold-dim);margin-bottom:12px">// 完整场景渲染提示词 → 在各集场景包中查看</div>
+      <div style="font-size:13px;color:var(--text-dim);line-height:1.9">
+        EP1完整渲染提示词：点击「打开EP1场景包」→ 选择「📋 渲染需求清单」Tab<br>
+        EP2渲染提示词：制作中·EP1渲染完成后陆续补充
+      </div>
+    </div>
+
+  </section>
+
   <!-- 02 创作红线 -->
   <section class="section" id="rules">
     <div class="section-header">
@@ -3889,11 +3950,27 @@ function toggleEp(header) {
     if (firstTab) firstTab.classList.add('active');
     var firstPage = document.getElementById(ep + '-modal-overview');
     if (firstPage) firstPage.style.display = 'block';
+    // 延迟绑定关闭监听·避免打开瞬间被同一个click事件关闭
+    setTimeout(function() {
+      modal._closeHandler = function(e) {
+        var inner = modal.querySelector('.scene-modal');
+        if (inner && !inner.contains(e.target)) {
+          closeSceneModal(ep);
+        }
+      };
+      document.addEventListener('click', modal._closeHandler);
+    }, 0);
   }
 
   function closeSceneModal(ep) {
-    document.getElementById('modal-' + ep).classList.remove('open');
+    var modal = document.getElementById('modal-' + ep);
+    modal.classList.remove('open');
     document.body.style.overflow = '';
+    // 移除关闭监听器
+    if (modal._closeHandler) {
+      document.removeEventListener('click', modal._closeHandler);
+      modal._closeHandler = null;
+    }
   }
 
   function switchSceneTab(ep, tab, btn) {
@@ -3909,21 +3986,10 @@ function toggleEp(header) {
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       document.querySelectorAll('.scene-modal-overlay.open').forEach(function(m) {
-        m.classList.remove('open');
-        document.body.style.overflow = '';
+        var ep = m.id.replace('modal-', '');
+        closeSceneModal(ep);
       });
     }
-  });
-
-  // 点击遮罩背景关闭·点击.scene-modal内部不关闭
-  document.addEventListener('click', function(e) {
-    document.querySelectorAll('.scene-modal-overlay.open').forEach(function(overlay) {
-      var modal = overlay.querySelector('.scene-modal');
-      if (modal && !modal.contains(e.target) && !e.target.closest('.open-scene-pack-btn')) {
-        overlay.classList.remove('open');
-        document.body.style.overflow = '';
-      }
-    });
   });
 </script>
 
