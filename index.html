@@ -825,6 +825,27 @@
   }
 
   /* ── 场景包模态窗口 ── */
+
+  /* 模态窗口内强制显示内容·覆盖旧tab样式 */
+  .scene-modal .ep1-tab-page {
+    display: block !important;
+    opacity: 1 !important;
+  }
+  .modal-inner-content {
+    display: block !important;
+  }
+  .scene-modal-page {
+    display: none;
+  }
+  .scene-modal-page.active {
+    display: block !important;
+  }
+  /* 模态内的ep1-tab-wrapper和ep1-tab-nav隐藏 */
+  .scene-modal .ep1-tab-wrapper { display: block !important; }
+  .scene-modal .ep1-tab-nav { display: none !important; }
+  .scene-modal .ep1-tab-content { display: block !important; }
+  .scene-modal .ep1-tab-btn { display: none !important; }
+
   .scene-modal-overlay {
     display: none;
     position: fixed;
@@ -3823,11 +3844,17 @@ function toggleEp(header) {
   });
 
   function openSceneModal(ep) {
-    document.getElementById('modal-' + ep).classList.add('open');
+    var modal = document.getElementById('modal-' + ep);
+    modal.classList.add('open');
     document.body.style.overflow = 'hidden';
-    // 重置到第一个tab
-    switchSceneTab(ep, 'overview', 
-      document.querySelector('#modal-' + ep + ' .scene-modal-tab'));
+    // 重置所有tab和page
+    modal.querySelectorAll('.scene-modal-tab').forEach(function(t) { t.classList.remove('active'); });
+    modal.querySelectorAll('.scene-modal-page').forEach(function(p) { p.style.display = 'none'; });
+    // 激活第一个tab和page
+    var firstTab = modal.querySelector('.scene-modal-tab');
+    if (firstTab) firstTab.classList.add('active');
+    var firstPage = document.getElementById(ep + '-modal-overview');
+    if (firstPage) firstPage.style.display = 'block';
   }
 
   function closeSceneModal(ep) {
@@ -3836,18 +3863,18 @@ function toggleEp(header) {
   }
 
   function switchSceneTab(ep, tab, btn) {
-    const modal = document.getElementById('modal-' + ep);
-    modal.querySelectorAll('.scene-modal-tab').forEach(b => b.classList.remove('active'));
-    modal.querySelectorAll('.scene-modal-page').forEach(p => p.style.display = 'none');
+    var modal = document.getElementById('modal-' + ep);
+    modal.querySelectorAll('.scene-modal-tab').forEach(function(b) { b.classList.remove('active'); });
+    modal.querySelectorAll('.scene-modal-page').forEach(function(p) { p.style.display = 'none'; });
     if (btn) btn.classList.add('active');
-    const page = document.getElementById(ep + '-modal-' + tab);
+    var page = document.getElementById(ep + '-modal-' + tab);
     if (page) page.style.display = 'block';
   }
 
   // ESC键关闭模态
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-      document.querySelectorAll('.scene-modal-overlay.open').forEach(m => {
+      document.querySelectorAll('.scene-modal-overlay.open').forEach(function(m) {
         m.classList.remove('open');
         document.body.style.overflow = '';
       });
@@ -3855,7 +3882,7 @@ function toggleEp(header) {
   });
 
   // 点击遮罩关闭
-  document.querySelectorAll('.scene-modal-overlay').forEach(overlay => {
+  document.querySelectorAll('.scene-modal-overlay').forEach(function(overlay) {
     overlay.addEventListener('click', function(e) {
       if (e.target === overlay) {
         overlay.classList.remove('open');
@@ -3879,7 +3906,7 @@ function toggleEp(header) {
     </div>
     <div class="scene-modal-body">
       <div class="scene-modal-page active" id="ep1-modal-overview">
-        <div class="ep1-tab-page" id="ep1tab-overview">
+        <div class="modal-inner-content" id="ep1tab-overview">
     <h3>EP1 · 场景状态总览</h3>
     <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
       <table style="width:100%;border-collapse:collapse;font-size:12px">
@@ -4886,7 +4913,7 @@ L3格子间某工位桌底，昏暗狭小空间。
 </div><!-- end ep1tab-overview -->
       </div>
       <div class="scene-modal-page" id="ep1-modal-renders">
-        <div class="ep1-tab-page" id="ep1tab-renders">
+        <div class="modal-inner-content" id="ep1tab-renders">
 
       <div style="margin-bottom:20px">
         <div style="display:flex;flex-direction:column;gap:8px;font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text)">
@@ -5226,7 +5253,7 @@ L3格子间某工位桌底，昏暗狭小空间。
       </div>
       <div class="scene-modal-page" id="ep1-modal-gallery">
         <!-- 标签4：场景定稿图库 -->
-    <div class="ep1-tab-page" id="ep1tab-gallery">
+    <div class="modal-inner-content" id="ep1tab-gallery">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)">
         <div>
           <div style="font-size:15px;font-weight:500;color:var(--text-bright)">EP1 · 场景定稿图库</div>
@@ -5641,7 +5668,7 @@ L3格子间某工位桌底，昏暗狭小空间。
     </div>
     <div class="scene-modal-body">
       <div class="scene-modal-page active" id="ep2-modal-overview">
-        <div class="ep1-tab-page" id="ep2tab-overview">
+        <div class="modal-inner-content" id="ep2tab-overview">
       <h3>EP2 · 场景状态总览</h3>
       <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
         <table style="width:100%;border-collapse:collapse;font-size:12px">
@@ -5724,7 +5751,7 @@ L3格子间某工位桌底，昏暗狭小空间。
       </div>
       <div class="scene-modal-page" id="ep2-modal-renders">
         <!-- 标签2：渲染需求清单 -->
-    <div class="ep1-tab-page" id="ep2tab-renders" style="display:none">
+    <div class="modal-inner-content" id="ep2tab-renders" >
       <div style="text-align:center;padding:60px 20px">
         <div style="font-size:48px;margin-bottom:20px">📋</div>
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);margin-bottom:12px">EP2 渲染需求清单</div>
@@ -5734,7 +5761,7 @@ L3格子间某工位桌底，昏暗狭小空间。
       </div>
       <div class="scene-modal-page" id="ep2-modal-gallery">
         <!-- 标签4：场景定稿图库 -->
-    <div class="ep1-tab-page" id="ep2tab-gallery" style="display:none">
+    <div class="modal-inner-content" id="ep2tab-gallery" >
       <div style="text-align:center;padding:60px 20px">
         <div style="font-size:48px;margin-bottom:20px">🖼️</div>
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);margin-bottom:12px">EP2 场景定稿图库</div>
