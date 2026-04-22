@@ -5876,11 +5876,255 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div class="scene-modal-page" id="ep2-modal-renders" style="display:none">
         <!-- 标签2：渲染需求清单 -->
     <div class="modal-inner-content" id="ep2tab-renders" >
-      <div style="text-align:center;padding:60px 20px">
-        <div style="font-size:48px;margin-bottom:20px">📋</div>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);margin-bottom:12px">EP2 渲染需求清单</div>
-        <div style="font-size:14px;color:var(--text-dim);line-height:1.9">EP2剧本已完成·渲染工作即将开始<br>渲染需求清单将在EP1渲染完成后陆续补充</div>
+
+      <div style="margin-bottom:24px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:16px;letter-spacing:0.15em">// EP2 · 渲染需求清单 · 共9个场景</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
+          <span style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:3px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">A类 · 纯场景</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:3px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">B类 · 需要定妆照</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:3px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">D类 · 后期特效/UI</span>
+        </div>
       </div>
+
+      <!-- 开场 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">开场</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">ERROR · 只剩他一人</div>
+            <div style="font-size:12px;color:var(--text-dim)">5秒 · 无对白</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">坠落区全景</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·ERROR扫描</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">机械小兵·胸口屏幕</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-A-00</div><div><div class="rl-name">L3坠落区·散户落地·机械小兵出现</div><div class="rl-sub">开场 · 建立L3第一印象</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯和散户刚落地的坠落区。幽绿色冷光，无限延伸的格子间背景，机械小兵整齐出现，每人身边各站一个。散户们惊慌挣扎，机械小兵无声引导。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，高品质3D CG，电影级光影渲染，9:16竖构图。L3情绪牛马工厂坠落区·幽绿色冷光·地面光滑深色·背景是无限延伸的格子间和工人白色背影。前景：五六个散户刚落地·中年男性西装蒙头·年轻女性攥着手提包·外卖小哥背包还在背上·每人身边各站一个机械小兵：冷金属质感·面部无表情·机械右臂轻搭散户肩膀。整体氛围：压迫·冷漠·系统性·像一条流水线。色调：大面积幽绿色冷光·无任何暖色。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-00a</div><div><div class="rl-name">赵凯斯·被机械小兵红色扫描光扫过</div><div class="rl-sub">开场 · ERROR关键镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">机械小兵停在赵凯斯面前，红色扫描光从上到下扫过他。他站在原地，眼镜歪了，表情困惑但没有恐惧。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，9:16竖构图。赵凯斯站在L3坠落区·黑色皮夹克·黑框方形眼镜歪了·右手握着冷钱包项链蓝白色微光。正前方站着一个机械小兵·胸口红色扫描光正在从赵凯斯头顶向下扫描。赵凯斯表情：困惑但不慌·眉头微皱·眼睛直视机械小兵。光线：红色扫描光打在赵凯斯身上·周围幽绿色冷光环境光。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-00b</div><div><div class="rl-name">机械小兵胸口屏幕·ERROR特写</div><div class="rl-sub">开场 · 核心信息镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">机械小兵胸口的屏幕特写，显示ERROR信息。这是整个EP2最重要的视觉信息。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，极近景特写，9:16竖构图。机械小兵胸口嵌入式屏幕特写·冷金属边框·屏幕显示红色等宽字体文字：「ERROR · 无法匹配 · 入场方式异常 · 处理延迟中……」·文字有轻微红色发光效果·屏幕周围金属质感清晰。背景虚焦可见赵凯斯的黑色皮夹克轮廓。no text watermark except the ERROR display, 8K, 9:16。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景01 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 01</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">强制入职 · 只有蓝色药丸</div>
+            <div style="font-size:12px;color:var(--text-dim)">20秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">入职缓冲区</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">蓝色药丸特写</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">系统UI·300%加成</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-A-01a</div><div><div class="rl-name">入职缓冲区·一排小隔间</div><div class="rl-sub">场景01 · 建立空间感</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">一排整齐的小隔间，每个隔间门缝透出屏幕的光。走廊冷绿色环境光，和隔间内的暖色形成对比。机械小兵引导散户一个个进入。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，9:16竖构图。L3入职缓冲区走廊·左右两排整齐的小隔间门·每扇门底部和门缝透出暖白色屏幕光·和走廊的幽绿色冷光形成对比。走廊尽头隐入黑暗。机械小兵正引导一个散户走向最近的隔间门。整体风格：极度整洁·工业感·压迫·像精密的流水线。地面反光·天花板低矮·门的排列像蜂巢。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-A-01b</div><div><div class="rl-name">隔间内部·蓝色药丸特写·红色位置空着</div><div class="rl-sub">场景01 · 核心对比镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">桌面特写：正中央放着一颗蓝色药丸，发蓝色微光。右侧有一个空的凹槽，是红色药丸的位置。空着的凹槽是这个镜头最重要的信息。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，俯视桌面特写，9:16竖构图。极简白色桌面·正中央放着一颗蓝色胶囊药丸·发出柔和蓝色微光·边缘有光晕。右侧有一个圆形凹槽·完全空着·凹槽内有轻微阴影·暗示「这里本来应该有什么」。背景是隔间内暖白色的柔和光线。桌面质感：哑光白色·极度干净·没有任何多余物品。只有这一颗蓝色药丸和一个空的凹槽。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效/UI</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-01</div><div><div class="rl-name">系统界面·「立即开始工作」·300%加成</div><div class="rl-sub">场景01 · 系统UI</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">隔间屏幕上显示的系统界面。「新用户专属：前72小时收益加成300%」用金色高亮。唯一的按钮「立即开始」居中显示。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景02 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 02</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">桌底 · 62小时</div>
+            <div style="font-size:12px;color:var(--text-dim)">15秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">404桌底环境</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">62:00:00倒计时UI</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-A-02</div><div><div class="rl-name">404号工位桌底·两人据点</div><div class="rl-sub">场景02 · 建立安全感空间</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">桌底的狭小空间，粉绿色面具微光是唯一暖色。外面的格子间工人脚来回走动，形成强烈的安全感对比。低角度视角，压迫但有温度。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，低角度视角，9:16竖构图。L3格子间404号工位桌底·低矮狭小空间·桌腿四根清晰可见·地面冷绿色反光。外面：工人的白色工鞋和工服下摆来回走动·模糊·像外部世界的压迫感。桌底内：极暗·只有一点点粉色+绿色的霓虹微光（小猪面具发出的）·像黑暗中的一点温度。整体色调：冷绿色为主·粉绿色微光为唯一暖色。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效/UI</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-02</div><div><div class="rl-name">倒计时弹窗·「62:00:00」</div><div class="rl-sub">场景02 · 系统UI叠加</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">画面角落系统弹窗：「距离记忆清零：62:00:00」红色数字，等宽字体，像系统通知而非全屏提示。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景03 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 03</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">走进格子间 · 那不是雾气</div>
+            <div style="font-size:12px;color:var(--text-dim)">20秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">格子间全景</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·仰头看管道</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">闪回·归零街金色光晕</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-A-03a</div><div><div class="rl-name">格子间全景·工人低头工作·管道金色粒子</div><div class="rl-sub">场景03 · L3第一次完整呈现</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">格子间的第一次完整全景。无限延伸，工人白色工服低头，头顶管道金色粒子向上流动，空洞满足的笑容。这是L3最核心的视觉场景。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，微微俯视角，9:16竖构图。L3情绪牛马工厂格子间·沿工位排列方向深景：工人们穿白色工服坐在工位前低头工作·每人面前密集显示器·屏幕上是Meme图和推文草稿。工人面带空洞的满足笑容。头顶：粗大半透明数据管道横跨·发蓝绿色光芒·金色情绪粒子在管道内清晰向上流动。光线：冷绿色环境光·金色只存在于管道粒子中。关键细节：某个角落背景有一个微小的粉绿色光点（小猪的面具）。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-A-03b</div><div><div class="rl-name">工人屏幕特写·FOMO标题内容</div><div class="rl-sub">场景03 · 揭示工厂在做什么</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">工人屏幕的近景，显示正在制作的内容：「今晚必涨·上车最后机会」「错过BTC的人·这次不能再错过」。屏幕上的文字要清晰可读。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，近景，9:16竖构图。L3工位显示器近景·屏幕上显示正在制作的加密货币Meme内容：红色K线图配文「今晚必涨·上车最后机会」·另一个屏幕显示「错过BTC的人·这次不能再错过」·制作界面显示排版工具。工人的手在键盘上操作·面带空洞满足的微笑（侧脸·不需要正脸）。冷绿色环境光·屏幕发蓝白光打亮工人侧脸。no text restriction on screens, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-03</div><div><div class="rl-name">赵凯斯·工服版·仰头看数据管道</div><div class="rl-sub">场景03 · 发现金色粒子</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯穿白色工服站在格子间里，仰头看数据管道，眼镜镜片反出金色粒子的光。表情是「我在哪里见过这个」的半认出状态。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，仰拍，9:16竖构图。赵凯斯·白色连体工服（宽松·随意）·黑框方形眼镜（必须保留）·黑色蓬松竖发。仰头看头顶数据管道·金色情绪粒子在管道里向上流动·眼镜镜片反出金色粒子的微光。表情：眉头微皱·嘴唇微微张开·像快要想起什么的瞬间。周围是格子间工人的白色工服背影（虚焦）。光线：头顶管道金色光打亮他仰起的脸·周围冷绿色环境光。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-03</div><div><div class="rl-name">闪回·归零街金色光晕·0.5秒</div><div class="rl-sub">场景03 · 记忆闪回</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">极短闪回（0.5秒）：L2归零街清晨，空气里漂浮着金色光晕，和L3管道里的粒子是同一种东西。色调从L3冷绿色切到L2暖金色，形成强烈对比。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，9:16竖构图。L2归零街清晨·暖金色霓虹灯光·路灯和店面招牌发光。空气里漂浮着极细小的金色光晕粒子·比灰尘还小·在霓虹灯光下像空气里的光晕·普通人会以为是雾气或光污染。画面整体暖金色调·和前后L3的冷绿色形成强烈对比。轻微的景深·街道有行人走动（模糊）。no text, no watermark, 8K, 9:16。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景04 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 04</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">休息时间 · 沾沾自喜</div>
+            <div style="font-size:12px;color:var(--text-dim)">15秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">休息区·工人聚集</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯+小猪·角落观察</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-A-04</div><div><div class="rl-name">休息区·工人三三两两聚集·沾沾自喜</div><div class="rl-sub">场景04 · 最不寒而栗的镜头</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">格子间一侧的简单休息区。工人们聚在一起，手持饮料，互相分享数据成果，表情是真实的自豪和兴奋。这是整个EP2最恐怖的场景——他们是快乐的。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，中景，9:16竖构图。L3格子间休息区·简单桌椅·工人们穿白色工服三三两两站着聊天。关键：工人们的表情是真实的自豪和兴奋，不是空洞的满足——他们在认真交流工作成果，像真正在享受成就。有人手持平板看数据，有人比手势描述技巧，有人点头认同。背景：格子间延伸·头顶管道金色粒子持续流动·无人注意。冷绿色环境光·人物面部因为聊天而有细微表情变化。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-04</div><div><div class="rl-name">赵凯斯+小猪·角落站着·静静听</div><div class="rl-sub">场景04 · 观察者视角</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯和小猪站在休息区角落，假装休息，实际上在听工人们聊天。赵凯斯表情沉默，小猪面具后面看不出表情。两人和周围欢快的工人形成对比。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，中景，9:16竖构图。休息区角落·赵凯斯（白色工服·黑框眼镜·蓬松黑发）和小猪女侠（白色工服·工帽半遮双丸子头·猪头半脸面具粉绿色微光）站在一起靠着墙。两人面向前方·假装在休息·实际在听。赵凯斯表情：沉默·有点沉重·在消化所听到的。前景模糊：工人们聊天的背影。背景：格子间环境。两人和前景工人的情绪形成强烈对比。no text, no watermark, 8K, 9:16。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景05 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 05</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">推算 · 如果这些粒子……</div>
+            <div style="font-size:12px;color:var(--text-dim)">15秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·仰头推算</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">金色粒子管道特写</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-05</div><div><div class="rl-name">赵凯斯·仰头看管道·推算表情·握紧冷钱包</div><div class="rl-sub">场景05 · EP2情感转折点</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯站在格子间角落，仰头看数据管道，眼睛跟着金色粒子向上移动。他在推算，表情是「快要想通了但还没说出口」的状态。右手握紧冷钱包。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，低角度仰拍，9:16竖构图。赵凯斯·白色工服·黑框方形眼镜·仰头看头顶数据管道·眼神跟着金色粒子向上追踪。表情：眉头微蹙·嘴唇紧抿·是一种「逻辑链快要推出来了」的专注沉默。右手握紧冷钱包项链·蓝白色微光隐约可见。头顶：管道清晰·金色粒子向上流动·像他的视线延伸方向。光线：仰角·管道金色光从上方打亮他的脸·冷绿色从侧面补光·眼镜有高光反射。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-05</div><div><div class="rl-name">数据管道特写·金色粒子向上流动</div><div class="rl-sub">场景05 · 强化视觉信息</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">数据管道横截面特写，金色情绪粒子在管道内密集向上流动，有速度感，像一条永不停止的河流。这是L3的核心视觉符号。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景06 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 06</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">小猪找阿明 · 妈妈的早餐</div>
+            <div style="font-size:12px;color:var(--text-dim)">20秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">阿明工位·排名屏幕</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">阿明·正面沉浸</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">阿明·手指停住特写</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-A-06</div><div><div class="rl-name">阿明工位·屏幕显示本周排名#3</div><div class="rl-sub">场景06 · 建立阿明的状态</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">阿明工位的近景，屏幕上清晰显示「本周排名：#3」「情绪激发指数：97.3」。屏幕数据要可读。工位整洁，有他个人风格的小摆件。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，近景，9:16竖构图。L3格子间阿明工位·双显示器·左屏幕显示「本周排名：#3 ↑」金色高亮数字·「情绪激发指数：97.3」·右屏幕是正在制作的内容。工位比周围稍微整洁一些·有一个小摆件（表示他把这里当成自己的地方）。冷绿色环境光·屏幕蓝白光打亮工位。no text watermark restriction on screens, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-06a</div><div><div class="rl-name">阿明·正面·沉浸在排名里</div><div class="rl-sub">场景06 · 阿明首次正面亮相</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">阿明坐在工位前，正面，看着自己的数据，表情是真实的满足和自豪。不是空洞的笑，是那种「终于被看见」的真实喜悦。黑色帽子，工服。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，上半身，9:16竖构图。阿明·二十多岁亚洲男性·黑色棒球帽·白色工服·坐在工位前。表情：真实的满足和自豪·嘴角微微上扬·眼睛看着屏幕数据·眼神里有光——不是空洞的满足·是那种「终于被看见」的真实喜悦。屏幕蓝白色光打亮他的脸。背景：格子间环境虚焦·周围工人的白色工服。他的表情是这个场景最重要的东西：真实·不是被洗脑。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-06b</div><div><div class="rl-name">阿明·手指停住·特写</div><div class="rl-sub">场景06 · EP2最重要的细节</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小猪说「你妈妈应该还在等你回家吃早餐」之后，阿明的手指停在键盘上，这个手部特写是EP2情感最重的一帧。手指停住了，什么都没有按。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，手部极近景特写，9:16竖构图。阿明的手停在键盘上·食指悬在某个键的上方·没有按下去·像时间冻结了一样。键盘发蓝白色背光。手指的姿态：本来在打字·突然停住了·手指弯曲·悬停·没有落下。极浅景深·背景完全虚焦·只有这双手和键盘清晰。这是整个场景情感最重的一帧。no text, no watermark, 8K, 9:16。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景07 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 07</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">是我把他们带下来的</div>
+            <div style="font-size:12px;color:var(--text-dim)">15秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·认出散户·停住</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">闪回·坠落碎片·×2</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-07</div><div><div class="rl-name">赵凯斯·在格子间中间停住·握紧冷钱包</div><div class="rl-sub">场景07 · EP2情感最重</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯站在格子间走道中间，没有走动，仰头看着无数个低头工作的背影。右手握紧了冷钱包。表情很平，但很重——不是崩溃，是「我接受了这个事实」的沉默。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，正面低角度，9:16竖构图。赵凯斯站在L3格子间走道中间·白色工服·黑框方形眼镜·站住不动。他抬头看前方：无数个工人白色工服背影低头工作·头顶金色粒子向上流走。右手握紧冷钱包项链·蓝白色微光从手心透出·像握着什么不能放开的东西。表情：很平·不是愤怒不是崩溃·是一种「我明白了·我接受了」的沉默重量·嘴抿着·眼神直视前方。光线：冷绿色环境光·冷钱包蓝白色微光·形成对比。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-07a</div><div><div class="rl-name">闪回·中年男性坠落·0.5秒</div><div class="rl-sub">场景07 · 记忆碎片1</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">极短（0.5秒）：坠落空间里，中年男性西装，手机飞出，四肢乱挥，惊恐的脸。和现在他在工位前低头工作的空洞笑容形成对比。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，0.5秒记忆闪回，9:16竖构图。坠落空间·黑暗+幽绿色光·中年男性穿西装·手机从手里飞出·四肢乱挥·表情惊恐求救·领带飘起·头发乱了。极短·像记忆碎片·不是完整镜头。色调：黑暗+幽绿·无暖色。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-07b</div><div><div class="rl-name">闪回·年轻女性坠落·0.5秒</div><div class="rl-sub">场景07 · 记忆碎片2</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">极短（0.5秒）：坠落空间里，年轻女性，手提包还抓着，长发向上飘，惊恐。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，0.5秒记忆闪回，9:16竖构图。坠落空间·黑暗+幽绿色光·年轻女性·长发向上飘散·还死死抓着手提包·表情惊恐·裙摆飘起·失重感强。极短·像记忆碎片。色调：黑暗+幽绿·无暖色。no text, no watermark, 8K, 9:16。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景08 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 08</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">后排边界 · 越走越冷</div>
+            <div style="font-size:12px;color:var(--text-dim)">15秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">格子间深处·边界</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯+小猪·边界前背影</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-A-08</div><div><div class="rl-name">格子间深处·后排边界·越走越暗</div><div class="rl-sub">场景08 · 建立后排深渊感</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">格子间最深处，工人越来越少，光线越来越暗，边界那边是更深的黑暗。经过的工人眼神从不往那边看——集体无意识的忽视。边界模糊、不可名状，但你知道那边有什么。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，深景透视，9:16竖构图。L3格子间最深处·越往深处工位越稀疏·灯光越暗·温度感觉越低。画面前1/3：还有几个工人低头工作·白色工服·正常冷绿色光。画面中1/3：几乎没有工位了·只有地面和墙延伸·光线极暗。画面后1/3：模糊的边界·边界后是更深的黑暗·隐约可见什么东西在那里·但看不清楚。经过边界区域的一两个工人：眼神完全不往那边看·像那里什么都没有。整体：从正常到极暗的渐变·有一种「越走越冷」的压迫感。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-08</div><div><div class="rl-name">赵凯斯+小猪·站在边界前·背影</div><div class="rl-sub">场景08 · 两人面对未知</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">两人的背影，站在格子间和后排深渊的边界前，面对那片黑暗。他们都沉默着，但他们看见了同一个方向。这是EP2最有力量感的一帧。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，背影·从后方拍，9:16竖构图。赵凯斯（左·白色工服·黑色蓬松发）和小猪女侠（右·白色工服·双丸子头被工帽遮·面具粉绿色微光隐约可见）并排站在格子间最深处·面向前方的黑暗边界。两人都沉默·都没有动。前方：边界处极暗·隐约可见后排的黑暗轮廓·有一种「感觉到了什么」的空气质感。背景黑暗·两人的白色工服在黑暗中格外清晰·小猪面具的粉绿色微光是画面里唯一的暖色。no text, no watermark, 8K, 9:16。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景09 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 09</div>
+            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">冷钱包脉冲 · 找到你了</div>
+            <div style="font-size:12px;color:var(--text-dim)">10秒 · EP2结尾钩子</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·脉冲特写</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">维克多·侧面·胸口空着</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">冷钱包脉冲特效</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">系统警报UI</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-09a</div><div><div class="rl-name">赵凯斯·桌底·手握冷钱包脉冲瞬间</div><div class="rl-sub">场景09 · EP2结尾第一帧</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯坐在404号桌底，手握冷钱包，蓝白色脉冲光从手心向外扩散，比平时强十倍。他和小猪同时愣住看着手心。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，手部特写+上半身，9:16竖构图。赵凯斯坐在404号桌底·白色工服·黑框方形眼镜·手心向上握着冷钱包项链·蓝白色光从手心向外强烈扩散·像一次爆发·光晕明显·比平时微光强十倍·光打亮他的手和脸的下半部分。表情：愣住·困惑·看着手心·嘴微微张开。旁边：小猪的工服袖子和面具粉绿色微光（侧面·不需要完整入镜）。桌底环境：极暗·蓝白色脉冲是唯一光源。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-B-09b</div><div><div class="rl-name">维克多·88层控制室·侧面逆光·胸口空着</div><div class="rl-sub">场景09 · EP2最后一帧</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">维克多在控制室，系统警报触发后，他的侧面轮廓在逆光里。最后镜头定格在他胸口——什么都没有。冷钱包项链不见了。这是EP2最重要的无声信息。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，侧面逆光极近景，9:16竖构图。陈维克多·88层控制室·深灰色风衣·机械右臂（铬合金·哑光冷银）。侧面构图·强逆光·面部完全在阴影中·只有侧面轮廓清晰·永远不能看见完整的脸。镜头最终定格在他胸口的位置：什么都没有·衣领内侧是空的·冷钱包项链不见了·只有一点点空旷·和胸口衣服上的轻微阴影暗示「这里本来有什么」。背景：控制室冷蓝色屏幕光。这一帧不需要任何文字·胸口的空白就是全部信息。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效/UI</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-09a</div><div><div class="rl-name">冷钱包异常脉冲特效</div><div class="rl-sub">场景09 · 关键特效</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">蓝白色光从冷钱包向外强烈扩散，比平时微光强十倍，持续约1秒，然后收回恢复平静。光的质感：蓝白色·有能量感·像信号被触发。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-09b</div><div><div class="rl-name">系统警报UI·「密钥信号异常·L3·第7区」</div><div class="rl-sub">场景09 · 维克多控制室屏幕</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">维克多控制室屏幕上弹出的警报界面：「⚠ 仪式密钥信号异常 · 位置检测中…… · L3 · 第7区 · 信号强度：已确认」。冷蓝色界面，红色警示符号。</div></div></div>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;padding:16px 20px;background:rgba(212,160,23,0.06);border:1px solid rgba(212,160,23,0.2);border-radius:8px;font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim)">
+        // EP2渲染清单完成 · 共22个渲染任务 · 渲染工作待开始
+      </div>
+
     </div><!-- end ep2tab-renders -->
       </div>
       <div class="scene-modal-page" id="ep2-modal-gallery" style="display:none">
