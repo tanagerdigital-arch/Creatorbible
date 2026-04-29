@@ -997,15 +997,15 @@
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
           <div style="width:9px;height:9px;border-radius:50%;background:#E8B84B;box-shadow:0 0 10px #E8B84B,0 0 20px rgba(232,184,75,0.4);animation:pulse 2s infinite;flex-shrink:0"></div>
           <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.2em">最后更新</span>
-          <span style="margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 8px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v2.8</span>
+          <span style="margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 8px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v2.9</span>
         </div>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:26px;font-weight:700;color:#fff;letter-spacing:0.08em;line-height:1.1;text-shadow:0 0 20px rgba(232,184,75,0.3)">2026<span style="color:var(--gold)">·</span>04<span style="color:var(--gold)">·</span>20</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:26px;font-weight:700;color:#fff;letter-spacing:0.08em;line-height:1.1;text-shadow:0 0 20px rgba(232,184,75,0.3)">2026<span style="color:var(--gold)">·</span>04<span style="color:var(--gold)">·</span>29</div>
         <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(232,184,75,0.15)">
           <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);line-height:1.9">
-            <span style="color:var(--gold)">+</span> EP2完整剧本·小匠的狂想<br>
-            <span style="color:var(--gold)">+</span> L3空间结构·后排深渊<br>
-            <span style="color:var(--gold)">+</span> 情绪粒子L2→L3→L1闭环<br>
-            <span style="color:var(--gold)">+</span> 第二次入职机制
+            <span style="color:var(--gold)">+</span> EP2标题→没有工位的人·结尾修正<br>
+            <span style="color:var(--gold)">+</span> EP3完整剧本·情绪矿工<br>
+            <span style="color:var(--gold)">+</span> EP4标题→粉色暗池<br>
+            <span style="color:var(--gold)">+</span> 六集情感核心全面更新
           </div>
         </div>
       </div>
@@ -1116,10 +1116,11 @@
     <div class="nav-section-label">六集大纲 / 剧本</div>
     <a href="#ep1" class="nav-link">EP1 天降神针</a>
     <a onclick="openSceneModal('ep1')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP1 场景包 ↗</a>
-    <a href="#ep2" class="nav-link">EP2 小匠的狂想</a>
+    <a href="#ep2" class="nav-link">EP2 没有工位的人</a>
     <a onclick="openSceneModal('ep2')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP2 场景包 ↗</a>
-    <a href="#ep3" class="nav-link">EP3 粉色暗池</a>
-    <a href="#ep4" class="nav-link">EP4 跨阶层Ping</a>
+    <a href="#ep3" class="nav-link">EP3 情绪矿工</a>
+    <a onclick="openSceneModal('ep3')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP3 场景包 ↗</a>
+    <a href="#ep4" class="nav-link">EP4 粉色暗池</a>
     <a href="#ep5" class="nav-link">EP5 零日漏洞</a>
     <a href="#ep6" class="nav-link">EP6 情绪之证</a>
   </div>
@@ -1646,6 +1647,11 @@
 
       <!-- L3空间结构 -->
       <h4 style="color:var(--gold);margin:24px 0 12px">L3空间结构 · 三层区域</h4>
+      <div style="padding:14px 18px;background:rgba(42,173,204,0.06);border:1px solid rgba(42,173,204,0.2);border-radius:8px;margin-bottom:20px;font-size:13px;color:var(--text);line-height:1.9">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--teal-bright);margin-bottom:8px">// 工位屏幕·常驻倒计时</div>
+        每个工位屏幕右下角常驻显示「距离全体记忆重置：XX:XX:XX」倒计时·字体极小·颜色偏暗灰。工人们完全无视这个数字·就像办公室里没有人盯着屏幕时间数着下班——<strong style="color:var(--gold)">因为他们不想离开·他们喜欢在这里</strong>。<br><br>
+        对赵凯斯来说·这个数字是他存在的期限：时间到了·他也不会记得为什么要找出口了。同一个数字·两种完全不同的重量。
+      </div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:16px 0">
         <div class="info-box" style="border-color:rgba(42,173,204,0.4)">
           <div class="info-box-label" style="color:var(--teal-bright)">前排 · 格子间</div>
@@ -3021,14 +3027,20 @@
       <div class="ep-card" id="ep2">
         <div class="ep-header" onclick="toggleEp(this)">
           <span class="ep-num">EP2</span>
-          <span class="ep-title">小匠的狂想</span>
+          <span class="ep-title">没有工位的人</span>
           <span class="ep-time">10-20小时 · 倒计时62:00:00→52:00:00</span>
           <span class="ep-toggle">▼</span>
         </div>
         <div class="ep-body">
-          <div class="ep-core">情感核心：「你以为自己是赢家，其实你是最高级的燃料」</div>
+          <div class="ep-core">情感核心：「你砸了那个按钮·你欠他们一个出口」</div>
 
           <h4>完整剧本</h4>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">开场字幕卡</span></div>
+            <div class="script-scene-name">第10小时</div>
+            <div class="script-dir">黑底字幕卡·白色衬线字体·「第10小时」居中·淡入淡出·停留1.5秒</div>
+          </div>
 
           <div class="script-scene-block">
             <div><span class="script-scene-label">开场 · 5秒</span></div>
@@ -3080,7 +3092,8 @@
               <div class="script-char-name script-char-xiaozhu">小猪</div>
               <p class="script-speech">「不知道。早晚系统会来处理你。」</p>
             </div>
-            <div class="script-dir">小猪抬手·赵凯斯视野角落弹出倒计时：「62:00:00」</div>
+            <div class="script-dir">小猪抬手·赵凯斯视野角落弹出系统通知：「距离全体记忆重置：62:00:00」</div>
+            <p class="script-action-text">同时·镜头扫过旁边格子间工位的屏幕右下角——同样的数字「62:00:00」静静显示着·工人完全没有看它·还在低头工作。同一个数字·两种完全不同的重量。</p>
             <div class="script-dlg">
               <div class="script-char-name script-char-xiaozhu">小猪</div>
               <p class="script-speech">「还有另一个问题。每七天，系统清零所有人的记忆。不是全部，是你为什么进来，和你为什么要出去。七天后，你还会在这里工作，但你不会记得为什么要离开。」</p>
@@ -3278,12 +3291,15 @@
               <div class="script-char-name script-char-xiaozhu">小猪（盯着冷钱包，声音很低）</div>
               <p class="script-speech">「我不知道。但不正常。」</p>
             </div>
-            <div class="script-dir">【画面切换·88层控制室·维克多站在控制台前·屏幕弹出警报：「⚠ 仪式密钥信号异常 · 位置检测中…… · L3 · 第7区 · 信号强度：已确认」】</div>
-            <p class="script-action-text">他的机械右臂缓慢抬起，食指在屏幕上轻轻点下：「启动追踪协议」。他的侧面轮廓在逆光里。胸口——什么都没有。</p>
+            <p class="script-action-text">画面切换——88层控制室。维克多站在控制台前，伸手摸向胸口——什么都没有。他低头确认，然后转向控制台，调出赵凯斯坠落的时间戳。</p>
+            <div class="script-dir">屏幕显示：「坠落事件记录 · 同步检测到密钥物理震荡 · 范围：第7-10区 · 精确位置：无法确认」</div>
+            <p class="script-action-text">他看着这个数据，沉默了一秒。他的机械右臂缓慢抬起，食指在屏幕上点下：「启动第7至10区人员核查协议」。他转过身，背对控制台，看向透明地板下的L3。</p>
             <div class="script-dlg">
               <div class="script-char-name script-char-victor">维克多（极轻）</div>
-              <p class="script-speech">「找到你了。」</p>
+              <p class="script-speech">「你把它带下去了。」</p>
             </div>
+            <p class="script-action-text">他的侧面轮廓在逆光里。胸口——什么都没有。</p>
+            <div class="script-dir" style="text-align:center;margin-top:16px">黑底字幕卡·「第20小时 · 距离记忆清零：52:00:00」</div>
             <div class="script-countdown-display">EP2 · 完</div>
           </div>
 
@@ -3299,27 +3315,212 @@
       <div class="ep-card" id="ep3">
         <div class="ep-header" onclick="toggleEp(this)">
           <span class="ep-num">EP3</span>
-          <span class="ep-title">粉色暗池的走私客</span>
+          <span class="ep-title">情绪矿工</span>
           <span class="ep-time">20-30小时</span>
           <span class="ep-toggle">▼</span>
         </div>
         <div class="ep-body">
-          <div class="ep-core">情感核心：「你以为在帮忙，其实是共谋」</div>
-          <ul class="ep-events">
-            <li>赵凯斯分析冷钱包，发现密钥与情绪之门的关系</li>
-            <li>小猪追踪异常监听节点，找到质检室，找到林牧</li>
-            <li>林牧：「我等你很久了。」他早就感知到她的存在</li>
-            <li>特洛伊木马战术确立：CA指挥棒+Meme病毒+冷钱包密钥三合一计划</li>
-            <li>小何从L2发出第一个信号，触发隐私保护协议</li>
-            <li>陈维克多察觉：「为什么系统在自动传播一个我没有授权的Meme？」</li>
-          </ul>
+          <div class="ep-core">情感核心：「被收割过的人·是最精准的收割工具」</div>
+
+          <h4>完整剧本</h4>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">场景01 · 10秒</span></div>
+            <div class="script-scene-name">阿明来找他们 · 有条件答应</div>
+            <div class="script-loc">404号工位桌底·清晨·倒计时52:00:00</div>
+            <p class="script-action-text">赵凯斯和小猪在据点里。阿明蹲下来，把头伸进桌底。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-npc">阿明</div>
+              <p class="script-speech">「我想好了。」</p>
+              <div class="script-char-name script-char-xiaozhu">小猪（看着他·没有说话）</div>
+              <div class="script-char-name script-char-npc">阿明</div>
+              <p class="script-speech">「但有条件。我的排名不能掉。我还是要发内容，数据不能下滑。」</p>
+              <div class="script-char-name script-char-xiaozhu">小猪</div>
+              <p class="script-speech">「可以。」</p>
+              <div class="script-char-name script-char-npc">阿明（看向赵凯斯）</div>
+              <p class="script-speech">「你就是那个系统找不到的人？」</p>
+              <div class="script-char-name script-char-zhao">赵凯斯</div>
+              <p class="script-speech">「暂时是。」</p>
+            </div>
+            <p class="script-action-text">阿明点头，缩回去了。</p>
+          </div>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">场景02 · 25秒</span></div>
+            <div class="script-scene-name">小猪解释两个秘密武器</div>
+            <div class="script-loc">格子间·休息时间·三人站在角落</div>
+            <p class="script-action-text">小猪从工服内侧取出CA指挥棒，递给阿明看。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-xiaozhu">小猪</div>
+              <p class="script-speech">「这个，我指向哪个CA地址，那个代币就会波动。我帮你维持你负责的那个币，系统会认为你的内容还在产出影响力。」</p>
+              <div class="script-char-name script-char-npc">阿明（盯着指挥棒）</div>
+              <p class="script-speech">「你一直用这个应付考核？」</p>
+              <div class="script-char-name script-char-xiaozhu">小猪</div>
+              <p class="script-speech">「我还有另一个东西。」</p>
+            </div>
+            <p class="script-action-text">她指了指自己的面具。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-xiaozhu">小猪</div>
+              <p class="script-speech">「这个屏蔽AI面部扫描，让系统以为我在认真工作。但用一次少一次，用多了，我自己身体也会真的学会不表达情绪。」</p>
+            </div>
+            <p class="script-action-text">她把一个极小的数据片递给阿明。赵凯斯站在旁边听着，但他的眼睛，一直在看身边的四个工作台。他的视线扫过旁边一个工位屏幕的右下角——「52:00:00」·字体极小·颜色偏暗·工人完全没有看它。</p>
+          </div>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">场景03 · 60秒</span></div>
+            <div class="script-scene-name">工厂四工作台 · 赵凯斯旁观</div>
+            <div class="script-loc">格子间·工人区·小猪和阿明还在低声说话</div>
+
+            <div class="script-dir">【工作台A · 情绪预热组】</div>
+            <p class="script-action-text">赵凯斯走近一个工位，工人盯着屏幕，在反复修改一句话。屏幕上：「我朋友上周买了某个币·昨天提现买了辆车·我：还在看K线」</p>
+            <p class="script-action-text">工人把「朋友」改成「同学」→ 系统指标：87→89。把「某个币」改成具体代币名+涨幅数字 → 系统指标：92→96.3。工人对着屏幕微微点头·找到了。赵凯斯看着那个数字跳动，没有说话。</p>
+
+            <div class="script-dir">【工作台B · 流动性配合组】</div>
+            <p class="script-action-text">另一个工人，左屏是代币价格走势，右屏是散户情绪监测数据。他盯着右屏等待某个数字，数字到达阈值的瞬间，他按下左屏的一个键。价格开始上涨。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-npc">工人（对旁边的人·低声）</div>
+              <p class="script-speech">「这批人今晚会自己去发内容的。」</p>
+            </div>
+            <p class="script-action-text">赵凯斯站在旁边，听见这句话，没有动。</p>
+
+            <div class="script-dir">【工作台C · 收割时机组】</div>
+            <p class="script-action-text">第三个工人，盯着一条接近顶点的曲线。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-npc">旁边的工人</div>
+              <p class="script-speech">「现在不触发吗？」</p>
+              <div class="script-char-name script-char-npc">工人</div>
+              <p class="script-speech">「还差一点，最后一批人还没进来。等他们刚买完，那个时候才是最准的。」</p>
+            </div>
+            <p class="script-action-text">他的眼神里有一种「我太了解他们了」的熟悉感。赵凯斯看着这个人的侧脸，站住了。</p>
+
+            <div class="script-dir">【工作台D · 符号选择组】</div>
+            <p class="script-action-text">最后一个工位，工人面前一张白纸，写着很多词：「始皇·归零·神针·满仓·all in·最后机会」。他一个一个划掉。划掉「最后机会」：「太透明了」。划掉「满仓」：「太直接」。最后圈出：「归零」。他抬头看了一眼头顶管道里的金色粒子，又低下头，开始写内容。系统显示：「情绪穿透力：98.6」</p>
+            <p class="script-action-text">赵凯斯看完这一切，没有说话。只是抬头，看着头顶金色粒子无声地向上流走。右手，不自觉地握紧了冷钱包。</p>
+          </div>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">场景04 · 20秒</span></div>
+            <div class="script-scene-name">B线 · 维克多 · 发现冷钱包不见了</div>
+            <div class="script-loc">88层控制室</div>
+            <p class="script-action-text">维克多站在控制台前。他伸手摸向胸口——什么都没有。他低头确认，然后走向控制台，调出赵凯斯坠落的时间戳。</p>
+            <div class="script-dir">屏幕显示：「坠落事件记录 · 同步检测到密钥物理震荡 · 范围：第7-10区 · 精确位置：无法确认」</div>
+            <p class="script-action-text">同时另一个屏幕弹出：「第7区 · KOL账号异常行为 · 数据曲线偏离正常轨迹 · 幅度：超出基准线340%」。维克多看了看两个屏幕。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-victor">维克多（极轻）</div>
+              <p class="script-speech">「第7区。」</p>
+            </div>
+            <p class="script-action-text">他的机械右臂缓慢抬起，食指在屏幕上点下：「启动第7至10区人员核查协议·从第7区开始」。他转过身，背对控制台。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-victor">维克多</div>
+              <p class="script-speech">「你把它带下去了。」</p>
+              <p class="script-paren-text">（停顿）</p>
+              <p class="script-speech">「有意思。」</p>
+            </div>
+          </div>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">场景05 · 10秒</span></div>
+            <div class="script-scene-name">机械小兵开始搜查</div>
+            <div class="script-loc">L3第7区入口</div>
+            <p class="script-action-text">四个机械小兵整齐走进第7区，红色扫描光亮起。胸口屏幕显示：「人员核查协议·启动 · 目标：无档案人员 · 区域：第7区 · 工位总数：1024 · 预计完成：推进中」。它们开始逐排扫描，从第7区入口，一排一排地走过去。</p>
+          </div>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">场景06 · 15秒</span></div>
+            <div class="script-scene-name">三人分工确认</div>
+            <div class="script-loc">格子间角落</div>
+            <p class="script-action-text">小猪把数据片递给阿明。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-xiaozhu">小猪（极低）</div>
+              <p class="script-speech">「如果看见机械小兵往这边过来，发信号给我。」</p>
+              <div class="script-char-name script-char-npc">阿明（接过数据片·掂了掂）</div>
+              <p class="script-speech">「就这？」</p>
+              <div class="script-char-name script-char-xiaozhu">小猪</div>
+              <p class="script-speech">「就这。」</p>
+            </div>
+            <p class="script-action-text">阿明把数据片放进口袋，转身走回工位，没有多说一句话。</p>
+          </div>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">场景07 · 20秒</span></div>
+            <div class="script-scene-name">进入后排边界 · 越走越冷</div>
+            <div class="script-loc">格子间深处·接近边界</div>
+            <p class="script-action-text">赵凯斯走在前面，闭着眼睛感知，小猪跟在后面。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-xiaozhu">小猪（极轻）</div>
+              <p class="script-speech">「你感觉到了就走，我跟着你。」</p>
+            </div>
+            <p class="script-action-text">赵凯斯没有回答，只是继续往前走。工人越来越少，灯光越来越暗，温度越来越低。他们越过边界，走进后排。四周极暗，极冷。地上，隐约可以看见有什么东西蜷缩着，不动，眼睛是睁着的。赵凯斯没有看那些，他只是跟着感知往前走。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-zhao">赵凯斯（更轻）</div>
+              <p class="script-speech">「还在那个方向。比昨天近了。」</p>
+            </div>
+          </div>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">场景08 · 15秒</span></div>
+            <div class="script-scene-name">林牧的敲击声 · 质数序列</div>
+            <div class="script-loc">后排深处·极暗</div>
+            <p class="script-action-text">两人停下来。寂静。然后——「……咚。」极轻的，单次的。「……咚。咚。」有规律的。赵凯斯仰头听，他的逆向感知展开——「咚·咚咚·咚···咚咚咚咚咚·」</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-zhao">赵凯斯（停住）</div>
+              <p class="script-speech">「这是质数。2·3·5·7·11·是有人在敲。」</p>
+              <div class="script-char-name script-char-xiaozhu">小猪</div>
+              <p class="script-speech">「我听见这个声音已经三个星期了。」</p>
+              <div class="script-char-name script-char-zhao">赵凯斯</div>
+              <p class="script-speech">「他在告诉我们往哪里走。」</p>
+            </div>
+            <p class="script-action-text">他闭上眼睛，感知那个声音的来源。「很深。但我知道方向了。」</p>
+          </div>
+
+          <div class="script-scene-block">
+            <div><span class="script-scene-label">场景09 · 20秒</span></div>
+            <div class="script-scene-name">结尾平行剪辑 · EP3钩子</div>
+            <div class="script-loc">多场景平行</div>
+
+            <div class="script-dir">【A线·后排深处】</div>
+            <p class="script-action-text">小猪的数据片震动——一下·停顿·一下一下。阿明的警告。</p>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-zhao">赵凯斯（对着黑暗·极轻）</div>
+              <p class="script-speech">「我们会回来的。」</p>
+            </div>
+            <p class="script-action-text">两人转身，快速往回走。敲击声渐渐变远。</p>
+
+            <div class="script-dir">【B线·第7区格子间】</div>
+            <p class="script-action-text">阿明坐在工位前，手指没有停，继续工作，眼角死死盯着越来越近的红色扫描光。</p>
+
+            <div class="script-dir">【C线·第7区·404号工位】</div>
+            <p class="script-action-text">机械小兵走到404号工位前，停住，蹲下，红色扫描光扫进桌底——空的。机械小兵停顿一秒。</p>
+            <div class="script-dir">胸口屏幕显示：「工位：空置 · 人员状态：缺席 · ⚠ 异常·上报中」红色扫描光变成闪烁的橙色警报光。</div>
+
+            <div class="script-dir">【D线·88层控制室】</div>
+            <div class="script-dir">维克多屏幕弹出：「⚠ 第7区404号工位 · 人员异常·缺席未授权」</div>
+            <div class="script-dlg">
+              <div class="script-char-name script-char-victor">维克多（极轻）</div>
+              <p class="script-speech">「找到了。」</p>
+            </div>
+
+            <p class="script-action-text">画面切黑。</p>
+            <p class="script-action-text">黑屏。只有敲击声。「咚·咚咚·咚···咚咚咚咚咚·」</p>
+            <p class="script-action-text">然后画面亮起——后排深处，极暗，极冷。只有一双手，停在数据管道上。白色布条蒙着眼睛，布条上密密麻麻的废弃代码隐约可见。那双手，刚刚敲完最后一下，停在管道上，静止。等待。</p>
+
+            <div class="script-dir" style="text-align:center;margin-top:16px">黑底字幕卡·「第35小时 · 距离记忆清零：37:00:00」</div>
+            <div class="script-countdown-display">EP3 · 完</div>
+          </div>
+
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border)">
+            <button class="open-scene-pack-btn" onclick="openSceneModal('ep3')">
+              🎬 打开 EP3 场景包 &nbsp;→
+            </button>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:12px">场景总览 · 渲染需求 · 定稿图库</span>
+          </div>
         </div>
       </div>
 
       <div class="ep-card" id="ep4">
         <div class="ep-header" onclick="toggleEp(this)">
           <span class="ep-num">EP4</span>
-          <span class="ep-title">跨阶层Ping</span>
+          <span class="ep-title">粉色暗池</span>
           <span class="ep-time">30-38小时</span>
           <span class="ep-toggle">▼</span>
         </div>
@@ -5049,6 +5250,47 @@ L3格子间某工位桌底，昏暗狭小空间。
         </div>
       </div>
 
+      <!-- 时间锚点 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid rgba(42,173,204,0.3);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--teal-bright);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">时间锚点</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">第10小时 · 开场字幕卡</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">D类·字幕后期</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-00a</div><div><div class="rl-name">开场字幕卡·「第10小时」</div><div class="rl-sub">EP2开场 · 时间锚点建立</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">黑底字幕卡，白色衬线字体「第10小时」居中，轻微金色发光。淡入淡出，停留1.5秒。和EP1的「12小时前」字幕卡保持同一风格。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】
+字幕卡·覆盖在开场第一帧上方。
+内容：「第10小时」
+字体：白色衬线字体·字号大·轻微金色发光描边
+副文字：无（和EP1「12小时前」同款但更简洁）
+背景：纯黑·或叠加在L3坠落区画面的半透明黑层上
+出现方式：淡入·停留1.5秒·淡出
+风格：沉稳·简洁·不打断叙事节奏</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-00b</div><div><div class="rl-name">工位屏幕角落·常驻倒计时·「62:00:00」特写</div><div class="rl-sub">场景02 · 世界观视觉强化</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">工位屏幕右下角的常驻倒计时特写。字体极小·颜色偏暗灰·工人完全没有注意到它。和赵凯斯主观视野里的「62:00:00」弹窗形成对比：同一个数字·两种完全不同的重量。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】
+工位屏幕局部特写·右下角区域。
+屏幕主体：工人正在制作的Meme内容（正常显示）
+右下角极小文字：
+「距离全体记忆重置：62:00:00」
+字体：Share Tech Mono·字号极小（约8-9px等效）
+颜色：rgba(200,200,200,0.35)·几乎看不见·
+像系统默认显示·没有人会去看的那种
+对比：赵凯斯看见这个数字的主观视角里
+同样的数字以「62:00:00」红色弹窗形式出现
+两个版本同一个数字·不同的感受</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-09c</div><div><div class="rl-name">EP2结尾字幕·「第20小时·52:00:00」</div><div class="rl-sub">EP2结尾 · 时间锚点收尾</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">EP2结尾的时间字幕卡，在维克多「找到你了」台词后、画面切黑之前出现。提醒观众时间在消耗。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】
+黑底字幕卡·叠加在切黑之前
+主文字：「第20小时」白色衬线字体
+副文字：「距离记忆清零：52:00:00」红色·等宽字体·字号较小
+出现方式：淡入·停留2秒·淡出·然后画面完全切黑
+感觉：时间在消耗·但还有52小时·也只剩52小时了</div></div></div>
+        </div>
+      </div>
+
       <!-- 开场 -->
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
         <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
@@ -5956,11 +6198,52 @@ L3格子间某工位桌底，昏暗狭小空间。
     <div class="modal-inner-content" id="ep2tab-renders" >
 
       <div style="margin-bottom:24px">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:16px;letter-spacing:0.15em">// EP2 · 渲染需求清单 · 共9个场景</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold-dim);margin-bottom:16px;letter-spacing:0.15em">// EP2 · 渲染需求清单 · 共9个场景+时间锚点</div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
           <span style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:3px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">A类 · 纯场景</span>
           <span style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:3px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">B类 · 需要定妆照</span>
           <span style="font-family:'Share Tech Mono',monospace;font-size:10px;padding:3px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">D类 · 后期特效/UI</span>
+        </div>
+      </div>
+
+      <!-- 时间锚点 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid rgba(42,173,204,0.3);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--teal-bright);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">时间锚点</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">第10小时 · 开场字幕卡</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">D类·字幕后期</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-00a</div><div><div class="rl-name">开场字幕卡·「第10小时」</div><div class="rl-sub">EP2开场 · 时间锚点建立</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">黑底字幕卡，白色衬线字体「第10小时」居中，轻微金色发光。淡入淡出，停留1.5秒。和EP1的「12小时前」字幕卡保持同一风格。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】
+字幕卡·覆盖在开场第一帧上方。
+内容：「第10小时」
+字体：白色衬线字体·字号大·轻微金色发光描边
+副文字：无（和EP1「12小时前」同款但更简洁）
+背景：纯黑·或叠加在L3坠落区画面的半透明黑层上
+出现方式：淡入·停留1.5秒·淡出
+风格：沉稳·简洁·不打断叙事节奏</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-00b</div><div><div class="rl-name">工位屏幕角落·常驻倒计时·「62:00:00」特写</div><div class="rl-sub">场景02 · 世界观视觉强化</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">工位屏幕右下角的常驻倒计时特写。字体极小·颜色偏暗灰·工人完全没有注意到它。和赵凯斯主观视野里的「62:00:00」弹窗形成对比：同一个数字·两种完全不同的重量。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】
+工位屏幕局部特写·右下角区域。
+屏幕主体：工人正在制作的Meme内容（正常显示）
+右下角极小文字：
+「距离全体记忆重置：62:00:00」
+字体：Share Tech Mono·字号极小（约8-9px等效）
+颜色：rgba(200,200,200,0.35)·几乎看不见·
+像系统默认显示·没有人会去看的那种
+对比：赵凯斯看见这个数字的主观视角里
+同样的数字以「62:00:00」红色弹窗形式出现
+两个版本同一个数字·不同的感受</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E2-D-09c</div><div><div class="rl-name">EP2结尾字幕·「第20小时·52:00:00」</div><div class="rl-sub">EP2结尾 · 时间锚点收尾</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">EP2结尾的时间字幕卡，在维克多「找到你了」台词后、画面切黑之前出现。提醒观众时间在消耗。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】
+黑底字幕卡·叠加在切黑之前
+主文字：「第20小时」白色衬线字体
+副文字：「距离记忆清零：52:00:00」红色·等宽字体·字号较小
+出现方式：淡入·停留2秒·淡出·然后画面完全切黑
+感觉：时间在消耗·但还有52小时·也只剩52小时了</div></div></div>
         </div>
       </div>
 
@@ -6291,5 +6574,261 @@ L3格子间某工位桌底，昏暗狭小空间。
     </div>
   </div>
 </div>
+<!-- EP3场景包·模态窗口 -->
+<div class="scene-modal-overlay" id="modal-ep3">
+  <div class="scene-modal">
+    <div class="scene-modal-header">
+      <div class="scene-modal-title">EP3 · 场景包 · 情绪矿工</div>
+      <button class="scene-modal-close" onclick="closeSceneModal('ep3')">✕</button>
+    </div>
+    <div class="scene-modal-tabs">
+      <button class="scene-modal-tab active" onclick="switchSceneTab('ep3','overview',this)">📊 场景总览</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep3','renders',this)">📋 渲染需求清单</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep3','gallery',this)">🖼️ 场景定稿图库</button>
+    </div>
+    <div class="scene-modal-body">
+      <div class="scene-modal-page" id="ep3-modal-overview" style="display:block">
+        <h3>EP3 · 场景状态总览</h3>
+        <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
+          <table style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead>
+              <tr style="background:rgba(212,160,23,0.08);border-bottom:1px solid var(--border)">
+                <th style="text-align:left;padding:10px 14px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;font-weight:400">场景</th>
+                <th style="text-align:left;padding:10px 14px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;font-weight:400">内容</th>
+                <th style="text-align:left;padding:10px 14px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;font-weight:400">时长</th>
+                <th style="text-align:left;padding:10px 14px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;font-weight:400">渲染状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景01</td>
+                <td style="padding:10px 14px;color:var(--text)">阿明来找他们·有条件答应</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">10秒</td>
+                <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景02</td>
+                <td style="padding:10px 14px;color:var(--text)">小猪解释CA指挥棒和面具</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">25秒</td>
+                <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景03</td>
+                <td style="padding:10px 14px;color:var(--text)">工厂四工作台·赵凯斯旁观</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">60秒</td>
+                <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景04</td>
+                <td style="padding:10px 14px;color:var(--text)">B线·维克多·发现冷钱包不见了</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">20秒</td>
+                <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景05</td>
+                <td style="padding:10px 14px;color:var(--text)">机械小兵开始搜查第7区</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">10秒</td>
+                <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景06</td>
+                <td style="padding:10px 14px;color:var(--text)">三人分工确认</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
+                <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景07</td>
+                <td style="padding:10px 14px;color:var(--text)">进入后排边界·越走越冷</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">20秒</td>
+                <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景08</td>
+                <td style="padding:10px 14px;color:var(--text)">林牧的敲击声·质数序列</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
+                <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              </tr>
+              <tr>
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景09</td>
+                <td style="padding:10px 14px;color:var(--text)">平行结尾·空桌底警报·林牧双手</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">20秒</td>
+                <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:20px;padding:16px 20px;background:rgba(240,165,0,0.06);border:1px solid rgba(240,165,0,0.2);border-radius:8px;font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim)">
+          // EP3渲染工作尚未开始 · 场景定稿图库待填充 · 渲染需求清单制作中
+        </div>
+      </div>
+      <div class="scene-modal-page" id="ep3-modal-renders" style="display:none">
+  
+      <!-- EP3时间锚点 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid rgba(42,173,204,0.3);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--teal-bright);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px">时间锚点</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text-bright);line-height:1.4">第20小时·开场 / 第35小时·结尾</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">D类·字幕后期 ×2</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-D-00</div><div><div class="rl-name">开场字幕卡·「第20小时」</div><div class="rl-sub">EP3开场 · 时间锚点</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">黑底字幕卡，和EP2开场字幕卡同款风格，「第20小时」居中，淡入淡出1.5秒。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】字幕卡·黑底·白色衬线字体「第20小时」·轻微金色描边·淡入淡出·停留1.5秒·和EP1/EP2字幕卡保持同一风格</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-D-09e</div><div><div class="rl-name">EP3结尾字幕·「第35小时·37:00:00」</div><div class="rl-sub">EP3结尾 · 时间锚点</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">EP3结尾字幕卡，在林牧双手独立镜头切黑之前出现。37小时的倒计时让观众感受到时间压迫感升级。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】黑底字幕卡·主文字「第35小时」白色衬线字体·副文字「距离记忆清零：37:00:00」红色等宽字体·停留2秒·淡出·然后接林牧双手独立镜头·再切黑</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景01+02 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px">场景 01-02</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text-bright);line-height:1.4">阿明答应 · 武器解释</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:4px">25秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">阿明·桌底伸头</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">小猪·CA指挥棒</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">工位时钟「52:00:00」</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-B-01</div><div><div class="rl-name">阿明·蹲下·头伸进桌底·侧面</div><div class="rl-sub">场景01 · 阿明答应的一刻</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">阿明蹲下来，把头伸进404号桌底，侧脸。表情平静但有某种决定落下的重量。他不是因为被感动才答应的——他是因为条件谈妥了。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，9:16竖构图。阿明蹲下来·头伸进404号桌底·侧面构图·黑色棒球帽·白色工服。桌底低矮·阿明头部和肩膀勉强塞进来。表情：平静·有一种「条件谈妥了」的冷静·不是热血的决定·是一个人在做一个他能接受的选择。桌底内：粉绿色面具微光隐约可见·和赵凯斯蓝白色冷钱包微光。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-B-02a</div><div><div class="rl-name">小猪·拿出CA指挥棒·向阿明和赵凯斯展示</div><div class="rl-sub">场景02 · 武器第一次亮相</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小猪从工服内侧取出CA指挥棒，递给阿明看。指挥棒顶端粉色猪头发出霓虹光，棒身绿色数据流。这是它第一次在剧中正式亮相。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，近景，9:16竖构图。小猪女侠·白色工服·猪头半脸面具·从工服内侧取出CA指挥棒。指挥棒：约30cm长·细长·顶端是小型3D猪头造型·发出粉色霓虹光·棒身透明管道内有绿色数据流缓慢流动。她把它递向阿明·阿明的手在画面边缘接过来（不需要完整入镜）。背景：格子间冷绿色环境光·指挥棒的粉绿色光是前景最亮的东西。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-B-02b</div><div><div class="rl-name">小猪·指着面具·说明次数限制</div><div class="rl-sub">场景02 · 面具秘密首次揭示</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小猪用手指指着自己的猪头面具，神情有一点复杂。面具是她的保护，但也是她最深的困境——用一次少一次，用多了自己也真的会失去情绪表达。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，上半身特写，9:16竖构图。小猪女侠·白色工服·右手食指指向自己的猪头半脸面具。面具：粉色+绿色霓虹发光·但此刻光芒比平时略暗·像在强调它的有限性。表情（面具后的眼睛）：有一点复杂·不是恐惧·是一种「我知道这个代价」的清醒。背景：格子间冷绿色。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-D-02</div><div><div class="rl-name">工位屏幕角落「52:00:00」·赵凯斯眼角扫到</div><div class="rl-sub">场景02 · 时间压迫感</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯听小猪讲话时眼角扫到旁边工位屏幕右下角的倒计时，极小极暗的「52:00:00」。工人完全没有注意它。赵凯斯注意到了，但没有说话。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】工位屏幕右下角常驻显示「距离全体记忆重置：52:00:00」·字体极小·颜色偏暗灰rgba(200,200,200,0.35)·工人完全没有注意。赵凯斯主观视角：镜头短暂聚焦在这个数字上·然后切回。同样的效果在EP2场景02也出现过·EP3强化了这个时间压迫感。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景03 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px">场景 03</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text-bright);line-height:1.4">工厂四工作台 · 60秒</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:4px">60秒·EP3核心场景</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">四个工作台场景</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯·旁观·握紧冷钱包</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">系统评分UI</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-A-03a</div><div><div class="rl-name">工作台A·工人调试羞耻感文案</div><div class="rl-sub">场景03 · 情绪预热组</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">工人盯着屏幕反复修改一句话，系统指标数字随每次修改跳动。他在精准调试人类的羞耻感触发点，像调音师在调一个无形的乐器。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，近景，9:16竖构图。L3格子间工作台A·工人低头盯着屏幕·白色工服·神情专注像在做精密工作。屏幕上显示正在编辑的内容：「我朋友上周买了某个币昨天提现买了辆车我：还在看K线」旁边有一个实时指标面板「情绪共鸣指数：96.3」金色数字·正在微微上升。工人嘴角微微上扬·「找到了」的满足感。背景：冷绿色格子间·其他工人的白色背影。no text watermark except screen content, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-A-03b</div><div><div class="rl-name">工作台B·流动性配合·双屏·等待阈值</div><div class="rl-sub">场景03 · 让真相传播谎言</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">工人面前两个屏幕：左屏代币价格走势，右屏散户情绪监测数据。他盯着右屏等待某个数字到达阈值，然后按下左屏的键。这是「让真实的人传播系统设计好的信息」的核心操作。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，双屏近景，9:16竖构图。工作台B·工人面前两个显示器：左屏：代币K线图·价格走势·有一条待触发的分界线。右屏：散户情绪热力图·数字在缓慢上升·接近某个红色阈值线。工人的手悬在左屏的一个按键上方·等待·极度专注。右屏数字触达阈值的瞬间·他的手指按下去。左屏价格开始上涨。工人嘴角微微上扬。no text watermark except screen data, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-A-03c</div><div><div class="rl-name">工作台C·收割时机·等待曲线顶点</div><div class="rl-sub">场景03 · 只有人能感知那个时刻</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">工人盯着一条接近顶点的曲线，什么都不做，只是在等。旁边的工人问他为什么不触发，他说「最后一批人还没进来」。他的眼神里有一种「我太了解他们了」的熟悉感——因为他自己就是那种人。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，侧面近景，9:16竖构图。工作台C·工人侧面·盯着屏幕上一条接近顶点的抛物线曲线。他的手放在桌上·没有按任何键·只是等待。表情：一种极度专注的耐心·像猎人在等猎物走进圈套的那一秒。屏幕上曲线慢慢上升·距离顶点还有一点距离。旁边工人的手（入镜一部分）指向屏幕·在问。no text watermark except screen chart, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-A-03d</div><div><div class="rl-name">工作台D·白纸写词·圈出「归零」</div><div class="rl-sub">场景03 · 符号选择·情绪穿透力</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">工人面前一张白纸，写满被划掉的词，最后圈出「归零」。他抬头看了一眼头顶管道里的金色粒子，又低下头开始写内容。系统显示情绪穿透力98.6分。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，俯视桌面，9:16竖构图。工作台D桌面：一张白纸上写满词汇·大部分被横线划掉：「始皇」「满仓」「all in」「最后机会」等·只有「归零」两字被清晰的圆圈圈住·圆圈用力·像做了一个重要决定。旁边屏幕角落显示「情绪穿透力：98.6」金色数字。工人的手（入镜）正在拿起笔准备开始写正式内容。no text watermark except on paper and screen, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-B-03</div><div><div class="rl-name">赵凯斯·四工作台旁观·握紧冷钱包</div><div class="rl-sub">场景03 · 沉默的理解</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯站在四个工作台中间，看完了这一切。他没有说话，只是抬头看金色粒子，然后低头，右手握紧冷钱包。这个沉默比任何台词都重。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，正面低角度，9:16竖构图。赵凯斯·白色工服·黑框方形眼镜·站在格子间走道中央。他低着头·右手握紧冷钱包项链·蓝白色微光从拳头缝隙透出。表情：不是愤怒·不是震惊·是一种「我理解了·但这个重量很重」的沉默。周围：工人们低头工作的白色背影（虚焦）·头顶金色粒子向上流动。光线：冷钱包蓝白色微光·头顶金色粒子光·冷绿色环境光·三种光同时存在。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-D-03</div><div><div class="rl-name">系统评分UI·「情绪穿透力：98.6」</div><div class="rl-sub">场景03 · 工作台D屏幕叠加</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">工作台D屏幕上的评分界面，金色数字98.6，像游戏里的高分提示，但这是对人类情绪被操控程度的评分。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】屏幕UI叠加·工作台D屏幕右上角评分面板：「情绪穿透力」标签·数字「98.6」金色·粗体·轻微金色发光·旁边有一条评分条几乎满格。整体风格：像游戏评分界面·但内容是对人类情绪被操控程度的量化。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景04+05 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px">场景 04-05</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text-bright);line-height:1.4">维克多发现 · 搜查开始</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:4px">30秒·B线</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">维克多·发现钱包不见</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">双屏警报UI</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">机械小兵·第7区入口</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-B-04a</div><div><div class="rl-name">维克多·伸手摸向胸口·发现冷钱包不见</div><div class="rl-sub">场景04 · 关键细节</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">维克多站在控制台前，伸手摸向胸口——什么都没有。这个细微的动作是整个EP3最关键的B线起点。他的表情没有任何变化，但胸口的空白说明了一切。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，侧面逆光，9:16竖构图。陈维克多·88层控制室·深灰色风衣·机械右臂·侧面构图·强逆光。他的人类左手缓慢抬起·触碰胸口的位置——空的。手指在衣服上轻轻抚过·确认。他的侧面表情：没有任何变化·极度平静·只有那只手的动作说明了一切。胸口：什么都没有·衣服平整·空旷。冷蓝色控制室背景光。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-B-04b</div><div><div class="rl-name">维克多·调出坠落记录·侧面逆光</div><div class="rl-sub">场景04 · 推断与决策</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">维克多在控制台前调出赵凯斯坠落的时间戳，看着屏幕上的震荡范围数据和KOL异常警报。他在做一个推断。「有意思」是他在EP3里最有人味的一句话。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，侧面逆光·控制台近景，9:16竖构图。维克多侧面·机械右臂食指在控制台屏幕上操作。屏幕显示：坠落事件记录·震荡范围第7-10区·另一个屏幕KOL异常行为警报。他看着两个屏幕·侧面轮廓清晰·面部在阴影中。机械右臂的金属质感·冷蓝色屏幕光打亮轮廓。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-A-05</div><div><div class="rl-name">第7区入口·机械小兵整队进入·搜查开始</div><div class="rl-sub">场景05 · 追踪开始</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">四个机械小兵整齐走进第7区入口，红色扫描光同时亮起，开始逐排扫描。工人们完全没有注意到这些机械小兵——他们定期巡逻是正常的事。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，广角，9:16竖构图。L3第7区入口·四个机械小兵并排走进来·动作完全一致·步伐整齐。红色扫描光从胸口向四周扩散·开始照亮最近的工位。工人们继续低头工作·完全没有任何反应·像这是日常。格子间冷绿色环境光·机械小兵的红色扫描光是新的色彩元素·和冷绿色形成对比·营造压迫感。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-D-04</div><div><div class="rl-name">双屏警报UI·震荡范围+KOL异常</div><div class="rl-sub">场景04 · 维克多屏幕</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">维克多控制台两个屏幕同时显示：左屏坠落记录和震荡范围，右屏KOL异常行为警报。两个信息叠加指向第7区。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】双屏UI叠加：左屏：「坠落事件记录 · 密钥物理震荡检测 · 范围：第7-10区 · 精确位置：无法确认」冷白色数据界面。右屏：「⚠ 第7区 · KOL账号异常行为 · 数据曲线偏离基准线340% · 账号：[编号]」红色警告样式。两个屏幕风格：彭博终端+军事指挥系统混合·冷静精准。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景06+07+08 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px">场景 06-08</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text-bright);line-height:1.4">出发·后排·林牧信号</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:4px">50秒</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">后排深处·极暗</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">赵凯斯领路·闭眼感知</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">敲击声·质数可视化</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-A-07a</div><div><div class="rl-name">格子间到后排边界·渐变·越走越暗</div><div class="rl-sub">场景07 · 空间过渡</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">从格子间正常区域到后排边界的空间渐变：工人越来越少，光越来越暗，温度越来越低。这个渐变是L3最重要的空间语言之一。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，深景透视，9:16竖构图。L3格子间深处到后排边界的空间渐变：前景1/3：正常工位·工人低头工作·冷绿色光·正常密度。中景1/3：工位开始稀疏·光线更暗·地面变粗糙·没有工人。后景1/3：极暗·只有隐约的边界轮廓·边界后完全是黑暗。经过的工人：眼神从不往后看·像什么都不存在。整体：从「正常」到「未知」的渐变·越远越压抑。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-A-07b</div><div><div class="rl-name">后排深处·蜷缩的身影·眼睛是睁着的</div><div class="rl-sub">场景07 · 后排的真实面目（不完整呈现）</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">后排深处，地上隐约可见有什么东西蜷缩着，不动，眼睛是睁着的。不需要清晰呈现——模糊、隐约、让观众自己感受就够了。EP3不完整展示后排。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，极暗环境，9:16竖构图。后排深处·极暗·地面粗糙·没有工位没有椅子。地上：隐约可见有人形的东西蜷缩着·不动·白色工服·蜷成一团·眼睛隐约是睁着的。关键：不要清晰·要模糊·要「隐约看见」的感觉·像眼睛还没适应黑暗·不确定自己看见了什么。这是EP3对后排的第一次呈现·不完整·不具体·只是让观众感受到「这里有什么」。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-B-07</div><div><div class="rl-name">赵凯斯走在前·闭眼·感知方向·小猪跟随</div><div class="rl-sub">场景07 · 逆向感知实战</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">赵凯斯走在前面，眼睛闭着，跟着逆向感知走。小猪跟在他后面。这是逆向感知能力第一次真正发挥作用——不是感知天降神针，而是在黑暗中寻路。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，背影·从后方拍，9:16竖构图。赵凯斯走在前（左·白色工服·黑色蓬松发）·眼睛闭着·步伐稳·像被某种感知牵引着走。小猪跟在他后面（右·白色工服·面具粉绿色微光）·睁眼看着周围。两人的白色工服在后排极暗的环境里格外清晰。小猪的粉绿色面具微光·是画面里唯一的暖色点。背景：后排深处·极暗·隐约的地上蜷缩身影（模糊）。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-D-08</div><div><div class="rl-name">敲击声·质数序列·声波可视化</div><div class="rl-sub">场景08 · 林牧信号的视觉化</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">林牧敲击管道的声音以声波形式可视化呈现——不是普通的声波，而是质数间隔的脉冲：2·3·5·7·11。这个视觉化让观众和赵凯斯同时「看见」那个规律。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】声波可视化叠加在管道画面上。声波形态：不是连续波形·而是独立脉冲·按质数间隔出现：2个节拍·3个节拍·5个节拍·7个节拍·11个节拍。每次敲击产生一个蓝白色圆形脉冲·从管道向外扩散·然后消失。视觉感受：数学的·精确的·不像随机噪音·像在用某种语言说话。颜色：冷蓝白色·和周围的冷绿色协调。</div></div></div>
+        </div>
+      </div>
+
+      <!-- 场景09·结尾 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
+        <div style="display:flex;gap:0;cursor:pointer" onclick="var d=this.parentElement.querySelector('.rl-detail');d.style.display=d.style.display==='none'?'block':'none'">
+          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px">场景 09</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text-bright);line-height:1.4">平行结尾 · EP3钩子</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:4px">20秒·四条线平行</div>
+          </div>
+          <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">阿明·握紧数据片</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(42,173,204,0.15);color:var(--teal-bright)">404空桌底·橙色警报</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(46,204,113,0.15);color:#2ECC71">林牧双手·独立镜头</span>
+            <span style="font-size:12px;padding:4px 10px;border-radius:4px;background:rgba(233,69,96,0.15);color:var(--red)">维克多「找到了」·警报UI</span>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:auto;padding:4px 10px;white-space:nowrap">📂 展开详情</span>
+          </div>
+        </div>
+        <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
+          <div class="rl-section-title">B类 · 需要定妆照</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-B-09a</div><div><div class="rl-name">阿明·工位前·握紧数据片·眼角盯着扫描光</div><div class="rl-sub">场景09 · 阿明的压力</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">阿明坐在工位前，手指继续打字，但口袋里的手握紧了数据片。机械小兵的红色扫描光越来越近，但他不能动，不能看。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，正面+侧面双构图，9:16竖构图。阿明坐在工位前·白色工服·黑色棒球帽·一只手在键盘上打字（保持工作状态）·另一只手在口袋里握紧了什么（数据片·不可见）。眼神：表面看着屏幕·眼角余光死死盯着画面边缘越来越近的红色扫描光。表情：极度克制的紧张·努力维持「正常工作」的样子。屏幕上「本周排名：#3」依然显示。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-B-09b</div><div><div class="rl-name">林牧双手·停在管道上·白色布条蒙眼·独立镜头</div><div class="rl-sub">场景09 · EP3最后一幕·林牧首次亮相</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">EP3最后的独立镜头。林牧的双手停在数据管道上，刚刚敲完最后一下。白色布条蒙着眼睛，布条上密密麻麻的废弃代码隐约可见。静止。等待。这是观众第一次看见林牧——不是完整的他，只是一双手和一条布条。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，极近景，9:16竖构图。画面构成：上半部分——白色布条横跨·蒙住眼睛·布条上密密麻麻写满极小的代码和数学符号（废弃的·模糊的·像被划掉的记忆）。下半部分——一双手停在半透明数据管道上·刚刚敲完最后一下·现在静止·手指微微弯曲·贴着管道。管道：发出极微弱的蓝绿色光·照亮手的轮廓。整体：极暗·极静·等待的感觉。这是林牧第一次出现在画面里·不露脸·只有手和布条。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">A类 · 纯场景渲染</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-A-09</div><div><div class="rl-name">机械小兵·蹲下·扫描404空桌底</div><div class="rl-sub">场景09 · 藏身处暴露</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">机械小兵停在404号工位前，蹲下，红色扫描光扫进桌底——空的。然后橙色警报灯亮起。这是EP3最重要的场景之一：三人刚好离开，但藏身处已经暴露了。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，低角度，9:16竖构图。404号工位·机械小兵停在工位前·蹲下·头部降低至桌底高度。红色扫描光从机械小兵胸口射出·照进桌底——桌底完全空着·什么都没有。停顿一秒。然后机械小兵胸口的红色扫描光变成闪烁的橙色警报光·胸口屏幕文字变化（后期叠加）。背景：格子间冷绿色·其他工人完全没有注意到这一幕。no text, no watermark, 8K, 9:16。</div></div></div>
+          <div class="rl-section-title">D类 · 后期特效</div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-D-09a</div><div><div class="rl-name">机械小兵胸口屏幕·橙色警报·「异常·上报中」</div><div class="rl-sub">场景09 · 警报触发</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">机械小兵胸口屏幕从红色扫描变为橙色警报，显示「工位空置·人员缺席·⚠异常·上报中」。这个状态变化是EP3结尾的关键视觉信息。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】机械小兵胸口屏幕UI变化：第一状态（红色扫描）：正常扫描界面「扫描中……」。切换到第二状态（橙色警报）：「工位：空置 · 人员状态：缺席 · ⚠ 异常·上报中」橙色警报色·文字闪烁一次·然后稳定。屏幕光色从红色变为橙色·这个颜色变化要清晰可见。</div></div></div>
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">E3-D-09b</div><div><div class="rl-name">维克多屏幕·「⚠第7区404号工位·找到了」</div><div class="rl-sub">场景09 · 88层控制室</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-fx">FX</span></div></div><div class="rl-body"><div class="rl-desc">维克多控制室屏幕接收到404号工位的异常上报，他看着这条通知说「找到了」。屏幕UI风格和之前的维克多屏幕保持一致。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">【后期特效定义】维克多控制室屏幕UI：「⚠ 第7区404号工位 · 人员异常·缺席未授权 · 处理建议：锁定区域」橙色警报样式·彭博终端风格。屏幕弹窗出现时有轻微闪烁效果·然后稳定。维克多看着这条通知的侧面轮廓要在这个橙色光里。</div></div></div>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;padding:16px 20px;background:rgba(212,160,23,0.06);border:1px solid rgba(212,160,23,0.2);border-radius:8px;font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim)">
+        // EP3渲染清单完成 · 共26个渲染任务 · 渲染工作待开始
+      </div>
+
+      </div>
+      <div class="scene-modal-page" id="ep3-modal-gallery" style="display:none">
+        <div style="text-align:center;padding:60px 20px">
+          <div style="font-size:48px;margin-bottom:20px">🖼️</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);margin-bottom:12px">EP3 场景定稿图库</div>
+          <div style="font-size:14px;color:var(--text-dim);line-height:1.9">渲染完成后将陆续上传至此</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
