@@ -1004,15 +1004,15 @@
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
           <div style="width:9px;height:9px;border-radius:50%;background:#E8B84B;box-shadow:0 0 10px #E8B84B,0 0 20px rgba(232,184,75,0.4);animation:pulse 2s infinite;flex-shrink:0"></div>
           <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.2em">最后更新</span>
-          <span style="margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 8px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v3.0</span>
+          <span style="margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 8px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v3.1</span>
         </div>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:26px;font-weight:700;color:#fff;letter-spacing:0.08em;line-height:1.1;text-shadow:0 0 20px rgba(232,184,75,0.3)">2026<span style="color:var(--gold)">·</span>05<span style="color:var(--gold)">·</span>02</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:26px;font-weight:700;color:#fff;letter-spacing:0.08em;line-height:1.1;text-shadow:0 0 20px rgba(232,184,75,0.3)">2026<span style="color:var(--gold)">·</span>05<span style="color:var(--gold)">·</span>11</div>
         <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(232,184,75,0.15)">
           <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);line-height:1.9">
-            <span style="color:var(--gold)">+</span> 道具档案·冷钱包/猪灵面具/CA指挥棒/熊猫眼<br>
-            <span style="color:var(--gold)">+</span> 猪灵面具统一命名·全文替换<br>
-            <span style="color:var(--gold)">+</span> 赵凯斯人格重构·功夫熊猫底色<br>
-            <span style="color:var(--gold)">+</span> 三主角定妆照全面更新
+            <span style="color:var(--gold)">+</span> EP2渲染清单重构·按场景归类<br>
+            <span style="color:var(--gold)">+</span> EP2分镜时间轴·47个镜头·C类分镜图<br>
+            <span style="color:var(--gold)">+</span> EP2场景包标题更新·渲染状态标记<br>
+            <span style="color:var(--gold)">+</span> EP2/EP3剧本修正·强制入职三阶段
           </div>
         </div>
       </div>
@@ -1097,7 +1097,8 @@
   </script>
 
   <div class="nav-section">
-    <div class="nav-section-label">世界观</div>
+    <div class="nav-section-label" onclick="toggleNav('nav-world')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">世界观<span id="nav-world-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
+    <div id="nav-world">
     <a href="#world" class="nav-link">永信城世界观</a>
     <a href="#world" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 01 永信城层级</a>
     <a href="#theme" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 02 核心主题</a>
@@ -1106,10 +1107,12 @@
     <a href="#world-areas" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 05 永信城重要区域</a>
     <a href="#recruitment-detail" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 06 永信城牛马情绪工厂</a>
     <a href="#world-prompts" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ 场景提示词参考</a>
+    </div>
   </div>
 
   <div class="nav-section">
-    <div class="nav-section-label">角色档案</div>
+    <div class="nav-section-label" onclick="toggleNav('nav-chars')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">角色档案<span id="nav-chars-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
+    <div id="nav-chars">
     <a href="#zhao" class="nav-link">🐼 赵凯斯</a>
     <a href="#piggy" class="nav-link">🐷 小猪女侠</a>
     <a href="#linmu" class="nav-link">🎧 林牧</a>
@@ -1117,15 +1120,19 @@
     <a href="#victor" class="nav-link">⚙️ 陈维克多</a>
     <a href="#aming" class="nav-link">😎 阿明</a>
     <a href="#aming-mom" class="nav-link">🍜 阿明妈妈</a>
+    </div>
   </div>
 
   <div class="nav-section">
-    <div class="nav-section-label">道具档案</div>
+    <div class="nav-section-label" onclick="toggleNav('nav-props')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">道具档案<span id="nav-props-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
+    <div id="nav-props">
     <a href="#prop-coldwallet" class="nav-link">🔑 冷钱包</a>
     <a href="#prop-mask" class="nav-link">🐷 猪灵面具</a>
     <a href="#prop-castaff" class="nav-link">📊 CA指挥棒</a>
     <a href="#prop-pandaeye" class="nav-link">🐼 熊猫眼</a>
-    <div class="nav-section-label">六集大纲 / 剧本</div>
+    </div>
+    <div class="nav-section-label" onclick="toggleNav('nav-eps')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">六集大纲 / 剧本<span id="nav-eps-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
+    <div id="nav-eps">
     <a href="#ep1" class="nav-link">EP1 天降神针</a>
     <a onclick="openSceneModal('ep1')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP1 场景包 ↗</a>
     <a href="#ep2" class="nav-link">EP2 没有工位的人</a>
@@ -1135,18 +1142,22 @@
     <a href="#ep4" class="nav-link">EP4 粉色暗池</a>
     <a href="#ep5" class="nav-link">EP5 零日漏洞</a>
     <a href="#ep6" class="nav-link">EP6 情绪之证</a>
+    </div>
   </div>
 
   <div class="nav-section">
-    <div class="nav-section-label">创作指引</div>
+    <div class="nav-section-label" onclick="toggleNav('nav-guide')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">创作指引<span id="nav-guide-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
+    <div id="nav-guide">
     <a href="#prompts" class="nav-link">01 · 提示词实例</a>
     <a href="#rules" class="nav-link">02 · 创作红线</a>
     <a href="#scoring" class="nav-link">03 · 评分标准</a>
     <a href="#gallery" class="nav-link" style="color:var(--gold);border-color:rgba(212,160,23,0.4)">04 · 🖼️ 概念图合辑 ↗</a>
     <a href="#concept-shorts-section" class="nav-link">05 · 永信城概念短片</a>
+    </div>
   </div>
     <div class="nav-section" style="margin-top:auto;padding-top:24px;border-top:1px solid var(--border);margin-bottom:0">
-    <div class="nav-section-label">社区入口</div>
+    <div class="nav-section-label" onclick="toggleNav('nav-community')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">社区入口<span id="nav-community-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
+    <div id="nav-community">
     <a href="https://x.com/Bianxiaoshuo" target="_blank" class="nav-link" style="color:var(--text-dim);display:flex;align-items:center;gap:8px">
       <span style="font-size:14px">𝕏</span> Twitter · 币安小说
     </a>
@@ -1156,8 +1167,24 @@
     <a href="https://t.me/bianxiaoshuo" target="_blank" class="nav-link" style="color:var(--teal-bright);display:flex;align-items:center;gap:8px">
       <span style="font-size:14px">✈️</span> Telegram 频道
     </a>
-  </div>
+    </div><!-- end nav-community -->
+  </div><!-- end nav inner -->
 </nav>
+
+<script>
+function toggleNav(id) {
+  var el = document.getElementById(id);
+  var icon = document.getElementById(id + '-icon');
+  if (!el) return;
+  if (el.style.display === 'none') {
+    el.style.display = 'block';
+    if (icon) icon.style.transform = 'rotate(0deg)';
+  } else {
+    el.style.display = 'none';
+    if (icon) icon.style.transform = 'rotate(-90deg)';
+  }
+}
+</script>
 
 <!-- MAIN -->
 <main class="main">
@@ -6490,7 +6517,7 @@ L3格子间某工位桌底，昏暗狭小空间。
 <div class="scene-modal-overlay" id="modal-ep2">
   <div class="scene-modal">
     <div class="scene-modal-header">
-      <div class="scene-modal-title">EP2 · 场景包 · 小匠的狂想</div>
+      <div class="scene-modal-title">EP2 · 场景包 · 没有工位的人</div>
       <button class="scene-modal-close" onclick="closeSceneModal('ep2')">✕</button>
     </div>
     <div class="scene-modal-tabs">
@@ -6502,6 +6529,11 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div class="scene-modal-page" id="ep2-modal-overview" style="display:block">
         <div class="modal-inner-content" id="ep2tab-overview">
       <h3>EP2 · 场景状态总览</h3>
+      <div style="margin-bottom:16px;padding:12px 16px;background:rgba(243,156,18,0.08);border:1px solid rgba(243,156,18,0.25);border-radius:8px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);line-height:1.9">
+        // 渲染进度：21/48张已完成 · 27张待渲染<br>
+        // ✅ 已完成 &nbsp;·&nbsp; 🔶 部分完成 &nbsp;·&nbsp; ⏳ 待渲染<br>
+        // 详见渲染需求清单Tab查看每个场景具体待渲染卡片
+      </div>
       <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
         <table style="width:100%;border-collapse:collapse;font-size:12px">
           <thead>
@@ -6517,69 +6549,66 @@ L3格子间某工位桌底，昏暗狭小空间。
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">开场</td>
               <td style="padding:10px 14px;color:var(--text)">ERROR·机械小兵无法匹配·散户被带走</td>
               <td style="padding:10px 14px;color:var(--text-dim)">5秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 3/6</span></td>
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">01</td>
               <td style="padding:10px 14px;color:var(--text)">强制入职·三阶段反应·拍门→倒计时→妥协按下</td>
               <td style="padding:10px 14px;color:var(--text-dim)">20秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 2/10</span></td>
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">02</td>
               <td style="padding:10px 14px;color:var(--text)">桌底·ERROR的意义·62小时倒计时</td>
               <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 2/5</span></td>
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">03</td>
               <td style="padding:10px 14px;color:var(--text)">走进格子间·金色粒子闪回归零街</td>
               <td style="padding:10px 14px;color:var(--text-dim)">20秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 4/9</span></td>
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">04</td>
               <td style="padding:10px 14px;color:var(--text)">休息时间·工人沾沾自喜</td>
               <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 1/4</span></td>
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">05</td>
               <td style="padding:10px 14px;color:var(--text)">赵凯斯推算·粒子去向·留白</td>
               <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 1/4</span></td>
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">06</td>
               <td style="padding:10px 14px;color:var(--text)">小猪找阿明·后排接应计划·妈妈的早餐</td>
               <td style="padding:10px 14px;color:var(--text-dim)">20秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 2/7</span></td>
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">07</td>
               <td style="padding:10px 14px;color:var(--text)">发现坠落散户·「是我把他们带下来的」</td>
               <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 1/6</span></td>
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">08</td>
               <td style="padding:10px 14px;color:var(--text)">感知出口方向·后排边界·越走越冷</td>
               <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 2/6</span></td>
             </tr>
             <tr>
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">09</td>
               <td style="padding:10px 14px;color:var(--text)">冷钱包脉冲·维克多启动追踪·「找到你了」</td>
               <td style="padding:10px 14px;color:var(--text-dim)">10秒</td>
-              <td style="padding:10px 14px"><span style="color:var(--amber);font-size:11px">⏳ 待渲染</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 2/6</span></td>
             </tr>
           </tbody>
         </table>
       </div>
       <div style="margin-top:20px;padding:16px 20px;background:rgba(240,165,0,0.06);border:1px solid rgba(240,165,0,0.2);border-radius:8px;font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim)">
-        // EP2渲染工作尚未开始 · 场景定稿图库待填充 · 渲染需求清单制作中
-      </div>
-
       <!-- 分镜Overview -->
       <h3 style="margin-top:32px;margin-bottom:8px">EP2 · 分镜时间轴 · 共47个镜头 · 约2分30秒</h3>
       <div style="font-size:13px;color:var(--text-dim);margin-bottom:20px;line-height:1.7">点击场景色块展开该场景的分镜列表。色块宽度对应场景时长。</div>
