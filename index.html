@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
@@ -6942,6 +6942,30 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div class="scene-modal-page" id="ep2-modal-gallery" style="display:none">
         <!-- 标签4：场景定稿图库 -->
     <div class="modal-inner-content" id="ep2tab-gallery" >
+      <style>
+        #ep2tab-gallery .char-images {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          padding: 0;
+          background: none;
+          border: none;
+          gap: 10px;
+        }
+        #ep2tab-gallery .char-image-item {
+          width: calc(25% - 8px);
+          flex-shrink: 0;
+        }
+        @media (max-width: 900px) {
+          #ep2tab-gallery .char-image-item {
+            width: calc(33.333% - 7px);
+          }
+        }
+        @media (max-width: 600px) {
+          #ep2tab-gallery .char-image-item {
+            width: calc(50% - 5px);
+          }
+        }
+      </style>
       <div style="margin-bottom:20px;display:flex;align-items:center;justify-content:space-between">
         <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold-dim);letter-spacing:0.1em">// EP2 · 场景定稿图库 · 共21张</div>
         <a href="https://ibb.co/album/qNnZDP" target="_blank" style="font-size:11px;color:var(--teal-bright);text-decoration:none;border:1px solid rgba(42,173,204,0.3);padding:4px 12px;border-radius:4px;font-family:'Share Tech Mono',monospace">查看完整相册 ↗</a>
