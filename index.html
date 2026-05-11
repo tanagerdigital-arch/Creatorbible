@@ -1184,6 +1184,16 @@ function toggleNav(id) {
     if (icon) icon.style.transform = 'rotate(-90deg)';
   }
 }
+
+// 默认全部折叠
+document.addEventListener('DOMContentLoaded', function() {
+  ['nav-world','nav-chars','nav-props','nav-eps','nav-guide','nav-community'].forEach(function(id) {
+    var el = document.getElementById(id);
+    var icon = document.getElementById(id + '-icon');
+    if (el) el.style.display = 'none';
+    if (icon) icon.style.transform = 'rotate(-90deg)';
+  });
+});
 </script>
 
 <!-- MAIN -->
@@ -4489,12 +4499,15 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
 
   function switchSceneTab(ep, tab, btn) {
     var modal = document.getElementById('modal-' + ep);
+    if (!modal) return;
+    // 重置所有tab按钮
     modal.querySelectorAll('.scene-modal-tab').forEach(function(b) { b.classList.remove('active'); });
     if (btn) btn.classList.add('active');
-    // 操作scene-modal-page外层wrapper
-    modal.querySelectorAll('.scene-modal-page').forEach(function(p) { p.style.display = 'none'; });
-    var page = document.getElementById(ep + '-modal-' + tab);
-    if (page) page.style.display = 'block';
+    // 通过ID直接控制三个tab页面
+    ['overview','renders','gallery'].forEach(function(t) {
+      var p = document.getElementById(ep + '-modal-' + t);
+      if (p) p.style.display = (t === tab) ? 'block' : 'none';
+    });
     // 滚回顶部
     var modalEl = modal.querySelector('.scene-modal');
     if (modalEl) modalEl.scrollTop = 0;
@@ -4609,15 +4622,6 @@ function toggleEp(header) {
       document.removeEventListener('click', modal._closeHandler);
       modal._closeHandler = null;
     }
-  }
-
-  function switchSceneTab(ep, tab, btn) {
-    var modal = document.getElementById('modal-' + ep);
-    modal.querySelectorAll('.scene-modal-tab').forEach(function(b) { b.classList.remove('active'); });
-    modal.querySelectorAll('.scene-modal-page').forEach(function(p) { p.style.display = 'none'; });
-    if (btn) btn.classList.add('active');
-    var page = document.getElementById(ep + '-modal-' + tab);
-    if (page) page.style.display = 'block';
   }
 
   // ESC键关闭模态
