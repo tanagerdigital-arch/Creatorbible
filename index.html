@@ -1170,18 +1170,20 @@
     </a>
     </div><!-- end nav-community -->
 
-    <!-- 更新记录 -->
-    <div class="nav-section">
-      <div class="nav-section-label" onclick="toggleNav('nav-updates')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">📋 更新记录<span id="nav-updates-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
-      <div id="nav-updates">
-        <a href="#updates" class="nav-link">最新更新 · v3.5</a>
-        <a href="#updates" class="nav-link" style="color:var(--text-dim)">v3.4 · 2026·05·17</a>
-        <a href="#updates" class="nav-link" style="color:var(--text-dim)">v3.3 · 2026·05·16</a>
-        <a href="#updates" class="nav-link" style="color:var(--text-dim)">v3.2 · 2026·05·15</a>
-      </div>
-    </div>
-
   </div><!-- end nav inner -->
+
+  <!-- 更新记录·独立于其他模块·底部固定 -->
+  <div style="padding:16px 24px;border-top:1px solid var(--border);margin-top:auto">
+    <div class="nav-section-label" onclick="toggleNav('nav-updates')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">📋 更新记录<span id="nav-updates-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
+    <div id="nav-updates" style="display:none">
+      <a href="#updates" class="nav-link" style="color:var(--gold)">v3.5 · 最新 · 2026·05·19</a>
+      <a href="#updates" class="nav-link" style="color:var(--text-dim)">v3.4 · 2026·05·19</a>
+      <a href="#updates" class="nav-link" style="color:var(--text-dim)">v3.3 · 2026·05·17</a>
+      <a href="#updates" class="nav-link" style="color:var(--text-dim)">v3.2 · 2026·05·16</a>
+      <a href="#updates" class="nav-link" style="color:var(--text-dim)">v3.1 · 2026·05·15</a>
+    </div>
+  </div>
+
 </nav>
 
 <script>
@@ -4858,26 +4860,76 @@ function toggleEp(header) {
   <!-- v3.5 -->
   <div style="margin-bottom:40px">
     <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
-      <div style="font-family:'Share Tech Mono',monospace;font-size:22px;font-weight:700;color:#fff">2026·05·17</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:22px;font-weight:700;color:#fff">2026·05·19</div>
       <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 10px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v3.5</div>
-      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">9项更新</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">4项更新</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;padding-left:16px;border-left:2px solid rgba(232,184,75,0.2)">
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景01·强制入职·新增房间广播循环设计·屏幕三要素「新用户专属 前72小时 收益加成300%」·「04:32」·「立即加入」</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景07·四个人物闪回（中年男性·年轻女性·外卖小哥·小孩）·内心独白：「都是因为我砸碎了那个按钮」·小猪：「时间有限·机械小兵会巡逻」</span>
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景02·小猪台词：「你有点特别哦·不过你跟紧我·我可以罩着你」</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景08·小猪台词融合新版·赵凯斯逆向感知发动·熊猫眼加深·情绪浓度曲线K线下沉画面·小猪「大哥你这是发功了吗」</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(42,173,204,0.1);color:var(--teal-bright);border:1px solid rgba(42,173,204,0.2);white-space:nowrap;margin-top:1px">🎨 渲染</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2渲染清单新增B-11（后排边界双人镜头）·C-04（情绪浓度曲线感知画面）·含完整提示词</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.05);color:var(--text-dim);border:1px solid rgba(255,255,255,0.1);white-space:nowrap;margin-top:1px">🖼 素材</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">Creator Bible logo更新·小说菌新版·背景融合网站色调</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- v3.4 -->
+  <div style="margin-bottom:40px">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:22px;font-weight:700;color:#fff">2026·05·19</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 10px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v3.4</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">3项更新</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding-left:16px;border-left:2px solid rgba(232,184,75,0.18)">
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景04·赵凯斯/小猪对话更新：「当你觉得自己比别人聪明并且能赚到钱的时候·大多数人都会理所当然」</span>
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景03·删除「两人穿着工服混入」·小猪台词重写：「只有人最了解人对什么东西着迷或者上瘾」·归零街粒子对话</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景06·阿明完整重构：「你怎么又来了」·「每次都一样·你可以走来走去但我不能」·三人小组逻辑完整建立</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(232,184,75,0.1);color:var(--gold);border:1px solid rgba(232,184,75,0.2);white-space:nowrap;margin-top:1px">🌍 设定</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">新增📋更新记录Tab·追溯v3.1·左侧导航独立入口</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- v3.3 -->
+  <div style="margin-bottom:40px">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:22px;font-weight:700;color:#fff">2026·05·17</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 10px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v3.3</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">9项更新</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding-left:16px;border-left:2px solid rgba(232,184,75,0.15)">
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景01·新增房间广播循环·屏幕三要素「新用户专属 前72小时 收益加成300%」·「04:32」·「立即加入」</span>
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景04·工人A台词：P图大佬截图·「价值百万的截图」·「前三保持一个月够给女朋友搞一台iPhone17」</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景02·小猪：「你有点特别哦·不过你跟紧我·我可以罩着你」</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景03·小猪台词重写：「只有人最了解人对什么东西着迷或者上瘾」·归零街粒子对话</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景04·工人A台词：P图大佬截图·「价值百万的截图」·iPhone17</span>
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
@@ -4885,28 +4937,26 @@ function toggleEp(header) {
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景06·阿明对话完整重构·小猪说任务分工·阿明自己看向赵凯斯</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景07·镜头特写：手摸胸前口袋·握紧冷钱包·蓝白色光隐约透出</span>
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景07·新增镜头特写：赵凯斯手摸工服胸前口袋·握紧冷钱包·蓝白色光隐约从口袋透出</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景09·胸前口袋震动·小猪「还有电动功能呢」·维克多「目标：K-01」</span>
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">EP2场景09·裤兜震动→胸前口袋震动·小猪「还有电动功能呢」·维克多指令：「目标：K-01」</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">EP1维克多台词·五十万token→500万token</span>
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
-        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">📝 剧本</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">EP1维克多台词·五十万token→500万token（约5万美金·GPT-4o/Claude Sonnet级别）</span>
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(232,184,75,0.1);color:var(--gold);border:1px solid rgba(232,184,75,0.2);white-space:nowrap;margin-top:1px">🌍 设定</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">冷钱包·熊猫眼·小猪面具规范全站更新·逆向感知状态重命名</span>
       </div>
     </div>
   </div>
 
+
   <!-- v3.2 -->
   <div style="margin-bottom:40px">
-    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
-      <div style="font-family:'Share Tech Mono',monospace;font-size:22px;font-weight:700;color:#fff">2026·05·16</div>
-      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 10px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v3.2</div>
       <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">3项更新</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;padding-left:16px;border-left:2px solid rgba(232,184,75,0.15)">
@@ -6372,12 +6422,22 @@ L3格子间某工位桌底，昏暗狭小空间。
         </div>
       </div>
 
+      <!-- 场景07新增·外卖小哥+小孩闪回 -->
+      <div style="margin-bottom:8px;border-radius:8px;border:1px solid rgba(232,184,75,0.3);overflow:hidden;background:var(--dark-2)">
+        <div style="padding:14px 16px;border-bottom:1px solid rgba(232,184,75,0.2)">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#fff;background:rgba(232,184,75,0.2);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px">场景 07 · 新增</div>
+          <div style="font-size:17px;font-weight:600;color:var(--text-bright);line-height:1.4">外卖小哥·小孩·闪回特写</div>
+        </div>
+        <div style="padding:12px 16px;display:flex;flex-direction:column;gap:12px">
+
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-12</div><div><div class="rl-name">外卖小哥·格子间工位·主动入职的满足感</div><div class="rl-sub">场景07 · 闪回对比</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">外卖小哥坐在L3工位前·黄色工服·屏幕上排名数字跳升·两手飞速操作·嘴角带着真实的兴奋和满足。和其他人的空洞不同·他是真心觉得这比跑外卖好。闪回对比：坠落时他直接按下按钮的笑容。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，高品质3D CG，电影级光影渲染，3D rendered with painterly 2D texture，三维渲二维质感，9:16竖构图。L3格子间工位·外卖小哥·黄色L3工服（底色为黄色·印有L3臂章）·头戴白色工帽·帽顶情绪管金色粒子流动特别旺盛·比周围工人更密集更快。他坐在工位前身体前倾·两手在键盘上飞速操作·屏幕上「本周排名：#12↑」数字持续跳升·他嘴角带着真实的满足感·不是空洞·是发自内心的高兴·像一个真的找到好工作的人。这是和其他工人最大的不同——他不是被迫的·他是自愿来的。【闪回叠加·0.5秒·右下角小画面·坠落时他直接按下按钮·松了口气·「这比跑外卖强多了」】。光线：L3冷绿色环境光·屏幕蓝光打在脸上·头顶金色情绪管特别亮。no text, no watermark, 8K, 9:16。</div></div></div></div>
+
+          <div class="rl-card"><div class="rl-header"><div class="rl-id">B-13</div><div><div class="rl-name">小孩·格子间工位·玩游戏·书包还在背上</div><div class="rl-sub">场景07 · 最重的一幕</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小孩坐在L3工位前·书包还在背上·屏幕上是游戏画面·他认真在玩·头顶情绪管金色粒子流动特别旺盛。他完全不知道发生了什么。这是场景07最让赵凯斯无法移开目光的一幕。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，高品质3D CG，电影级光影渲染，3D rendered with painterly 2D texture，三维渲二维质感，9:16竖构图。L3格子间工位·小孩·灰色T恤牛仔裤·蓝色书包还背在背上（没有摘下来·细节）·头戴白色工帽·帽顶情绪管金色粒子流动特别旺盛·像一个高产情绪矿工。屏幕上：色彩鲜艳的游戏画面·他低头认真玩·手指在操作·表情专注投入·像一个放学后认真打游戏的孩子·完全不知道自己在哪里·不知道头顶的管道在抽走什么。他太小了·以至于椅子对他来说太高·脚踝刚好到椅子边缘。【闪回叠加·0.5秒·坠落时·书包还在背上·一只手搭在地面·难以置信的惊慌】。光线：L3冷绿色环境光·游戏屏幕彩色光打在他脸上·头顶金色情绪管特别亮·形成强烈对比。no text, no watermark, 8K, 9:16。</div></div></div></div>
+
+        </div>
+      </div>
+
       <!-- 场景08 -->
-      <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
-        <div style="display:flex;gap:0;cursor:pointer" onclick="this.parentElement.querySelector('.rl-detail').style.display=this.parentElement.querySelector('.rl-detail').style.display==='none'?'block':'none'">
-          <div style="width:180px;flex-shrink:0;padding:14px 16px;border-right:1px solid var(--border)">
-            <div style="font-family:'Share Tech Mono',monospace;font-size:11px;font-weight:700;color:#0D1220;background:var(--gold);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:0.05em">场景 08</div>
-            <div style="font-size:17px;font-weight:600;color:var(--text-bright);margin-bottom:8px;line-height:1.4">L3初醒 · 小猪出现</div>
             <div style="font-size:12px;color:var(--text-dim)">10秒 · 无对白</div>
           </div>
           <div style="flex:1;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center">
@@ -6877,7 +6937,7 @@ L3格子间某工位桌底，昏暗狭小空间。
         <div class="modal-inner-content" id="ep2tab-overview">
       <h3>EP2 · 场景状态总览</h3>
       <div style="margin-bottom:16px;padding:12px 16px;background:rgba(243,156,18,0.08);border:1px solid rgba(243,156,18,0.25);border-radius:8px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);line-height:1.9">
-        // 渲染进度：21/48张已完成 · 27张待渲染<br>
+        // 渲染进度：21/52张已完成 · 31张待渲染<br>
         // ✅ 已完成 &nbsp;·&nbsp; 🔶 部分完成 &nbsp;·&nbsp; ⏳ 待渲染<br>
         // 详见渲染需求清单Tab查看每个场景具体待渲染卡片
       </div>
@@ -6936,15 +6996,15 @@ L3格子间某工位桌底，昏暗狭小空间。
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">07</td>
-              <td style="padding:10px 14px;color:var(--text)">发现坠落散户·「是我把他们带下来的」</td>
+              <td style="padding:10px 14px;color:var(--text)">四个人物闪回·外卖小哥+小孩·内心独白·小猪「时间有限」</td>
               <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
-              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 1/6</span></td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 1/8</span></td>
             </tr>
             <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">08</td>
-              <td style="padding:10px 14px;color:var(--text)">感知出口方向·后排边界·越走越冷</td>
-              <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
-              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 2/6</span></td>
+              <td style="padding:10px 14px;color:var(--text)">逆向感知发动·情绪浓度曲线·K线谷底异常信号·小猪「你这是发功了吗」</td>
+              <td style="padding:10px 14px;color:var(--text-dim)">20秒</td>
+              <td style="padding:10px 14px"><span style="font-size:11px;color:#F39C12">🔶 部分完成 2/8</span></td>
             </tr>
             <tr>
               <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">09</td>
