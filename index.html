@@ -7528,6 +7528,236 @@ L3格子间某工位桌底，昏暗狭小空间。
       </div>
     </div>
 
+        // ⭐ 标记为情感核心镜头 · 优先渲染
+      </div>
+    </div>
+
+    <!-- 制作进度表 -->
+    <div style="margin-top:32px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:0.1em">// EP2 · 制作进度表</div>
+        <div style="flex:1;height:1px;background:rgba(232,184,75,0.2)"></div>
+        <div id="ep2-progress-summary" style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">0 / 11 完成</div>
+      </div>
+
+      <!-- 进度条 -->
+      <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:2px;margin-bottom:24px;overflow:hidden">
+        <div id="ep2-progress-bar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--teal-bright),var(--gold));border-radius:2px;transition:width 0.4s ease"></div>
+      </div>
+
+      <!-- 场景列表 -->
+      <div style="display:flex;flex-direction:column;gap:8px" id="ep2-checklist">
+
+        <!-- 开场字幕卡 -->
+        <div class="ep2-check-row" data-id="s00a" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">开场字幕卡</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">第10小时</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">黑底白字 · 叠加字幕</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 开场 -->
+        <div class="ep2-check-row" data-id="s00b" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">开场 · 5秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">ERROR · 只剩他一人</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">L3情绪工厂 · 坠落区 · 幽绿色冷光</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 场景01 -->
+        <div class="ep2-check-row" data-id="s01" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">场景 01 · 15秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">桌底 · ERROR的意义 · 62小时</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">404号工位桌底 · 面具粉绿色光是唯一暖色</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 场景02 -->
+        <div class="ep2-check-row" data-id="s02" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">场景 02 · 20秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">强制入职 · 三阶段反应</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">L3入职缓冲区 · 小隔间 · 门缝透屏幕光</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 场景03 -->
+        <div class="ep2-check-row" data-id="s03" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">场景 03 · 20秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">走进格子间 · 那不是雾气</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">L3格子间 · 无限延伸工位 · 头顶数据管道</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 场景04 -->
+        <div class="ep2-check-row" data-id="s04" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">场景 04 · 15秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">休息时间 · 工人们的沾沾自喜</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">格子间休息区 · 工人短暂停歇</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 场景05 -->
+        <div class="ep2-check-row" data-id="s05" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">场景 05 · 15秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">推算 · 如果这些粒子一直在往上输……</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">格子间角落 · 赵凯斯仰头看数据管道</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 场景06 -->
+        <div class="ep2-check-row" data-id="s06" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">场景 06 · 20秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">小猪找阿明 · 妈妈的早餐</span>
+              <span style="font-size:10px;color:var(--red);font-family:'Share Tech Mono',monospace;padding:1px 6px;border:1px solid rgba(233,69,96,0.3);border-radius:3px">情感核心</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">格子间 · 阿明工位附近 · 第10小时</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 场景07 -->
+        <div class="ep2-check-row" data-id="s07" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">场景 07 · 15秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">是我把他们带下来的</span>
+              <span style="font-size:10px;color:var(--red);font-family:'Share Tech Mono',monospace;padding:1px 6px;border:1px solid rgba(233,69,96,0.3);border-radius:3px">情感核心</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">格子间中段 · 四个人物闪回</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 场景08 -->
+        <div class="ep2-check-row" data-id="s08" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">场景 08 · 20秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">感知出口方向 · 情绪归零处的异常信号</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">格子间最深处 · 靠近后排边界 · 极暗</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+        <!-- 场景09 -->
+        <div class="ep2-check-row" data-id="s09" onclick="toggleEP2Check(this)" style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;cursor:pointer;transition:all 0.2s">
+          <div class="ep2-checkbox" style="width:20px;height:20px;border-radius:5px;border:2px solid rgba(232,184,75,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" class="ep2-check-icon" style="opacity:0;transition:opacity 0.15s"><polyline points="1,4.5 4,7.5 10,1" stroke="#0D1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#0D1220;background:var(--gold);padding:2px 8px;border-radius:3px;font-weight:700">场景 09 · 10秒</span>
+              <span class="ep2-row-title" style="font-size:13px;color:var(--text-bright);font-weight:500">冷钱包脉冲 · EP2结尾钩子</span>
+              <span style="font-size:10px;color:var(--red);font-family:'Share Tech Mono',monospace;padding:1px 6px;border:1px solid rgba(233,69,96,0.3);border-radius:3px">结尾钩子</span>
+            </div>
+            <div style="font-size:11px;color:var(--text-dim);margin-top:3px">404号工位桌底 · 深夜 · 幽绿色冷光</div>
+          </div>
+          <div class="ep2-done-tag" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2ECC71;opacity:0;transition:opacity 0.2s;white-space:nowrap">✓ 完成</div>
+        </div>
+
+      </div><!-- end ep2-checklist -->
+
+      <!-- 完成提示 -->
+      <div id="ep2-all-done" style="display:none;margin-top:20px;padding:16px;background:rgba(46,204,113,0.08);border:1px solid rgba(46,204,113,0.3);border-radius:8px;text-align:center;font-family:'Share Tech Mono',monospace;font-size:13px;color:#2ECC71;letter-spacing:0.05em">
+        🎬 EP2 全集制作完成 · 准备发布
+      </div>
+    </div>
+
+    <script>
+    function toggleEP2Check(row) {
+      var isDone = row.classList.contains('ep2-done');
+      if (isDone) {
+        row.classList.remove('ep2-done');
+        row.style.background = 'rgba(255,255,255,0.03)';
+        row.style.borderColor = 'rgba(255,255,255,0.07)';
+        var cb = row.querySelector('.ep2-checkbox');
+        cb.style.background = 'transparent';
+        cb.style.borderColor = 'rgba(232,184,75,0.4)';
+        row.querySelector('.ep2-check-icon').style.opacity = '0';
+        row.querySelector('.ep2-done-tag').style.opacity = '0';
+        row.querySelector('.ep2-row-title').style.textDecoration = 'none';
+        row.querySelector('.ep2-row-title').style.color = 'var(--text-bright)';
+      } else {
+        row.classList.add('ep2-done');
+        row.style.background = 'rgba(46,204,113,0.06)';
+        row.style.borderColor = 'rgba(46,204,113,0.3)';
+        var cb = row.querySelector('.ep2-checkbox');
+        cb.style.background = '#2ECC71';
+        cb.style.borderColor = '#2ECC71';
+        row.querySelector('.ep2-check-icon').style.opacity = '1';
+        row.querySelector('.ep2-done-tag').style.opacity = '1';
+        row.querySelector('.ep2-row-title').style.textDecoration = 'line-through';
+        row.querySelector('.ep2-row-title').style.color = 'var(--text-dim)';
+      }
+      var total = document.querySelectorAll('.ep2-check-row').length;
+      var done = document.querySelectorAll('.ep2-check-row.ep2-done').length;
+      document.getElementById('ep2-progress-summary').textContent = done + ' / ' + total + ' 完成';
+      document.getElementById('ep2-progress-bar').style.width = (done / total * 100) + '%';
+      document.getElementById('ep2-all-done').style.display = (done === total) ? 'block' : 'none';
+    }
+    </script>
+
     </div><!-- end ep2tab-overview -->
       </div>
       <div class="scene-modal-page" id="ep2-modal-renders" style="display:none">
