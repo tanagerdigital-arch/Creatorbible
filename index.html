@@ -8873,6 +8873,7 @@ L3格子间某工位桌底，昏暗狭小空间。
     </div>
     <div class="scene-modal-tabs">
       <button class="scene-modal-tab active" onclick="switchSceneTab('ep3','overview',this)">📊 场景总览</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep3','storyboard',this)">🎬 故事板</button>
       <button class="scene-modal-tab" onclick="switchSceneTab('ep3','renders',this)">📋 渲染需求清单</button>
       <button class="scene-modal-tab" onclick="switchSceneTab('ep3','gallery',this)">🖼️ 场景定稿图库</button>
     </div>
@@ -8963,6 +8964,98 @@ L3格子间某工位桌底，昏暗狭小空间。
           // EP3渲染工作尚未开始 · 场景定稿图库待填充 · 渲染需求清单制作中
         </div>
       </div>
+      <div class="scene-modal-page" id="ep3-modal-storyboard" style="display:none">
+        <div class="modal-inner-content">
+
+          <div style="margin-bottom:24px">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--teal-bright);margin-bottom:6px">// 导演故事板 · 创作者参考用</div>
+            <p style="font-size:13px;color:var(--text-dim);line-height:1.8">故事板由导演提供，用于帮助创作者理解每个场景的镜头意图和情绪走向。请在查看渲染需求清单之前先看故事板，了解导演的视觉构想。</p>
+          </div>
+
+          <!-- SB-E3-00 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E3-00</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">开场 · 妈妈的早餐店</span>
+            </div>
+            <img src="https://i.ibb.co/yczrkjck/SB-E3-00.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E3-01 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--gold);padding:2px 10px;border-radius:4px;font-weight:700">SB-E3-01</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">场景01-1 + 01-2 · 阿明答应 · SKL屎来运转</span>
+            </div>
+            <img src="https://i.ibb.co/RGTW2QGw/SB-E3-01-01-1-01-2-SKL.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E3-02 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--gold);padding:2px 10px;border-radius:4px;font-weight:700">SB-E3-02</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">场景02 · 桌底对话 · 面具消失</span>
+            </div>
+            <img src="https://i.ibb.co/FqkW5QgC/SB-E3-02-02.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E3-03-A -->
+          <div style="margin-bottom:20px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--gold);padding:2px 10px;border-radius:4px;font-weight:700">SB-E3-03-A</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">场景03 · 工厂四工作台 · 第一张（桌底开场 + 工作台建立）</span>
+            </div>
+            <img src="https://i.ibb.co/Dgm8r5wC/SB-E3-03-A-03.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E3-03-B -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--gold);padding:2px 10px;border-radius:4px;font-weight:700">SB-E3-03-B</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">场景03 · 工厂四工作台 · 第二张（工作台细节 + 赵凯斯收口）</span>
+            </div>
+            <img src="https://i.ibb.co/S4pbhX8s/SB-E3-03-B-03.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E3-04 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--gold);padding:2px 10px;border-radius:4px;font-weight:700">SB-E3-04</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">场景04 + 05 · 维克多监控 · 机械小兵推进</span>
+            </div>
+            <img src="https://i.ibb.co/RxmgKpb/SB-E3-04-04-05.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E3-06 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--gold);padding:2px 10px;border-radius:4px;font-weight:700">SB-E3-06</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">场景06 · 数据片交接 · 屎来运转 · 三人</span>
+            </div>
+            <img src="https://i.ibb.co/Fkq0MFYP/SB-E3-06-06.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E3-07 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--gold);padding:2px 10px;border-radius:4px;font-weight:700">SB-E3-07</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">场景07 + 08 · 进入后排 · 林牧质数序列</span>
+            </div>
+            <img src="https://i.ibb.co/1cxXf5n/SB-E3-07-07-08.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E3-09 -->
+          <div style="margin-bottom:16px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--gold);padding:2px 10px;border-radius:4px;font-weight:700">SB-E3-09</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">场景09 · 排名风暴 · 阿明跳桌 · 「求菩萨保佑」</span>
+            </div>
+            <img src="https://i.ibb.co/zh1hVQy7/SB-E3-09-09.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+        </div>
+      </div>
+
       <div class="scene-modal-page" id="ep3-modal-renders" style="display:none">
 
       <div class="modal-inner-content" id="ep3tab-renders">
