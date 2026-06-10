@@ -3067,6 +3067,25 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <div class="char-detail-body">
+        <h4>电量机制</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+          <div class="info-box" style="border-color:rgba(233,69,96,0.3)">
+            <div class="info-box-label" style="color:var(--red)">发光层结构</div>
+            <p><strong style="color:var(--teal-bright)">外层·绿色</strong>：伪装/隐藏功能·正常运作<br>
+            <strong style="color:var(--red)">内层·粉色</strong>：能量核心·亮度 = 剩余电量</p>
+          </div>
+          <div class="info-box" style="border-color:rgba(233,69,96,0.3)">
+            <div class="info-box-label" style="color:var(--red)">充能方式</div>
+            <p>消耗<strong style="color:var(--gold)">真实情绪</strong>或<strong style="color:var(--gold)">金钱</strong>·
+            S2中小猪两者均快耗尽·
+            冷钱包对CA指挥棒有充能作用·
+            间接影响面具续航。</p>
+          </div>
+        </div>
+        <div class="info-box" style="border-color:rgba(42,173,204,0.2);margin-bottom:16px">
+          <div class="info-box-label" style="color:var(--teal-bright)">EP3电量状态</div>
+          <p>进入后排时粉色内层隐约偏暗·像手机电量剩20%·绿色外层仍清晰明亮·整体仍可正常使用·但小猪自己知道不多了。</p>
+        </div>
         <h4>道具定义</h4>
         <div class="info-grid">
           <div class="info-box">
@@ -3159,7 +3178,11 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="char-images" style="gap:12px;margin-bottom:20px">
         <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/pjcnmghG/image.png')">
           <img src="https://i.ibb.co/pjcnmghG/image.png" alt="猪灵面具·道具图">
-          <div class="char-image-label">// 猪灵面具</div>
+          <div class="char-image-label">// 猪灵面具·满电</div>
+        </div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/Kj8d5GrZ/image.png')">
+          <img src="https://i.ibb.co/Kj8d5GrZ/image.png" alt="猪灵面具·电量不足版">
+          <div class="char-image-label">// 猪灵面具·电量不足</div>
         </div>
       </div>
 
@@ -3246,7 +3269,34 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <div class="char-detail-body">
-        <h4>道具定义</h4>
+                <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/1tqvRGst/CA.png')">
+          <img src="https://i.ibb.co/1tqvRGst/CA.png" alt="CA指挥棒·充电版">
+          <div class="char-image-label">// CA指挥棒·电量●●●○○</div>
+        
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/ccnNTSh8/image.png')">
+          <img src="https://i.ibb.co/ccnNTSh8/image.png" alt="阿明妈妈·定妆照">
+          <div class="char-image-label">// 阿明妈妈·定妆照</div>
+        </div></div>
+      </div>
+      <h4>电量机制</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+        <div class="info-box" style="border-color:rgba(42,173,204,0.2)">
+          <div class="info-box-label" style="color:var(--teal-bright)">电量显示</div>
+          <p>棒身侧面<strong style="color:var(--gold)">5个粉色发光点</strong>·亮=有电·暗=已耗尽<br>
+          满电：●●●●●<br>EP3开始：●●●○○（三格）</p>
+        </div>
+        <div class="info-box" style="border-color:rgba(42,173,204,0.2)">
+          <div class="info-box-label" style="color:var(--teal-bright)">充能来源</div>
+          <p>冷钱包对CA指挥棒有充能作用·
+          EP3场景07发现·靠近冷钱包时第三格隐约亮起·
+          充能不稳定但存在。EP4待展开。</p>
+        </div>
+      </div>
+      <div class="info-box" style="border-color:rgba(42,173,204,0.2);margin-bottom:16px">
+        <div class="info-box-label" style="color:var(--teal-bright)">EP3电量记录</div>
+        <p>场景01-2使用：●●●○○ → 场景06使用：●●○○○ → 场景07靠近冷钱包短暂充至●●●○○·又回落至●●○○○</p>
+      </div>
+      <h4>道具定义</h4>
         <div class="info-grid">
           <div class="info-box">
             <div class="info-box-label">功能</div>
