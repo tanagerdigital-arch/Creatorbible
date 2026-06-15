@@ -1142,6 +1142,7 @@
     <a href="#ep3" class="nav-link">EP3 情绪矿工</a>
     <a onclick="openSceneModal('ep3')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP3 场景包 ↗</a>
     <a href="#ep4" class="nav-link">EP4 粉色暗池</a>
+    <a onclick="openSceneModal('ep4')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP4 场景包 ↗</a>
     <a href="#ep5" class="nav-link">EP5 零日漏洞</a>
     <a href="#ep6" class="nav-link">EP6 情绪之证</a>
     </div>
@@ -4788,6 +4789,13 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
               <div class="script-dir" style="text-align:center;margin-top:16px">黑底字幕卡·「第45小时 · 距离记忆清零：27:00:00」</div>
               <div class="script-countdown-display">EP4 · 完</div>
             </div>
+          </div>
+
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border)">
+            <button class="open-scene-pack-btn" onclick="openSceneModal('ep4')">
+              🎬 打开 EP4 场景包 &nbsp;→
+            </button>
+            <span style="font-size:12px;color:var(--text-dim);margin-left:12px">场景总览 · 11张故事板 · 渲染需求 · 定稿图库</span>
           </div>
         </div>
       </div>
@@ -9706,6 +9714,243 @@ L3格子间某工位桌底，昏暗狭小空间。
           <div style="font-size:14px;color:var(--text-dim);line-height:1.9">渲染完成后将陆续上传至此</div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="scene-modal-overlay" id="modal-ep4">
+  <div class="scene-modal">
+    <div class="scene-modal-header">
+      <div class="scene-modal-title">EP4 · 场景包 · 粉色暗池</div>
+      <button class="scene-modal-close" onclick="closeSceneModal('ep4')">✕</button>
+    </div>
+    <div class="scene-modal-tabs">
+      <button class="scene-modal-tab active" onclick="switchSceneTab('ep4','overview',this)">📊 场景总览</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep4','storyboard',this)">🎬 故事板</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep4','renders',this)">📋 渲染需求清单</button>
+      <button class="scene-modal-tab" onclick="switchSceneTab('ep4','gallery',this)">🖼️ 场景定稿图库</button>
+    </div>
+    <div class="scene-modal-body">
+
+      <!-- 场景总览 -->
+      <div class="scene-modal-page" id="ep4-modal-overview" style="display:block">
+        <h3>EP4 · 场景状态总览</h3>
+        <div style="margin:12px 0 16px;padding:12px 16px;background:rgba(233,69,96,0.06);border:1px solid rgba(233,69,96,0.2);border-radius:8px;font-size:12px;color:var(--text-dim);line-height:1.7">
+          时间轴 40→45小时（记忆清零 32→27）· 11个场景 · 核心：发现峡谷/培养皿/粉色暗池/鸿沟 · 确立"必须回去唤醒所有人填满暗池才能漂过鸿沟"的解放逻辑 · 苏晴四线合一首次落地
+        </div>
+        <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
+          <table style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead>
+              <tr style="background:rgba(212,160,23,0.08);border-bottom:1px solid var(--border)">
+                <th style="text-align:left;padding:10px 14px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;font-weight:400">场景</th>
+                <th style="text-align:left;padding:10px 14px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;font-weight:400">内容</th>
+                <th style="text-align:left;padding:10px 14px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;font-weight:400">时长</th>
+                <th style="text-align:left;padding:10px 14px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;font-weight:400">状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--teal-bright)">冷开场</td>
+                <td style="padding:10px 14px;color:var(--text)">坠落与对视 · 脚蹬培养皿 · 和插粉色管的人对视</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">20秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景01</td>
+                <td style="padding:10px 14px;color:var(--text)">机械小兵扫到404 · 桌底空了 · 危机</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">15秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景02</td>
+                <td style="padding:10px 14px;color:var(--text)">阿明《求菩萨保佑》名场面 · 唱歌打断机械小兵 · 营救行动 <span style="color:var(--red);font-size:11px">⭐情感核心</span></td>
+                <td style="padding:10px 14px;color:var(--text-dim)">50秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景03</td>
+                <td style="padding:10px 14px;color:var(--text)">返回404 · 机械小兵推阿明 · 小猪「来财」· 危机解除</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">25秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景04</td>
+                <td style="padding:10px 14px;color:var(--text)">冷静觉察与举报 · 发现真相 · 情绪增幅道具勾引</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">40秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景05</td>
+                <td style="padding:10px 14px;color:var(--text)">桌底 · 双时钟 · 记忆+电量双倒计时 · 决定二次出发</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">30秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景06</td>
+                <td style="padding:10px 14px;color:var(--text)">二次下降 · 穿培养皿 · 1382天 · 小猪粉色共振</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">50秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景07</td>
+                <td style="padding:10px 14px;color:var(--text)">粉色暗池 · CA充电 · 钥匙找锁 <span style="color:var(--red);font-size:11px">⭐情感核心</span></td>
+                <td style="padding:10px 14px;color:var(--text-dim)">40秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景08</td>
+                <td style="padding:10px 14px;color:var(--text)">发现鸿沟 · 赵凯斯执意尝试 · 必须回去唤醒所有人 <span style="color:var(--red);font-size:11px">⭐情感核心</span></td>
+                <td style="padding:10px 14px;color:var(--text-dim)">40秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景09</td>
+                <td style="padding:10px 14px;color:var(--text)">林牧被审计 · 维克多逼近 · 罪证危机</td>
+                <td style="padding:10px 14px;color:var(--text-dim)">30秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;color:var(--gold)">场景10</td>
+                <td style="padding:10px 14px;color:var(--text)">小何登场 · 林牧看照片 · 苏晴四线合一 · 结尾炸点 <span style="color:var(--red);font-size:11px">⭐情感核心</span></td>
+                <td style="padding:10px 14px;color:var(--text-dim)">25秒</td>
+                <td style="padding:10px 14px"><span style="color:#C6F135;font-size:11px">✅ 故事板完成</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:20px;padding:16px 20px;background:rgba(198,241,53,0.06);border:1px solid rgba(198,241,53,0.2);border-radius:8px;font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim)">
+          // EP4 故事板已全部完成（11张）· 分镜渲染图与场景定稿图库制作中
+        </div>
+      </div>
+
+      <!-- 故事板 -->
+      <div class="scene-modal-page" id="ep4-modal-storyboard" style="display:none">
+        <div class="modal-inner-content">
+          <div style="margin-bottom:24px">
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--teal-bright);margin-bottom:6px">// 导演故事板 · 创作者参考用 · 共11张</div>
+            <p style="font-size:13px;color:var(--text-dim);line-height:1.8">故事板由导演提供，用于帮助创作者理解每个场景的镜头意图和情绪走向。建议制作视频时：故事板定调 + 对应分镜渲染图一起参考，出图又快又准。</p>
+          </div>
+
+          <!-- SB-E4-00 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-00</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">冷开场 · 坠落与对视</span>
+            </div>
+            <img src="https://i.ibb.co/yF4rbMqD/SB-E4-00.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-01 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-01</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">阿明唱歌名场面 · 上 · 点火与峡谷交叉</span>
+            </div>
+            <img src="https://i.ibb.co/WWcmkkh7/SB-E4-01.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-02 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-02</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">阿明唱歌名场面 · 下 · 群舞与合家欢</span>
+            </div>
+            <img src="https://i.ibb.co/qFpkfYWR/SB-E4-02.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-03 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-03</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">返回404 · 危机解除</span>
+            </div>
+            <img src="https://i.ibb.co/H0vmSRX/SB-E4-03-404.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-04 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-04</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">冷静觉察与举报</span>
+            </div>
+            <img src="https://i.ibb.co/hJtPWKpV/SB-E4-04.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-05 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-05</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">双时钟 · 二次出发</span>
+            </div>
+            <img src="https://i.ibb.co/prNYw5Ht/SB-E4-05.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-06 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-06</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">二次下降 · 穿培养皿</span>
+            </div>
+            <img src="https://i.ibb.co/WW75qYNS/SB-E4-03.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-07 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-07</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">粉色暗池 · CA充电 · 钥匙找锁</span>
+            </div>
+            <img src="https://i.ibb.co/8DBWH1WF/SB-E4-07-CA-001.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-08 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-08</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">发现鸿沟 · 执意尝试</span>
+            </div>
+            <img src="https://i.ibb.co/Xr6Y9Tgk/SB-E4-08.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-09 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-09</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">林牧被审计</span>
+            </div>
+            <img src="https://i.ibb.co/MkN4cFTq/SB-E4-09.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+          <!-- SB-E4-10 -->
+          <div style="margin-bottom:32px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+              <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:#0D1220;background:var(--teal-bright);padding:2px 10px;border-radius:4px;font-weight:700">SB-E4-10</span>
+              <span style="font-size:14px;font-weight:600;color:var(--text-bright)">结尾 · 小何 · 林牧看照片 · 双钩子</span>
+            </div>
+            <img src="https://i.ibb.co/LwJwGmC/SB-E4-10.png" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 渲染需求清单 -->
+      <div class="scene-modal-page" id="ep4-modal-renders" style="display:none">
+        <div style="text-align:center;padding:60px 20px">
+          <div style="font-size:48px;margin-bottom:20px">📋</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);margin-bottom:12px">EP4 渲染需求清单</div>
+          <div style="font-size:14px;color:var(--text-dim);line-height:1.9">分镜渲染图提示词制作中 · 将匹配故事板颗粒度逐格出图</div>
+        </div>
+      </div>
+
+      <!-- 场景定稿图库 -->
+      <div class="scene-modal-page" id="ep4-modal-gallery" style="display:none">
+        <div style="text-align:center;padding:60px 20px">
+          <div style="font-size:48px;margin-bottom:20px">🖼️</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);margin-bottom:12px">EP4 场景定稿图库</div>
+          <div style="font-size:14px;color:var(--text-dim);line-height:1.9">渲染完成后将陆续上传至此</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
