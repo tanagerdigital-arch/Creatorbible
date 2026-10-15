@@ -1004,15 +1004,14 @@
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
           <div style="width:9px;height:9px;border-radius:50%;background:#E8B84B;box-shadow:0 0 10px #E8B84B,0 0 20px rgba(232,184,75,0.4);animation:pulse 2s infinite;flex-shrink:0"></div>
           <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.2em">最后更新</span>
-          <span style="margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 8px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v4.9</span>
+          <span style="margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(232,184,75,0.5);padding:2px 8px;border:1px solid rgba(232,184,75,0.2);border-radius:20px">v4.10</span>
         </div>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:26px;font-weight:700;color:#fff;letter-spacing:0.08em;line-height:1.1;text-shadow:0 0 20px rgba(232,184,75,0.3)">2026<span style="color:var(--gold)">·</span>10<span style="color:var(--gold)">·</span>11</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:26px;font-weight:700;color:#fff;letter-spacing:0.08em;line-height:1.1;text-shadow:0 0 20px rgba(232,184,75,0.3)">2026<span style="color:var(--gold)">·</span>10<span style="color:var(--gold)">·</span>13</div>
         <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(232,184,75,0.15)">
           <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);line-height:1.9">
-            <span style="color:#39FF14;font-weight:700">v4.9</span> <span style="color:#39FF14">◆</span> EP5 Part-2 整段并入既有结构：新建「EP5 Part-2 场景包」（场景总览/故事板/渲染需求清单/定稿图库 四Tab，与 Part-1 同款）<br>
-            <span style="color:#39FF14">◆</span> 60 条逐镜头渲染提示词（皮克斯3D+painterly 2D·内联官方定妆·14★重点）· 12张线稿分镜入库<br>
-            <span style="color:#39FF14">◆</span> 剧本tab新增 EP5 Part-2 完整剧本工作稿；撤除上一版的独立分镜板块<br>
-          </div>
+            <span style="color:#39FF14;font-weight:700">v4.10</span> <span style="color:#39FF14">◆</span> 客服小何角色档案重写：出场记录全时间线 · 两块屏（谷底废屏追踪端点 / 光明顶失踪用户秘密墙）· 收割管线触达设定 · 删除旧「Block/Payload」台词<br>
+            <span style="color:#39FF14">◆</span> 新增「永信城·界面与平台资产」区：永信发射台 / 粒子面签 / 工厂热点播报 / 创作者招募页 / 回本吧UI 五张卡＋City Logo（图位待回填）<br>
+            <span style="color:#39FF14">◆</span> 光明顶大屏4条即梦提示词；全局 $0KID→$0xkid 改名<br></div>
         </div>
       </div>
     </div>
@@ -1137,8 +1136,17 @@
     <a href="#prop-uniform" class="nav-link">👔 L3标准工服</a>
     <a href="#prop-capsule" class="nav-link">💊 情绪增幅胶囊</a>
     <a href="#prop-sackbird" class="nav-link">🐦 扇财鸟 SackBird</a>
-    <a href="#prop-0kid" class="nav-link">🪙 $0KID 归零街之子</a>
+    <a href="#prop-0kid" class="nav-link">🪙 $0xkid 归零街之子</a>
     <a href="#prop-cex-band" class="nav-link">🔑 CEX权限手环</a>
+    </div>
+    <div class="nav-section-label" onclick="toggleNav('nav-assets')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">界面与平台资产<span id="nav-assets-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
+    <div id="nav-assets">
+    <a href="#asset-launchpad" class="nav-link">🚀 永信发射台</a>
+    <a href="#asset-proofofheart" class="nav-link">💗 粒子面签</a>
+    <a href="#asset-hotboard" class="nav-link">📊 工厂热点播报</a>
+    <a href="#asset-recruit" class="nav-link">📢 创作者招募页</a>
+    <a href="#asset-breakeven-ui" class="nav-link">🟦 回本吧 UI</a>
+    <a href="#vi-city-logo" class="nav-link">🔺 永信城 Logo</a>
     </div>
     <div class="nav-section-label" onclick="toggleNav('nav-eps')" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center">六集大纲 / 剧本<span id="nav-eps-icon" style="font-size:10px;transition:transform 0.2s">▾</span></div>
     <div id="nav-eps">
@@ -1623,7 +1631,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <p style="line-height:1.9"><strong style="color:var(--gold)">这条设定解释了三件事：</strong></p>
         <p style="line-height:1.9">① <strong>EP1的神针为什么那么狠</strong>——那时冷钱包还在体系内，全能量可用。<br>
-        ② <strong>S2的神针为什么砸不穿$0KID</strong>——冷钱包随赵凯斯落入L3，维克多只能用<strong>降格的算法功率</strong>打。他砸得出恐惧，砸不穿"不卖的人"。<br>
+        ② <strong>S2的神针为什么砸不穿$0xkid</strong>——冷钱包随赵凯斯落入L3，维克多只能用<strong>降格的算法功率</strong>打。他砸得出恐惧，砸不穿"不卖的人"。<br>
         ③ <strong>维克多为什么疯了一样要找冷钱包</strong>——它既是情绪之门的钥匙，<strong style="color:var(--red)">也是他自己武器的电池</strong>。动机翻倍。</p>
         <p style="line-height:1.9;margin-top:12px;font-size:13px;color:var(--text-dim)">// 手动接管时的系统提示（Part 2场景06拍4）：「<strong style="color:var(--red)">手动接管 · 冷钱包密钥未授权 · 自由能量锁定 · 当前：算法功率</strong>」</p>
       </div>
@@ -1812,7 +1820,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-box" style="border-color:rgba(212,160,23,0.3)">
               <div class="info-box-label" style="color:var(--gold)">老庙祝的那句话</div>
-              <p><strong style="color:var(--teal-bright)">「求财的鸟，教人拜的却从来不是财。」</strong><br><span style="font-size:12px;color:var(--text-dim)">// 这句话是整个$0KID三拍动作的注脚：扇财鸟收翼抱住的姿势，本来就不是求财的姿势。归零街人拜了几十年，没有一个人看懂。</span></p>
+              <p><strong style="color:var(--teal-bright)">「求财的鸟，教人拜的却从来不是财。」</strong><br><span style="font-size:12px;color:var(--text-dim)">// 这句话是整个$0xkid三拍动作的注脚：扇财鸟收翼抱住的姿势，本来就不是求财的姿势。归零街人拜了几十年，没有一个人看懂。</span></p>
             </div>
           </div>
           <p style="font-size:14px;line-height:1.9"><strong style="color:var(--gold)">EP5出现方式：</strong>场景02，阿明想起这座庙——<strong>以回忆/意识流画面呈现</strong>（三人被困L3，去不了L2）。观众借此第一次看见庙。</p>
@@ -1832,7 +1840,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div style="margin:14px 0;padding:14px 16px;background:rgba(0,0,0,0.2);border-radius:8px">
             <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:8px">// EP5 里回本吧承担的三件事</div>
             <p style="font-size:13px;line-height:1.9;margin:0">
-            ① <strong style="color:var(--gold)">$0KID的诞生地</strong>：阿明不在全网喊单，先在这里发首帖「我做了个东西，送给归零街。」<b>零回复开局</b>，楼一层一层自己盖起来。<br>
+            ① <strong style="color:var(--gold)">$0xkid的诞生地</strong>：阿明不在全网喊单，先在这里发首帖「我做了个东西，送给归零街。」<b>零回复开局</b>，楼一层一层自己盖起来。<br>
             ② <strong style="color:var(--gold)">人气的可视化</strong>：场景06第一拍——回本吧的楼层与K线的绿柱<b>并排涨</b>，一个是人气，一个是价格。<br>
             ③ <strong style="color:var(--gold)">阿明的遗言帖</strong>：场景07被捕前，他在置顶帖里补上「楼盖到这了。剩下的，你们自己盖。」黑场前，楼层数字跳得比任何时候都快。
             </p>
@@ -2205,7 +2213,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- 赵凯斯 -->
     <div class="char-detail" id="zhao">
       <div class="char-detail-header">
-        <div class="char-icon" style="background:rgba(212,160,23,0.1);border-color:var(--gold);padding:0;overflow:hidden"><img src="https://i.ibb.co/zTPRRg5k/2.png" alt="赵凯斯" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <div class="char-icon" style="background:rgba(212,160,23,0.1);border-color:var(--gold);padding:0;overflow:hidden"><img src="https://i.ibb.co/XZ05hCmM/image.png" alt="赵凯斯" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
         <div>
           <div class="char-detail-name">赵凯斯</div>
           <div class="char-detail-subtitle">ROARING PANDA · L2系统维护工程师 · 28岁 · 绝对主角</div>
@@ -2217,45 +2225,37 @@ document.addEventListener('DOMContentLoaded', function() {
           <a href="https://ibb.co/album/r3GknW" target="_blank" style="font-size:11px;color:var(--teal-bright);text-decoration:none;border:1px solid rgba(42,173,204,0.3);padding:4px 12px;border-radius:4px;white-space:nowrap;font-family:'Share Tech Mono',monospace">查看完整角色相册 ↗</a>
         </div>
         <div style="font-size:11px;color:var(--text-dim);margin-bottom:12px">即梦渲染时上传对应角度图作参考·配合正面定妆照使用</div>
-        <div style="font-size:10px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;margin-bottom:8px">── L2正常版 ──</div>
+        <div style="font-size:10px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;margin-bottom:8px">── L2 永信城版 ──</div>
       </div>
       <div class="char-images" style="gap:12px">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/rKx3RFNR/image.png')">
-          <img src="https://i.ibb.co/rKx3RFNR/image.png" alt="赵凯斯·正面">
-          <div class="char-image-label">// 正面</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/XZpSNRP4/L2.png')">
+          <img src="https://i.ibb.co/XZpSNRP4/L2.png" alt="赵凯斯·永信城L2定妆三视图">
+          <div class="char-image-label">// 永信城 L2 定妆三视图</div>
         </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/8Dmj9Q2D/image.png')">
-          <img src="https://i.ibb.co/8Dmj9Q2D/image.png" alt="赵凯斯·背面">
-          <div class="char-image-label">// 背面</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/XZ05hCmM/image.png')">
+          <img src="https://i.ibb.co/XZ05hCmM/image.png" alt="赵凯斯·永信城版">
+          <div class="char-image-label">// 永信城版</div>
         </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/8yW03by/1-2.png')">
-          <img src="https://i.ibb.co/8yW03by/1-2.png" alt="赵凯斯·侧面">
-          <div class="char-image-label">// 侧面</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/hRBFHZcq/3-4.png')">
-          <img src="https://i.ibb.co/hRBFHZcq/3-4.png" alt="赵凯斯·3/4侧面">
-          <div class="char-image-label">// 3/4侧面</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/35ybzCgX/L2.png')">
+          <img src="https://i.ibb.co/35ybzCgX/L2.png" alt="赵凯斯·L2挥手版">
+          <div class="char-image-label">// L2 挥手版</div>
         </div>
       </div>
       <div style="margin:14px 0 8px">
-        <div style="font-size:10px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;margin-bottom:8px">── L3逆向感知版（熊猫眼） ──</div>
+        <div style="font-size:10px;color:var(--gold-dim);font-family:'Share Tech Mono',monospace;margin-bottom:8px">── L3 情绪工厂版 ──</div>
       </div>
       <div class="char-images" style="gap:12px">
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/hF26z5wf/image.png')">
-          <img src="https://i.ibb.co/hF26z5wf/image.png" alt="赵凯斯·熊猫眼特写">
-          <div class="char-image-label">// 熊猫眼·特写</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/PGZmPzjb/image.png')">
+          <img src="https://i.ibb.co/PGZmPzjb/image.png" alt="赵凯斯·工厂定妆三视图">
+          <div class="char-image-label">// 工厂定妆三视图</div>
         </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/k2NV8RYh/photo-2026-05-19-22-53-41.jpg')">
-          <img src="https://i.ibb.co/k2NV8RYh/photo-2026-05-19-22-53-41.jpg" alt="赵凯斯·L3工服·无熊猫眼">
-          <div class="char-image-label">// L3工服·无熊猫眼</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/My0WDFb7/L3.png')">
+          <img src="https://i.ibb.co/My0WDFb7/L3.png" alt="赵凯斯·L3情绪工厂熊猫眼版">
+          <div class="char-image-label">// L3 情绪工厂 · 熊猫眼版</div>
         </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/6JPCxfFX/L3.jpg')">
-          <img src="https://i.ibb.co/6JPCxfFX/L3.jpg" alt="赵凯斯·L3工服·2">
-          <div class="char-image-label">// L3工服·2</div>
-        </div>
-        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/LwDFxRj/image.png')">
-          <img src="https://i.ibb.co/LwDFxRj/image.png" alt="赵凯斯·L3工服·3">
-          <div class="char-image-label">// L3工服·3</div>
+        <div class="char-image-item" onclick="openLightbox('https://i.ibb.co/Nhc0Kn3/L3.png')">
+          <img src="https://i.ibb.co/Nhc0Kn3/L3.png" alt="赵凯斯·L3情绪工厂版">
+          <div class="char-image-label">// L3 情绪工厂版</div>
         </div>
       </div>
       <div class="char-detail-body">
@@ -2799,7 +2799,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="char-icon" style="background:rgba(26,143,170,0.1);border-color:var(--teal-bright)">📞</div>
         <div>
           <div class="char-detail-name">客服小何</div>
-          <div class="char-detail-subtitle">永信城K线山光明顶交易所"高级客服" · 特殊权限拥有者</div>
+          <div class="char-detail-subtitle">永信城K线山光明顶交易所"高级客服" · 特殊权限拥有者 · Agent He（客服＋特工双关）</div>
         </div>
       </div>
       <div class="char-images" style="gap:12px">
@@ -2813,23 +2813,23 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
       <div class="char-detail-body">
+
+        <div class="quote-block" style="margin:4px 0 20px">
+          <p style="margin:0"><b style="color:var(--teal-bright)">一句话定位：</b>永信城最大交易所（K线山·光明顶）的"高级客服"，特殊权限拥有者。表面接电话，实则是体制内的盟友。她从"客服"回到"特工"是整季的隐藏弧线。和赵凯斯、小猪最大的区别——<b>她的战场在 L2，在系统内部。</b></p>
+        </div>
+
         <h4>形象特征</h4>
         <div class="info-grid">
           <div class="info-box">
             <div class="info-box-label">标准造型</div>
-            <p>黑色高马尾+红色发圈·金色圆耳环·白色西装外套（领口金色线条细节）·酒红色高领内搭·左手腕发光手环（蓝白色CEX权限道具）</p>
+            <p>黑色高马尾+红色发圈·金色圆耳环·白色西装外套（领口袖口极细金色线条，胸口低调金色菱形标志）·酒红色高领内搭·黑色修身西裤·黑色高跟踝靴·左手腕宽版贴腕柔性屏手环（蓝白色CEX权限道具）</p>
           </div>
           <div class="info-box">
             <div class="info-box-label">激活状态（EP6）</div>
-            <p>高马尾在能量爆发中散开飞扬·红色发圈断开飘落·手环爆发强烈蓝白色光芒沿手臂蔓延·表情反而最平静</p>
+            <p>高马尾在能量爆发中散开飞扬·红色发圈断开飘落·手环爆发强烈蓝白色光芒沿手臂蔓延·表情反而最平静——她知道代价、仍然选择的那一刻</p>
           </div>
         </div>
-        <h4>「Robinhood困境」</h4>
-        <p>她做了正确的事，但系统判定她违规。就像Robinhood在GameStop事件中被SEC审查——系统设计出来不是为了判断对错，而是维护「市场稳定」，而稳定的定义由L1决定。</p>
-        <div class="quote-block">
-          <p>S2结局属导演保留信息（命运悬念留待 S3）。创作者不得写明或暗示。</p>
-        </div>
-        <h4>即梦提示词</h4>
+
         <div class="prompt-card">
           <div class="prompt-header">
             <span class="prompt-title">// 日常工作版</span>
@@ -2866,44 +2866,91 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <hr class="divider">
+        <h3 style="color:var(--teal-bright)">出场记录 · 全时间线</h3>
+        <div style="overflow-x:auto;margin:14px 0">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;line-height:1.7">
+          <thead><tr style="border-bottom:1px solid rgba(42,173,204,0.3)">
+            <td style="padding:8px 10px;color:var(--teal-bright);white-space:nowrap">时点</td>
+            <td style="padding:8px 10px;color:var(--teal-bright);white-space:nowrap">在哪块屏</td>
+            <td style="padding:8px 10px;color:var(--teal-bright)">她做了什么 · 推进到哪</td>
+          </tr></thead>
+          <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td style="padding:8px 10px;color:var(--gold)">S1 闪回</td><td style="padding:8px 10px">光明顶战场</td><td style="padding:8px 10px">红色崩盘＋FUD黑潮砸向K线山，几十万散户眼看被砸穿。她逆着撤退人流站最前，回头说「一个用户，都不能丢。」战后与赵凯斯重重击掌 🙌。（埋下 EP5 验签暗号 🙌🐼🌄 的来历）</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td style="padding:8px 10px;color:var(--gold)">EP4 登场</td><td style="padding:8px 10px">谷底废屏 ＋ 光明顶大屏</td><td style="padding:8px 10px">谷底一块废弃监控屏自己亮起，弹出客服笑脸「需要帮助吗？😊」；同一刻光明顶墙上「苏晴」账户灯由灰变黄，她走到屏前盯三秒、按下「接入」。全程只是屏上客服文案，不露人话。</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td style="padding:8px 10px;color:var(--gold)">EP5 P1·场景03</td><td style="padding:8px 10px">谷底废屏</td><td style="padding:8px 10px">赵凯斯「证明给我看」→屏跳 🙌🐼🌄 验签→认人成功。赵凯斯侧身让开，屏的摄像头正对身后成片培养皿＋粉色暗池。她第一次"看见"工厂真相，自语「也许那些大崩盘之后就沉默的用户，都在这里。」</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td style="padding:8px 10px;color:var(--gold)">EP5 P1·场景06</td><td style="padding:8px 10px">交易所后台大屏</td><td style="padding:8px 10px">刷到"扇、扇、抱"的视频，屏上打出「L1，看见了。」（L1 的钱一大半从她交易所过，她能从资金侧感知 L1 动静）</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td style="padding:8px 10px;color:var(--gold)">EP5 P1·场景07</td><td style="padding:8px 10px">交易所后台大屏</td><td style="padding:8px 10px">左边回本吧阿明「楼盖到这了」置顶刚发；右边她那句「L1，看见了」发出很久无人回应。她看不见工厂里面，但两信号叠加读懂了：出事了。手慢慢攥紧。</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td style="padding:8px 10px;color:var(--gold)">EP5 P2·幕8</td><td style="padding:8px 10px">交易所后台大屏</td><td style="padding:8px 10px">$0xkid 充值流水暴涨、满屏红色卖单，她见怪不怪——又一个要崩的 meme 挤着出货。反转：长期暗着的持仓地址一个个亮起、不卖反买、价格逆势涨。她头一回对一个要崩的币看住眼：「……这帮人，把币搬进来，不是来卖的?」</td></tr>
+          <tr><td style="padding:8px 10px;color:var(--red)">EP6</td><td style="padding:8px 10px">—</td><td style="padding:8px 10px">手环激活，引爆 CEX 服务器，触发 3 秒全局回滚（破门四要素里唯一来自系统内部的一环）。用权限＝暴露自己。</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <hr class="divider">
+        <h3 style="color:var(--teal-bright)">她的两块屏</h3>
+        <p style="font-size:13px;color:var(--text-dim);margin-top:-4px">这两块屏是小何唯一的两个"身体"，互为镜像——一块伸进工厂最底层（看得见一个人却够不着），一块高悬系统顶端（看得见所有的钱却看不见人）。</p>
+
+        <h4 style="color:var(--gold)">① 谷底废屏 · 她伸进工厂的唯一触手（秘密机关墙的外接端点）</h4>
+        <p>L3 谷底——植物人山谷最底部、粉色暗池边缘——一块早已废弃落灰的培养皿监控屏，是小何通讯频道<b>唯一能触及工厂的物理端点</b>。她本人从不出现，只能让这块屏替她说话。EP4 它自己亮起客服笑脸「检测到您遇到了困难。需要帮助吗？😊 ——客服小何」，镜头下移——屏正下方就是「苏晴 · 自愿转入 · 第1382天」的培养皿。EP5 场景03 赵凯斯验签认人后<b>侧身让开</b>，让这块屏的摄像头照见身后成片培养皿。叙事功能＝"看得见一个具体的人、却够不着"：她能透过它通话、能借它的镜头看见工厂，却唯独认不出正下方那个皿里的苏晴，就是她在大屏上监测了 1382 天的账户、就是林牧照片里的妻子。</p>
+
+        <div class="script-dir" style="background:rgba(212,160,23,0.06);border-color:rgba(212,160,23,0.25);margin:14px 0">
+          <strong style="color:var(--gold)">设定 · 她为何能够到谷底（收割管线与废弃客户口）</strong><br>
+          <span style="font-size:13px;line-height:1.85;color:var(--text)">别想成"一条额外的线"。培养皿标签写「自愿转入」——入厂在系统话术里是一笔<b>金融操作</b>（早期没有自托管钱包，用户进场只能用 CEX 给的钱包地址，账户＝人＝交易所绑死）。情绪被抽走→结算成钱／能量→顺着一条管子往上走：<b>培养皿 → 小何的交易所（中转结算）→ L1 收割</b>。这条管子是永信城命脉（呼应"所有光明顶机构向 L1 输送能量"）。小何的交易所正是这条管线<b>中间的结算节点</b>（"L1 的钱一大半从她交易所过"）。<br><br>
+          那块屏为什么又"废弃落灰"又"一直通着"？因为是<b>同一根管子的两头</b>：钱只往上走，没人回头看管子最底下那个面向客户的旧端口（当年开户的客服/回执口），所以它落灰废弃；但管子没断，因为 L1 还在靠它收割。小何顺着这条还活着的管线<b>反向</b>够到最底下那个废弃端口，把客服界面倒推下去，让屏亮起来。够得着＝她在管线上；只够得着那一个账户绑定的口、看不见工厂全景＝她手里只有"账户"这一个身份，不是工厂监控权限。<br>
+          <span style="color:var(--text-dim)">※ 全程非物理动作：她人在光明顶，按下「接入」，信号跑完一条现成的管子；谷底那块屏是工厂的旧硬件。皿上的工厂内部监控传感（内网）她永远看不见；她点亮的是账户客户端面板（接结算管线），面板自带一个小摄像头，只能看它正对的那一小片。</span></span>
+        </div>
+
+        <h4 style="color:var(--gold)">② 光明顶 · 失踪用户追踪墙（秘密机关墙）</h4>
+        <p>小何办公室一角、藏在机关后的一面墙：成排的账户证件照单元格，绝大多数是暗灰色模糊人形剪影（失踪/沉睡用户），其中唯一一格亮着温暖的琥珀色——苏晴。<b>功能单一：只追踪失踪的用户。</b>颜色只有两档——<b>灰暗＝失踪/很久没动，暖琥珀＝这个人重新出现了</b>（苏晴由灰变黄＝她被追踪到"醒"了）。</p>
+        <div class="script-dir" style="background:rgba(233,69,96,0.06);border-color:rgba(233,69,96,0.22);margin:12px 0">
+          <strong style="color:var(--red)">这面墙是她的秘密。</strong><span style="font-size:13px;color:var(--text)"> 平时她的办公室就是普通顶层行政办公室（落地窗、办公桌、夜城）；这面墙<b>平时藏着，只有她触动机关才显形</b>。私藏这面墙是<b>不被授权</b>的——不是公司配的工具，是她自己偷偷留下的一本"失踪者档案"，一面不该存在的纪念/守望墙。呼应"体制内卧底（Agent He）"与"Robinhood困境"（做对的事、却被系统判违规）。EP4"她走到屏前盯三秒、按下接入"＝她触动机关、唤出这面墙，谷底废屏正是从这面秘密墙接出去的——她救人用的是自己偷藏的东西。</span>
+        </div>
+
+        <h4 style="color:var(--gold)">③ 交易所后台大屏 · 她的日常工位</h4>
+        <p>正常的 CEX 后台：K线、买卖盘、充值流水、回本吧 feed、她的频道。EP5「L1，看见了」、回本吧遗言帖、以及 EP5 P2 的轧空，都发生在这块<b>普通后台</b>上，与那面秘密墙无关。EP5 P2"暗账户点亮"＝后台里沉睡地址突然活跃，反常在<b>行为</b>（不卖、反手买、价格逆势涨），不上升到色彩隐喻。</p>
+
+        <div style="margin:16px 0 8px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold-dim)">// 光明顶大屏 · 场景定稿图（待回填）</div>
+        <div class="char-images" style="gap:12px;margin-bottom:16px">
+          <div style="flex:1;min-width:200px;padding:24px 14px;text-align:center;border:1px dashed rgba(42,173,204,0.35);border-radius:10px;background:rgba(42,173,204,0.04);color:var(--teal-bright);font-family:'Share Tech Mono',monospace;font-size:12px">图位 OF-1 · 待 ibb 直链<br><span style="color:var(--text-dim);font-size:11px">失踪用户墙+谷底（第一张）</span></div>
+          <div style="flex:1;min-width:200px;padding:24px 14px;text-align:center;border:1px dashed rgba(42,173,204,0.35);border-radius:10px;background:rgba(42,173,204,0.04);color:var(--teal-bright);font-family:'Share Tech Mono',monospace;font-size:12px">图位 OF-2 · 待 ibb 直链<br><span style="color:var(--text-dim);font-size:11px">托腮·机关墙私密（第二张）</span></div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-header"><span class="prompt-title">// P3 · 她走近墙·抬手按「接入」（EP4）</span><button class="prompt-copy" onclick="copyPrompt(this)">复制</button></div>
+          <div class="prompt-body">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景微仰，9:16，
+一位三十多岁亚洲女性站在高耸的失踪用户证件照屏墙前，墙上满是暗灰色剪影面孔；黑色高马尾红色发圈，金色圆耳环，白色修身西装外套极细金线领口，酒红色高领内搭，黑色西裤黑色高跟踝靴，左手腕宽版柔性屏手环发蓝白色光；
+她微微抬起左手，指尖将触未触墙上那个亮起琥珀色的单元格旁一个悬浮的发光「接入」确认键，手环蓝白光在此刻变亮；
+她的侧脸被墙面冷光与手环蓝光照亮，神情专注克制、眼里有一瞬动容；
+电影级侧光，浅景深，安静而郑重，8K，no text，no watermark</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-header"><span class="prompt-title">// P4 · 真人轧空·暗账户逆势亮起（EP5 P2 · 交易所后台）</span><button class="prompt-copy" onclick="copyPrompt(this)">复制</button></div>
+          <div class="prompt-body">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中近景，9:16，
+交易所后台工作大屏前，屏上是实时K线、买卖盘与持仓地址分布图；画面右侧一长列红色卖单正在排队并逐渐消退；原本大片暗灰色的"沉睡持仓地址"开始一个、又一个地亮起温暖的琥珀色——它们不挂卖单、反而逆势买回，K线不跌反涨；
+一位三十多岁亚洲女性站在屏前，黑色高马尾红色发圈，白色修身西装外套极细金线领口，酒红色高领内搭，左手腕宽版柔性屏手环发蓝白色微光；她第一次对一个要崩的币停住目光，眉头微动，眼中倒映着那片渐次亮起的暖色；
+冷蓝数据屏调中点点琥珀暖光，红色卖单与暖色买盘对冲的张力，电影级辉光，8K，no text，no watermark</div>
+        </div>
+
+        <hr class="divider">
+        <h4>她的沟通限制</h4>
+        <p>通讯频道受限，<strong style="color:var(--red)">她只能用表情包说话</strong>，办公室里的自语频道那头听不见。<br>
+        <strong style="color:var(--gold)">验签暗号：</strong>🙌🐼🌄（击掌·熊猫·K线山）＝ S1 光明顶大战后那次击掌的暗号，只有当事人知道。赵凯斯不信标签只信签名，靠这组表情认出她。<br>
+        <strong style="color:var(--gold)">决心表达：</strong>👊🧐💦💪 ＝「我会想办法，会尽力。」</p>
+
+        <h4>她的信息面（严格红线，不可越界）</h4>
+        <p>只有三样——① 通讯频道（谷底废屏端点）② 公开互联网（视频 / 回本吧）③ 她交易所侧的资金数据。<strong style="color:var(--red)">她看不见工厂内部监控。</strong>她能看见钱，看不见人。EP5 场景07 她知道出事，靠的是"回本吧阿明遗言帖"＋"自己的警告无人回应"两信号叠加推断，不是能监控工厂。</p>
+
+        <hr class="divider">
         <h3 style="color:var(--teal-bright)">深度背景档案</h3>
-
-        <h4>她在永信城里的真实处境</h4>
-        <p>全球用户量最大的加密货币交易所的高级客服，驻守K线山光明顶。她的每一句话都可能成为游资制造Meme盘子的工具——不是她的错，但发生在她身上。她知道系统有问题，选择留在内部做有限的好事，而不是离开。这是她和赵凯斯、小猪女侠最大的区别：她的战场在L2。</p>
-
+        <h4>「Robinhood困境」</h4>
+        <p>她做了正确的事，但系统判定她违规。类比 Robinhood 在 GameStop 事件中被 SEC 审查：系统设计不是为了判断对错，而是维护"市场稳定"，而稳定的定义由 L1 决定。她违反了规则，但她的规则是对的。</p>
         <h4>她真正的影响力</h4>
-        <p>在真实加密世界里，像她这样的机构声音，一句表态就能带动数百万用户的FOMO或恐慌。她的超能力「暂停交易+触发隐私保护协议」对应的正是这个现实——CEX在关键时刻可以冻结账户、回滚交易，而她选择用这个权力保护散户而不是机构。</p>
-
-        <h4>为什么留在L2</h4>
-        <div class="quote-block">
-          <p>「如果我离开，这个位置会被一个更不在乎用户的人占据。至少我在这里，还能做一些事。」——这是她的选择，沉重的、痛苦的，但真实的。</p>
-        </div>
-
-        <h4>「Robinhood困境」的深层含义</h4>
-        <p>她做了正确的事，但系统判定她违规。类比Robinhood在GameStop事件中被SEC审查：系统的设计不是为了判断对错，而是维护「市场稳定」，而稳定的定义由L1决定。她违反了规则，但她的规则是对的。</p>
-
-        <h4>S2结局与悬念</h4>
-        <p>小何在 S2 结尾的最终命运属导演保留信息，是 S3 最大的悬念之一。创作者不得写明或暗示其结局。</p>
-
+        <p>在真实加密世界里，像她这样的机构声音，一句表态就能带动数百万用户的 FOMO 或恐慌。她的超能力"暂停交易＋触发隐私保护协议"对应的正是这个现实——CEX 在关键时刻可以冻结账户、回滚交易，而她选择用这个权力保护散户而不是机构。</p>
+        <h4>为什么留在 L2</h4>
+        <div class="quote-block"><p>「如果我离开，这个位置会被一个更不在乎用户的人占据。至少我在这里，还能做一些事。」——这是她的选择，沉重的、痛苦的，但真实的。</p></div>
         <h4>标志性台词</h4>
-        <p style="color:var(--gold);font-style:italic">「你拖住Block，我传Payload。」——EP4对赵凯斯说</p>
+        <p style="color:var(--gold);font-style:italic">「一个用户，都不能丢。」——S1 光明顶大战，逆着撤退人流站在最前，回头对赵凯斯说。</p>
 
-        <div class="script-dir" style="background:rgba(42,173,204,0.08);border-color:rgba(42,173,204,0.25);margin:18px 0">
-          <strong style="color:var(--teal-bright)">【EP5 更新 · 接上了】</strong>
-        </div>
-
-        <p><strong style="color:var(--gold)">表情包验签（EP5场景03）：</strong>赵凯斯不信标签，只信签名——「如果你真是'客服小何'，<b>证明给我看</b>。」屏上跳出：<strong style="color:var(--teal-bright)">🙌🐼🌄</strong>（击掌·熊猫·K线山）。这是S1光明顶大战之后那次击掌的暗号，只有当事人知道。<br>
-        <span style="font-size:12px;color:var(--text-dim)">// 闪回：撤退的人流里，她逆着人流站在最前，回头说「<b>一个用户，都不能丢。</b>」画面细节以S1素材为准。</span></p>
-
-        <p><strong style="color:var(--gold)">她的沟通限制：</strong>通讯频道受限，<strong style="color:var(--red)">她只能用表情包说话</strong>（👊🧐💦💪＝"我会想办法，会尽力"）。她在办公室里的自语，频道那头听不见。</p>
-
-        <p><strong style="color:var(--gold)">她的信息面（严格限制，不可越界）：</strong>只有三样——① 通讯频道（谷底废屏端点）② 公开互联网（视频 / 回本吧）③ 她交易所侧的数据。<strong style="color:var(--red)">她看不见工厂内部监控。</strong>EP5场景07她之所以知道出事了，是靠两个信号叠加：<b>回本吧上阿明那条"楼盖到这了"的遗言帖</b> + <b>她发去谷底的警告至今无人回应</b>。</p>
-
-        <div style="margin:16px 0;padding:14px 16px;background:rgba(42,173,204,0.06);border:1px solid rgba(42,173,204,0.2);border-radius:8px">
-          <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);margin-bottom:8px">// 「L1，看见了」（EP5场景06收尾）</div>
-          <p style="font-size:13px;line-height:1.9;margin:0"><b>L1的钱，一大半从她的交易所过</b>，所以她能从资金侧感知到L1的动静。L3粉色爆发导致情绪结算异常，L1的审查机器<b>已经转向这里</b>。她把警告推进频道——<br>
-          <strong style="color:var(--red)">但那一刻，谷底空无一人。</strong>废屏自己亮了起来，镜头缓缓拉远：<b>警告送到了。没有人在。</b><span style="font-size:12px;color:var(--text-dim)">（赵凯斯和小猪正在赶去谷底的路上，还没到，阿明就被抓了。）</span></p>
-        </div>
       </div>
     </div>
 
@@ -3140,7 +3187,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <p><strong style="color:var(--gold)">出场规范：</strong>S2全程<strong style="color:var(--red)">只以剪影 / 一只手 / 通讯投影出现</strong>，不露全身、不露正脸。声音冷得没有起伏。</p>
 
-        <p><strong style="color:var(--gold)">EP5的动机（双重）：</strong>他要冷钱包，不只是因为它是情绪之门的钥匙——<strong style="color:var(--red)">它还是天降神针的能量器</strong>。没有它，神针只能用算法功率打，砸不穿$0KID。这就是他在场景06拍4沉声自语"……钱包。找到它。"的原因。</p>
+        <p><strong style="color:var(--gold)">EP5的动机（双重）：</strong>他要冷钱包，不只是因为它是情绪之门的钥匙——<strong style="color:var(--red)">它还是天降神针的能量器</strong>。没有它，神针只能用算法功率打，砸不穿$0xkid。这就是他在场景06拍4沉声自语"……钱包。找到它。"的原因。</p>
       </div>
     </div>
 
@@ -3245,13 +3292,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <p><strong style="color:var(--gold)">六十万债务（EP5场景01揭示）：</strong>他把母亲早餐店的<strong>六十万棺材本</strong>全投进一个修仙模因币，没几天归零。这是他进永信城创作者计划（＝L3工厂）的真实原因。<strong style="color:var(--red)">但七天一次的记忆清除，让他忘了自己是来还债的，只记得"在做喜欢的事"</strong>——所以他给妈妈发的"在这儿如鱼得水"是<b>真心话</b>，不是系统代发。这是全剧最残忍的设计之一。</p>
 
-        <p><strong style="color:var(--gold)">$0KID的作者：</strong>EP5场景05，阿明创造并发射了《归零街之子》$0KID。他从"给系统打工做内容的牛马"，变成<strong style="color:var(--teal-bright)">为自己的人发币的作者</strong>。他设定了公平发射（无预留无私募）和粒子面签（骗得了链，骗不了它）。他给它取名时说：「归零街之子。从零来的……就都从零开始。」</p>
+        <p><strong style="color:var(--gold)">$0xkid的作者：</strong>EP5场景05，阿明创造并发射了《归零街之子》$0xkid。他从"给系统打工做内容的牛马"，变成<strong style="color:var(--teal-bright)">为自己的人发币的作者</strong>。他设定了公平发射（无预留无私募）和粒子面签（骗得了链，骗不了它）。他给它取名时说：「归零街之子。从零来的……就都从零开始。」</p>
 
-        <p><strong style="color:var(--gold)">帽子＝私通道具：</strong>$0KID的图标是<strong>戴着阿明那顶黑色棒球帽的扇财鸟</strong>。Part 2他妈妈在电视里看到这个图标时，<b>那顶帽子她认得</b>。共鸣不需要知情，但道具可以私通。</p>
+        <p><strong style="color:var(--gold)">帽子＝私通道具：</strong>$0xkid的图标是<strong>戴着阿明那顶黑色棒球帽的扇财鸟</strong>。Part 2他妈妈在电视里看到这个图标时，<b>那顶帽子她认得</b>。共鸣不需要知情，但道具可以私通。</p>
 
         <p><strong style="color:var(--gold)">被捕（EP5场景07）：</strong>机械手落在肩上时他没跑，先在回本吧置顶帖里补上最后一行，然后<strong>长按小猪给他的那个小装置</strong>——那是<strong style="color:var(--red)">报信，不是呼救</strong>：我这边到头了，你们别回来。押送时他还在贫嘴、朝工人打招呼、朝长发女孩比了一个心。</p>
 
-        <p style="color:var(--gold);font-style:italic">「归零街之子，人人有份。但你得<b>真的</b>想起一个人——骗得了链，骗不了它。」——EP5场景05，发射$0KID时</p>
+        <p style="color:var(--gold);font-style:italic">「归零街之子，人人有份。但你得<b>真的</b>想起一个人——骗得了链，骗不了它。」——EP5场景05，发射$0xkid时</p>
         <p style="color:var(--gold);font-style:italic">「楼盖到这了。剩下的，你们自己盖。」——EP5场景07，被捕前的最后一帖</p>
         <p style="color:var(--gold);font-style:italic">「大家继续继续！扇一个祝福——求菩萨保佑！」——EP5场景07，被押过走廊时朝所有人喊的</p>
       </div>
@@ -3463,14 +3510,14 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="char-icon" style="background:rgba(212,160,23,0.1);border-color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:30px">🎤</div>
         <div>
           <div class="char-detail-name" style="font-size:22px">剧内名人 · 六位</div>
-          <div class="char-detail-subtitle">$0KID跟拍者 · 永信城的名利场 · EP5首次出现</div>
+          <div class="char-detail-subtitle">$0xkid跟拍者 · 永信城的名利场 · EP5首次出现</div>
         </div>
       </div>
       <div class="char-detail-body">
         <div class="script-dir" style="background:rgba(233,69,96,0.08);border-color:rgba(233,69,96,0.25);margin-bottom:18px">
           <strong style="color:var(--red)">创作红线：绝对不用真实名人。</strong>永信城是<b>影射宇宙</b>（客服小何影射但不是何一，K线山、灰鲸金融全是转译）。真名人一出场，影射宇宙就漏气了。名人必须是<b>永信城自己的名流</b>。
         </div>
-        <p><strong style="color:var(--gold)">戏剧功能：</strong>名人跟拍不是背书秀。$0KID的传播内核是<b>素人的真情</b>，名人进场要有<strong style="color:var(--teal-bright)">层次和讽刺</strong>——按进场动机分三类。</p>
+        <p><strong style="color:var(--gold)">戏剧功能：</strong>名人跟拍不是背书秀。$0xkid的传播内核是<b>素人的真情</b>，名人进场要有<strong style="color:var(--teal-bright)">层次和讽刺</strong>——按进场动机分三类。</p>
 
         <div style="margin:16px 0">
           <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);margin-bottom:10px">① 蹭流量的（最先进场，最不走心）</div>
@@ -3795,7 +3842,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <p style="line-height:2">
         <strong style="color:var(--gold)">EP3</strong>：场景01-2使用 ●●●○○ → 场景06使用 ●●○○○ → 场景07靠近冷钱包短暂充至●●●○○·又回落至 <strong>●●○○○</strong><br>
         <strong style="color:var(--gold)">EP4</strong>：全程与携带冷钱包的赵凯斯同行（下峡谷/培养皿/暗池），长时间贴近，<strong style="color:var(--teal-bright)">缓慢回充一格</strong> → <strong>●●●○○</strong><br>
-        <strong style="color:var(--gold)">EP5 Part 1</strong>：场景05拉初盘（把$0KID顶进所有人视野）耗一格 → <strong>●●○○○</strong><br>
+        <strong style="color:var(--gold)">EP5 Part 1</strong>：场景05拉初盘（把$0xkid顶进所有人视野）耗一格 → <strong>●●○○○</strong><br>
         <strong style="color:var(--gold)">EP5 Part 2</strong>：场景06拍5护盘（神针砸落时护住盘口最后的流动性）耗一格 → <strong style="color:var(--red)">●○○○○</strong><br>
         <strong style="color:var(--gold)">EP6</strong>：<strong style="color:var(--red)">最后一格</strong>——小猪刻意留着，"等更关键的时候"。
         </p>
@@ -4092,12 +4139,12 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
       </div>
     </div>
 
-    <!-- 道具·$0KID 归零街之子 -->
+    <!-- 道具·$0xkid 归零街之子 -->
     <div class="char-detail" id="prop-0kid">
       <div class="char-detail-header">
         <div class="char-icon" style="background:rgba(46,204,113,0.12);border-color:#2ECC71;display:flex;align-items:center;justify-content:center;font-size:30px">🐦</div>
         <div>
-          <div class="char-detail-name" style="font-size:22px">$0KID · 归零街之子</div>
+          <div class="char-detail-name" style="font-size:22px">$0xkid · 归零街之子</div>
           <div class="char-detail-subtitle">阿明创造的Meme代币 · EP5核心道具 · 公平发射 + 粒子面签</div>
         </div>
       </div>
@@ -4109,14 +4156,14 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
           <strong style="color:#2ECC71">完整机制链（四步，缺一不可）</strong><br>
           <b>① 公平发射</b>：无预留 · 无私募 · 人人同一起跑线。没有庄。这是它后来能扛住天降神针的<b>道德根基</b>——维克多的世界靠预谋和收割，这个币从出生就是干净的。<br>
           <b>② 回本吧首帖</b>：不在全网喊单，先发在归零街人人都泡的老论坛「回本吧」。标题「我做了个东西，送给归零街。」正文只有视频和合约地址，<b>没有喊单、没有目标价、没有"冲"</b>。零回复开局，楼一层一层自己盖起来。<br>
-          <b>③ 粒子面签（核心）</b>：跟拍视频、在「这一下，是扇给____的」里填上一个名字后，<b>面对镜头三秒</b>。检测到<b>粉色情绪粒子升腾</b>，合约自动发放你那一份$0KID。阿明的话：<b>「骗得了链，骗不了它。」</b><br>
+          <b>③ 粒子面签（核心）</b>：跟拍视频、在「这一下，是扇给____的」里填上一个名字后，<b>面对镜头三秒</b>。检测到<b>粉色情绪粒子升腾</b>，合约自动发放你那一份$0xkid。阿明的话：<b>「骗得了链，骗不了它。」</b><br>
           <b>④ 名字锁定</b>：每一份空投在链上绑定你填的那个名字。卖出时界面显示「你正在卖出：<b>扇给【妈】的那一份</b>」。这是"不卖"从情怀升级为机制的底座——卖币＝亲手把妈的名字挂上卖单。
         </div>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0">
           <div class="info-box" style="border-color:rgba(46,204,113,0.3)">
             <div class="info-box-label" style="color:#2ECC71">武器的倒转（主题核心）</div>
-            <p>情绪粒子检测<strong style="color:var(--teal-bright)">本来是工厂的收割技术</strong>——维克多用它抽取工人情绪。$0KID的填空面签，是把<strong style="color:var(--gold)">同一套技术反过来用</strong>：工厂用粒子检测来"收"，归零街之子用粒子检测来"发"。<strong>同一把刀，一面割人，一面认人。</strong>验证能力来自工位头顶的传感网——寄生在收割系统上的解放机制。</p>
+            <p>情绪粒子检测<strong style="color:var(--teal-bright)">本来是工厂的收割技术</strong>——维克多用它抽取工人情绪。$0xkid的填空面签，是把<strong style="color:var(--gold)">同一套技术反过来用</strong>：工厂用粒子检测来"收"，归零街之子用粒子检测来"发"。<strong>同一把刀，一面割人，一面认人。</strong>验证能力来自工位头顶的传感网——寄生在收割系统上的解放机制。</p>
           </div>
           <div class="info-box" style="border-color:rgba(46,204,113,0.3)">
             <div class="info-box-label" style="color:#2ECC71">防伪 = 真心</div>
@@ -4196,6 +4243,131 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
       </div>
     </div>
 
+
+    <div class="section-header" style="margin-top:50px">
+      <span class="section-num" style="color:var(--teal-bright)">◈</span>
+      <h2 class="section-title" id="assets-ui">永信城 · 界面与平台资产</h2>
+    </div>
+    <p style="color:#8a8a94;font-style:italic;margin:-6px 0 24px">UI / 平台界面类资产（与手持道具区分）。图位留空，创作者渲染后按编号回填。</p>
+
+    <!-- 资产·永信发射台 -->
+    <div class="char-detail" id="asset-launchpad">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(42,173,204,0.12);border-color:var(--teal-bright);display:flex;align-items:center;justify-content:center;font-size:34px">🚀</div>
+        <div><div class="char-detail-name" style="font-size:22px">永信发射台 Launchpad</div>
+        <div class="char-detail-subtitle">阿明发射 $0xkid 的平台 · 公平发射工具 · EP5 场景05</div></div>
+      </div>
+      <div class="char-images" style="gap:12px;margin-bottom:20px"><div style="width:100%;padding:28px;text-align:center;border:1px dashed rgba(232,184,75,0.35);border-radius:10px;background:rgba(232,184,75,0.04);color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:12px">图位 D3 · 待 ibb 直链<br><span style="color:var(--text-dim);font-size:11px">永信发射台 UI</span></div></div>
+      <div class="char-detail-body">
+        <p><strong style="color:var(--gold)">本质：</strong>永信城里的 meme 发币平台（launchpad）。任何人都能一键发一个币。阿明用它把《归零街之子》$0xkid 发了出来。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0">
+          <div class="info-box" style="border-color:rgba(42,173,204,0.3)"><div class="info-box-label" style="color:var(--teal-bright)">机制</div><p><b>填表发射</b>：名称《归零街之子》·代码 $0xkid·图标（戴阿明帽子、双翅收拢抱在胸前的扇财鸟）。<b>公平发射</b>：勾选「无预留·无私募·人人同一起跑线」——没有庄、没有谁说了算。<b>发放规则可挂载</b>：把「填空面签」直接挂进发放规则（填名·对镜头三秒·真起粉色才自动到账）。</p></div>
+          <div class="info-box" style="border-color:rgba(42,173,204,0.3)"><div class="info-box-label" style="color:var(--teal-bright)">真实锚 · UI</div><p><b>Fair launch</b>（公平发射）——无预留、无私募、无团队份额，真实 web3 最硬的那条叙事。<b>UI</b>：L2/系统级干净表单——名称/代码/图标上传位、发射方式单选（高亮「公平发射」）、一条可添加的「发放规则」。冷色科技感，与 L3 脏乱成对比。</p></div>
+        </div>
+        <div class="prompt-card"><div class="prompt-header"><span class="prompt-title">// UI 即梦提示词（备用·以成图为准）</span><button class="prompt-copy" onclick="copyPrompt(this)">复制</button></div><div class="prompt-body">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，UI界面特写，9:16，
+一个干净未来感的meme发币平台表单界面，冷蓝与深色玻璃质感，表单字段：名称/代码/图标上传框，图标位是一只戴黑色棒球帽、双翅收拢抱在胸前的卡通鸟；下方发射方式单选，"公平发射·无预留·无私募"一项高亮发光；最底一条可添加的发放规则；
+整体高级、克制、科技感强，冷光，8K，no text，no watermark</div></div>
+        <p style="font-size:12px;color:var(--text-dim)">// 关联：$0xkid · <a href="#asset-proofofheart" style="color:var(--teal-bright)">粒子面签</a> · 阿明</p>
+      </div>
+    </div>
+
+    <!-- 资产·粒子面签 -->
+    <div class="char-detail" id="asset-proofofheart">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(233,90,155,0.12);border-color:#E85A9B;display:flex;align-items:center;justify-content:center;font-size:34px">💗</div>
+        <div><div class="char-detail-name" style="font-size:22px">粒子面签 · 情绪凭证铸造（PROOF-OF-HEART）</div>
+        <div class="char-detail-subtitle">$0xkid 的反女巫发放机制 · 回本吧资深用户老功能 · 「骗得了链，骗不了它」</div></div>
+      </div>
+      <div class="char-images" style="gap:12px;margin-bottom:20px"><div style="width:100%;padding:28px;text-align:center;border:1px dashed rgba(232,184,75,0.35);border-radius:10px;background:rgba(232,184,75,0.04);color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:12px">图位 D4 · 待 ibb 直链<br><span style="color:var(--text-dim);font-size:11px">粒子面签 UI 终稿</span></div></div>
+      <div class="char-detail-body">
+        <p><strong style="color:var(--gold)">本质：</strong>一个"认真人"的机制。领币的人要<b>填一个名字 → 对着镜头待三秒 → 头顶真的升起那一缕粉（你真的想起了一个人）</b>，系统才把那一份 $0xkid 发给你。</p>
+        <p><strong style="color:var(--gold)">它解决什么（核心）：</strong>网上一个账号，背后不一定是一个真人。一个人能写段小程序开出几千个账号、每个都填上"妈""爸""家人"，几秒钟把免费发的东西全领走转卖——你以为送给了一千个人，其实一个真正的归零街人都没拿到。粒子面签不去分账号真假（分账号就得有人说了算，有人说了算就有庄），它<b>分真心</b>：机器能批量开号、批量填名、复制视频一万遍，但<b>刷不出那一缕真心的粉</b>。</p>
+        <div class="script-dir" style="background:rgba(233,90,155,0.07);border-color:rgba(233,90,155,0.25);margin:14px 0"><strong style="color:#E85A9B">来源 · 同一把刀</strong><br><span style="font-size:13px;color:var(--text)">情绪粒子检测本是<b>工厂的收割技术</b>（维克多用它抽工人情绪）。回本吧早年一帮老手把这套"看人心"的传感<b>偷偷接了出来</b>，做成一个藏得很深的小功能，专治"一个人装成一千个人"来刷的，只有资深用户才解锁。小猪在回本吧泡了快十年，是她把它调出来的。<b>同一套东西——工厂拿它抽情绪，回本吧拿它认真人。一把刀，一面割人，一面认人。</b></span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0">
+          <div class="info-box" style="border-color:rgba(233,90,155,0.3)"><div class="info-box-label" style="color:#E85A9B">真实锚</div><p>Proof-of-personhood / 反女巫（Sybil resistance）——真实 web3 最难的问题之一。核心白话：<b>屏幕对面，不一定是一个真人。</b></p></div>
+          <div class="info-box" style="border-color:rgba(233,90,155,0.3)"><div class="info-box-label" style="color:#E85A9B">UI</div><p>甜美、干净的界面：标题「情绪凭证铸造 · PROOF-OF-HEART」，下面一行小字「填一个名字 · 对着镜头三秒 · 心，动了，就铸成」。反馈全白话。</p></div>
+        </div>
+        <div class="prompt-card"><div class="prompt-header"><span class="prompt-title">// UI 即梦提示词（备用·以成图为准）</span><button class="prompt-copy" onclick="copyPrompt(this)">复制</button></div><div class="prompt-body">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，UI界面特写，9:16，
+一个甜美干净、圆润友好的情绪认证界面，暖白与柔粉色调，中央一个名字输入框与一个圆形摄像头取景框，取景框上方一缕柔和的粉色光粒正在升起；界面整体温暖、治愈、极简；
+与冷硬的系统UI形成反差，柔光，8K，no text，no watermark</div></div>
+        <p style="font-size:12px;color:var(--text-dim)">// 关联：$0xkid · <a href="#asset-breakeven-ui" style="color:var(--teal-bright)">回本吧</a> · <a href="#prop-capsule" style="color:var(--teal-bright)">情绪增幅胶囊（收割侧）</a> · 小猪女侠</p>
+      </div>
+    </div>
+
+    <!-- 资产·工厂热点播报 -->
+    <div class="char-detail" id="asset-hotboard">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(233,69,96,0.12);border-color:#E94560;display:flex;align-items:center;justify-content:center;font-size:34px">📊</div>
+        <div><div class="char-detail-name" style="font-size:22px">工厂热点播报</div>
+        <div class="char-detail-subtitle">L3 工厂对内的收割数据屏 · 模因热度榜 · 对外是"永信TV"，对内是这块</div></div>
+      </div>
+      <div class="char-images" style="gap:12px;margin-bottom:20px"><div style="width:100%;padding:28px;text-align:center;border:1px dashed rgba(232,184,75,0.35);border-radius:10px;background:rgba(232,184,75,0.04);color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:12px">图位 D5 · 待 ibb 直链<br><span style="color:var(--text-dim);font-size:11px">工厂热点播报 UI</span></div></div>
+      <div class="char-detail-body">
+        <p><strong style="color:var(--gold)">本质：</strong>挂在工位区／小黑屋墙上、给工人看的<b>热度排行榜数据屏</b>。对外有光鲜的"永信TV"，对内就是这块冷冰冰的产能榜。</p>
+        <p><strong style="color:var(--gold)">机制：</strong>滚动模因热度排行榜、24 小时飙升榜、本周工位排名——用排名与飙升刺激工人的情绪产能（系统的 FOMO 工具）。</p>
+        <div class="quote-block"><p>EP5 里这块屏弹窗「模因热度排行榜 · 24 小时飙升 No.1」，$0xkid 一根线拉到天上——<b>系统的 FOMO 工具，正帮着推一个反 FOMO 的东西。它还不知道。</b></p></div>
+        <div class="prompt-card"><div class="prompt-header"><span class="prompt-title">// UI 即梦提示词（备用·以成图为准）</span><button class="prompt-copy" onclick="copyPrompt(this)">复制</button></div><div class="prompt-body">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，UI界面特写，9:16，
+一块冷硬的工厂车间数据播报大屏，深色底、红绿配色的模因热度排行榜与24小时飙升榜，箭头与排名数字跳动，一条曲线猛地拉到屏幕顶端并闪烁"No.1"；工业感、压迫感、纯数据收割气质；
+冷光与红色警示光，8K，no text，no watermark</div></div>
+        <p style="font-size:12px;color:var(--text-dim)">// 关联：维克多 · L3情绪牛马工厂 · $0xkid</p>
+      </div>
+    </div>
+
+    <!-- 资产·创作者计划招募页 -->
+    <div class="char-detail" id="asset-recruit">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(212,160,23,0.12);border-color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:34px">📢</div>
+        <div><div class="char-detail-name" style="font-size:22px">创作者计划招募页</div>
+        <div class="char-detail-subtitle">牛马工厂的诱饵落地页 · "你的情绪，是这个时代最稀缺的资产"</div></div>
+      </div>
+      <div class="char-images" style="gap:12px;margin-bottom:20px"><div style="width:100%;padding:28px;text-align:center;border:1px dashed rgba(232,184,75,0.35);border-radius:10px;background:rgba(232,184,75,0.04);color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:12px">图位 D6 · 待 ibb 直链<br><span style="color:var(--text-dim);font-size:11px">创作者计划招募页</span></div></div>
+      <div class="char-detail-body">
+        <p><strong style="color:var(--gold)">本质：</strong>"永信城创作者计划"的招募广告／落地页。让人<b>以为在赚钱、自愿走进系统</b>，实际是进 L3 工厂为系统打工。阿明、苏晴都是被它引进来的。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0">
+          <div class="info-box" style="border-color:rgba(212,160,23,0.3)"><div class="info-box-label" style="color:var(--gold)">三层文案诱饵</div><p>① 钩住情绪：「你的愤怒、绝望、对失败的不甘，都是这个时代最稀缺的资产。」② 许诺收益：「情绪激发收益，远超传统劳动报酬。」③ 制造紧迫：「请在倒计时结束前完成入职。」</p></div>
+          <div class="info-box" style="border-color:rgba(212,160,23,0.3)"><div class="info-box-label" style="color:var(--gold)">病毒营销钩子</div><p>整页完全用真实招募广告的语气与格式做。观众第一眼以为是真广告，然后发现是《凡人修币录》的——这就是最好的病毒营销。渠道：短视频信息流 · 链上空投打开即落地页 · 陌生人私信 · "好心"转发的链接。</p></div>
+        </div>
+        <div class="quote-block"><p>最残忍的一帧（维克多 S2 结局）：他自己收到了<b>自己设计的</b>这张招募邀请，手指悬在「点击加入」上方——定格。他设计系统收割别人，现在系统在收割他。</p></div>
+        <div class="prompt-card"><div class="prompt-header"><span class="prompt-title">// UI 即梦提示词（备用·以成图为准）</span><button class="prompt-copy" onclick="copyPrompt(this)">复制</button></div><div class="prompt-body">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，UI界面特写，9:16，
+一张光鲜诱人的招募落地页界面，高级感的深色与金色调，大字标语区、收益数字、一个倒计时，页面正中一个发亮的"加入"大按钮；表面专业可信、底下透着诱饵的危险感；
+金色点光与冷调背景，8K，no text，no watermark</div></div>
+        <p style="font-size:12px;color:var(--text-dim)">// 关联：维克多 · 阿明 · L3情绪牛马工厂</p>
+      </div>
+    </div>
+
+    <!-- 资产·回本吧 UI -->
+    <div class="char-detail" id="asset-breakeven-ui">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(29,161,242,0.12);border-color:#1DA1F2;display:flex;align-items:center;justify-content:center;font-size:34px">🟦</div>
+        <div><div class="char-detail-name" style="font-size:22px">回本吧 · UI / 视觉资产</div>
+        <div class="char-detail-subtitle">归零街老论坛的视觉与界面资产 · 设定正文见 <a href="#supp-breakeven" style="color:var(--teal-bright)">补充设定·二 回本吧</a></div></div>
+      </div>
+      <div class="char-detail-body">
+        <p style="font-size:12px;color:var(--text-dim);margin-top:0">※ 回本吧世界观与剧情设定已在"世界观·09 回本吧"与"补充设定·二 回本吧"。本卡<b>只收 UI/视觉资产</b>，不重复设定。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0">
+          <div class="info-box" style="border-color:rgba(29,161,242,0.3)"><div class="info-box-label" style="color:#1DA1F2">Logo</div><p>「回本」＋蓝块「吧!」＋英文 BREAK EVEN（Bangers 字体）；主色早期 Twitter 蓝 #1DA1F2（唤醒集体记忆）。含深／浅版、纯图标（app icon）、Mac Dock 示意图。</p></div>
+          <div class="info-box" style="border-color:rgba(29,161,242,0.3)"><div class="info-box-label" style="color:#1DA1F2">盖楼机制图</div><p>粉砖（真情·带脸/名字·发光）vs 灰水泥（灌水/bot）；楼高＝人气，与 K线价格<b>并排涨</b>；砸盘露出<b>真人砖地基</b>＝轧空。</p></div>
+        </div>
+        <div style="margin:8px 0;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold-dim)">// 精选帖模板 ×3：4:5 竖版·回本吧蓝顶栏＋发帖人＋身份标签＋时间＋正文＋可替换配图区＋互动数据＋BREAK EVEN 水印（交易员复盘帖 / 阿明《归零街之子》帖含小猪跟帖 / 小猪现身帖）</div>
+        <div class="char-images" style="gap:12px;margin-bottom:20px"><div style="width:100%;padding:28px;text-align:center;border:1px dashed rgba(232,184,75,0.35);border-radius:10px;background:rgba(232,184,75,0.04);color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:12px">图位 D2 · 待 ibb 直链<br><span style="color:var(--text-dim);font-size:11px">回本吧盖楼机制图 / Logo / 精选帖模板</span></div></div>
+        <p style="font-size:12px;color:var(--text-dim)">// 关联：回本吧 · <a href="#asset-proofofheart" style="color:var(--teal-bright)">粒子面签</a> · $0xkid · 小猪女侠</p>
+      </div>
+    </div>
+
+    <!-- 视觉资产·永信城 City Logo -->
+    <div class="char-detail" id="vi-city-logo">
+      <div class="char-detail-header">
+        <div class="char-icon" style="background:rgba(212,160,23,0.1);border-color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:34px">🔺</div>
+        <div><div class="char-detail-name" style="font-size:22px">永信城 City Logo（三角＋心）</div>
+        <div class="char-detail-subtitle">城市视觉识别 VI · 非道具</div></div>
+      </div>
+      <div class="char-images" style="gap:12px;margin-bottom:20px"><div style="width:100%;padding:28px;text-align:center;border:1px dashed rgba(232,184,75,0.35);border-radius:10px;background:rgba(232,184,75,0.04);color:var(--gold-dim);font-family:'Share Tech Mono',monospace;font-size:12px">图位 D1 · 待 ibb 直链<br><span style="color:var(--text-dim);font-size:11px">永信城 Logo（三角+心）</span></div></div>
+      <div class="char-detail-body">
+        <p><strong style="color:var(--gold)">本质：</strong>永信城（Evertrust City）的城市视觉识别标志。三角＋心——三角对应"不可能三角"的稳定执念，心对应被系统收割的"真情"。属视觉资产，不进手持道具。</p>
+      </div>
+    </div>
+
+  
   </section>
 
   <!-- EPISODES -->
@@ -5487,7 +5659,7 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
         </div>
         <div class="ep-body">
           <div class="ep-core">情感核心（前半）：「最魔性的东西里，藏着最真的东西」<br>情感核心（后半）：「系统能伪造一切，唯独伪造不了想起一个人」</div>
-          <div class="script-dir" style="background:rgba(233,69,96,0.08);border-color:rgba(233,69,96,0.2);margin-bottom:16px">【v4.2 · EP5 Part 1 完整剧本定稿。时间轴45→52小时（记忆清零27→20）。七场：拉阿明入伙 / 归零街之子 / 接那只悬着的手 / 有人回应了 / Meme制作与发射 / 唤醒 / 收网。核心：$0KID公平发射 + 粒子面签机制首次落地 · 科目三式扩散 × 新世相式破防 · 林牧收到"求助" · 阿明被捕。<b>天降神针段（原拍4-7）已切至 Part 2。</b>】</div>
+          <div class="script-dir" style="background:rgba(233,69,96,0.08);border-color:rgba(233,69,96,0.2);margin-bottom:16px">【v4.2 · EP5 Part 1 完整剧本定稿。时间轴45→52小时（记忆清零27→20）。七场：拉阿明入伙 / 归零街之子 / 接那只悬着的手 / 有人回应了 / Meme制作与发射 / 唤醒 / 收网。核心：$0xkid公平发射 + 粒子面签机制首次落地 · 科目三式扩散 × 新世相式破防 · 林牧收到"求助" · 阿明被捕。<b>天降神针段（原拍4-7）已切至 Part 2。</b>】</div>
 
           <h4>完整剧本 · Part 1 定稿</h4>
 
@@ -5704,8 +5876,8 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
             </div>
             <div class="script-shot-block">
               <div class="script-shot-label">发射 · 公平发射与粒子面签</div>
-              <p class="script-action-text">视频录完。阿明<b>没有停</b>——他调出一个界面：<b>发射台（meme launchpad）</b>。屏上表单，他一格一格填：<b>名称：归零街之子。代码：$0KID。</b><b>图标</b>：他把那张图拖进去——<b>戴着他那顶帽子的扇财鸟，双翅收拢，抱在胸前</b>。</p>
-              <p class="script-action-text">发射方式，他勾了那一项：<b>公平发射——无预留·无私募·人人同一起跑线</b>。然后他又设了一条规则——屏上一行字：<b>「填空面签：跟拍并填上名字后，面对镜头三秒。」</b>下一行，小字：<b>「检测到粉色情绪粒子升腾，自动发放你那一份$0KID。」</b></p>
+              <p class="script-action-text">视频录完。阿明<b>没有停</b>——他调出一个界面：<b>发射台（meme launchpad）</b>。屏上表单，他一格一格填：<b>名称：归零街之子。代码：$0xkid。</b><b>图标</b>：他把那张图拖进去——<b>戴着他那顶帽子的扇财鸟，双翅收拢，抱在胸前</b>。</p>
+              <p class="script-action-text">发射方式，他勾了那一项：<b>公平发射——无预留·无私募·人人同一起跑线</b>。然后他又设了一条规则——屏上一行字：<b>「填空面签：跟拍并填上名字后，面对镜头三秒。」</b>下一行，小字：<b>「检测到粉色情绪粒子升腾，自动发放你那一份$0xkid。」</b></p>
               <div class="script-dialogue"><span class="script-char">阿明（轻）</span>「归零街之子，人人有份。但你得<b>真的</b>想起一个人——骗得了链，骗不了它。」</div>
               <p class="script-dir">【他指的"它"，是每个人头顶那套粒子传感——工厂用来收割的东西。同一套传感器，工厂用它收，他用它发。】</p>
               <div class="script-dialogue"><span class="script-char">阿明（盯着屏，轻，像给它取名的父亲）</span>「归零街之子。从零来的……就都从零开始。」</div>
@@ -5714,7 +5886,7 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
             <div class="script-shot-block">
               <div class="script-shot-label">回本吧首帖 · 全网上传</div>
               <p class="script-action-text">他打开那个<b>归零街人人都泡的老论坛——「回本吧」</b>。【昏黄的老式网页，置顶帖永远是"今天你回本了吗"。】他<b>开了个新帖</b>。标题，打了又删，删了又打，最后只留一行：<b>「我做了个东西，送给归零街。」</b></p>
-              <p class="script-action-text">正文：那条视频，和$0KID的合约地址。<b>没有喊单，没有目标价，没有"冲"。</b>他<b>按下发布</b>。【零回复。楼，要一层一层自己盖起来。】紧接着，他把视频<b>同时甩向全网</b>：工厂内网、外网短视频平台、社交平台——<b>上传进度条，一条一条走满</b>。</p>
+              <p class="script-action-text">正文：那条视频，和$0xkid的合约地址。<b>没有喊单，没有目标价，没有"冲"。</b>他<b>按下发布</b>。【零回复。楼，要一层一层自己盖起来。】紧接着，他把视频<b>同时甩向全网</b>：工厂内网、外网短视频平台、社交平台——<b>上传进度条，一条一条走满</b>。</p>
             </div>
             <div class="script-shot-block">
               <div class="script-shot-label">拉初盘 · 最后的电量</div>
@@ -5724,7 +5896,7 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
               <div class="script-dialogue"><span class="script-char">小猪（内心OS，画外，轻）</span>「……也无所谓。反正，本来也没人等我回去。」</div>
               <p class="script-action-text">她<b>握紧指挥棒，站起来</b>，走近阿明。</p>
               <div class="script-dialogue"><span class="script-char">小猪</span>「光发出去没用。这网每秒刷过几千条，几秒就把它盖没了。得给它拉一把。」</div>
-              <p class="script-action-text">她<b>举起CA指挥棒，对准刚诞生的那个池子</b>。指挥棒<b>亮起，一格电灭：●●○○○</b>。屏上——$0KID<b>猛地被一股热度顶上去</b>，从信息流底部窜到大家能刷到的位置。【拉初盘：注入第一波流量，顶进所有人视野。】</p>
+              <p class="script-action-text">她<b>举起CA指挥棒，对准刚诞生的那个池子</b>。指挥棒<b>亮起，一格电灭：●●○○○</b>。屏上——$0xkid<b>猛地被一股热度顶上去</b>，从信息流底部窜到大家能刷到的位置。【拉初盘：注入第一波流量，顶进所有人视野。】</p>
             </div>
             <div class="script-shot-block">
               <div class="script-shot-label">维克多 · 抓不住的光点</div>
@@ -5758,8 +5930,8 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
             <div class="script-dir">【全程无旁白。阿明那首改编的《财源滚滚来》，从一个声部，渐渐长成很多个声部。<b>天降神针段（原拍4-7）已切至Part 2。</b>】</div>
             <div class="script-shot-block">
               <div class="script-shot-label">第一拍 · K线翘头，机器先动</div>
-              <p class="script-action-text">不是人，是数据先动。DEX界面，<b>$0KID《归零街之子》</b>——图标是那只<b>戴帽子的扇财鸟，双翅收拢抱在胸前</b>——K线<b>猛地翘起第一根绿柱</b>，交易量放大。</p>
-              <p class="script-action-text"><b>行情机器人弹窗</b>接连跳出：涨幅榜、热门榜，那只戴帽子的鸟<b>爬进榜单</b>。自动快讯滚过：交易量翻倍——<b>「$0KID持币地址24小时暴增——每个填空的人，都领到了自己那份。」</b>【系统的FOMO工具——榜单、快讯——正在帮着推一个反FOMO的东西。它还不知道。】</p>
+              <p class="script-action-text">不是人，是数据先动。DEX界面，<b>$0xkid《归零街之子》</b>——图标是那只<b>戴帽子的扇财鸟，双翅收拢抱在胸前</b>——K线<b>猛地翘起第一根绿柱</b>，交易量放大。</p>
+              <p class="script-action-text"><b>行情机器人弹窗</b>接连跳出：涨幅榜、热门榜，那只戴帽子的鸟<b>爬进榜单</b>。自动快讯滚过：交易量翻倍——<b>「$0xkid持币地址24小时暴增——每个填空的人，都领到了自己那份。」</b>【系统的FOMO工具——榜单、快讯——正在帮着推一个反FOMO的东西。它还不知道。】</p>
               <p class="script-action-text">——<b>「回本吧」，阿明那个帖子，从零回复，开始跳楼层：1……7……23……106……</b>【回本吧的楼和K线的柱并排涨——一个是人气，一个是价格。】</p>
             </div>
             <div class="script-shot-block">
@@ -5775,7 +5947,7 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
             <div class="script-shot-block">
               <div class="script-shot-label">第三拍 · 新世相式破防 · 粒子面签</div>
               <p class="script-action-text">但要填那个空，就得先想起一个人。镜头切<b>填空那一秒</b>：</p>
-              <p class="script-action-text">——中年工人，扇、扇、抱，笑着；填空栏敲下两个字："<b>姐姐</b>"。他<b>面对镜头</b>。一秒，两秒——<b>一缕粉色粒子，从他头顶升腾起来</b>。叮——<b>一份$0KID，到账</b>。屏上：「扇给【姐姐】的那一份 · 已认领」。他看着那缕<b>没有被管道抽走、悬在头顶散不掉</b>的粉。笑没了。【管道抽不动粉色——它抽不走的，才是你的。】</p>
+              <p class="script-action-text">——中年工人，扇、扇、抱，笑着；填空栏敲下两个字："<b>姐姐</b>"。他<b>面对镜头</b>。一秒，两秒——<b>一缕粉色粒子，从他头顶升腾起来</b>。叮——<b>一份$0xkid，到账</b>。屏上：「扇给【姐姐】的那一份 · 已认领」。他看着那缕<b>没有被管道抽走、悬在头顶散不掉</b>的粉。笑没了。【管道抽不动粉色——它抽不走的，才是你的。】</p>
               <p class="script-action-text">——打游戏的小孩填："<b>姥姥</b>"。面签，一缕粉升起。他忽然不玩了。——女工人填到一半，<b>戴上了藏了很久的、恋人送的手环</b>。她的粉，升起来的时候，比谁的都亮。</p>
               <p class="script-action-text">——<b>长发女孩</b>（EP4和阿明跳舞、EP1坠落特写那个），跟着扇了两下，手停在填空栏上，<b>指尖抚过和阿明跳过舞的工位边缘</b>。她没填。【她想起的那个人，是阿明。埋点。】</p>
               <p class="script-action-text">工人们离开工位，聚到公共区，有人坐地、有人靠墙、有人跟着哼。一个工人抱住陌生工人哭。空气里的粉色，<b>不再零星，成团</b>。管道抽不动了。</p>
@@ -5826,7 +5998,7 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
               <div class="script-shot-label">最后一击 · 阿明</div>
               <p class="script-action-text">工位区。红光<b>从走廊两头同时亮起</b>——机械小兵，两队，收拢。工人们<b>从屏幕前抬起头</b>。歌还在放。粉色还悬在头顶。阿明的工位。他<b>看见了红光</b>——<b>一只机械手，已经落在他肩上</b>。阿明<b>回头</b>。机械小兵胸前的屏上，一行字：<b>「SLK · 违规操作」</b>。</p>
               <div class="script-dialogue"><span class="script-char">阿明（叹气，嘟囔）</span>「妈呀。这下惨了。」</div>
-              <p class="script-action-text">他<b>瞥了一眼屏</b>：$0KID的K线还在涨，回本吧他那个帖子，楼层数字还在疯跳。他<b>深吸一口气，手指飞快</b>——赶在被拖走前，打开自己那个帖子，<b>打出一行字</b>：</p>
+              <p class="script-action-text">他<b>瞥了一眼屏</b>：$0xkid的K线还在涨，回本吧他那个帖子，楼层数字还在疯跳。他<b>深吸一口气，手指飞快</b>——赶在被拖走前，打开自己那个帖子，<b>打出一行字</b>：</p>
               <p class="script-action-text"><b>「楼盖到这了。剩下的，你们自己盖。——归零街之子」</b><b>发布。</b></p>
               <p class="script-action-text">两个机械小兵<b>把他从座位上架了起来</b>。</p>
               <div class="script-dialogue"><span class="script-char">阿明（挣扎着，还贫）</span>「诶诶诶——你们怎么这么不讲文明啊？你们以前不是挺文明的吗？」</div>
@@ -5888,7 +6060,7 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
 
               <div class="script-shot-block">
                 <div class="script-shot-label">第四拍 · 天降神针（手动接管）</div>
-                <p class="script-action-text">切：维克多总控室。大屏上，<b>粉色热力图大片扩散</b>——这是先跳进他眼睛的东西。【他监控的是产能：粉色＝无法结算的废料，正在淹掉他的报表。】那只手（不露全身）<b>顺着异常溯源，调出另一块屏</b>——$0KID的K线，一路向上。旁边，那条视频：扇、扇、抱。<b>手，停了两秒。</b></p>
+                <p class="script-action-text">切：维克多总控室。大屏上，<b>粉色热力图大片扩散</b>——这是先跳进他眼睛的东西。【他监控的是产能：粉色＝无法结算的废料，正在淹掉他的报表。】那只手（不露全身）<b>顺着异常溯源，调出另一块屏</b>——$0xkid的K线，一路向上。旁边，那条视频：扇、扇、抱。<b>手，停了两秒。</b></p>
                 <div class="script-dialogue"><span class="script-char">维克多（只有声音，很平，带着些许轻蔑）</span>「……归零街之子。一个meme，还挺嚣张。」</div>
                 <p class="script-action-text"><b>停顿。</b></p>
                 <div class="script-dialogue"><span class="script-char">维克多</span>「那就用meme的死法。从哪来，回哪去。」</div>
@@ -5899,7 +6071,7 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
                 <div class="script-dialogue"><span class="script-char">维克多（声音沉下来，几乎自语）</span>「……钱包。」</div>
                 <p class="script-action-text"><b>停顿。</b></p>
                 <div class="script-dialogue"><span class="script-char">维克多</span>「找到它。」</div>
-                <p class="script-action-text">切：$0KID的K线。<b>针，一格，又一格，往下压。</b>价格瞬间腰斩、再腰斩。全网瞬间翻脸，FUD像黑潮淹过来：「归零街之子要归零了」「扇财鸟要掉毛了啊」「归零街就是这个命，还之子？天王老子也不行」跟风盘割肉出逃，K线上挂满恐慌卖单。<b>刚聚起来的粉色，在FUD里剧烈地明灭、摇晃。</b></p>
+                <p class="script-action-text">切：$0xkid的K线。<b>针，一格，又一格，往下压。</b>价格瞬间腰斩、再腰斩。全网瞬间翻脸，FUD像黑潮淹过来：「归零街之子要归零了」「扇财鸟要掉毛了啊」「归零街就是这个命，还之子？天王老子也不行」跟风盘割肉出逃，K线上挂满恐慌卖单。<b>刚聚起来的粉色，在FUD里剧烈地明灭、摇晃。</b></p>
               </div>
 
               <div class="script-shot-block">
@@ -5993,10 +6165,10 @@ CA指挥棒·熊版：约30cm细长棒·顶端暗红色熊头立体造型·沉�
                 </div>
                 <div style="padding:12px 14px;background:rgba(0,0,0,0.2);border-left:3px solid var(--gold);border-radius:0 4px 4px 0">
                   <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:6px">28-38秒 · 填空面签（裂变段）</div>
-                  <p style="font-size:13px;margin:0;line-height:1.9">定格扇财鸟抱姿。字一个个打出：<b>「这一下，是扇给 ____ 的。」</b>阿明画外，很轻：「你拍的时候，把空填上。<b>然后对着镜头，待三秒。</b>」最后一帧：$0KID图标 + 两行小字（归零街之子·公平发射·没有庄 / 填空面签·人人有份）。<b>戛然而止，不喊冲。</b></p>
+                  <p style="font-size:13px;margin:0;line-height:1.9">定格扇财鸟抱姿。字一个个打出：<b>「这一下，是扇给 ____ 的。」</b>阿明画外，很轻：「你拍的时候，把空填上。<b>然后对着镜头，待三秒。</b>」最后一帧：$0xkid图标 + 两行小字（归零街之子·公平发射·没有庄 / 填空面签·人人有份）。<b>戛然而止，不喊冲。</b></p>
                 </div>
               </div>
-              <p style="font-size:12px;color:var(--text-dim);margin-top:14px">// 素材清单：阿明真人拍摄段（3镜头）· 扇财鸟三拍动画 · 三个亲子/温情实拍插画面 · 改编版音频（15秒唱段）· $0KID图标尾帧。故事板见EP5场景包「故事板」Tab（视频Sheet 1 / Sheet 2）。</p>
+              <p style="font-size:12px;color:var(--text-dim);margin-top:14px">// 素材清单：阿明真人拍摄段（3镜头）· 扇财鸟三拍动画 · 三个亲子/温情实拍插画面 · 改编版音频（15秒唱段）· $0xkid图标尾帧。故事板见EP5场景包「故事板」Tab（视频Sheet 1 / Sheet 2）。</p>
 
             </div>
           </div>
@@ -7745,11 +7917,38 @@ function toggleEp(header) {
     <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,0.05);color:var(--text-dim);border:1px solid rgba(255,255,255,0.1)">🖼 道具/素材</span>
   </div>
 
+  <!-- v4.10 -->
+  <div style="margin-bottom:40px">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:22px;font-weight:700;color:#fff">2026·10·13</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);padding:2px 10px;border:1px solid rgba(232,184,75,0.4);border-radius:20px">v4.10 · 最新</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">4项更新</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding-left:16px;border-left:2px solid rgba(232,184,75,0.4)">
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(42,173,204,0.1);color:var(--teal-bright);border:1px solid rgba(42,173,204,0.2);white-space:nowrap;margin-top:1px">👤 角色</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">客服小何档案重写：出场记录全时间线（S1→EP6）· 两块屏（谷底废屏追踪端点 / 光明顶失踪用户秘密墙 / 交易所后台）· 收割管线触达设定 · 隐藏机关墙 · 删除旧「你拖住Block我传Payload」台词，标志性台词改「一个用户，都不能丢」</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(212,160,23,0.1);color:var(--gold);border:1px solid rgba(212,160,23,0.3);white-space:nowrap;margin-top:1px">🖼 资产</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">新增「永信城·界面与平台资产」区：永信发射台 / 粒子面签（情绪凭证铸造 PROOF-OF-HEART）/ 工厂热点播报 / 创作者招募页 / 回本吧UI 五张卡 ＋ City Logo；图位留空待回填，侧栏加入口</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,90,155,0.1);color:#E85A9B;border:1px solid rgba(233,90,155,0.2);white-space:nowrap;margin-top:1px">🖌 渲染</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">光明顶大屏 2 条即梦提示词（P3 按接入 / P4 真人轧空）入小何卡；办公室定稿改由 OF-1/OF-2 两张成图承载</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.05);color:var(--text-dim);border:1px solid rgba(255,255,255,0.1);white-space:nowrap;margin-top:1px">⚙️ 其他</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">全局 $0KID→$0xkid 改名（38处）；待回填图位：主角定妆批量 / 6名人 / 扇财鸟 / 永信城资产 D1–D6 / 小何办公室 OF-1·OF-2</span>
+      </div>
+    </div>
+  </div>
+
   <!-- v4.9 -->
   <div style="margin-bottom:40px">
     <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
       <div style="font-family:'Share Tech Mono',monospace;font-size:22px;font-weight:700;color:#fff">2026·10·11</div>
-      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);padding:2px 10px;border:1px solid rgba(232,184,75,0.4);border-radius:20px">v4.9 · 最新</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);padding:2px 10px;border:1px solid rgba(232,184,75,0.4);border-radius:20px">v4.9</div>
       <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)">4项更新</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;padding-left:16px;border-left:2px solid rgba(232,184,75,0.4)">
@@ -7767,7 +7966,7 @@ function toggleEp(header) {
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.05);color:var(--text-dim);border:1px solid rgba(255,255,255,0.1);white-space:nowrap;margin-top:1px">⚙️ 其他</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">撤除 v4.8 的独立分镜板块（内容迁入场景包）；本段用 $0xkid，全局 $0KID→$0xkid 改名与 29 条待入库项仍挂起</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">撤除 v4.8 的独立分镜板块（内容迁入场景包）；本段用 $0xkid，全局 $0xkid→$0xkid 改名与 29 条待入库项仍挂起</span>
       </div>
     </div>
   </div>
@@ -7790,7 +7989,7 @@ function toggleEp(header) {
       </div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:11px;font-family:'Share Tech Mono',monospace;padding:2px 8px;border-radius:4px;background:rgba(233,69,96,0.1);color:#E94560;border:1px solid rgba(233,69,96,0.2);white-space:nowrap;margin-top:1px">⏳ 挂起</span>
-        <span style="font-size:13px;color:var(--text);line-height:1.6">本节代币用 $0xkid；全局 $0KID→$0xkid 改名、EP5 Part-2 待入库 29 条、永信城资产仍未入库（下一轮统一处理）</span>
+        <span style="font-size:13px;color:var(--text);line-height:1.6">本节代币用 $0xkid；全局 $0xkid→$0xkid 改名、EP5 Part-2 待入库 29 条、永信城资产仍未入库（下一轮统一处理）</span>
       </div>
     </div>
   </div>
@@ -12486,7 +12685,7 @@ L3格子间某工位桌底，昏暗狭小空间。
       <div class="scene-modal-page" id="ep5-modal-overview" style="display:block">
         <h3>EP5 · Part 1 · 场景状态总览</h3>
         <div style="margin:12px 0 16px;padding:12px 16px;background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.2);border-radius:8px;font-size:12px;color:var(--text-dim);line-height:1.7">
-          时间轴 45→52小时（记忆清零 27→20）· 7个场景 · 核心：$0KID公平发射 + 粒子面签机制首次落地 · 科目三式扩散 × 新世相式破防 · 林牧收到「求助」· 阿明被捕<br>
+          时间轴 45→52小时（记忆清零 27→20）· 7个场景 · 核心：$0xkid公平发射 + 粒子面签机制首次落地 · 科目三式扩散 × 新世相式破防 · 林牧收到「求助」· 阿明被捕<br>
           <b style="color:var(--red)">天降神针段（原场景06拍4-7）已切至 Part 2，不在本场景包内。</b>
         </div>
         <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
@@ -12792,8 +12991,8 @@ L3格子间某工位桌底，昏暗狭小空间。
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
           <div class="rl-section-title">A类 · 场景</div>
-<div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-03</div><div><div class="rl-name">发射台表单·公平发射</div><div class="rl-sub">场景05 · $0KID诞生</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">meme launchpad发射台界面：名称归零街之子/代码$0KID/图标是戴帽子的扇财鸟/公平发射选项被勾选/填空面签规则。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，界面特写，9:16竖构图。一块屏幕上的meme发射台（launchpad）界面·深色科技UI风格。表单里已填好：代币图标框中是一只戴着黑色棒球帽的亮蓝色三角形扇财鸟·双翅收拢抱在胸前。表单下方"公平发射"选项被明确勾选（发光的对勾）·再下方一行规则设置。UI精致、干净、有仪式感。屏幕的光映出一点手指的轮廓。no readable text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-04</div><div><div class="rl-name">回本吧首帖·零回复</div><div class="rl-sub">场景05 · 我做了个东西送给归零街</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">昏黄的老式论坛"回本吧"页面，阿明发出的新帖，零回复。正文只有视频和合约地址，没有喊单。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，界面中景，9:16竖构图。一个昏黄陈旧的老式论坛页面（像早年的天涯/贴吧）·配色是发黄的米色和暗红·版式古老。页面中是一个刚发出的新帖·标题栏和正文区·下方回复数显示为零。整体气质：破旧、真实、草根、无人问津。屏幕的光在昏暗的工位里。no readable text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-05</div><div><div class="rl-name">维克多大屏·光点又灭了</div><div class="rl-sub">场景05 · 还在动，抓不住</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">总控室大屏，那个代表小猪的光点若隐若现又灭了。系统标签：间歇信号·无法持续锁定。剪影的手在标记加粗。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。陈维克多总控室·冷色。巨大监控屏上的L3热力图·后排空白区那个光点刚刚又熄灭。屏上浮着系统标签框。一只手（剪影·不露全身）悬在屏前·正在给那个位置加粗一层标记。冷静的、耐心的追猎感。no text except screen UI, no watermark, 8K, 9:16。</div></div></div>          <div class="rl-section-title">B类 · 角色/定妆</div>
-<div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-26</div><div><div class="rl-name">阿明录制·扇财鸟与推秋千</div><div class="rl-sub">场景05 · Meme成型</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">阿明在工位设备前录短视频，屏上是扇财鸟三拍动画，旁边穿插推秋千的亲子画面。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。阿明（黑色棒球帽·棕色蓬乱短发·白色L3工服领口大开·袖子卷起·轻微胡茬）坐在工位设备前录制短视频·他闭着眼在唱·神情认真。他面前的屏幕上是扇财鸟（亮蓝色正三角形身体·粉色倒尖喙·黑色圆形硬币状眼睛带粉色美元符号$·头顶蓝色小三角多面体与中央金色多面体·金色光晕）的三拍动画（扇、扇、抱）·旁边的小窗里是一个温暖的画面：家长推着孩子荡秋千。冷色工位光与屏幕暖光的对比。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-27</div><div><div class="rl-name">阿明按下发射键</div><div class="rl-sub">场景05 · 从零来的就都从零开始</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">阿明手指悬在「发射」键上，深吸一口气按下。侧脸，轻，像给它取名的父亲。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，近景，9:16竖构图。阿明（黑色棒球帽·棕色蓬乱短发·白色L3工服领口大开·袖子卷起·轻微胡茬）的手指悬在屏幕上那个「发射」按钮上方·正要按下。他的侧脸神情：安静、郑重、带着一点像父亲给孩子取名时的温柔。屏幕的光映在他脸上。这一刻他从牛马变成了作者。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-28</div><div><div class="rl-name">小猪盯电量·没人等我回去</div><div class="rl-sub">场景05 · 露脸（不戴面具）</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小猪坐在自己工位前不戴面具，盯着CA指挥棒的电量（●●●○○），神情沮丧又强自振作。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，近景，9:16竖构图。小猪女侠（女·干练·白色L3工服）坐在自己的工位前（合法位置·不戴面具·露出脸）·低头盯着手里CA指挥棒的电量指示（三格亮两格暗）。神情从沮丧、疲惫·到抿嘴振作。孤独但不认输。这是她少数不戴面具的镜头。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-29</div><div><div class="rl-name">拉初盘·一格电熄灭</div><div class="rl-sub">场景05 · 得给它拉一把</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小猪举起CA指挥棒对准刚诞生的池子，棒身亮起，一格电熄灭（●●○○○），屏上$0KID被热度顶上去。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。小猪女侠（女·干练·白色L3工服）站起来·双手举起CA指挥棒·对准前方的屏幕。指挥棒的棒身亮起强光·棒身上的电量指示中一格熄灭。屏幕上一条K线被一股热度猛地顶了上去。动作有仪式感·像挥出一记不能收回的攻击。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-30</div><div><div class="rl-name">高山峰一顿·瞥见推秋千</div><div class="rl-sub">场景05 · 身子回撤半步</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">高山峰端着水路过，身子突然一顿、回撤半步——瞥见阿明设备屏上推秋千的画面。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。高山峰（壮实偏胖·圆脸有肉·黑色蓬松长卷发·圆形复古细框深棕色眼镜·短胡茬·白色工装外套）端着水杯路过工位区·脚步突然一顿·身子回撤半步·目光被画外的屏幕钉住了。表情从不屑（"又搞事……"）·到某种被击中的怔住。他的手已经不自觉抬起来·摸向脖子。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-31</div><div><div class="rl-name">高山峰攥住吊坠</div><div class="rl-sub">场景05 · 触动的临界</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">特写：高山峰的手猛地攥住胸前那只扇财鸟吊坠，指节收紧，手在抖。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，特写，9:16竖构图。高山峰（壮实偏胖·圆脸有肉·黑色蓬松长卷发·圆形复古细框深棕色眼镜·短胡茬·白色工装外套）胸前·一只粗壮的手猛地攥住那枚小小的扇财鸟吊坠·指节收紧发白·手在微微发抖。脸的下半部分在画面上方·嘴唇动了一下·几乎要哼出那个调子。压抑到极点的动容。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-32</div><div><div class="rl-name">女儿闪回·推秋千</div><div class="rl-sub">场景05 · 他在别人的Meme里看见了自己（关键帧）</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">闪回（暖调柔焦）：小院里高山峰推着一架秋千，秋千上小女儿咯咯地笑，秋千绳上挂着一只扇财鸟玩偶跟着晃。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图，闪回质感（暖调、柔焦、边缘发光）。一个温暖的小院。高山峰（壮实偏胖·圆脸有肉·黑色蓬松长卷发·圆形复古细框深棕色眼镜·短胡茬·白色工装外套）（气色比现在好·笑着）站在秋千后面·双手推着秋千。秋千上坐着他的小女儿（五六岁·扎双马尾·穿着小裙子）·咯咯地笑·喊着"再高一点"。秋千的绳子上·挂着一只小小的扇财鸟（亮蓝色正三角形身体·粉色倒尖喙·黑色圆形硬币状眼睛带粉色美元符号$·头顶蓝色小三角多面体与中央金色多面体·金色光晕）毛绒玩偶·跟着一起晃。金色的午后阳光。人生里最好的一天。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-33</div><div><div class="rl-name">冷静触发二次复核</div><div class="rl-sub">场景05 · 让系统自己去挖</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">冷静翘脚坐着慢慢坐直，嘴角一挑，手指点向系统界面，进度条开始爬。高山峰站在旁边回头望向阿明方向。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，双人中景，9:16竖构图。冷静（清瘦偏矮·白工服穿得服帖·细金属框金色眼镜配茶色镜片·硕大金色劳力士）翘着脚坐着·慢慢坐直身体·茶色镜片后的眼睛眯起来·嘴角挑起一个玩味的弧度·手指点向面前的屏幕（进度条开始爬）。旁边站着高山峰（壮实偏胖·圆脸有肉·黑色蓬松长卷发·圆形复古细框深棕色眼镜·短胡茬·白色工装外套）·他回过头·望向画外阿明的方向·没说话。刚出卖了差点唤醒他的人。冷、蔫坏、与愧疚。no text, no watermark, 8K, 9:16。</div></div></div>
+<div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-03</div><div><div class="rl-name">发射台表单·公平发射</div><div class="rl-sub">场景05 · $0xkid诞生</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">meme launchpad发射台界面：名称归零街之子/代码$0xkid/图标是戴帽子的扇财鸟/公平发射选项被勾选/填空面签规则。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，界面特写，9:16竖构图。一块屏幕上的meme发射台（launchpad）界面·深色科技UI风格。表单里已填好：代币图标框中是一只戴着黑色棒球帽的亮蓝色三角形扇财鸟·双翅收拢抱在胸前。表单下方"公平发射"选项被明确勾选（发光的对勾）·再下方一行规则设置。UI精致、干净、有仪式感。屏幕的光映出一点手指的轮廓。no readable text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-04</div><div><div class="rl-name">回本吧首帖·零回复</div><div class="rl-sub">场景05 · 我做了个东西送给归零街</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">昏黄的老式论坛"回本吧"页面，阿明发出的新帖，零回复。正文只有视频和合约地址，没有喊单。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，界面中景，9:16竖构图。一个昏黄陈旧的老式论坛页面（像早年的天涯/贴吧）·配色是发黄的米色和暗红·版式古老。页面中是一个刚发出的新帖·标题栏和正文区·下方回复数显示为零。整体气质：破旧、真实、草根、无人问津。屏幕的光在昏暗的工位里。no readable text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-05</div><div><div class="rl-name">维克多大屏·光点又灭了</div><div class="rl-sub">场景05 · 还在动，抓不住</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">总控室大屏，那个代表小猪的光点若隐若现又灭了。系统标签：间歇信号·无法持续锁定。剪影的手在标记加粗。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。陈维克多总控室·冷色。巨大监控屏上的L3热力图·后排空白区那个光点刚刚又熄灭。屏上浮着系统标签框。一只手（剪影·不露全身）悬在屏前·正在给那个位置加粗一层标记。冷静的、耐心的追猎感。no text except screen UI, no watermark, 8K, 9:16。</div></div></div>          <div class="rl-section-title">B类 · 角色/定妆</div>
+<div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-26</div><div><div class="rl-name">阿明录制·扇财鸟与推秋千</div><div class="rl-sub">场景05 · Meme成型</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">阿明在工位设备前录短视频，屏上是扇财鸟三拍动画，旁边穿插推秋千的亲子画面。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。阿明（黑色棒球帽·棕色蓬乱短发·白色L3工服领口大开·袖子卷起·轻微胡茬）坐在工位设备前录制短视频·他闭着眼在唱·神情认真。他面前的屏幕上是扇财鸟（亮蓝色正三角形身体·粉色倒尖喙·黑色圆形硬币状眼睛带粉色美元符号$·头顶蓝色小三角多面体与中央金色多面体·金色光晕）的三拍动画（扇、扇、抱）·旁边的小窗里是一个温暖的画面：家长推着孩子荡秋千。冷色工位光与屏幕暖光的对比。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-27</div><div><div class="rl-name">阿明按下发射键</div><div class="rl-sub">场景05 · 从零来的就都从零开始</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">阿明手指悬在「发射」键上，深吸一口气按下。侧脸，轻，像给它取名的父亲。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，近景，9:16竖构图。阿明（黑色棒球帽·棕色蓬乱短发·白色L3工服领口大开·袖子卷起·轻微胡茬）的手指悬在屏幕上那个「发射」按钮上方·正要按下。他的侧脸神情：安静、郑重、带着一点像父亲给孩子取名时的温柔。屏幕的光映在他脸上。这一刻他从牛马变成了作者。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-28</div><div><div class="rl-name">小猪盯电量·没人等我回去</div><div class="rl-sub">场景05 · 露脸（不戴面具）</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小猪坐在自己工位前不戴面具，盯着CA指挥棒的电量（●●●○○），神情沮丧又强自振作。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，近景，9:16竖构图。小猪女侠（女·干练·白色L3工服）坐在自己的工位前（合法位置·不戴面具·露出脸）·低头盯着手里CA指挥棒的电量指示（三格亮两格暗）。神情从沮丧、疲惫·到抿嘴振作。孤独但不认输。这是她少数不戴面具的镜头。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-29</div><div><div class="rl-name">拉初盘·一格电熄灭</div><div class="rl-sub">场景05 · 得给它拉一把</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">小猪举起CA指挥棒对准刚诞生的池子，棒身亮起，一格电熄灭（●●○○○），屏上$0xkid被热度顶上去。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。小猪女侠（女·干练·白色L3工服）站起来·双手举起CA指挥棒·对准前方的屏幕。指挥棒的棒身亮起强光·棒身上的电量指示中一格熄灭。屏幕上一条K线被一股热度猛地顶了上去。动作有仪式感·像挥出一记不能收回的攻击。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-30</div><div><div class="rl-name">高山峰一顿·瞥见推秋千</div><div class="rl-sub">场景05 · 身子回撤半步</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">高山峰端着水路过，身子突然一顿、回撤半步——瞥见阿明设备屏上推秋千的画面。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。高山峰（壮实偏胖·圆脸有肉·黑色蓬松长卷发·圆形复古细框深棕色眼镜·短胡茬·白色工装外套）端着水杯路过工位区·脚步突然一顿·身子回撤半步·目光被画外的屏幕钉住了。表情从不屑（"又搞事……"）·到某种被击中的怔住。他的手已经不自觉抬起来·摸向脖子。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-31</div><div><div class="rl-name">高山峰攥住吊坠</div><div class="rl-sub">场景05 · 触动的临界</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">特写：高山峰的手猛地攥住胸前那只扇财鸟吊坠，指节收紧，手在抖。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，特写，9:16竖构图。高山峰（壮实偏胖·圆脸有肉·黑色蓬松长卷发·圆形复古细框深棕色眼镜·短胡茬·白色工装外套）胸前·一只粗壮的手猛地攥住那枚小小的扇财鸟吊坠·指节收紧发白·手在微微发抖。脸的下半部分在画面上方·嘴唇动了一下·几乎要哼出那个调子。压抑到极点的动容。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-32</div><div><div class="rl-name">女儿闪回·推秋千</div><div class="rl-sub">场景05 · 他在别人的Meme里看见了自己（关键帧）</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">闪回（暖调柔焦）：小院里高山峰推着一架秋千，秋千上小女儿咯咯地笑，秋千绳上挂着一只扇财鸟玩偶跟着晃。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图，闪回质感（暖调、柔焦、边缘发光）。一个温暖的小院。高山峰（壮实偏胖·圆脸有肉·黑色蓬松长卷发·圆形复古细框深棕色眼镜·短胡茬·白色工装外套）（气色比现在好·笑着）站在秋千后面·双手推着秋千。秋千上坐着他的小女儿（五六岁·扎双马尾·穿着小裙子）·咯咯地笑·喊着"再高一点"。秋千的绳子上·挂着一只小小的扇财鸟（亮蓝色正三角形身体·粉色倒尖喙·黑色圆形硬币状眼睛带粉色美元符号$·头顶蓝色小三角多面体与中央金色多面体·金色光晕）毛绒玩偶·跟着一起晃。金色的午后阳光。人生里最好的一天。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-33</div><div><div class="rl-name">冷静触发二次复核</div><div class="rl-sub">场景05 · 让系统自己去挖</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">冷静翘脚坐着慢慢坐直，嘴角一挑，手指点向系统界面，进度条开始爬。高山峰站在旁边回头望向阿明方向。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，双人中景，9:16竖构图。冷静（清瘦偏矮·白工服穿得服帖·细金属框金色眼镜配茶色镜片·硕大金色劳力士）翘着脚坐着·慢慢坐直身体·茶色镜片后的眼睛眯起来·嘴角挑起一个玩味的弧度·手指点向面前的屏幕（进度条开始爬）。旁边站着高山峰（壮实偏胖·圆脸有肉·黑色蓬松长卷发·圆形复古细框深棕色眼镜·短胡茬·白色工装外套）·他回过头·望向画外阿明的方向·没说话。刚出卖了差点唤醒他的人。冷、蔫坏、与愧疚。no text, no watermark, 8K, 9:16。</div></div></div>
         </div>
       </div>
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
@@ -12810,8 +13009,8 @@ L3格子间某工位桌底，昏暗狭小空间。
         </div>
         <div class="rl-detail" style="display:none;border-top:1px solid var(--border);padding:16px 20px">
           <div class="rl-section-title">A类 · 场景</div>
-<div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-06</div><div><div class="rl-name">DEX界面·$0KID第一根绿柱</div><div class="rl-sub">场景06 · 机器先动</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">DEX界面上$0KID的K线猛地翘起第一根绿柱，戴帽子的鸟图标爬进涨幅榜，行情机器人快讯弹窗接连跳出。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，界面特写，9:16竖构图。一块加密交易所DEX的深色界面·一条K线猛地翘起第一根醒目的绿柱·交易量柱状图放大。界面一侧的涨幅榜/热门榜上·一个戴着黑色棒球帽的亮蓝三角扇财鸟图标正在爬升。多个行情机器人快讯弹窗接连跳出。冷冰冰的数据狂欢——系统的FOMO工具正在帮着推一个反FOMO的东西。no readable text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-07</div><div><div class="rl-name">回本吧楼层疯跳</div><div class="rl-sub">场景06 · 人气与价格并排涨</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">回本吧上阿明那个帖子，回复数从零开始疯跳：1……7……23……106……</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，界面特写，9:16竖构图。昏黄陈旧的老式论坛页面·一个帖子的回复数字正在疯狂跳动上涨（从个位数到三位数）。页面下方新回复不断涌现的版式。破旧的界面与爆炸的人气形成反差。no readable text, no watermark, 8K, 9:16。</div></div></div>          <div class="rl-section-title">B类 · 角色/定妆</div>
-<div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-34</div><div><div class="rl-name">走廊群舞·科目三式狂欢</div><div class="rl-sub">场景06 · 表层全是好玩</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">一群L3工人在走廊里跟着魔性的调子齐刷刷扇、扇、抱，有人加花样、有人笑场、手机互拍。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，群像全景，9:16竖构图。L3工厂走廊·一群穿白色L3工服的工人齐刷刷地跟着做那个三拍动作（扇、扇、抱）·有人跳得夸张、有人加花样、有人笑场·互相举着手机拍摄。喧闹、魔性、病毒式狂欢的表层。冷绿色环境光下罕见的欢腾。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-35</div><div><div class="rl-name">老法师·庙里的西装</div><div class="rl-sub">场景06 · 最不该跳的人跳了（关键帧）</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">K线山老法师，人在归零街翼扇万金庙里，身上还是那套穿了十年的三件套西装，动作僵硬笨拙地扇了两下、抱住了。眼睛微红。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。归零街翼扇万金庙内·满室廉价金色LED串灯·背后是2.5米高的扇财鸟（亮蓝色正三角形身体·粉色倒尖喙·黑色圆形硬币状眼睛带粉色美元符号$·头顶蓝色小三角多面体与中央金色多面体·金色光晕）神像轮廓（翅膀朝下收拢作祈祷状）。庙中央站着一位六十岁上下的老分析师（清瘦·花白头发梳得一丝不苟·深灰色老式三件套西装·酒红色领带·老花镜）——他西装革履·动作僵硬笨拙地把双臂收拢·紧紧抱在胸前。老花镜后的眼睛微微发红·嘴唇抿着·克制的哽咽。庄重·心碎·全网破防的那一帧。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-36</div><div><div class="rl-name">思思练习室落泪</div><div class="rl-sub">场景06 · 没剪就发了</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">L2女团偶像思思，练习室里跳到第三拍"抱"的瞬间眼泪突然涌出，妆哭花了一点，但她抱得更紧了。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。一间惨白顶灯的舞蹈练习室·整面落地镜映出背影。二十岁出头的女团偶像（精致舞台妆·粉紫色渐变长发·闪片舞台服）跳到第三拍——双臂收拢抱住自己的瞬间·眼泪突然涌出·睫毛膏微微晕开·但她没有停·抱得更紧了。凌晨的空旷·人设崩塌的一秒·也是她最真的一秒。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-37</div><div><div class="rl-name">撸毛党·面签死寂</div><div class="rl-sub">场景06 · 粒子只认真的</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">昏暗工作室成排手机支架，脚本批量生成跟拍视频，填空栏字填得出来，但面签三秒镜头前头顶一片死寂，没有一缕粉色。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。一间昏暗的撸毛工作室·成排的手机支架和亮着的屏幕·自动化脚本正在批量生成跟拍视频。但每一部手机的镜头前·空无一人的位置上方一片死寂——没有一缕粉色粒子升起。角落里一个撸毛党头子（连帽衫·油腻·烦躁）盯着屏幕骂骂咧咧。冷、机械、空洞。字符可以复制·粒子只认真的。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-38</div><div><div class="rl-name">中年工人面签·填「姐姐」</div><div class="rl-sub">场景06 · 粒子面签标准帧（关键帧）</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">中年工人填空栏敲下"姐姐"，面对镜头一秒两秒——一缕粉色粒子从头顶升腾，$0KID到账。他看着那缕没被抽走、悬在头顶散不掉的粉，笑没了。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，近景，9:16竖构图。一个疲惫的中年L3工人（白色工服）面对着镜头（手机）·刚刚在填空栏敲下两个字。他的头顶·一缕粉色情绪粒子正在缓缓升腾起来·微微发亮·悬在那里散不掉——没有被上方的管道抽走。屏幕上弹出一个到账提示的光效。他看着那缕粉·脸上的笑容慢慢消失了·眼眶发热。金色管道与粉色粒子的强烈对比。管道抽不走的·才是你的。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-39</div><div><div class="rl-name">公共区群像·粉色成团</div><div class="rl-sub">场景06 · 管道抽不动了</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">工人们离开工位聚到公共区，有人坐地、有人靠墙、有人跟着哼，一个工人抱住陌生工人哭。空气里的粉色不再零星，成团。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，群像全景，9:16竖构图。L3工厂公共区·大量白工服的工人离开工位聚集在一起·有人坐在地上·有人靠着墙·有人跟着哼歌·一个工人抱住一个陌生工人哭了。所有人的头顶·粉色情绪粒子不再是零星几缕·而是汇聚成团、成云·浓得化不开。上方的管道嗡嗡空转·一缕也抽不走。壮观、安静、令人动容的集体觉醒。no text, no watermark, 8K, 9:16。</div></div></div>
+<div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-06</div><div><div class="rl-name">DEX界面·$0xkid第一根绿柱</div><div class="rl-sub">场景06 · 机器先动</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">DEX界面上$0xkid的K线猛地翘起第一根绿柱，戴帽子的鸟图标爬进涨幅榜，行情机器人快讯弹窗接连跳出。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，界面特写，9:16竖构图。一块加密交易所DEX的深色界面·一条K线猛地翘起第一根醒目的绿柱·交易量柱状图放大。界面一侧的涨幅榜/热门榜上·一个戴着黑色棒球帽的亮蓝三角扇财鸟图标正在爬升。多个行情机器人快讯弹窗接连跳出。冷冰冰的数据狂欢——系统的FOMO工具正在帮着推一个反FOMO的东西。no readable text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-A-07</div><div><div class="rl-name">回本吧楼层疯跳</div><div class="rl-sub">场景06 · 人气与价格并排涨</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-scene">SCENE</span></div></div><div class="rl-body"><div class="rl-desc">回本吧上阿明那个帖子，回复数从零开始疯跳：1……7……23……106……</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，界面特写，9:16竖构图。昏黄陈旧的老式论坛页面·一个帖子的回复数字正在疯狂跳动上涨（从个位数到三位数）。页面下方新回复不断涌现的版式。破旧的界面与爆炸的人气形成反差。no readable text, no watermark, 8K, 9:16。</div></div></div>          <div class="rl-section-title">B类 · 角色/定妆</div>
+<div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-34</div><div><div class="rl-name">走廊群舞·科目三式狂欢</div><div class="rl-sub">场景06 · 表层全是好玩</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">一群L3工人在走廊里跟着魔性的调子齐刷刷扇、扇、抱，有人加花样、有人笑场、手机互拍。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，群像全景，9:16竖构图。L3工厂走廊·一群穿白色L3工服的工人齐刷刷地跟着做那个三拍动作（扇、扇、抱）·有人跳得夸张、有人加花样、有人笑场·互相举着手机拍摄。喧闹、魔性、病毒式狂欢的表层。冷绿色环境光下罕见的欢腾。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-35</div><div><div class="rl-name">老法师·庙里的西装</div><div class="rl-sub">场景06 · 最不该跳的人跳了（关键帧）</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">K线山老法师，人在归零街翼扇万金庙里，身上还是那套穿了十年的三件套西装，动作僵硬笨拙地扇了两下、抱住了。眼睛微红。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。归零街翼扇万金庙内·满室廉价金色LED串灯·背后是2.5米高的扇财鸟（亮蓝色正三角形身体·粉色倒尖喙·黑色圆形硬币状眼睛带粉色美元符号$·头顶蓝色小三角多面体与中央金色多面体·金色光晕）神像轮廓（翅膀朝下收拢作祈祷状）。庙中央站着一位六十岁上下的老分析师（清瘦·花白头发梳得一丝不苟·深灰色老式三件套西装·酒红色领带·老花镜）——他西装革履·动作僵硬笨拙地把双臂收拢·紧紧抱在胸前。老花镜后的眼睛微微发红·嘴唇抿着·克制的哽咽。庄重·心碎·全网破防的那一帧。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-36</div><div><div class="rl-name">思思练习室落泪</div><div class="rl-sub">场景06 · 没剪就发了</div></div><div class="rl-badges"><span class="rl-badge rl-p2">优先级2</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">L2女团偶像思思，练习室里跳到第三拍"抱"的瞬间眼泪突然涌出，妆哭花了一点，但她抱得更紧了。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。一间惨白顶灯的舞蹈练习室·整面落地镜映出背影。二十岁出头的女团偶像（精致舞台妆·粉紫色渐变长发·闪片舞台服）跳到第三拍——双臂收拢抱住自己的瞬间·眼泪突然涌出·睫毛膏微微晕开·但她没有停·抱得更紧了。凌晨的空旷·人设崩塌的一秒·也是她最真的一秒。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-37</div><div><div class="rl-name">撸毛党·面签死寂</div><div class="rl-sub">场景06 · 粒子只认真的</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">昏暗工作室成排手机支架，脚本批量生成跟拍视频，填空栏字填得出来，但面签三秒镜头前头顶一片死寂，没有一缕粉色。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，中景，9:16竖构图。一间昏暗的撸毛工作室·成排的手机支架和亮着的屏幕·自动化脚本正在批量生成跟拍视频。但每一部手机的镜头前·空无一人的位置上方一片死寂——没有一缕粉色粒子升起。角落里一个撸毛党头子（连帽衫·油腻·烦躁）盯着屏幕骂骂咧咧。冷、机械、空洞。字符可以复制·粒子只认真的。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-38</div><div><div class="rl-name">中年工人面签·填「姐姐」</div><div class="rl-sub">场景06 · 粒子面签标准帧（关键帧）</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">中年工人填空栏敲下"姐姐"，面对镜头一秒两秒——一缕粉色粒子从头顶升腾，$0xkid到账。他看着那缕没被抽走、悬在头顶散不掉的粉，笑没了。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，近景，9:16竖构图。一个疲惫的中年L3工人（白色工服）面对着镜头（手机）·刚刚在填空栏敲下两个字。他的头顶·一缕粉色情绪粒子正在缓缓升腾起来·微微发亮·悬在那里散不掉——没有被上方的管道抽走。屏幕上弹出一个到账提示的光效。他看着那缕粉·脸上的笑容慢慢消失了·眼眶发热。金色管道与粉色粒子的强烈对比。管道抽不走的·才是你的。no text, no watermark, 8K, 9:16。</div></div></div><div class="rl-card"><div class="rl-header"><div class="rl-id">E5-B-39</div><div><div class="rl-name">公共区群像·粉色成团</div><div class="rl-sub">场景06 · 管道抽不动了</div></div><div class="rl-badges"><span class="rl-badge rl-p1">优先级1</span><span class="rl-badge rl-char">CHAR</span></div></div><div class="rl-body"><div class="rl-desc">工人们离开工位聚到公共区，有人坐地、有人靠墙、有人跟着哼，一个工人抱住陌生工人哭。空气里的粉色不再零星，成团。</div><div class="rl-prompt" style="margin-top:12px;background:rgba(0,0,0,0.2);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--teal-bright);line-height:1.7">皮克斯3D动画电影风格，电影级渲染，3D rendered with painterly 2D texture，三维渲二维质感，群像全景，9:16竖构图。L3工厂公共区·大量白工服的工人离开工位聚集在一起·有人坐在地上·有人靠着墙·有人跟着哼歌·一个工人抱住一个陌生工人哭了。所有人的头顶·粉色情绪粒子不再是零星几缕·而是汇聚成团、成云·浓得化不开。上方的管道嗡嗡空转·一缕也抽不走。壮观、安静、令人动容的集体觉醒。no text, no watermark, 8K, 9:16。</div></div></div>
         </div>
       </div>
       <div style="margin-bottom:8px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--dark-2)">
