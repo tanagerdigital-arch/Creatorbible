@@ -1156,6 +1156,7 @@
     <div id="nav-eps">
     <a href="#ep1" class="nav-link">EP1 天降神针</a>
     <a onclick="openSceneModal('ep1')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP1 场景包 ↗</a>
+    <a href="#ep1-shots" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--text-dim)">↳ EP1 场景状态总览（分镜/渲染）</a>
     <a href="#ep2" class="nav-link">EP2 没有工位的人</a>
     <a onclick="openSceneModal('ep2')" class="nav-link" style="font-size:11px;padding-left:20px;color:var(--teal-bright);cursor:pointer">↳ EP2 场景包 ↗</a>
     <a href="#ep3" class="nav-link">EP3 情绪矿工</a>
@@ -8624,7 +8625,7 @@ function toggleEp(header) {
     <div class="scene-modal-body">
       <div class="scene-modal-page" id="ep1-modal-overview" style="display:block">
         <div class="modal-inner-content" id="ep1tab-overview">
-    <h3>EP1 · 场景状态总览</h3>
+    <h3 id="ep1-shots">EP1 · 场景状态总览</h3>
     <div style="overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px">
       <table style="width:100%;border-collapse:collapse;font-size:12px">
         <thead>
